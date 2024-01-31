@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dks2luv6au0gb"
+path="res://.godot/imported/lightPostModern.obj-66c9f7d6d6b116a37a8f20322392f160.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lightPostModern.obj-66c9f7d6d6b116a37a8f20322392f160.mesh"]
+
+source_file="res://art/Models/OBJ format/lightPostModern.obj"
+dest_files=["res://.godot/imported/lightPostModern.obj-66c9f7d6d6b116a37a8f20322392f160.mesh", "res://.godot/imported/lightPostModern.obj-66c9f7d6d6b116a37a8f20322392f160.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

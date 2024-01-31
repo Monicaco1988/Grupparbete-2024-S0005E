@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chqpchat1hqe4"
+path="res://.godot/imported/roadCurved.obj-5ec4ccc2d671e4427610adf6741cd02b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadCurved.obj-5ec4ccc2d671e4427610adf6741cd02b.mesh"]
+
+source_file="res://art/Models/OBJ format/roadCurved.obj"
+dest_files=["res://.godot/imported/roadCurved.obj-5ec4ccc2d671e4427610adf6741cd02b.mesh", "res://.godot/imported/roadCurved.obj-5ec4ccc2d671e4427610adf6741cd02b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

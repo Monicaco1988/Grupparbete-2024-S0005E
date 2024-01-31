@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vpvuu5sg5jwk"
+path="res://.godot/imported/bannerTowerRed.obj-3633eda346953dd4aca6e3e09041d3be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bannerTowerRed.obj-3633eda346953dd4aca6e3e09041d3be.mesh"]
+
+source_file="res://art/Models/OBJ format/bannerTowerRed.obj"
+dest_files=["res://.godot/imported/bannerTowerRed.obj-3633eda346953dd4aca6e3e09041d3be.mesh", "res://.godot/imported/bannerTowerRed.obj-3633eda346953dd4aca6e3e09041d3be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

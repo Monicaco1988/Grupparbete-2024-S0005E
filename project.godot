@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Group Project - S0005E"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/name="recing project"
+run/main_scene="res://main_root.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="Group Project - S0005E"
+project/assembly_name="recing project"
+
+[filesystem]
+
+import/fbx/enabled=false

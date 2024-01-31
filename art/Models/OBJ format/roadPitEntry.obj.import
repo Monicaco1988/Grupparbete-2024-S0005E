@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chc0cepnasnwp"
+path="res://.godot/imported/roadPitEntry.obj-b848a61fc52efc8b71cbd612dddd47cf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadPitEntry.obj-b848a61fc52efc8b71cbd612dddd47cf.mesh"]
+
+source_file="res://art/Models/OBJ format/roadPitEntry.obj"
+dest_files=["res://.godot/imported/roadPitEntry.obj-b848a61fc52efc8b71cbd612dddd47cf.mesh", "res://.godot/imported/roadPitEntry.obj-b848a61fc52efc8b71cbd612dddd47cf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

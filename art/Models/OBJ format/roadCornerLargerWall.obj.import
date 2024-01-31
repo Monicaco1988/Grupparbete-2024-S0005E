@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dteo1rc0g7fs4"
+path="res://.godot/imported/roadCornerLargerWall.obj-3d7a789dca4d4068c1584591ab49749b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadCornerLargerWall.obj-3d7a789dca4d4068c1584591ab49749b.mesh"]
+
+source_file="res://art/Models/OBJ format/roadCornerLargerWall.obj"
+dest_files=["res://.godot/imported/roadCornerLargerWall.obj-3d7a789dca4d4068c1584591ab49749b.mesh", "res://.godot/imported/roadCornerLargerWall.obj-3d7a789dca4d4068c1584591ab49749b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

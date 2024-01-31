@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ej7fhjdqb0iy"
+path="res://.godot/imported/billboardLow.obj-f98745f9d55196cd74d495f804133eff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/billboardLow.obj-f98745f9d55196cd74d495f804133eff.mesh"]
+
+source_file="res://art/Models/OBJ format/billboardLow.obj"
+dest_files=["res://.godot/imported/billboardLow.obj-f98745f9d55196cd74d495f804133eff.mesh", "res://.godot/imported/billboardLow.obj-f98745f9d55196cd74d495f804133eff.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

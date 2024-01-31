@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chrobjuxtqcjy"
+path="res://.godot/imported/overheadRoundColored.obj-b3003be2e8f5e9eaa8db79aaa57417ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/overheadRoundColored.obj-b3003be2e8f5e9eaa8db79aaa57417ab.mesh"]
+
+source_file="res://art/Models/OBJ format/overheadRoundColored.obj"
+dest_files=["res://.godot/imported/overheadRoundColored.obj-b3003be2e8f5e9eaa8db79aaa57417ab.mesh", "res://.godot/imported/overheadRoundColored.obj-b3003be2e8f5e9eaa8db79aaa57417ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

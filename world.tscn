@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6cjtpt5gile0"]
+
+[ext_resource type="MeshLibrary" uid="uid://dsd75e6dt8jvi" path="res://tile.tres" id="1_xvbus"]
+
+[node name="World" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+mesh_library = ExtResource("1_xvbus")
+cell_size = Vector3(0.5, 0.25, 0.5)
+cell_scale = 4.0
+data = {
+"cells": PackedInt32Array(9, 2, 59, 8, 2, 59, -131072, 14, 1441825, 65531, 30, 1441825, 11, 30, 1441825, 27, 30, 1441825, 43, 30, 1441825)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)

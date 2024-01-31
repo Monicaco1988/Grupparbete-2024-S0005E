@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7vcv5qvofb12"
+path="res://.godot/imported/roadRampLong.obj-404d86e8a706759eb95e10309580038d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadRampLong.obj-404d86e8a706759eb95e10309580038d.mesh"]
+
+source_file="res://art/Models/OBJ format/roadRampLong.obj"
+dest_files=["res://.godot/imported/roadRampLong.obj-404d86e8a706759eb95e10309580038d.mesh", "res://.godot/imported/roadRampLong.obj-404d86e8a706759eb95e10309580038d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

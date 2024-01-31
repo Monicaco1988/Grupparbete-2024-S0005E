@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://40gpcguosemn"
+path="res://.godot/imported/roadStraightLong.obj-80fad77b3b0e8510f9d2ea22afb859db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadStraightLong.obj-80fad77b3b0e8510f9d2ea22afb859db.mesh"]
+
+source_file="res://art/Models/OBJ format/roadStraightLong.obj"
+dest_files=["res://.godot/imported/roadStraightLong.obj-80fad77b3b0e8510f9d2ea22afb859db.mesh", "res://.godot/imported/roadStraightLong.obj-80fad77b3b0e8510f9d2ea22afb859db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

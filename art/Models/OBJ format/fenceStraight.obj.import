@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dojkpffb2tp86"
+path="res://.godot/imported/fenceStraight.obj-13f5d054ddf1fbdb4f790aa3c0a4e05d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fenceStraight.obj-13f5d054ddf1fbdb4f790aa3c0a4e05d.mesh"]
+
+source_file="res://art/Models/OBJ format/fenceStraight.obj"
+dest_files=["res://.godot/imported/fenceStraight.obj-13f5d054ddf1fbdb4f790aa3c0a4e05d.mesh", "res://.godot/imported/fenceStraight.obj-13f5d054ddf1fbdb4f790aa3c0a4e05d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
