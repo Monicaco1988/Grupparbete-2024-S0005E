@@ -21,19 +21,32 @@ public partial class g_car : VehicleBody3D
 
 		if (Input.GetJoyAxis(id, JoyAxis.LeftX) > 0.3f || Input.GetJoyAxis(id, JoyAxis.LeftX) < -0.3f)
 		{
-			Steering = Input.GetJoyAxis(id, JoyAxis.LeftX);
+			Steering = -Input.GetJoyAxis(id, JoyAxis.LeftX)*((float)Math.PI)/6;
 		}
 		else
 		{
             Steering = 0;
         }
 
-		if(Input.IsJoyButtonPressed(id, 0))
+		if(Input.IsJoyButtonPressed(id, 0) && EngineForce < 100000)
 		{
-            EngineForce += 50000000;
+            EngineForce -= 3;
         }
-		
-		GD.Print(EngineForce);
+		else if(EngineForce > 0)
+		{
+            EngineForce += 0.5f;
+        }
+
+        if (Input.IsJoyButtonPressed(id, JoyButton.B) && EngineForce < 100000)
+        {
+            EngineForce -= 3;
+        }
+        else if (EngineForce > 0)
+        {
+            EngineForce += 0.5f;
+        }
+
+        GD.Print(EngineForce);
         
     }
 }

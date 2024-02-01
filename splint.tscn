@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqf6bl5lqsa5n"]
+
+[ext_resource type="Texture2D" uid="uid://cqm7udbogey7y" path="res://Art/bravag.png" id="1_icwex"]
+[ext_resource type="PackedScene" uid="uid://d3h00vbr1317o" path="res://input_manager.tscn" id="2_up5af"]
+[ext_resource type="PackedScene" uid="uid://vvr3r6q01dqo" path="res://ambulance.tscn" id="3_o63vb"]
+
+[sub_resource type="Curve3D" id="Curve3D_wni2d"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector3Array(-10.0024, 0.871577, -1.40142, 10.002, 0, 1.401, -16.864, 0, -43.465, -11.127, -1.06133, -7.30253, 11.127, 1.06133, 7.30253, 2.06291, 5.22229, -31.6534, -5.389, 0, -3.158, 5.389, 0, 3.158, 23.809, 0, -18.469, -6.51, 0, -4.038, 6.51, 0, 4.038, 28.756, 0, -6.246, 1.02516, -7.62939e-06, -9.22384, -1.02516, 7.62939e-06, 9.22384, 24.475, 0, 6.954, 7.1458, 0, -4.6375, -7.1458, 0, 4.6375, 16.335, 0, 15.185, 1.612, 0, -0.889, -1.612, 0, 0.889, -2.197, 0, 23.904, 6.22395, 0.749792, 0.0346832, -6.22395, -0.749792, -0.0346832, -18.173, -4.67899, 29.9433, 10.7357, -1.58655, 11.2555, -10.7357, 1.58655, -11.2555, -34.584, 0, 22.188, 3.01108, -7.62939e-06, 7.25052, -3.01108, 7.62939e-06, -7.25052, -50.327, 0, -0.264, 1.608, 0, 8.33, -1.608, 0, -8.33, -63.683, 0, -20.86, -8.452, 0, 5.941, 8.45239, 0.295244, -5.94079, -67.543, 0, -35.493, -8.88908, -1.32327, 3.56678, 8.88908, 1.32327, -3.56678, -52.1025, 2.82474, -36.59, 0, 0, 0, 0, 0, 0, -42.3314, 2.67998, -38.9095, -7.53333, 4.53006, 0.852043, 7.53333, -4.53006, -0.852043, -30.1734, 1.26623, -40.3717, -7.19109, 2.35645, 0.185066, 7.19109, -2.35645, -0.185066, -18.9913, -1.7236, -42.5205),
+"tilts": PackedFloat32Array(0.269169, -0.483697, -0.797883, 0, 0, 0, 0, 0, 0, -0.268297, 0, 0, -1.70012, 0.365939, 0, 0)
+}
+point_count = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lasnp"]
+albedo_texture = ExtResource("1_icwex")
+uv1_scale = Vector3(1, 13.535, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ndn61"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ht2ys"]
+
+[node name="splint" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90852, 2.74074, 1.81773)
+curve = SubResource("Curve3D_wni2d")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.595849, 0)
+operation = 2
+use_collision = true
+polygon = PackedVector2Array(-3, 0, -2.99046, 0.62623, 5.96522, 0.570135, 6, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 1
+path_interval = 0.01
+path_simplify_angle = 0.0
+path_rotation = 1
+path_local = true
+path_continuous_u = true
+path_u_distance = 2.1
+path_joined = true
+smooth_faces = true
+material = SubResource("StandardMaterial3D_lasnp")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.60428, 0)
+polygon = PackedVector2Array(-6, 0, -6, 1, -4.11503, 5.05249, -1.30138, 5.45459, 2.36594, 5.47755, 5.22999, 4.78226, 6, 1, 6, 0, 5.73267, -0.00646377, 5.74908, 1.01063, 5.11957, 4.68973, 2.36207, 5.33283, -1.34227, 5.33543, -3.97103, 4.93101, -5.75575, 1.04795, -5.76365, -0.0104506)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.33482, 13.5181)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ndn61")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_ht2ys")
+skeleton = NodePath("../..")
+
+[node name="Input_Manager" parent="." instance=ExtResource("2_up5af")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.113099, 0.993584, 0, -0.993584, -0.113099, 0, 3.61352, 17.3137)
+
+[node name="Ambulans" parent="." instance=ExtResource("3_o63vb")]
+transform = Transform3D(0.372243, 0, -0.928135, 0, 1, 0, 0.928135, 0, 0.372243, 0, 2.76393, 23.2504)

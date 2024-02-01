@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdeadmvsk0qvy"]
+[gd_scene load_steps=7 format=3 uid="uid://bdeadmvsk0qvy"]
 
 [ext_resource type="PackedScene" uid="uid://b6cjtpt5gile0" path="res://world.tscn" id="1_m6u2e"]
 [ext_resource type="PackedScene" uid="uid://c1ht3ddyqmmtp" path="res://g_car.tscn" id="2_eqn52"]
+[ext_resource type="PackedScene" uid="uid://kfgvqfy478uo" path="res://art/Models/GLTF format/treeLarge.glb" id="3_ex2q6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qj8sr"]
 
@@ -15,9 +16,11 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [node name="World" parent="." instance=ExtResource("1_m6u2e")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.149363, 0.988782, 0, -0.988782, 0.149363, 0, 8.74525, 7.87204)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 151.206, 7.87204)
+shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 physics_material_override = SubResource("PhysicsMaterial_qj8sr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
@@ -28,8 +31,37 @@ shape = SubResource("ConvexPolygonShape3D_rce3k")
 mesh = SubResource("BoxMesh_7xeko")
 skeleton = NodePath("")
 
-[node name="Player" parent="." instance=ExtResource("2_eqn52")]
-transform = Transform3D(0.00240858, 0, 0.999997, 0, 1, 0, -0.999997, 0, 0.00240858, 0, 2.2847, 7.3239)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.943899, 0.330234, 0, -0.330234, 0.943899, 0, 2.15948, 7.55633)
+transform = Transform3D(1, 0, 0, 0, 0.943899, 0.330234, 0, -0.330234, 0.943899, 0, 3.59687, 7.71209)
+
+[node name="treeLarge" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77141, 0.68102, 5.60788)
+
+[node name="treeLarge2" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60034, 0.68102, 5.51933)
+
+[node name="treeLarge3" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201211, 0.68102, 5.75392)
+
+[node name="treeLarge4" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16594, 0.681019, 3.49388)
+
+[node name="treeLarge5" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93994, 0.68102, 2.36109)
+
+[node name="treeLarge6" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74963, 0.68102, 0.795289)
+
+[node name="treeLarge7" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12582, 0.68102, -1.09355)
+
+[node name="treeLarge8" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.339561, 0.681019, -2.27262)
+
+[node name="treeLarge9" parent="." instance=ExtResource("3_ex2q6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59087, 0.68102, -0.443767)
+
+[node name="VehicleBody3D" parent="." instance=ExtResource("2_eqn52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.759309, 0)
+axis_lock_angular_x = true
+axis_lock_angular_z = true

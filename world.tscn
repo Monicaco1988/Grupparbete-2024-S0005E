@@ -8,7 +8,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 mesh_library = ExtResource("1_xvbus")
 cell_size = Vector3(0.5, 0.25, 0.5)
-cell_scale = 4.0
+cell_scale = 8.0
 data = {
 "cells": PackedInt32Array(9, 2, 59, 8, 2, 59, -131072, 14, 1441825, 65531, 30, 1441825, 11, 30, 1441825, 27, 30, 1441825, 43, 30, 1441825)
 }
