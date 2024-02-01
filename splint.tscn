@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqf6bl5lqsa5n"]
 
-[ext_resource type="Texture2D" uid="uid://cqm7udbogey7y" path="res://Art/bravag.png" id="1_icwex"]
-[ext_resource type="PackedScene" uid="uid://d3h00vbr1317o" path="res://input_manager.tscn" id="2_up5af"]
-[ext_resource type="PackedScene" uid="uid://vvr3r6q01dqo" path="res://ambulance.tscn" id="3_o63vb"]
+[ext_resource type="Texture2D" uid="uid://61bcu6o0ig4" path="res://art/Road-Texture1.jpg" id="1_icwex"]
+[ext_resource type="PackedScene" path="res://input_manager.tscn" id="2_up5af"]
+[ext_resource type="PackedScene" uid="uid://c1ht3ddyqmmtp" path="res://g_car.tscn" id="3_o63vb"]
 
 [sub_resource type="Curve3D" id="Curve3D_wni2d"]
 bake_interval = 0.01
@@ -45,20 +45,6 @@ path_joined = true
 smooth_faces = true
 material = SubResource("StandardMaterial3D_lasnp")
 
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Path3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.60428, 0)
-polygon = PackedVector2Array(-6, 0, -6, 1, -4.11503, 5.05249, -1.30138, 5.45459, 2.36594, 5.47755, 5.22999, 4.78226, 6, 1, 6, 0, 5.73267, -0.00646377, 5.74908, 1.01063, 5.11957, 4.68973, 2.36207, 5.33283, -1.34227, 5.33543, -3.97103, 4.93101, -5.75575, 1.04795, -5.76365, -0.0104506)
-mode = 2
-path_node = NodePath("..")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.33482, 13.5181)
 
@@ -74,5 +60,5 @@ skeleton = NodePath("../..")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.113099, 0.993584, 0, -0.993584, -0.113099, 0, 3.61352, 17.3137)
 
-[node name="Ambulans" parent="." instance=ExtResource("3_o63vb")]
-transform = Transform3D(0.372243, 0, -0.928135, 0, 1, 0, 0.928135, 0, 0.372243, 0, 2.76393, 23.2504)
+[node name="VehicleBody3D" parent="." instance=ExtResource("3_o63vb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.673)
