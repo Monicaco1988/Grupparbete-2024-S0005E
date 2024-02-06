@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyijotwd6pxb5"
-path="res://.godot/imported/ambulance.glb-43b03e022d77944c8ad7aba7175ec9db.scn"
+path="res://.godot/imported/ambulance.glb-3e9889b6e279c6d8b9c1b1556a3c29d5.scn"
 
 [deps]
 
-source_file="res://ambulance.glb"
-dest_files=["res://.godot/imported/ambulance.glb-43b03e022d77944c8ad7aba7175ec9db.scn"]
+source_file="res://Ambulance/ambulance.glb"
+dest_files=["res://.godot/imported/ambulance.glb-3e9889b6e279c6d8b9c1b1556a3c29d5.scn"]
 
 [params]
 

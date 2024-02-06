@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvh0fwg53wpus"]
 
-[ext_resource type="Script" path="res://betterCar.cs" id="1_ti0hk"]
-[ext_resource type="PackedScene" uid="uid://dyijotwd6pxb5" path="res://ambulance.glb" id="2_ytsmq"]
+[ext_resource type="Script" path="res://Ambulance/betterCar.cs" id="1_ti0hk"]
+[ext_resource type="PackedScene" uid="uid://dyijotwd6pxb5" path="res://Ambulance/ambulance.glb" id="2_ytsmq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
