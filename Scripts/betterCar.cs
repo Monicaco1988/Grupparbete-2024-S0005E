@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
 {
@@ -21,6 +22,7 @@ public partial class betterCar : RigidBody3D
     float turnStopLimit = 0.75f;
     float speedInput = 0;
     float turnInput = 0;
+    float bodyTilt = 35;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -75,9 +77,37 @@ public partial class betterCar : RigidBody3D
             var newBasis = carMesh.GlobalBasis.Rotated(carMesh.GlobalBasis.Y, turnInput);
             carMesh.GlobalBasis = carMesh.GlobalBasis.Slerp(newBasis, (float)(turnSpeed*delta));
             carMesh.GlobalTransform = carMesh.GlobalTransform.Orthonormalized();
+
+            var tilted = -turnInput * LinearVelocity.Length() / bodyTilt;
+            bodyMesh.Rotation = new Vector3(0, 0, tilted);
+            //if (bodyMesh.Rotation.Z < 35 || bodyMesh.Rotation.Z > -35)
+            //{
+            //    bodyMesh.RotateZ(tilted);
+            //}
+            
+            
+            if (groundRay.IsColliding())
+            {
+                var normal = groundRay.GetCollisionNormal();
+                var xForm = AlignWithY(carMesh.GlobalTransform, normal);
+                carMesh.GlobalTransform = carMesh.GlobalTransform.InterpolateWith(xForm, (float)(10 * delta));
+            }
         }
 
+        
+
+        
 
 
+
+    }
+
+    public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
+    {
+        xForm.Basis.Y = newY;
+        xForm.Basis.X = -xForm.Basis.Z.Cross(newY);
+        xForm.Basis = xForm.Basis.Orthonormalized();
+
+        return xForm.Orthonormalized();
     }
 }
