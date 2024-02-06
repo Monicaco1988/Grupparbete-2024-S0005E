@@ -11,10 +11,6 @@ public partial class Camera3D : Godot.Camera3D
 	[Export]
 	public RigidBody3D player; // (second way to call objects from another class)
 
-	//[Export]
-	//public Node3D checkpoint;
-
-	private Node3D checkpoint;
 
 	private Vector3 position;
 
@@ -22,17 +18,18 @@ public partial class Camera3D : Godot.Camera3D
 	public override void _Ready()
 	{
 		//player = GetNode<RigidBody3D>("/root/Player");
-		checkpoint = GetNode<Node3D>("/root/FlagsCheckpoint");
+		//checkpoint = GetNode<Node3D>("FlagsCheckpoint");
 
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(player == checkpoint)
-		{
-			
+		GD.Print(position.X);
 
+		if(player.Position.X > -850)
+		{
+			position.X += 800;
 
 		}
 	}

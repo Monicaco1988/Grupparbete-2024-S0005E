@@ -55,7 +55,7 @@ public partial class betterCar : RigidBody3D
         }
         speedInput = Input.GetAxis("brake", "accelerate") * acceleration;
         turnInput = Input.GetAxis("steerRight", "steerLeft") * Mathf.DegToRad(steering);
-        GD.Print(turnInput);
+        //GD.Print(turnInput);
         rightWheel.Rotation = new Vector3(0,turnInput,Mathf.DegToRad(-180));
         leftWheel.Rotation = new Vector3(0, turnInput, 0);
         //if (0.13 > rightWheel.Rotation.Y || -0.13 < rightWheel.Rotation.Y)
