@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dswm1pni78n63"
+path="res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"]
+
+source_file="res://Art/kenney_car-kit/Models/OBJ format/ambulance.obj"
+dest_files=["res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh", "res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

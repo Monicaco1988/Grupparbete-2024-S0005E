@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpwfhndtjcjxl"
+path="res://.godot/imported/truck.obj-a5459988a58531afb247a964dd2e0ebf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/truck.obj-a5459988a58531afb247a964dd2e0ebf.mesh"]
+
+source_file="res://Art/kenney_car-kit/Models/OBJ format/truck.obj"
+dest_files=["res://.godot/imported/truck.obj-a5459988a58531afb247a964dd2e0ebf.mesh", "res://.godot/imported/truck.obj-a5459988a58531afb247a964dd2e0ebf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

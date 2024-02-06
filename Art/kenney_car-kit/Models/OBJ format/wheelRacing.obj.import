@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt60owvkece3e"
+path="res://.godot/imported/wheelRacing.obj-ee1799f8d7fcf29fe78fe9af3d608e07.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheelRacing.obj-ee1799f8d7fcf29fe78fe9af3d608e07.mesh"]
+
+source_file="res://Art/kenney_car-kit/Models/OBJ format/wheelRacing.obj"
+dest_files=["res://.godot/imported/wheelRacing.obj-ee1799f8d7fcf29fe78fe9af3d608e07.mesh", "res://.godot/imported/wheelRacing.obj-ee1799f8d7fcf29fe78fe9af3d608e07.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
