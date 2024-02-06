@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1t4q4j4i77ir"
-path="res://.godot/imported/raceFuture.png-1bef6e14230a6d8f21251c2648ca1a7c.ctex"
+path="res://.godot/imported/raceFuture.png-9a15b6b61df12fd7b245fa261278520c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/raceFuture.png"
-dest_files=["res://.godot/imported/raceFuture.png-1bef6e14230a6d8f21251c2648ca1a7c.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/raceFuture.png"
+dest_files=["res://.godot/imported/raceFuture.png-9a15b6b61df12fd7b245fa261278520c.ctex"]
 
 [params]
 
