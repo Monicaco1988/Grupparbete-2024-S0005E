@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnl5j48x11ivm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_epafc"]
+size = Vector3(200, 20, 50)
+
+[node name="FlagsCheckpoint" type="Node3D"]
+
+[node name="Flag1" type="StaticBody3D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CheckpointBoundry" type="CollisionShape3D" parent="Flag1"]
+shape = SubResource("BoxShape3D_epafc")
