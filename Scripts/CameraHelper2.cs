@@ -21,6 +21,7 @@ public partial class CameraHelper2 : CharacterBody3D
 		var direction = Vector3.Zero;
 
 		GD.Print(Position.DistanceTo(player.Position));
+
 		if (Position.DistanceTo(player.Position) < 1326) // distance to the ambulance (Player) might change Position to the position of the collision checkpoints?
 		{
 			direction.Z = player.LinearVelocity.Z;
@@ -36,7 +37,7 @@ public partial class CameraHelper2 : CharacterBody3D
 		_cameraVelocity.Z = direction.Z * Speed;
 
 		Velocity = _cameraVelocity;
-		MoveAndSlide();
+		//MoveAndSlide();
 
 		//LookAt(player.Position);
 	}

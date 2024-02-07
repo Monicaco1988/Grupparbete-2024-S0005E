@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqys6h5chl7ns"
-path="res://.godot/imported/road_bendBarrier.png-2e9fc5367e114e5c370ef197797d332e.ctex"
+path="res://.godot/imported/road_bendBarrier.png-7d04b4d4e1a8865921c2e7e4d299f8e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Side/road_bendBarrier.png"
-dest_files=["res://.godot/imported/road_bendBarrier.png-2e9fc5367e114e5c370ef197797d332e.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Side/road_bendBarrier.png"
+dest_files=["res://.godot/imported/road_bendBarrier.png-7d04b4d4e1a8865921c2e7e4d299f8e4.ctex"]
 
 [params]
 

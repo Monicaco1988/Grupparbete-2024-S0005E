@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://oda8s16ai2og"
-path="res://.godot/imported/road_slantFlatHigh.dae-be78c7a857c67560551d62e0c0f475a1.scn"
+path="res://.godot/imported/road_slantFlatHigh.dae-668f949e47e9ab2a8e48b470c89c47b7.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_slantFlatHigh.dae"
-dest_files=["res://.godot/imported/road_slantFlatHigh.dae-be78c7a857c67560551d62e0c0f475a1.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_slantFlatHigh.dae"
+dest_files=["res://.godot/imported/road_slantFlatHigh.dae-668f949e47e9ab2a8e48b470c89c47b7.scn"]
 
 [params]
 

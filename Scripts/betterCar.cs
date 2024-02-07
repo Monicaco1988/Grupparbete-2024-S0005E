@@ -16,7 +16,7 @@ public partial class betterCar : RigidBody3D
     Vector3 sphereOffset = Vector3.Down;
 
 
-    float acceleration = 45;
+    float acceleration = 65;
     float steering = 18.0f;
     float turnSpeed = 4.0f;
     float turnStopLimit = 0.75f;
