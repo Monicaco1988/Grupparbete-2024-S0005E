@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Numerics;
 
 public partial class CameraFollow : Node3D
 {
@@ -51,10 +52,12 @@ public partial class CameraFollow : Node3D
 
 
 		//foreach (checkpoint in root as area)
-		//      {
+		//      {S
 		//          area.AreaEntered += Area_AreaEntered;
 		//      }
-		//LookAt(leadingCar.Position);
+		LookAt(leadingCar.Position, Godot.Vector3.Up);
+
+		//GetNode<RigidBody3D>("/root/World/Player").LookAt(Position, Godot.Vector3.Up);
 	}
 }
 
