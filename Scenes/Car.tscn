@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvh0fwg53wpus"]
+
+[ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_ti0hk"]
+[ext_resource type="PackedScene" uid="uid://dyijotwd6pxb5" path="res://art/ambulance.glb" id="2_ytsmq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
+resource_local_to_scene = true
+bounce = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_syqvy"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0ce8"]
+albedo_color = Color(0.815686, 0.945098, 0.372549, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ofj0k"]
+material = SubResource("StandardMaterial3D_d0ce8")
+radius = 1.0
+height = 2.0
+
+[node name="Player" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_xca33")
+gravity_scale = 3.0
+angular_damp = 10.0
+script = ExtResource("1_ti0hk")
+
+[node name="CarMesh" parent="." instance=ExtResource("2_ytsmq")]
+top_level = true
+
+[node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("SphereShape3D_syqvy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("SphereMesh_ofj0k")
