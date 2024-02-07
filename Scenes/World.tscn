@@ -2,7 +2,6 @@
 
 [ext_resource type="MeshLibrary" uid="uid://bflqixg00vok3" path="res://Tiles.tres" id="2_ws7av"]
 [ext_resource type="PackedScene" uid="uid://cvh0fwg53wpus" path="res://Scenes/Car.tscn" id="3_4t1g1"]
-[ext_resource type="PackedScene" uid="uid://dnl5j48x11ivm" path="res://Scenes/flags_checkpoint.tscn" id="3_y1ebi"]
 [ext_resource type="Script" path="res://Scripts/CameraFollow.cs" id="5_wljpx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ayanr"]
@@ -29,6 +28,9 @@ resource_local_to_scene = true
 bounce = 0.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_epafc"]
+size = Vector3(200, 20, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6p7hl"]
 size = Vector3(200, 20, 50)
 
 [node name="World" type="Node3D"]
@@ -141,24 +143,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6268, 43.7515, 82.0762)
 [node name="Camera3D" type="Camera3D" parent="CameraRoot/CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -53.3316, -4.78031, -85.547)
 
-[node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, 0, 0, 0)
+[node name="Area3D" type="Area3D" parent="."]
 
-[node name="FlagsCheckpoint" type="Node3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 10, 980)
-
-[node name="Flag1" type="StaticBody3D" parent="Node3D/FlagsCheckpoint"]
-collision_layer = 0
-collision_mask = 0
-
-[node name="CheckpointBoundry" type="CollisionShape3D" parent="Node3D/FlagsCheckpoint/Flag1"]
+[node name="Checkpoint1" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, -912.134, 10.7384, 973.356)
 shape = SubResource("BoxShape3D_epafc")
 
-[node name="FlagsCheckpoint2" parent="Node3D" instance=ExtResource("3_y1ebi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 10, 930)
+[node name="Checkpoint2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, -911.768, 10.7409, 923.357)
+shape = SubResource("BoxShape3D_6p7hl")
 
-[node name="FlagsCheckpoint3" parent="Node3D" instance=ExtResource("3_y1ebi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 10, 880)
+[node name="Checkpoint3" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, -911.403, 10.7434, 873.358)
+shape = SubResource("BoxShape3D_6p7hl")
 
-[node name="FlagsCheckpoint4" parent="Node3D" instance=ExtResource("3_y1ebi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 10, 830)
+[node name="Checkpoint4" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, -911.037, 10.7459, 823.36)
+shape = SubResource("BoxShape3D_6p7hl")
