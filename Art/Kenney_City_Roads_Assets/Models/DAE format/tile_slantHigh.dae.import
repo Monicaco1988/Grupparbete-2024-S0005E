@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://beqwbojd4pxmx"
-path="res://.godot/imported/tile_slantHigh.dae-5e56fbbc02d0bc95f2ddcb5c5b257692.scn"
+path="res://.godot/imported/tile_slantHigh.dae-1899cb3c6fc166c14846e46349983a76.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/tile_slantHigh.dae"
-dest_files=["res://.godot/imported/tile_slantHigh.dae-5e56fbbc02d0bc95f2ddcb5c5b257692.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/tile_slantHigh.dae"
+dest_files=["res://.godot/imported/tile_slantHigh.dae-1899cb3c6fc166c14846e46349983a76.scn"]
 
 [params]
 

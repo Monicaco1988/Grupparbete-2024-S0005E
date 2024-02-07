@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du8pujif0nr0h"
-path="res://.godot/imported/wheelTruck.png-3d9e06dc03ce5a24714f651547aa6050.ctex"
+path="res://.godot/imported/wheelTruck.png-fb6a3976875b9f7c5646217ffdde9ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/wheelTruck.png"
-dest_files=["res://.godot/imported/wheelTruck.png-3d9e06dc03ce5a24714f651547aa6050.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/wheelTruck.png"
+dest_files=["res://.godot/imported/wheelTruck.png-fb6a3976875b9f7c5646217ffdde9ad5.ctex"]
 
 [params]
 

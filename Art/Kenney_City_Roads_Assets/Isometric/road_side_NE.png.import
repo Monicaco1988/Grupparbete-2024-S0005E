@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jcr11l0aj5pa"
-path="res://.godot/imported/road_side_NE.png-d3ceec2cf0ebfbe7c18db1a6ea9316ba.ctex"
+path="res://.godot/imported/road_side_NE.png-8551086eaaeca34edf29a71d241395e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_side_NE.png"
-dest_files=["res://.godot/imported/road_side_NE.png-d3ceec2cf0ebfbe7c18db1a6ea9316ba.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_side_NE.png"
+dest_files=["res://.godot/imported/road_side_NE.png-8551086eaaeca34edf29a71d241395e5.ctex"]
 
 [params]
 
