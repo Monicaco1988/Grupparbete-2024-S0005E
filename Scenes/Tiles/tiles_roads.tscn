@@ -177,8 +177,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_npeop")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w8f6u"]
-points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.52, -0.5, 0.5, 0, -0.5, -0.5, 0.519949, 0.5, 0.5, 0, 0.5, -0.5, 0.52, 0.499902, 0.5, 0.52, -0.5, 0.5, 0.519949, 0.5, 0.5, 0.52, 0.499902)
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5rd8"]
+size = Vector3(1, 0.0283203, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6nfr"]
 resource_name = "pavement"
@@ -327,7 +327,6 @@ visible = false
 visible = false
 
 [node name="road_bridge" type="Node3D" parent="."]
-visible = false
 
 [node name="road_bridge" type="MeshInstance3D" parent="road_bridge"]
 mesh = SubResource("ArrayMesh_jx6is")
@@ -336,7 +335,8 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="road_bridge/road_bridge"]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="road_bridge/road_bridge/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_w8f6u")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.510737, 0)
+shape = SubResource("BoxShape3D_h5rd8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="road_bridge"]
 
@@ -452,6 +452,7 @@ visible = false
 visible = false
 
 [node name="road_slantHigh" type="Node3D" parent="."]
+visible = false
 
 [node name="road_slantHigh" type="MeshInstance3D" parent="road_slantHigh"]
 mesh = SubResource("ArrayMesh_cg0tr")
