@@ -3,16 +3,21 @@ using System;
 
 public partial class CameraHelper2 : CharacterBody3D
 {
+
+	// getting the values such as position, velocity etc from the Ambulance
 	[Export]
 	public RigidBody3D player;
 
+	// setting a speed on the camera
 	[Export]
 	public int Speed { get; set; } = 10;
 
+	// setting a spatial velocity to the camera
 	private Vector3 _cameraVelocity = Vector3.Zero;
 
 	public override void _PhysicsProcess(double delta)
 	{
+		//instantiating direction Vector
 		var direction = Vector3.Zero;
 
 		GD.Print(Position.DistanceTo(player.Position));
