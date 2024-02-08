@@ -6,7 +6,7 @@ public partial class CameraFollow : Node3D
 {
 
 
-	// // import the checkpoints from the Area3D to detect which player should hav ethe camera on it
+	// The CollisionShape3D node to check for collisions
 	 [Export]
 	 public CollisionShape3D checkpoint;
 
@@ -28,10 +28,17 @@ public partial class CameraFollow : Node3D
 	{
 		//sets the camera pivot to the leading car position
 		this.GlobalPosition = leadingCar.GlobalPosition;
-	
 	}
 
+public void OnPlayerEnter(Node3D playerContainer)
+{
+	GD.Print("Collision detected with: " + playerContainer.Name);
+}
 
+public void OnPlayerExit(Node3D playerContainer)
+{	
+GD.Print("Collision exited with: " + playerContainer,Name);
+}
 
 	// private void Area_AreaEntered(Area3D area)
 	// {
@@ -48,7 +55,7 @@ public partial class CameraFollow : Node3D
 		// 	checkpointArea.AreaEntered += Area_AreaEntered;
 		// }
 
-		GD.Print(checkpoint.Position.X);
+		//GD.Print(checkpoint.Position.X);
 
 
 		//foreach (checkpoint in root as area)
