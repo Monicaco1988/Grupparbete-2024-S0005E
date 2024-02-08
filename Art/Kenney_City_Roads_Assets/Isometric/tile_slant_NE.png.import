@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0k03b1rxi7bp"
-path="res://.godot/imported/tile_slant_NE.png-ffe556dd0f8f1cb14e0d6c623656e1f0.ctex"
+path="res://.godot/imported/tile_slant_NE.png-bd06d56742b8768e78e17ae001a6e6ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/tile_slant_NE.png"
-dest_files=["res://.godot/imported/tile_slant_NE.png-ffe556dd0f8f1cb14e0d6c623656e1f0.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/tile_slant_NE.png"
+dest_files=["res://.godot/imported/tile_slant_NE.png-bd06d56742b8768e78e17ae001a6e6ec.ctex"]
 
 [params]
 
