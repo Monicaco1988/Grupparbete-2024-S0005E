@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://5nbqkokljqrv"
-path="res://.godot/imported/road_roundabout.dae-4b8d54212df0ffd994522e849a781730.scn"
+path="res://.godot/imported/road_roundabout.dae-73cd31c1b5799989d78df8431200fec4.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_roundabout.dae"
-dest_files=["res://.godot/imported/road_roundabout.dae-4b8d54212df0ffd994522e849a781730.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_roundabout.dae"
+dest_files=["res://.godot/imported/road_roundabout.dae-73cd31c1b5799989d78df8431200fec4.scn"]
 
 [params]
 

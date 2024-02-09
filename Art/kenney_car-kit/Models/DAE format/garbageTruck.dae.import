@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b27r54cew54qr"
-path="res://.godot/imported/garbageTruck.dae-72ad02d70d9f874b1f16e25e9fecf115.scn"
+path="res://.godot/imported/garbageTruck.dae-eca68745ce6ff86a7ce1e89cd74b1099.scn"
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Models/DAE format/garbageTruck.dae"
-dest_files=["res://.godot/imported/garbageTruck.dae-72ad02d70d9f874b1f16e25e9fecf115.scn"]
+source_file="res://Art/kenney_car-kit/Models/DAE format/garbageTruck.dae"
+dest_files=["res://.godot/imported/garbageTruck.dae-eca68745ce6ff86a7ce1e89cd74b1099.scn"]
 
 [params]
 
