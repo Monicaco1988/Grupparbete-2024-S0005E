@@ -46,7 +46,7 @@ GD.Print("Collision exited with: " + playerContainer,Name);
 	// 	//MoveCameraHere
 	// }
 
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		cameraRoot.GlobalPosition = cameraRoot.GlobalPosition.Lerp(leadingCar.GlobalPosition, (float)delta * cameraSmoothing);
 
