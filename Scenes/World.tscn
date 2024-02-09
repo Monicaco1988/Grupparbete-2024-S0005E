@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://mbkw3qvx3nh3"]
+[gd_scene load_steps=37 format=3 uid="uid://mbkw3qvx3nh3"]
 
 [ext_resource type="Script" path="res://Scripts/Checkpoints.cs" id="3_jayl7"]
 [ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="4_8o0ld"]
+[ext_resource type="Script" path="res://Scenes/CharacterBody3D.cs" id="4_bg2v3"]
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="4_d8o1w"]
 [ext_resource type="Script" path="res://Scripts/CameraFollow.cs" id="5_wljpx"]
 
@@ -32,6 +33,10 @@ size = Vector3(450, 110, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_epafc"]
 size = Vector3(200, 20, 98.7925)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_esxcy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ec5hd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_td2tg"]
 resource_local_to_scene = true
@@ -742,7 +747,7 @@ cameraRoot = NodePath(".")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6268, 43.7515, 82.0762)
 
 [node name="Camera3D" type="Camera3D" parent="CameraRoot/CameraPivot"]
-transform = Transform3D(0.866025, -0.353553, 0.353553, -0.0326757, 0.665576, 0.745615, -0.498931, -0.657274, 0.564853, -43.2578, -39.2277, -76.2536)
+transform = Transform3D(0.866025, -0.353553, 0.353553, -0.0326757, 0.665576, 0.745615, -0.498931, -0.657274, 0.564853, -43.109, -38.9138, -76.0158)
 fov = 88.5625
 
 [node name="Checkpoints" type="Area3D" parent="." node_paths=PackedStringArray("cameraFollow")]
@@ -897,6 +902,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 800, 0, -800)
 
 [node name="SpawnPoint" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 20.934, 980)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="SpawnPoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+script = ExtResource("4_bg2v3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPoint/CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_esxcy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SpawnPoint/CharacterBody3D/CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_ec5hd")
 
 [node name="Player" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -905, 20.934, 980)

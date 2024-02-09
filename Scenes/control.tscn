@@ -21,22 +21,32 @@ anchors_preset = 0
 offset_right = 1080.0
 offset_bottom = 648.0
 
-[node name="Start" type="Button" parent="Menu"]
+[node name="MenuButton" type="MenuButton" parent="Menu"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 648.0
+
+[node name="Start" type="Button" parent="Menu/MenuButton"]
 layout_mode = 0
 offset_left = 471.0
-offset_top = 211.0
+offset_top = 237.0
 offset_right = 637.0
-offset_bottom = 266.0
+offset_bottom = 302.0
 text = "Start"
 
-[node name="Quit" type="Button" parent="Menu"]
+[node name="Quit" type="Button" parent="Menu/MenuButton"]
 layout_mode = 0
 offset_left = 471.0
-offset_top = 304.0
+offset_top = 379.0
 offset_right = 637.0
-offset_bottom = 369.0
+offset_bottom = 444.0
 text = "Quit"
 
-[connection signal="button_down" from="Menu/Start" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="Menu/Start" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="Menu/Quit" to="." method="_on_button_2_button_down"]
+[node name="PlayerManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="button_down" from="Menu/MenuButton/Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Menu/MenuButton/Start" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Menu/MenuButton/Quit" to="." method="_on_button_2_button_down"]
