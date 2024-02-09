@@ -4,16 +4,16 @@ using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
 {
-    int id = 0;
+    public int id = 0;
     public betterCar(int id)
     {
         this.id = id;
     }
 
-    public betterCar()
-    {
-        this.id = 0;
-    }
+    //public betterCar()
+    //{
+    //    this.id = 0;
+    //}
 
     Node3D carMesh;
     Node3D bodyMesh;
