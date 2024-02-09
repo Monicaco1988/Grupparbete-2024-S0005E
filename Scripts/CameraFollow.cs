@@ -62,7 +62,7 @@ GD.Print("Collision exited with: " + playerContainer,Name);
 		//      {S
 		//          area.AreaEntered += Area_AreaEntered;
 		//      }
-		LookAt(leadingCar.Position, Godot.Vector3.Up);
+		//LookAt(leadingCar.Position, Godot.Vector3.Up);
 
 		//GetNode<RigidBody3D>("/root/World/Player").LookAt(Position, Godot.Vector3.Up);
 	}

@@ -24,7 +24,7 @@ public partial class betterCar : RigidBody3D
 
 
 
-    float acceleration = 2500;
+    float acceleration = 2100;
     float velocity;
     float steering = 18.0f;
     float turnSpeed = 4.0f;
@@ -66,7 +66,7 @@ public partial class betterCar : RigidBody3D
 
     public override void _Process(double delta)
     {
-        GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+        //GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
         velocity = this.LinearVelocity.Length();
 
         if (!groundRay.IsColliding()) //

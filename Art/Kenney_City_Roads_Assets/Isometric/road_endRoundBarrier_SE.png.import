@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw0x5wdhishat"
-path="res://.godot/imported/road_endRoundBarrier_SE.png-0686f61fdf6899e08e944523e66942a7.ctex"
+path="res://.godot/imported/road_endRoundBarrier_SE.png-aac982c0b5ecda5c8f543ac5b5df33ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_endRoundBarrier_SE.png"
-dest_files=["res://.godot/imported/road_endRoundBarrier_SE.png-0686f61fdf6899e08e944523e66942a7.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_endRoundBarrier_SE.png"
+dest_files=["res://.godot/imported/road_endRoundBarrier_SE.png-aac982c0b5ecda5c8f543ac5b5df33ec.ctex"]
 
 [params]
 
