@@ -8,22 +8,18 @@ public partial class player_manager : Node3D
 	int numberOfPlayers;
 	Array<betterCar> ambulances;
 
-    enum PlayerState
+    public enum PlayerManagerState
     {
         ACTIVE,
-		IN_ACTIVE
+        IN_ACTIVE
     }
 
-	public PlayerState GetState(PlayerState state)
+	public PlayerManagerState state = PlayerManagerState.IN_ACTIVE;
+	public void setPlayerManagerState(PlayerManagerState setState)
 	{
-		switch (state)
-		{
-            case 0:
-                return PlayerState.ACTIVE;
-            case 1:
-                return PlayerState.IN_ACTIVE;
-        }		
+		this.state = setState;
 	}
+
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -34,16 +30,27 @@ public partial class player_manager : Node3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		var controllers = Input.GetConnectedJoypads();
+        if (this.state == PlayerManagerState.IN_ACTIVE)
+        {
+			return;
+        }
+        var controllers = Input.GetConnectedJoypads();
 
+		foreach ( var controller in controllers )
+		{
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Start))
+            {
 
-		playerScene.Instantiate();
+            }
+        }
+       
+        playerScene.Instantiate();
 	}
 
 	public void CreatePlayer(int playerId)
 	{
 		var player = this.playerScene.Instantiate<betterCar>();
-		player.id = playerId;
+		player.setId(playerId);
 		this.ambulances.Add(player);
 	}
 	

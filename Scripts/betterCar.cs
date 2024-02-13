@@ -5,15 +5,21 @@ using System.Security.Cryptography.X509Certificates;
 public partial class betterCar : RigidBody3D
 {
     public int id = 0;
-    public betterCar(int id)
+    //public betterCar(int id)
+    //{
+    //    this.id = id;
+    //}
+
+    public void setId(int newId)
     {
-        this.id = id;
+        this.id = newId;
     }
 
-    //public betterCar()
-    //{
-    //    this.id = 0;
-    //}
+    public enum PlayerState
+    {
+        ACTIVE,
+        IN_ACTIVE
+    }
 
     Node3D carMesh;
     Node3D bodyMesh;
@@ -21,6 +27,7 @@ public partial class betterCar : RigidBody3D
     MeshInstance3D rightWheel;
     MeshInstance3D leftWheel;
     Vector3 sphereOffset = Vector3.Down;
+    PlayerState instanceState = PlayerState.IN_ACTIVE;
 
 
 
@@ -35,6 +42,29 @@ public partial class betterCar : RigidBody3D
     float gasInput;
     float turnInput2;
     bool isDrifting = false;
+
+   
+
+    public PlayerState GetState(PlayerState state)
+    {
+        PlayerState returnState = PlayerState.IN_ACTIVE;
+        switch (state)
+        {
+            case PlayerState.ACTIVE:
+                returnState = PlayerState.ACTIVE;
+                break;
+
+            case PlayerState.IN_ACTIVE:
+                returnState = PlayerState.IN_ACTIVE;
+                break;
+        }
+        return returnState;
+    }
+
+    public void SetState(PlayerState state)
+    {
+        this.instanceState = state;    
+    }
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
