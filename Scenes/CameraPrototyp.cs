@@ -19,11 +19,11 @@ public partial class CameraPrototyp : Marker3D
 	{
 		if(Input.IsActionJustPressed("zoomIn"))
 		{
-			
+			//GetNode<Camera3D>("Camera3D").Position =
 		}
 		if(Input.IsActionJustPressed("zoomOut"))
 		{
-			
+			//GetNode<Camera3D>("Camera3D").Position =
 		}
 		if(Input.IsActionJustPressed("pivotForward"))
 		{
@@ -41,5 +41,6 @@ public partial class CameraPrototyp : Marker3D
 		{
 			this.RotateY(0.1f);
 		}
+		
 	}
 }
