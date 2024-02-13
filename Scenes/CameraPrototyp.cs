@@ -17,29 +17,21 @@ public partial class CameraPrototyp : Marker3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(Input.IsActionJustPressed("zoomIn"))
+		/*if(Input.IsActionJustPressed("zoomIn"))
 		{
 			//GetNode<Camera3D>("Camera3D").Position =
 		}
 		if(Input.IsActionJustPressed("zoomOut"))
 		{
 			//GetNode<Camera3D>("Camera3D").Position =
-		}
-		if(Input.IsActionJustPressed("pivotForward"))
-		{
-			this.RotateX(-0.1f); 
-		}
-		if(Input.IsActionJustPressed("pivotBack"))
-		{
-			this.RotateX(0.1f);
-		}
+		}*/
 		if(Input.IsActionJustPressed("pivotRight"))
 		{
-			this.RotateY(-0.1f);
+			this.RotateY(0.1f);
 		}
 		if(Input.IsActionJustPressed("pivotLeft"))
 		{
-			this.RotateY(0.1f);
+			this.RotateY(-0.1f);
 		}
 		
 	}
