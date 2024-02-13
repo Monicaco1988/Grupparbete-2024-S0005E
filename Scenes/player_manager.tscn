@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=4 format=3 uid="uid://c52ahpitgg1b0"]
+
+[ext_resource type="Script" path="res://Scenes/player_manager.cs" id="1_fqr60"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_igyj8"]
 size = Vector3(11, 1, 11)
@@ -7,6 +9,7 @@ size = Vector3(11, 1, 11)
 points = PackedVector3Array(-5.5, -0.5, -5.5, -5.5, 0.5, -5.5, 5.5, -0.5, -5.5, -5.5, -0.5, 5.5, -5.5, 0.5, 5.5, 5.5, 0.5, -5.5, 5.5, -0.5, 5.5, 5.5, 0.5, 5.5)
 
 [node name="PlayerManager" type="Node3D"]
+script = ExtResource("1_fqr60")
 
 [node name="SpawnPlatform" type="StaticBody3D" parent="."]
 
@@ -17,3 +20,9 @@ mesh = SubResource("BoxMesh_igyj8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("ConvexPolygonShape3D_0pybw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0157074, 0.999877, 0, -0.999877, -0.0157074, 0, 5.33467, 0)

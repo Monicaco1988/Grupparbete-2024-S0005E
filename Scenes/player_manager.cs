@@ -6,7 +6,8 @@ public partial class player_manager : Node3D
 {
 	PackedScene playerScene;
 	int numberOfPlayers;
-	Array<betterCar> ambulances;
+	Array<betterCar> ambulances = new Array<betterCar>();
+    public PlayerManagerState state = PlayerManagerState.ACTIVE;
 
     public enum PlayerManagerState
     {
@@ -14,7 +15,7 @@ public partial class player_manager : Node3D
         IN_ACTIVE
     }
 
-	public PlayerManagerState state = PlayerManagerState.IN_ACTIVE;
+	
 	public void setPlayerManagerState(PlayerManagerState setState)
 	{
 		this.state = setState;
@@ -25,26 +26,51 @@ public partial class player_manager : Node3D
     public override void _Ready()
 	{
 		playerScene = GD.Load<PackedScene>("res://Scenes/Car.tscn");
+		GD.Print("ready");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		
         if (this.state == PlayerManagerState.IN_ACTIVE)
         {
 			return;
         }
+		
         var controllers = Input.GetConnectedJoypads();
 
 		foreach ( var controller in controllers )
 		{
+			bool playerStateFlag = false;
             if (Input.IsJoyButtonPressed(controller, JoyButton.Start))
             {
-
+                if (ambulances.Count != 0)
+                {
+                    foreach (var ambulance in ambulances)
+                    {
+                        if (ambulance.id == controller)
+                        {
+                            playerStateFlag = true;
+                        }
+                    }
+                }
+                
+                
+                //CreatePlayer(controller);
+                if (!playerStateFlag)
+                {
+                    var player = playerScene.Instantiate<betterCar>();
+                    AddChild(player);
+                    player.setId(controller);
+                    player.SetState(betterCar.PlayerState.ACTIVE);
+                    this.ambulances.Add(player);
+                    GD.Print("player created, with player id: " + controller);
+                }  
             }
         }
        
-        playerScene.Instantiate();
+        
 	}
 
 	public void CreatePlayer(int playerId)

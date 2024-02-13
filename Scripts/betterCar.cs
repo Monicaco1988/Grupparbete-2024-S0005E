@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
 {
-    public int id = 0;
+    public int id = -1;
     //public betterCar(int id)
     //{
     //    this.id = id;
@@ -27,7 +27,7 @@ public partial class betterCar : RigidBody3D
     MeshInstance3D rightWheel;
     MeshInstance3D leftWheel;
     Vector3 sphereOffset = Vector3.Down;
-    PlayerState instanceState = PlayerState.IN_ACTIVE;
+    PlayerState state = PlayerState.IN_ACTIVE;
 
 
 
@@ -61,9 +61,9 @@ public partial class betterCar : RigidBody3D
         return returnState;
     }
 
-    public void SetState(PlayerState state)
+    public void SetState(PlayerState newState)
     {
-        this.instanceState = state;    
+        this.state = newState;    
     }
 
     // Called when the node enters the scene tree for the first time.
