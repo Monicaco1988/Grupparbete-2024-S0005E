@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
 {
-<<<<<<< Updated upstream
+
 	public int id = -1;
 	//public betterCar(int id)
 	//{
@@ -15,14 +15,7 @@ public partial class betterCar : RigidBody3D
 	{
 		this.id = newId;
 	}
-=======
-    public int id = -1;
-    
-    public void setId(int newId)
-    {
-        this.id = newId;
-    }
->>>>>>> Stashed changes
+
 
 	public enum PlayerState
 	{
@@ -75,16 +68,6 @@ public partial class betterCar : RigidBody3D
 		this.state = newState;    
 	}
 
-<<<<<<< Updated upstream
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		carMesh = GetNode<Node3D>("CarMesh");
-		bodyMesh = GetNode<Node3D>("CarMesh/ambulance");
-		groundRay = GetNode<RayCast3D>("CarMesh/RayCast3D");
-		rightWheel = GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
-		leftWheel = GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
-=======
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -93,7 +76,7 @@ public partial class betterCar : RigidBody3D
         groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
         rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
         leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
->>>>>>> Stashed changes
+
 
 	}
 
