@@ -1,10 +1,21 @@
-[gd_scene load_steps=22 format=3 uid="uid://dg1x2nelajj1a"]
+[gd_scene load_steps=22 format=3 uid="uid://ixf7snc0lnvu"]
 
-[ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_ti0hk"]
+[ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
 bounce = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_syqvy"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0ce8"]
+albedo_color = Color(0.815686, 0.945098, 0.372549, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ofj0k"]
+material = SubResource("StandardMaterial3D_d0ce8")
+radius = 1.0
+height = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lg1a"]
 resource_name = "paintWhite"
@@ -503,25 +514,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q6f1c")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_syqvy"]
-radius = 1.0
+[node name="PlayerRoot" type="Node3D"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0ce8"]
-albedo_color = Color(0.815686, 0.945098, 0.372549, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_ofj0k"]
-material = SubResource("StandardMaterial3D_d0ce8")
-radius = 1.0
-height = 2.0
-
-[node name="Player" type="RigidBody3D"]
+[node name="Player" type="RigidBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_xca33")
 gravity_scale = 3.0
 angular_damp = 10.0
-script = ExtResource("1_ti0hk")
+script = ExtResource("1_wd3ea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+visible = false
+shape = SubResource("SphereShape3D_syqvy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D"]
+mesh = SubResource("SphereMesh_ofj0k")
 
 [node name="CarMesh" type="Node3D" parent="."]
-top_level = true
 
 [node name="ambulance" type="Node3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -563,10 +571,3 @@ skeleton = NodePath("")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-visible = false
-shape = SubResource("SphereShape3D_syqvy")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
-mesh = SubResource("SphereMesh_ofj0k")

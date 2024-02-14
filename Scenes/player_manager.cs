@@ -6,7 +6,9 @@ public partial class player_manager : Node3D
 {
 	PackedScene playerScene;
 	int numberOfPlayers;
+
 	Array<betterCar> ambulances = new Array<betterCar>();
+    [Export] Array<Marker3D> Spawnpoints = new Array<Marker3D>();
     public PlayerManagerState state = PlayerManagerState.ACTIVE;
 
     public enum PlayerManagerState
@@ -25,7 +27,7 @@ public partial class player_manager : Node3D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
-		playerScene = GD.Load<PackedScene>("res://Scenes/Car.tscn");
+		playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
 		GD.Print("ready");
 	}
 
@@ -56,28 +58,26 @@ public partial class player_manager : Node3D
                     }
                 }
                 
-                
-                //CreatePlayer(controller);
                 if (!playerStateFlag)
                 {
-                    var player = playerScene.Instantiate<betterCar>();
-                    AddChild(player);
+
+                    GD.Print(playerScene.ResourcePath);
+
+                    var playerRoot = playerScene.Instantiate<Node3D>();
+                    AddChild(playerRoot);
+                    playerRoot.GlobalPosition = Spawnpoints[controller].GlobalPosition;
+                    var player = playerRoot.GetNode("Player") as betterCar;
+                    
                     player.setId(controller);
                     player.SetState(betterCar.PlayerState.ACTIVE);
                     this.ambulances.Add(player);
+                    numberOfPlayers++;
                     GD.Print("player created, with player id: " + controller);
                 }  
             }
         }
        
         
-	}
-
-	public void CreatePlayer(int playerId)
-	{
-		var player = this.playerScene.Instantiate<betterCar>();
-		player.setId(playerId);
-		this.ambulances.Add(player);
 	}
 	
 }
