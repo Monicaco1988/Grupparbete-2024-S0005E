@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bwaqv8h5govwf"
-path="res://.godot/imported/light_square.dae-0818085bee7d315b1e4226e420e2fe36.scn"
+path="res://.godot/imported/light_square.dae-cee48ca6a5d8c888088f0c91379f9b45.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/light_square.dae"
-dest_files=["res://.godot/imported/light_square.dae-0818085bee7d315b1e4226e420e2fe36.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/light_square.dae"
+dest_files=["res://.godot/imported/light_square.dae-cee48ca6a5d8c888088f0c91379f9b45.scn"]
 
 [params]
 

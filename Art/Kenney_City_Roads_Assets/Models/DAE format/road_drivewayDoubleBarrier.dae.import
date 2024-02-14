@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://drfpb77qtuxwj"
-path="res://.godot/imported/road_drivewayDoubleBarrier.dae-2831d93bbe4a30634473336334ddb0c1.scn"
+path="res://.godot/imported/road_drivewayDoubleBarrier.dae-9e5d90857173331fad053b2a936476d6.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_drivewayDoubleBarrier.dae"
-dest_files=["res://.godot/imported/road_drivewayDoubleBarrier.dae-2831d93bbe4a30634473336334ddb0c1.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_drivewayDoubleBarrier.dae"
+dest_files=["res://.godot/imported/road_drivewayDoubleBarrier.dae-9e5d90857173331fad053b2a936476d6.scn"]
 
 [params]
 

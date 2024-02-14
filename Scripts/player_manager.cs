@@ -27,7 +27,7 @@ public partial class player_manager : Node3D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
 	{
-		playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
+        playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
 		GD.Print("ready");
 	}
 

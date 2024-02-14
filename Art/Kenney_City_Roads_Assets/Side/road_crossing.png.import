@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwhtk4215q0r3"
-path="res://.godot/imported/road_crossing.png-74d2875865aa382fdf8c234816aca205.ctex"
+path="res://.godot/imported/road_crossing.png-d9da7a4ffbd70c4d333e732d5722a6e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Side/road_crossing.png"
-dest_files=["res://.godot/imported/road_crossing.png-74d2875865aa382fdf8c234816aca205.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Side/road_crossing.png"
+dest_files=["res://.godot/imported/road_crossing.png-d9da7a4ffbd70c4d333e732d5722a6e5.ctex"]
 
 [params]
 
