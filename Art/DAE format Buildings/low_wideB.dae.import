@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cmv6xv5wm453d"
-path="res://.godot/imported/low_wideB.dae-b9e04e9c1e916e2c9373fc4dd6c65a25.scn"
+path="res://.godot/imported/low_wideB.dae-b64735e2bb938aaaec7598362b6e1ae7.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/low_wideB.dae"
-dest_files=["res://.godot/imported/low_wideB.dae-b9e04e9c1e916e2c9373fc4dd6c65a25.scn"]
+source_file="res://art/DAE format Buildings/low_wideB.dae"
+dest_files=["res://.godot/imported/low_wideB.dae-b64735e2bb938aaaec7598362b6e1ae7.scn"]
 
 [params]
 

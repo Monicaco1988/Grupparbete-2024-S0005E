@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7ck40n5fcdj3"
-path="res://.godot/imported/road_bendSidewalk_SW.png-bca6e8f2f38a930aa74d05c787b51d56.ctex"
+path="res://.godot/imported/road_bendSidewalk_SW.png-8f05205751fe8cd63c903d43b432382c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_bendSidewalk_SW.png"
-dest_files=["res://.godot/imported/road_bendSidewalk_SW.png-bca6e8f2f38a930aa74d05c787b51d56.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_bendSidewalk_SW.png"
+dest_files=["res://.godot/imported/road_bendSidewalk_SW.png-8f05205751fe8cd63c903d43b432382c.ctex"]
 
 [params]
 

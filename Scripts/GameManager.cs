@@ -5,6 +5,13 @@ using static System.Formats.Asn1.AsnWriter;
 
 public partial class GameManager : Control
 {
+
+    // global accesspoint so that all subclasses can get access to all variables in this class. In my example this is good if i want to access the GameState State in for example MenuManager and change this State to -> LevelManager so that
+    // it is accessable from everywhere in my program. this make the class GameManager variables global. This also makes the class a singleton. look into singletons 
+    public static GameManager _instance;
+
+    public float something;
+
     //calls GameState enum list to makes a class for the different states that the game has
     public GameState State;
 
@@ -12,6 +19,13 @@ public partial class GameManager : Control
     //to this signal -> UpdateGameState2"
     [Signal]
     public delegate void UpdateGameStateSignalEventHandler(GameState newState);
+
+
+    // EnterTree = Awake (in unity) this will be run before Ready function. it will sett the _instance to the GameManager. this gives access to all variables inside GameManager class.
+    public override void _EnterTree()
+    {
+        _instance = this;
+    }
 
     public override void _Ready()
     {
@@ -60,7 +74,8 @@ public partial class GameManager : Control
 
     private void HandlePlayerSelect()
     {
-        throw new NotImplementedException();
+
+        //throw new NotImplementedException();
     }
 
     public void HandleMenuSelect()

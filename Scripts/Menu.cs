@@ -18,8 +18,12 @@ public partial class Menu : Control
 
     private void UpdateGameState(GameState newState)
     {
-        GD.Print("Working"); 
-        
+        GD.Print("Working");
+
+        // Here is an example that i can get any variable from GameManager. Then i can use it inside this subclass if i want. I might want to change the State from inside the MenuManager and then send the State back with the EMIT function.
+        //GameManager thiss = GameManager._instance;
+        //thiss.State++;
+
         //throw new NotImplementedException();
     }
 
@@ -35,10 +39,11 @@ public partial class Menu : Control
         getSignalFromGameManager.EmitSignal(nameof(getSignalFromGameManager.UpdateGameStateSignal), 2); // if this give an error change to 1.
 
 
+        // jag vill unsubscriba denna för att det inte ska bli en null när "subject" skickar en signal 
+        getSignalFromGameManager.UpdateGameStateSignal -= UpdateGameState;
 
         //Removes the MenuManager when done
         QueueFree();
-
         //this.Hide(); No need to hide it because im removing it
 
     }

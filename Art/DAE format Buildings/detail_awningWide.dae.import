@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c268vusgxe7e5"
-path="res://.godot/imported/detail_awningWide.dae-8ba53cfebdd5ed4f81fb5d3d22c40af5.scn"
+path="res://.godot/imported/detail_awningWide.dae-986411027544953903e830070170f093.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/detail_awningWide.dae"
-dest_files=["res://.godot/imported/detail_awningWide.dae-8ba53cfebdd5ed4f81fb5d3d22c40af5.scn"]
+source_file="res://art/DAE format Buildings/detail_awningWide.dae"
+dest_files=["res://.godot/imported/detail_awningWide.dae-986411027544953903e830070170f093.scn"]
 
 [params]
 

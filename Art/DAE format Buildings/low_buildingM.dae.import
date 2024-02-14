@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brolukw106okb"
-path="res://.godot/imported/low_buildingM.dae-b3824350137e46919c847d56c7891f7b.scn"
+path="res://.godot/imported/low_buildingM.dae-6e4748f7fbb193ff67496ddea807b487.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/low_buildingM.dae"
-dest_files=["res://.godot/imported/low_buildingM.dae-b3824350137e46919c847d56c7891f7b.scn"]
+source_file="res://art/DAE format Buildings/low_buildingM.dae"
+dest_files=["res://.godot/imported/low_buildingM.dae-6e4748f7fbb193ff67496ddea807b487.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://batatdjn7ux8m"
-path="res://.godot/imported/detail_overhangWide.dae-18e66b955852700029da643a0997f467.scn"
+path="res://.godot/imported/detail_overhangWide.dae-7113fe91dc35660edef7381af26f6d65.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/detail_overhangWide.dae"
-dest_files=["res://.godot/imported/detail_overhangWide.dae-18e66b955852700029da643a0997f467.scn"]
+source_file="res://art/DAE format Buildings/detail_overhangWide.dae"
+dest_files=["res://.godot/imported/detail_overhangWide.dae-7113fe91dc35660edef7381af26f6d65.scn"]
 
 [params]
 

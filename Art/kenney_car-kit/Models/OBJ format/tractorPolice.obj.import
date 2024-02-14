@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dbhl002kbkkwg"
-path="res://.godot/imported/tractorPolice.obj-aba9a87d71934bfe7ae556a6489c68eb.mesh"
+path="res://.godot/imported/tractorPolice.obj-19273ca671f77f58ec7a39a024ba65b7.mesh"
 
 [deps]
 
-files=["res://.godot/imported/tractorPolice.obj-aba9a87d71934bfe7ae556a6489c68eb.mesh"]
+files=["res://.godot/imported/tractorPolice.obj-19273ca671f77f58ec7a39a024ba65b7.mesh"]
 
-source_file="res://Art/kenney_car-kit/Models/OBJ format/tractorPolice.obj"
-dest_files=["res://.godot/imported/tractorPolice.obj-aba9a87d71934bfe7ae556a6489c68eb.mesh", "res://.godot/imported/tractorPolice.obj-aba9a87d71934bfe7ae556a6489c68eb.mesh"]
+source_file="res://art/kenney_car-kit/Models/OBJ format/tractorPolice.obj"
+dest_files=["res://.godot/imported/tractorPolice.obj-19273ca671f77f58ec7a39a024ba65b7.mesh", "res://.godot/imported/tractorPolice.obj-19273ca671f77f58ec7a39a024ba65b7.mesh"]
 
 [params]
 

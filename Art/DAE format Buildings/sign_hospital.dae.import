@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mi4hgtr8t325"
-path="res://.godot/imported/sign_hospital.dae-d934b5fefd3df845318150a8328d7c2a.scn"
+path="res://.godot/imported/sign_hospital.dae-6687b680b583014b96024f17bf805775.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/sign_hospital.dae"
-dest_files=["res://.godot/imported/sign_hospital.dae-d934b5fefd3df845318150a8328d7c2a.scn"]
+source_file="res://art/DAE format Buildings/sign_hospital.dae"
+dest_files=["res://.godot/imported/sign_hospital.dae-6687b680b583014b96024f17bf805775.scn"]
 
 [params]
 

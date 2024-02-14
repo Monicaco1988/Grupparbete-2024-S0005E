@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0egpugi6f6jo"
-path="res://.godot/imported/road_slantCurveBarrier_SW.png-d58f4646760702fc478efb119f21bf68.ctex"
+path="res://.godot/imported/road_slantCurveBarrier_SW.png-e250dbcec496d1bb815feafd833dbc58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_slantCurveBarrier_SW.png"
-dest_files=["res://.godot/imported/road_slantCurveBarrier_SW.png-d58f4646760702fc478efb119f21bf68.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_slantCurveBarrier_SW.png"
+dest_files=["res://.godot/imported/road_slantCurveBarrier_SW.png-e250dbcec496d1bb815feafd833dbc58.ctex"]
 
 [params]
 

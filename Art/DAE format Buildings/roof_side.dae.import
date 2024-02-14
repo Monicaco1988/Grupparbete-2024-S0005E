@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1poal5chyl45"
-path="res://.godot/imported/roof_side.dae-fa2488fd7f30a6de0e2b99a55f93353e.scn"
+path="res://.godot/imported/roof_side.dae-402b1ca13143c36749bce2fb0d2b4cb7.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/roof_side.dae"
-dest_files=["res://.godot/imported/roof_side.dae-fa2488fd7f30a6de0e2b99a55f93353e.scn"]
+source_file="res://art/DAE format Buildings/roof_side.dae"
+dest_files=["res://.godot/imported/roof_side.dae-402b1ca13143c36749bce2fb0d2b4cb7.scn"]
 
 [params]
 

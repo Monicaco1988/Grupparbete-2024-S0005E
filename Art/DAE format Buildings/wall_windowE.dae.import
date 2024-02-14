@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b6o2bg64qsfq1"
-path="res://.godot/imported/wall_windowE.dae-3eaf5fb4ae03d5e758ffdbfe424694fe.scn"
+path="res://.godot/imported/wall_windowE.dae-0b35fa2df14bc9bf1f196e1fc05d10e1.scn"
 
 [deps]
 
-source_file="res://Art/DAE format Buildings/wall_windowE.dae"
-dest_files=["res://.godot/imported/wall_windowE.dae-3eaf5fb4ae03d5e758ffdbfe424694fe.scn"]
+source_file="res://art/DAE format Buildings/wall_windowE.dae"
+dest_files=["res://.godot/imported/wall_windowE.dae-0b35fa2df14bc9bf1f196e1fc05d10e1.scn"]
 
 [params]
 
