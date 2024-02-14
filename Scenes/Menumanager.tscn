@@ -13,8 +13,8 @@ subpixel_positioning = 0
 [node name="MenuManager" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 1085.0
+offset_bottom = 648.0
 script = ExtResource("1_brujs")
 
 [node name="TextureRect" type="TextureRect" parent="."]

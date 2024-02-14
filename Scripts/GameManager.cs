@@ -36,15 +36,22 @@ public partial class GameManager : Node
 
     private void HandleLevelSelect()
     {
-        throw new NotImplementedException();
+        var sceneWorld = ResourceLoader.Load<PackedScene>("res://Scenes/world_test_1.tscn").Instantiate<Node3D>();
+        AddChild(sceneWorld);
     }
     private void HandlePlayerSelect()
     {
         GD.Print("hi there, seems fine");
-        //throw new NotImplementedException();
+        //not doing his right now
+        //var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
+        //AddChild(sceneplayer_manager);
     }
     private void HandleMenuSelect()
     {
+        var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate<Control>();
+        AddChild(sceneMenu);
+        var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
+        AddChild(sceneplayer_manager);
     }
 
     public override void _UnhandledInput(InputEvent @event)

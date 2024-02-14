@@ -8,11 +8,11 @@ size = Vector3(11, 1, 11)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0pybw"]
 points = PackedVector3Array(-5.5, -0.5, -5.5, -5.5, 0.5, -5.5, 5.5, -0.5, -5.5, -5.5, -0.5, 5.5, -5.5, 0.5, 5.5, 5.5, 0.5, -5.5, 5.5, -0.5, 5.5, 5.5, 0.5, 5.5)
 
-[node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
+[node name="PlayerManager" type="Node3D"]
 script = ExtResource("1_fqr60")
-Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4")]
 
 [node name="SpawnPlatform" type="StaticBody3D" parent="."]
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -24,18 +24,24 @@ shape = SubResource("ConvexPolygonShape3D_0pybw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0157074, 0.999877, 0, -0.999877, -0.0157074, 0, 5.33467, 0)
+visible = false
 
 [node name="SpawnPoint1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0, -2.71861)
+visible = false
 
 [node name="SpawnPoint2" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55301, 0, -2.26245)
+visible = false
 
 [node name="SpawnPoint3" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 0, 2.68194)
+visible = false
 
 [node name="SpawnPoint4" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 0, 2.66987)
+visible = false

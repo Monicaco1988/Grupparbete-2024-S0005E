@@ -27,7 +27,7 @@ public partial class MenuManager : Control
     public void OnButtonPressed() // when pressing Start the State should change to PlayerState but now it would be nice with whichever tho...
     {
 
-        _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 1);
+        _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 2);
 
         _GetSignalFromGameManager.UpdateGameState2 -= Test2;
         QueueFree();
