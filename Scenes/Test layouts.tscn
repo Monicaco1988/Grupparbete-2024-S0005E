@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://dge02kxuf05nq"]
 
+[ext_resource type="Script" path="res://Scenes/Testlayouts.cs" id="1_72h4c"]
 [ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="2_4xm81"]
-[ext_resource type="PackedScene" uid="uid://dyijotwd6pxb5" path="res://ambulance/ambulance.glb" id="2_q3i21"]
 [ext_resource type="Script" path="res://Scenes/CameraPrototyp.cs" id="3_j8a12"]
 [ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="3_xvc7w"]
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="5_lumm0"]
@@ -533,6 +533,7 @@ radius = 1.0
 height = 2.0
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_72h4c")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.948202, -0.157811, -0.275698, 0.314023, 0.59675, 0.73843, 0.0479906, -0.786756, 0.615395, 0, 180.072, 0)
@@ -573,11 +574,14 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="ambulance3" parent="." instance=ExtResource("2_q3i21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -397.011, 0.5, 790.892)
-
-[node name="ambulance4" parent="." instance=ExtResource("2_q3i21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6445, 0.5, 792.418)
+[node name="GridMap (XL)" type="GridMap" parent="."]
+mesh_library = ExtResource("2_4xm81")
+cell_size = Vector3(40, 0.1, 40)
+cell_scale = 40.0
+data = {
+"cells": PackedInt32Array(65520, 9, 1441841, 65520, 8, 1441841, 65520, 7, 1441841, 65521, 6, 655409, 65522, 7, 1048625, 65523, 8, 49, 65524, 7, 1441841, 65524, 6, 1441841, 65524, 5, 1441841, 65524, 4, 1441841, 65523, 3, 655409, 65522, 3, 655409, 65521, 3, 655409, 65520, 2, 1048625, 65520, 1, 1048625, 65521, 0, 49, 65522, 0, 49, 65523, 0, 49, 65524, 1, 1441841, 65525, 2, 655409, 65526, 2, 655409, 65527, 1, 1048625, 65527, 65535, 1048625, 65527, 0, 1048625, 65527, 65534, 1048625, 65527, 65532, 1048625, 65527, 65533, 1048625, 65526, 65531, 49, 65525, 65529, 1441841, 65525, 65530, 1441841, 65526, 65528, 655409, 65527, 65528, 655409, 65528, 65527, 1048625, 65520, 6, 0, 65522, 6, 1441792, 65522, 8, 1048576, 65524, 8, 655360, 65524, 3, 1441819, 65520, 3, 1048576, 65520, 0, 0, 65524, 0, 1441792, 65524, 2, 1048603, 65527, 2, 655360, 65527, 65531, 1441792, 65525, 65531, 1048576, 65525, 65528, 0, 65528, 65528, 655360, 131056, 9, 655410, 131056, 8, 655410, 131056, 7, 655410, 131057, 6, 1048626, 131058, 7, 50, 131059, 8, 1441842, 131060, 7, 655410, 131060, 6, 655410, 131060, 5, 655410, 131060, 4, 655410, 131059, 3, 1048626, 131058, 3, 1048626, 131057, 3, 1048626, 131056, 2, 50, 131056, 1, 50, 131057, 0, 1441842, 131058, 0, 1441842, 131059, 0, 1441842, 131062, 2, 1048626, 131063, 0, 50, 131063, 1, 50, 131063, 65535, 50, 131063, 65534, 50, 131063, 65533, 50, 131063, 65532, 50, 131062, 65531, 1441842, 131061, 65530, 655410, 131061, 65529, 655410, 131062, 65528, 1048626, 131063, 65528, 1048626, 131064, 65527, 50, 131060, 8, 655361, 131058, 8, 1048577, 131058, 6, 1441793, 131056, 6, 1, 131060, 3, 1441817, 131056, 3, 1048577, 131056, 0, 1, 131060, 0, 1441793, 131060, 2, 1048601, 131063, 2, 655361, 131063, 65531, 1441793, 131061, 65531, 1048577, 131061, 65528, 1, 131064, 65528, 655361, 131060, 1, 655410, 131061, 2, 1048626)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Obstacles" type="Node3D" parent="."]
 transform = Transform3D(29.575, 0, 0, 0, 29.575, 0, 0, 0, 29.575, -700.154, 0.5, 656.292)
@@ -678,8 +682,32 @@ transform = Transform3D(0.085, 0, 0, 0, 0.255, 0, 0, 0, 0.555, 1.33895, 0.018, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Cone wall4/StaticBody3D"]
 shape = SubResource("BoxShape3D_pty0t")
 
+[node name="Cone wall5" type="Node3D" parent="Obstacles"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 7.70102, 0, -20.8409)
+
+[node name="construction_pylon6" parent="Obstacles/Cone wall5" instance=ExtResource("3_xvc7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34001, 0, 0)
+
+[node name="construction_pylon7" parent="Obstacles/Cone wall5" instance=ExtResource("3_xvc7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34001, 0, -0.317293)
+
+[node name="construction_pylon8" parent="Obstacles/Cone wall5" instance=ExtResource("3_xvc7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34001, 0, -0.211172)
+
+[node name="construction_pylon9" parent="Obstacles/Cone wall5" instance=ExtResource("3_xvc7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34001, 0, -0.0969887)
+
+[node name="construction_pylon10" parent="Obstacles/Cone wall5" instance=ExtResource("3_xvc7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34001, 0, -0.421444)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Obstacles/Cone wall5"]
+transform = Transform3D(0.085, 0, 0, 0, 0.255, 0, 0, 0, 0.555, 1.33895, 0.018, -0.208965)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Cone wall5/StaticBody3D"]
+shape = SubResource("BoxShape3D_pty0t")
+
 [node name="Player" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.58463, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0656, 6.12724, 799.886)
 physics_material_override = SubResource("PhysicsMaterial_ugtr2")
 gravity_scale = 3.0
 angular_damp = 10.0

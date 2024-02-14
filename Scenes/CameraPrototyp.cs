@@ -34,5 +34,6 @@ public partial class CameraPrototyp : Marker3D
 			this.RotateY(-0.1f);
 		}
 		
+		
 	}
 }
