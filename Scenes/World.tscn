@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://mbkw3qvx3nh3"]
+[gd_scene load_steps=37 format=3 uid="uid://mbkw3qvx3nh3"]
 
+[ext_resource type="Script" path="res://Scenes/World.cs" id="1_ebfj7"]
 [ext_resource type="Script" path="res://Scripts/Checkpoints.cs" id="3_jayl7"]
 [ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="4_8o0ld"]
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="4_d8o1w"]
@@ -545,7 +546,14 @@ material = SubResource("StandardMaterial3D_mjywp")
 radius = 1.0
 height = 2.0
 
+[sub_resource type="Theme" id="Theme_moe0d"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_grjcx"]
+default_font_size = 20
+
 [node name="World" type="Node3D"]
+script = ExtResource("1_ebfj7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.496777, 0.867878, 0, -0.867878, 0.496777, 0, 180.072, 0)
@@ -732,10 +740,9 @@ shape = SubResource("BoxShape3D_bvwhl")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayBoundires/BoundaryWall14/CollisionShape3D"]
 mesh = SubResource("BoxMesh_sga0u")
 
-[node name="CameraRoot" type="Marker3D" parent="." node_paths=PackedStringArray("cameraRoot")]
+[node name="CameraRoot" type="Marker3D" parent="."]
 visible = false
 script = ExtResource("5_wljpx")
-cameraRoot = NodePath("")
 
 [node name="CameraPivot" type="Node3D" parent="CameraRoot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6268, 43.7515, 82.0762)
@@ -744,9 +751,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6268, 43.7515, 82.0762)
 transform = Transform3D(1, 0, 0, 0, 0.195141, 0.980775, 0, -0.980775, 0.195141, -48.4747, -33.3391, -83.8642)
 fov = 131.817
 
-[node name="Checkpoints" type="Area3D" parent="." node_paths=PackedStringArray("cameraFollow")]
+[node name="Checkpoints" type="Area3D" parent="."]
 script = ExtResource("3_jayl7")
-cameraFollow = NodePath("")
 
 [node name="Checkpoint1" type="CollisionShape3D" parent="Checkpoints"]
 transform = Transform3D(0.999973, 0.00086969, -0.0073135, -0.000870079, 1, -5.00143e-05, 0.00731346, 5.63754e-05, 0.999973, -913.418, 13.1797, 947.213)
@@ -958,3 +964,56 @@ mesh = SubResource("SphereMesh_ofj0k")
 transform = Transform3D(-0.0297709, 0, 0.999557, 0, 1, 0, -0.999557, 0, -0.0297709, 9.77091, -2.52414, 0)
 top_level = true
 current = true
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menuBackground" type="ColorRect" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.305882, 0.235294, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="MainMenu/menuBackground"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -104.0
+offset_right = 1.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_moe0d")
+text = "TBD: DYING GRANDMAS
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pressToStartLabel" type="Label" parent="MainMenu/menuBackground"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -49.5
+offset_right = 2.0
+offset_bottom = -21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_grjcx")
+text = "Press \"start\" to start!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
