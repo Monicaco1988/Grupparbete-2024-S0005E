@@ -27,10 +27,33 @@ public partial class MenuManager : Control
     public void OnButtonPressed() // when pressing Start the State should change to PlayerState but now it would be nice with whichever tho...
     {
 
-        _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 2);
+        _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 1);
 
         _GetSignalFromGameManager.UpdateGameState2 -= Test2;
         QueueFree();
+    }
+
+
+    public override void _Process(double delta)
+    {
+        var controllers = Input.GetConnectedJoypads();
+
+        foreach (var controller in controllers)
+        {
+            // same as pushing start with the mouse on the button but on the x-box controller instead
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Start))
+            {
+                _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 1);
+
+                _GetSignalFromGameManager.UpdateGameState2 -= Test2;
+                QueueFree();
+            }
+            // same as pushing quit with the mouse on the button but on the x-box controller instead
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Back))
+            {
+                GetTree().Quit();
+            }
+        }
     }
 
     void OnButtonPressed2() 

@@ -11,6 +11,7 @@ public partial class GameManager : Node
     public override void _Ready()
     {
         UpdateGameState2 += UpdateGameState;
+        UpdateGameState(GameState.AudioManager);
         UpdateGameState(GameState.Menu);
     }
 
@@ -28,10 +29,20 @@ public partial class GameManager : Node
             case GameState.LevelManager:
                 HandleLevelSelect();
                 break;
+            case GameState.AudioManager:
+                HandleAudioSelect();
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
 
+    }
+
+    private void HandleAudioSelect()
+    {
+    //throw new NotImplementedException();
+        var sceneAudio = ResourceLoader.Load<PackedScene>("res://Scenes/audio_manager.tscn").Instantiate<Control>();
+        AddChild(sceneAudio);
     }
 
     private void HandleLevelSelect()
@@ -43,15 +54,13 @@ public partial class GameManager : Node
     {
         GD.Print("hi there, seems fine");
         //not doing his right now
-        //var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
-        //AddChild(sceneplayer_manager);
+        var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
+        AddChild(sceneplayer_manager);
     }
     private void HandleMenuSelect()
     {
         var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate<Control>();
         AddChild(sceneMenu);
-        var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
-        AddChild(sceneplayer_manager);
     }
 
     public override void _UnhandledInput(InputEvent @event)
@@ -70,6 +79,6 @@ public enum GameState
 {
     Menu,
     PlayerManager,
-    LevelManager
-
+    LevelManager,
+    AudioManager
 }
