@@ -30,6 +30,9 @@ public partial class betterCar : RigidBody3D
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
+	PackedScene trackScene;
+	Node3D rightSkid;
+	Node3D leftSkid;
 
 
 
@@ -75,9 +78,27 @@ public partial class betterCar : RigidBody3D
         bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
         groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
         rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
-        leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
+		leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
+		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
+        leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
+        trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+		
+    }
 
+	public void addTireTracks()
+	{
+		var trackS = trackScene.Instantiate();
+		GetParent().GetParent().AddChild(trackS);
 
+		var trackL = trackS.GetNode<Decal>("DecalLeft");
+        var trackR = trackS.GetNode<Decal>("DecalRight");
+        trackL.GlobalPosition = leftSkid.GlobalPosition;
+		trackR.GlobalPosition = rightSkid.GlobalPosition;
+		//GD.Print(track.GlobalPosition);
+		var rL = leftSkid.Rotation;
+		var rR = rightSkid.Rotation;
+		trackR.Rotation = rR;
+		trackL.Rotation = rL;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -99,7 +120,7 @@ public partial class betterCar : RigidBody3D
 
 	public override void _Process(double delta)
 	{
-		GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+		//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
 		velocity = this.LinearVelocity.Length();
 
 		if (!groundRay.IsColliding()) //
@@ -124,6 +145,7 @@ public partial class betterCar : RigidBody3D
 			if (isDrifting)
 			{
 				steering = 30.0f;
+				addTireTracks();
 			}
 			else
 			{

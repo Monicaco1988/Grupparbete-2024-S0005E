@@ -4,6 +4,9 @@ using System;
 
 public partial class player_manager : Node3D
 {
+    //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
+    private GameManager _GetStateGameManager;
+
     PackedScene playerScene;
     int numberOfPlayers;
 
@@ -29,7 +32,12 @@ public partial class player_manager : Node3D
     {
         playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
         GD.Print("ready");
+        
+        //Gets the class information from GameManager to the variable _GetStateGameManager 
+        _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
     }
+
+
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
@@ -74,10 +82,29 @@ public partial class player_manager : Node3D
                     numberOfPlayers++;
                     GD.Print("player created, with player id: " + controller);
                 }
+
             }
+
+            // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
+            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 2)
+            {
+                _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
+                QueueFree();
+            }
+
         }
 
-
     }
+
+    //When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
+    public void OnButtonPressed()
+    {
+        if (numberOfPlayers >= 2) // "Start Game" only works if there are atleast 2 players
+        {
+            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
+            QueueFree();//removes PlayerManager Scene
+        }
+    }
+
 
 }
