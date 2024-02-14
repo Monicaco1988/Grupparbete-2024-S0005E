@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_igyj8"]
-size = Vector3(11, 1, 11)
+size = Vector3(111, 1, 111)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0pybw"]
-points = PackedVector3Array(-5.5, -0.5, -5.5, -5.5, 0.5, -5.5, 5.5, -0.5, -5.5, -5.5, -0.5, 5.5, -5.5, 0.5, 5.5, 5.5, 0.5, -5.5, 5.5, -0.5, 5.5, 5.5, 0.5, 5.5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6iab4"]
+points = PackedVector3Array(-55.5, -0.5, -55.5, -55.5, 0.5, -55.5, 55.5, -0.5, -55.5, -55.5, -0.5, 55.5, -55.5, 0.5, 55.5, 55.5, 0.5, -55.5, 55.5, -0.5, 55.5, 55.5, 0.5, 55.5)
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 script = ExtResource("1_fqr60")
@@ -18,9 +18,9 @@ Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("Spawn
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh = SubResource("BoxMesh_igyj8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPlatform"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-shape = SubResource("ConvexPolygonShape3D_0pybw")
+shape = SubResource("ConvexPolygonShape3D_6iab4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
