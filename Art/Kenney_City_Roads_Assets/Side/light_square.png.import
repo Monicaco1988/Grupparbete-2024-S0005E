@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3hyisnuvw8dj"
-path="res://.godot/imported/light_square.png-da8713f592e078a49676d6b65279027e.ctex"
+path="res://.godot/imported/light_square.png-c91689cacbebda95c05aed0184a7de86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Side/light_square.png"
-dest_files=["res://.godot/imported/light_square.png-da8713f592e078a49676d6b65279027e.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Side/light_square.png"
+dest_files=["res://.godot/imported/light_square.png-c91689cacbebda95c05aed0184a7de86.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bml62wh47lae7"
-path="res://.godot/imported/muzzle_05.png-1e1ed78a1e3e195c13be61e2713cafd0.ctex"
+path="res://.godot/imported/muzzle_05.png-307ff16722407c8a3ff59a187f75a4e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_particle-pack/PNG (Transparent)/muzzle_05.png"
-dest_files=["res://.godot/imported/muzzle_05.png-1e1ed78a1e3e195c13be61e2713cafd0.ctex"]
+source_file="res://Art/kenney_particle-pack/PNG (Transparent)/muzzle_05.png"
+dest_files=["res://.godot/imported/muzzle_05.png-307ff16722407c8a3ff59a187f75a4e3.ctex"]
 
 [params]
 

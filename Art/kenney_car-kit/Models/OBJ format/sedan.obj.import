@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ca7rdg25qlysh"
-path="res://.godot/imported/sedan.obj-e405450d094edff0c75a8dafa85d6767.mesh"
+path="res://.godot/imported/sedan.obj-99a79b5873892ca820309a99f2975833.mesh"
 
 [deps]
 
-files=["res://.godot/imported/sedan.obj-e405450d094edff0c75a8dafa85d6767.mesh"]
+files=["res://.godot/imported/sedan.obj-99a79b5873892ca820309a99f2975833.mesh"]
 
-source_file="res://art/kenney_car-kit/Models/OBJ format/sedan.obj"
-dest_files=["res://.godot/imported/sedan.obj-e405450d094edff0c75a8dafa85d6767.mesh", "res://.godot/imported/sedan.obj-e405450d094edff0c75a8dafa85d6767.mesh"]
+source_file="res://Art/kenney_car-kit/Models/OBJ format/sedan.obj"
+dest_files=["res://.godot/imported/sedan.obj-99a79b5873892ca820309a99f2975833.mesh", "res://.godot/imported/sedan.obj-99a79b5873892ca820309a99f2975833.mesh"]
 
 [params]
 

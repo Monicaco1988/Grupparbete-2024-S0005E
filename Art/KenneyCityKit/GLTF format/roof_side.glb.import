@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://civafgjnkf5hg"
-path="res://.godot/imported/roof_side.glb-fa2458ba54a5b30d97536912d960828a.scn"
+path="res://.godot/imported/roof_side.glb-f6f9f92921df6050b90b244024c1fe82.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/GLTF format/roof_side.glb"
-dest_files=["res://.godot/imported/roof_side.glb-fa2458ba54a5b30d97536912d960828a.scn"]
+source_file="res://Art/KenneyCityKit/GLTF format/roof_side.glb"
+dest_files=["res://.godot/imported/roof_side.glb-f6f9f92921df6050b90b244024c1fe82.scn"]
 
 [params]
 

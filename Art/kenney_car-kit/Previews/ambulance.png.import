@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c37dusqijvbx0"
-path="res://.godot/imported/ambulance.png-503c17b1f527ebf43db6c12bddfe0a2f.ctex"
+path="res://.godot/imported/ambulance.png-b043fd4977970238c9e2e384e30bb151.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/ambulance.png"
-dest_files=["res://.godot/imported/ambulance.png-503c17b1f527ebf43db6c12bddfe0a2f.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/ambulance.png"
+dest_files=["res://.godot/imported/ambulance.png-b043fd4977970238c9e2e384e30bb151.ctex"]
 
 [params]
 

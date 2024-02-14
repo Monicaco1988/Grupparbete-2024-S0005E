@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckicw3ukawirm"
-path="res://.godot/imported/road_curvePavement_SW.png-ffde9367283348598ae3dd46494a8deb.ctex"
+path="res://.godot/imported/road_curvePavement_SW.png-0c7665c3291b1c93abcb080ce999a0d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_curvePavement_SW.png"
-dest_files=["res://.godot/imported/road_curvePavement_SW.png-ffde9367283348598ae3dd46494a8deb.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_curvePavement_SW.png"
+dest_files=["res://.godot/imported/road_curvePavement_SW.png-0c7665c3291b1c93abcb080ce999a0d4.ctex"]
 
 [params]
 
