@@ -15,10 +15,9 @@ run/main_scene="res://Scenes/game_manager.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[display]
+[autoload]
 
-window/size/viewport_width=1080
-window/stretch/mode="viewport"
+PlayerList="*res://Scripts/PlayerList.cs"
 
 [dotnet]
 

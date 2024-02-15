@@ -515,6 +515,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q6f1c")
 
 [node name="PlayerRoot" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05023, 0)
 
 [node name="Player" type="RigidBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_xca33")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://borau12h05riq"]
+[gd_scene load_steps=6 format=3 uid="uid://borau12h05riq"]
 
 [ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="1_dj4it"]
+[ext_resource type="Script" path="res://Scripts/world_test_1.cs" id="1_k1nom"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ei8j"]
 size = Vector3(2000, 1, 2000)
@@ -13,6 +14,7 @@ material = SubResource("StandardMaterial3D_qwhoh")
 size = Vector2(2000, 2000)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_k1nom")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.496777, 0.867878, 0, -0.867878, 0.496777, 0, 180.072, 0)
@@ -35,4 +37,4 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 280.492, 0)
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 69.9888, 0)

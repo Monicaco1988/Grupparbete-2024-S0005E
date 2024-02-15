@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=14 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 
@@ -8,22 +8,57 @@ size = Vector3(11, 1, 11)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0pybw"]
 points = PackedVector3Array(-5.5, -0.5, -5.5, -5.5, 0.5, -5.5, 5.5, -0.5, -5.5, -5.5, -0.5, 5.5, -5.5, 0.5, 5.5, 5.5, 0.5, -5.5, 5.5, -0.5, 5.5, 5.5, 0.5, 5.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kc4dv"]
+size = Vector3(300, 10, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ik5n5"]
+size = Vector3(10, 1, 32)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhyw3"]
+size = Vector3(315, 1, 28)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aoppu"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cu5df"]
+size = Vector2(300, 30)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vfmx1"]
+size = Vector2(10, 1)
+
+[sub_resource type="Environment" id="Environment_xuy7r"]
+fog_enabled = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_pgkcv"]
+
+[sub_resource type="Animation" id="Animation_sje1r"]
+resource_name = "Lights"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qqoww"]
+_data = {
+"Lights": SubResource("Animation_sje1r")
+}
+
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 script = ExtResource("1_fqr60")
 Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4")]
 
 [node name="SpawnPlatform" type="StaticBody3D" parent="."]
+collision_layer = 0
+collision_mask = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
 mesh = SubResource("BoxMesh_igyj8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
 shape = SubResource("ConvexPolygonShape3D_0pybw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
+transform = Transform3D(2.98023e-08, -0.444651, 0.895704, 5.20033e-09, 0.895704, 0.444651, -1, -8.59368e-09, 2.90064e-08, 9, 5.26042, -0.10742)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0157074, 0.999877, 0, -0.999877, -0.0157074, 0, 5.33467, 0)
@@ -47,5 +82,118 @@ offset_right = 1070.0
 offset_bottom = 627.0
 text = "Press A 
 to Start"
+
+[node name="CollisionBoundries" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CollisionBoundries"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionBoundries/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.135, 1, 14)
+shape = SubResource("BoxShape3D_kc4dv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CollisionBoundries/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.135, 1, -14)
+shape = SubResource("BoxShape3D_kc4dv")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="CollisionBoundries/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6, 0, 0)
+shape = SubResource("BoxShape3D_ik5n5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="CollisionBoundries/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -272.269, 0, 0)
+shape = SubResource("BoxShape3D_ik5n5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="CollisionBoundries/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.5, -2, 0)
+shape = SubResource("BoxShape3D_bhyw3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionBoundries/StaticBody3D/CollisionShape3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598343, 0)
+material_override = SubResource("StandardMaterial3D_aoppu")
+mesh = SubResource("PlaneMesh_cu5df")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -155, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -188, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -211, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="CollisionBoundries"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243, -1.32959, 0)
+mesh = SubResource("PlaneMesh_vfmx1")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 33.3548, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xuy7r")
+camera_attributes = SubResource("CameraAttributesPractical_pgkcv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qqoww")
+}
 
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]

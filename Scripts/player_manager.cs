@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using System;
+using System.Xml.Linq;
 
 public partial class player_manager : Node3D
 {
@@ -32,9 +33,16 @@ public partial class player_manager : Node3D
     {
         playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
         GD.Print("ready");
-        
+
         //Gets the class information from GameManager to the variable _GetStateGameManager 
         _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
+
+        playerinfo PlayerInfo = new playerinfo()
+        {
+            Id = numberOfPlayers
+        };
+
+        PlayerList.Players.Add(PlayerInfo);
     }
 
 
