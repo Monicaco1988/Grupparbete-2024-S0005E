@@ -87,18 +87,22 @@ public partial class betterCar : RigidBody3D
 
 	public void addTireTracks()
 	{
-		var trackS = trackScene.Instantiate();
-		GetParent().GetParent().AddChild(trackS);
 
-		var trackL = trackS.GetNode<Decal>("DecalLeft");
-        var trackR = trackS.GetNode<Decal>("DecalRight");
-        trackL.GlobalPosition = leftSkid.GlobalPosition;
-		trackR.GlobalPosition = rightSkid.GlobalPosition;
-		//GD.Print(track.GlobalPosition);
-		var rL = leftSkid.Rotation;
-		var rR = rightSkid.Rotation;
-		trackR.Rotation = rR;
-		trackL.Rotation = rL;
+		if (Mathf.Abs(turnInput2) > 0.3f)
+		{
+			var trackS = trackScene.Instantiate();
+			GetParent().GetParent().AddChild(trackS);
+
+			var trackL = trackS.GetNode<Decal>("DecalLeft");
+			var trackR = trackS.GetNode<Decal>("DecalRight");
+			trackL.GlobalPosition = leftSkid.GlobalPosition;
+			trackR.GlobalPosition = rightSkid.GlobalPosition;
+			//GD.Print(track.GlobalPosition);
+			var rL = leftSkid.Rotation;
+			var rR = rightSkid.Rotation;
+			trackR.Rotation = rR;
+			trackL.Rotation = rL;
+		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

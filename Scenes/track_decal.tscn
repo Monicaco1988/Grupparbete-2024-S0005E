@@ -1,22 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://b081xf7sfnhhv"]
 
 [ext_resource type="Script" path="res://Scripts/track_decal.cs" id="1_bc7eu"]
-[ext_resource type="Texture2D" uid="uid://3t4xmcrfxjef" path="res://Art/skrrrt.png" id="1_xkjmi"]
+[ext_resource type="Texture2D" uid="uid://3t4xmcrfxjef" path="res://art/skrrrt.png" id="1_xkjmi"]
 
 [node name="TrackDecal" type="Node3D"]
 script = ExtResource("1_bc7eu")
 
 [node name="DecalLeft" type="Decal" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, -0.382408, 0)
-size = Vector3(0.397339, 0.544893, 0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, -1.10996, 0)
+size = Vector3(0.397339, 2, 0.5)
 texture_albedo = ExtResource("1_xkjmi")
 texture_normal = ExtResource("1_xkjmi")
 distance_fade_begin = 350.5
 distance_fade_length = 4096.0
 
 [node name="DecalRight" type="Decal" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, -0.37922, 0)
-size = Vector3(0.397339, 0.538516, 0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, -1.10996, 0)
+size = Vector3(0.397339, 2, 0.5)
 texture_albedo = ExtResource("1_xkjmi")
 texture_normal = ExtResource("1_xkjmi")
 distance_fade_begin = 350.5

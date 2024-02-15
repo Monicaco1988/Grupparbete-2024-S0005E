@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddje5yxg21vgn"
-path="res://.godot/imported/Preview.png-5b0f556a9b0d1535b9856ea04a779f05.ctex"
+path="res://.godot/imported/Preview.png-57850962638c722a328b7e34ff9e4f0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Preview.png"
-dest_files=["res://.godot/imported/Preview.png-5b0f556a9b0d1535b9856ea04a779f05.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Preview.png"
+dest_files=["res://.godot/imported/Preview.png-57850962638c722a328b7e34ff9e4f0a.ctex"]
 
 [params]
 

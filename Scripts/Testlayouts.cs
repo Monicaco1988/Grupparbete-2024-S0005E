@@ -15,7 +15,7 @@ public partial class Testlayouts : Node3D
 	Node3D buildings;
 
 	int numberOfPlayers;
-	int controllerID = 1;
+	int controllerID = 0;
 
     Array<betterCar> ambulances = new Array<betterCar>();
     public PlayerManagerState state = PlayerManagerState.ACTIVE;

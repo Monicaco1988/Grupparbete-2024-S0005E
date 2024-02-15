@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx8b3n6w0yud2"]
 
 [ext_resource type="Script" path="res://Scripts/MenuManager.cs" id="1_brujs"]
-[ext_resource type="Texture2D" uid="uid://60ip2nyy30hl" path="res://Art/MenuManager/pexels-pixabay-531880.jpg" id="2_nyspe"]
+[ext_resource type="Texture2D" uid="uid://60ip2nyy30hl" path="res://art/MenuManager/pexels-pixabay-531880.jpg" id="2_nyspe"]
 
 [sub_resource type="SystemFont" id="SystemFont_2tpmv"]
 font_names = PackedStringArray("Chiller")

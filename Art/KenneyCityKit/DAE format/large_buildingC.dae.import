@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dmaa1r4u6lavh"
-path="res://.godot/imported/large_buildingC.dae-3b9b961e166ae741df3f5d349cc0e7cb.scn"
+path="res://.godot/imported/large_buildingC.dae-625756e212f77f8b97b952b5050b55d9.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/DAE format/large_buildingC.dae"
-dest_files=["res://.godot/imported/large_buildingC.dae-3b9b961e166ae741df3f5d349cc0e7cb.scn"]
+source_file="res://art/KenneyCityKit/DAE format/large_buildingC.dae"
+dest_files=["res://.godot/imported/large_buildingC.dae-625756e212f77f8b97b952b5050b55d9.scn"]
 
 [params]
 

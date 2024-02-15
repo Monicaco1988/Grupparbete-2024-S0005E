@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmdxjtfbcktyo"
-path="res://.godot/imported/road_slantFlatHigh_SE.png-f7b45ba9c3f9d9c3e852902f2f9bc8be.ctex"
+path="res://.godot/imported/road_slantFlatHigh_SE.png-8f505ad95d9e862b712cf53e6514c7f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_slantFlatHigh_SE.png"
-dest_files=["res://.godot/imported/road_slantFlatHigh_SE.png-f7b45ba9c3f9d9c3e852902f2f9bc8be.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_slantFlatHigh_SE.png"
+dest_files=["res://.godot/imported/road_slantFlatHigh_SE.png-8f505ad95d9e862b712cf53e6514c7f7.ctex"]
 
 [params]
 

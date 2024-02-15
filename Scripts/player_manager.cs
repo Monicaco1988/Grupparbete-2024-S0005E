@@ -99,10 +99,10 @@ public partial class player_manager : Node3D
     //When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
     public void OnButtonPressed()
     {
-        if (numberOfPlayers >= 2) // "Start Game" only works if there are atleast 2 players
+        if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
         {
             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-            QueueFree();//removes PlayerManager Scene
+            //QueueFree();//removes PlayerManager Scene
         }
     }
 
