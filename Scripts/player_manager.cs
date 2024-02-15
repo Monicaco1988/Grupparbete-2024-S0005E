@@ -86,7 +86,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 2)
+            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
             {
                 _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
                 QueueFree();
@@ -102,7 +102,7 @@ public partial class player_manager : Node3D
         if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
         {
             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-            //QueueFree();//removes PlayerManager Scene
+            QueueFree();//removes PlayerManager Scene
         }
     }
 

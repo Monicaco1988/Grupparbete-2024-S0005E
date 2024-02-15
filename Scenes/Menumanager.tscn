@@ -20,15 +20,16 @@ script = ExtResource("1_brujs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1085.0
-offset_bottom = 645.0
+offset_right = 3841.0
+offset_bottom = 2160.0
 texture = ExtResource("2_nyspe")
-expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 1085.0
-offset_bottom = 645.0
+offset_left = 1001.0
+offset_top = 318.0
+offset_right = 2882.0
+offset_bottom = 2093.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -50,7 +51,7 @@ theme_override_constants/shadow_offset_x = 18
 theme_override_constants/shadow_offset_y = 18
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_2tpmv")
-theme_override_font_sizes/font_size = 120
+theme_override_font_sizes/font_size = 400
 text = "Saving Grandma!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -77,7 +78,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 theme_override_fonts/font = SubResource("SystemFont_cgk8v")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 120
 text = "START GAME"
 flat = true
 
@@ -92,7 +93,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 theme_override_fonts/font = SubResource("SystemFont_cgk8v")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 120
 text = "QUIT"
 flat = true
 
