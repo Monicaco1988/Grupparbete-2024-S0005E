@@ -2,22 +2,22 @@
 
 [ext_resource type="Script" path="res://Scripts/Testlayouts.cs" id="1_qdhpx"]
 [ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="2_2vnpk"]
-[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="3_20wi2"]
-[ext_resource type="Script" path="res://Scenes/CameraPrototyp.cs" id="4_x6v42"]
-[ext_resource type="Script" path="res://Scenes/CameraPole2.cs" id="5_keief"]
-[ext_resource type="Script" path="res://Scenes/CameraPole3.cs" id="6_flwdi"]
-[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://art/KenneyCityKit/GLTF format/skyscraperF.glb" id="7_q21vt"]
-[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_wuwwv"]
-[ext_resource type="PackedScene" uid="uid://v63tjnvtgb52" path="res://art/KenneyCityKit/GLTF format/skyscraperC.glb" id="9_vgjtv"]
-[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_amn5n"]
-[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_jrm24"]
-[ext_resource type="PackedScene" uid="uid://csebx4djupe5f" path="res://art/KenneyCityKit/GLTF format/low_buildingA.glb" id="12_cqr76"]
-[ext_resource type="PackedScene" uid="uid://cc8h2le3edmqd" path="res://art/KenneyCityKit/GLTF format/low_buildingB.glb" id="13_udxq3"]
-[ext_resource type="PackedScene" uid="uid://bxfd6yos4y1va" path="res://art/KenneyCityKit/GLTF format/large_buildingF.glb" id="14_4v63t"]
-[ext_resource type="PackedScene" uid="uid://dghiqj6u0o2wx" path="res://art/KenneyCityKit/GLTF format/low_buildingK.glb" id="15_5kijl"]
-[ext_resource type="PackedScene" uid="uid://u8bvxrrl6jge" path="res://art/KenneyCityKit/GLTF format/low_wideA.glb" id="16_jj627"]
-[ext_resource type="PackedScene" uid="uid://dds142d7y7ow6" path="res://art/KenneyCityKit/GLTF format/low_wideB.glb" id="17_gx8kn"]
-[ext_resource type="PackedScene" uid="uid://dm3nr3lrqxiuk" path="res://art/KenneyCityKit/GLTF format/low_buildingL.glb" id="18_pb4tc"]
+[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="3_20wi2"]
+[ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="4_x6v42"]
+[ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="5_keief"]
+[ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="6_flwdi"]
+[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://Art/KenneyCityKit/GLTF format/skyscraperF.glb" id="7_q21vt"]
+[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://Art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_wuwwv"]
+[ext_resource type="PackedScene" uid="uid://v63tjnvtgb52" path="res://Art/KenneyCityKit/GLTF format/skyscraperC.glb" id="9_vgjtv"]
+[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://Art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_amn5n"]
+[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://Art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_jrm24"]
+[ext_resource type="PackedScene" uid="uid://csebx4djupe5f" path="res://Art/KenneyCityKit/GLTF format/low_buildingA.glb" id="12_cqr76"]
+[ext_resource type="PackedScene" uid="uid://cc8h2le3edmqd" path="res://Art/KenneyCityKit/GLTF format/low_buildingB.glb" id="13_udxq3"]
+[ext_resource type="PackedScene" uid="uid://bxfd6yos4y1va" path="res://Art/KenneyCityKit/GLTF format/large_buildingF.glb" id="14_4v63t"]
+[ext_resource type="PackedScene" uid="uid://dghiqj6u0o2wx" path="res://Art/KenneyCityKit/GLTF format/low_buildingK.glb" id="15_5kijl"]
+[ext_resource type="PackedScene" uid="uid://u8bvxrrl6jge" path="res://Art/KenneyCityKit/GLTF format/low_wideA.glb" id="16_jj627"]
+[ext_resource type="PackedScene" uid="uid://dds142d7y7ow6" path="res://Art/KenneyCityKit/GLTF format/low_wideB.glb" id="17_gx8kn"]
+[ext_resource type="PackedScene" uid="uid://dm3nr3lrqxiuk" path="res://Art/KenneyCityKit/GLTF format/low_buildingL.glb" id="18_pb4tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkkt0"]
 size = Vector3(2000, 1, 2000)
@@ -236,6 +236,7 @@ offset_left = 25.0
 offset_top = 25.0
 offset_right = 416.0
 offset_bottom = 190.0
+theme_override_font_sizes/font_size = 40
 text = "[PLAYTEST OPTIONS]
 To choose track press F1, F2, F3 or F4
 Hide/show buildings with Q/W keys

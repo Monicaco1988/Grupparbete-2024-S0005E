@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx8b3n6w0yud2"]
 
 [ext_resource type="Script" path="res://Scripts/MenuManager.cs" id="1_brujs"]
-[ext_resource type="Texture2D" uid="uid://60ip2nyy30hl" path="res://art/MenuManager/pexels-pixabay-531880.jpg" id="2_nyspe"]
+[ext_resource type="Texture2D" uid="uid://60ip2nyy30hl" path="res://Art/MenuManager/pexels-pixabay-531880.jpg" id="2_nyspe"]
 
 [sub_resource type="SystemFont" id="SystemFont_2tpmv"]
 font_names = PackedStringArray("Chiller")
@@ -26,10 +26,10 @@ texture = ExtResource("2_nyspe")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 1001.0
-offset_top = 318.0
-offset_right = 2882.0
-offset_bottom = 2093.0
+offset_left = 740.0
+offset_top = 235.0
+offset_right = 3087.0
+offset_bottom = 2010.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -51,7 +51,7 @@ theme_override_constants/shadow_offset_x = 18
 theme_override_constants/shadow_offset_y = 18
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_2tpmv")
-theme_override_font_sizes/font_size = 400
+theme_override_font_sizes/font_size = 500
 text = "Saving Grandma!"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c23vheo84dp61"
-path="res://.godot/imported/wheelDark.png-2277320d9fe3335884e3524ea4d13b49.ctex"
+path="res://.godot/imported/wheelDark.png-746690fb8defe758bafc4ec646222490.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/wheelDark.png"
-dest_files=["res://.godot/imported/wheelDark.png-2277320d9fe3335884e3524ea4d13b49.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/wheelDark.png"
+dest_files=["res://.godot/imported/wheelDark.png-746690fb8defe758bafc4ec646222490.ctex"]
 
 [params]
 

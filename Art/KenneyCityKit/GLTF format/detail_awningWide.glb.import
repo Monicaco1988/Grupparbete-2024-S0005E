@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvhnifr365pr3"
-path="res://.godot/imported/detail_awningWide.glb-6b64d081ebf0d615c704fa4a669d8377.scn"
+path="res://.godot/imported/detail_awningWide.glb-c666972678379761df36706fb192460d.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/GLTF format/detail_awningWide.glb"
-dest_files=["res://.godot/imported/detail_awningWide.glb-6b64d081ebf0d615c704fa4a669d8377.scn"]
+source_file="res://Art/KenneyCityKit/GLTF format/detail_awningWide.glb"
+dest_files=["res://.godot/imported/detail_awningWide.glb-c666972678379761df36706fb192460d.scn"]
 
 [params]
 

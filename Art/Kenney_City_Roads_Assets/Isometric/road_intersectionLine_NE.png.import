@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uj4g6poi5buq"
-path="res://.godot/imported/road_intersectionLine_NE.png-751d141264e749a0a12d91d87c8cbfa9.ctex"
+path="res://.godot/imported/road_intersectionLine_NE.png-56466e12ad050d5be8b727ab7279c927.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_intersectionLine_NE.png"
-dest_files=["res://.godot/imported/road_intersectionLine_NE.png-751d141264e749a0a12d91d87c8cbfa9.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_intersectionLine_NE.png"
+dest_files=["res://.godot/imported/road_intersectionLine_NE.png-56466e12ad050d5be8b727ab7279c927.ctex"]
 
 [params]
 

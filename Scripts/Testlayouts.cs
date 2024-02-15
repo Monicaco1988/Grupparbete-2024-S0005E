@@ -189,6 +189,13 @@ public partial class Testlayouts : Node3D
 
 	}
 
-           
+    public override void _UnhandledInput(InputEvent @event)
+    {
+
+        if (Input.IsJoyButtonPressed(controllerID, JoyButton.Back))
+        {
+            GetTree().Quit();
+        }
+    }
 }
 

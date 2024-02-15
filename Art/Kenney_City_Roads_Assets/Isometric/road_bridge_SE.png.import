@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfem31ka5a0dr"
-path="res://.godot/imported/road_bridge_SE.png-b71ff27905daadc3c89308b144f9ae16.ctex"
+path="res://.godot/imported/road_bridge_SE.png-8c1b5929959d5481f47581c735610c38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_bridge_SE.png"
-dest_files=["res://.godot/imported/road_bridge_SE.png-b71ff27905daadc3c89308b144f9ae16.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_bridge_SE.png"
+dest_files=["res://.godot/imported/road_bridge_SE.png-8c1b5929959d5481f47581c735610c38.ctex"]
 
 [params]
 
