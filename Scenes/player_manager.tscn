@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=21 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 
@@ -14,6 +14,140 @@ points = PackedVector3Array(-55.5, -0.5, -55.5, -55.5, 0.5, -55.5, 55.5, -0.5, -
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8f5xi"]
 size = Vector2(1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1qlql"]
+size = Vector3(73.1895, 20, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4uv"]
+resource_name = "pavement"
+cull_mode = 2
+albedo_color = Color(0.756863, 0.756863, 0.8, 1)
+metallic = 0.5
+roughness = 0.0960784
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qux82"]
+resource_name = "light"
+cull_mode = 2
+albedo_color = Color(0.945098, 0.94902, 0.964706, 1)
+metallic = 0.5
+roughness = 0.0960784
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hr0vc"]
+_surfaces = [{
+"aabb": AABB(-0.025, 0, -0.2125, 0.05001, 0.6, 0.2375),
+"format": 34896613377,
+"index_count": 168,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 6, 0, 5, 0, 7, 0, 5, 0, 6, 0, 8, 0, 10, 0, 9, 0, 11, 0, 9, 0, 10, 0, 2, 0, 12, 0, 3, 0, 13, 0, 3, 0, 12, 0, 14, 0, 9, 0, 15, 0, 11, 0, 15, 0, 9, 0, 4, 0, 16, 0, 6, 0, 17, 0, 6, 0, 16, 0, 1, 0, 3, 0, 16, 0, 18, 0, 16, 0, 3, 0, 0, 0, 17, 0, 2, 0, 19, 0, 2, 0, 17, 0, 7, 0, 6, 0, 0, 0, 17, 0, 0, 0, 6, 0, 20, 0, 8, 0, 21, 0, 13, 0, 21, 0, 8, 0, 9, 0, 13, 0, 8, 0, 3, 0, 13, 0, 9, 0, 18, 0, 3, 0, 9, 0, 14, 0, 18, 0, 9, 0, 22, 0, 24, 0, 23, 0, 25, 0, 23, 0, 24, 0, 1, 0, 16, 0, 5, 0, 4, 0, 5, 0, 16, 0, 26, 0, 28, 0, 27, 0, 29, 0, 27, 0, 28, 0, 26, 0, 27, 0, 23, 0, 22, 0, 23, 0, 27, 0, 18, 0, 14, 0, 19, 0, 15, 0, 19, 0, 14, 0, 22, 0, 27, 0, 24, 0, 20, 0, 24, 0, 27, 0, 8, 0, 20, 0, 27, 0, 30, 0, 8, 0, 27, 0, 29, 0, 30, 0, 27, 0, 30, 0, 10, 0, 8, 0, 2, 0, 19, 0, 12, 0, 10, 0, 12, 0, 19, 0, 11, 0, 10, 0, 19, 0, 15, 0, 11, 0, 19, 0, 10, 0, 30, 0, 12, 0, 31, 0, 12, 0, 30, 0, 24, 0, 20, 0, 25, 0, 21, 0, 25, 0, 20, 0, 7, 0, 0, 0, 5, 0, 1, 0, 5, 0, 0, 0, 16, 0, 18, 0, 17, 0, 19, 0, 17, 0, 18, 0, 28, 0, 31, 0, 29, 0, 30, 0, 29, 0, 31, 0, 13, 0, 12, 0, 21, 0, 31, 0, 21, 0, 12, 0),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray(241, 255, 170, 42, 26, 202, 0, 0, 0, 0, 170, 42, 26, 202, 0, 0, 245, 191, 255, 63, 147, 215, 0, 0, 252, 63, 255, 63, 147, 215, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 26, 202, 0, 0, 241, 255, 0, 0, 255, 255, 0, 0, 241, 255, 0, 0, 26, 202, 0, 0, 252, 63, 255, 255, 147, 215, 0, 0, 252, 63, 84, 253, 201, 235, 0, 0, 245, 191, 255, 255, 147, 215, 0, 0, 245, 191, 84, 253, 201, 235, 0, 0, 245, 191, 84, 245, 147, 215, 0, 0, 252, 63, 84, 245, 147, 215, 0, 0, 252, 63, 84, 245, 133, 242, 0, 0, 245, 191, 84, 245, 133, 242, 0, 0, 0, 0, 170, 42, 255, 255, 0, 0, 241, 255, 170, 42, 255, 255, 0, 0, 252, 63, 255, 63, 133, 242, 0, 0, 245, 191, 255, 63, 133, 242, 0, 0, 252, 63, 255, 255, 201, 107, 0, 0, 252, 63, 84, 245, 201, 107, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 245, 0, 0, 0, 0, 0, 0, 255, 255, 228, 53, 0, 0, 0, 0, 84, 245, 228, 53, 0, 0, 241, 255, 84, 245, 0, 0, 0, 0, 241, 255, 255, 255, 0, 0, 0, 0, 241, 255, 84, 245, 228, 53, 0, 0, 241, 255, 255, 255, 228, 53, 0, 0, 245, 191, 255, 255, 201, 107, 0, 0, 245, 191, 84, 245, 201, 107, 0, 0)
+}, {
+"aabb": AABB(-0.025, 0.575, -0.2125, 0.05, 1.00136e-05, 0.1),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 3, 0, 2, 0, 5, 0, 3, 0, 4, 0),
+"name": "light",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 63, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wl5fi"]
+resource_name = "Mesh"
+_surfaces = [{
+"aabb": AABB(-0.025, 0, -0.2125, 0.05001, 0.6, 0.2375),
+"attribute_data": PackedByteArray(14, 143, 101, 113, 240, 112, 101, 113, 135, 135, 234, 101, 120, 120, 234, 101, 14, 143, 22, 128, 14, 143, 57, 139, 240, 112, 22, 128, 240, 112, 57, 139, 135, 135, 191, 88, 135, 135, 38, 93, 120, 120, 191, 88, 120, 120, 38, 93, 135, 135, 61, 100, 120, 120, 61, 100, 135, 135, 145, 5, 120, 120, 145, 5, 135, 135, 5, 13, 120, 120, 5, 13, 135, 135, 158, 8, 120, 120, 158, 8, 14, 143, 167, 133, 240, 112, 167, 133, 14, 143, 97, 111, 240, 112, 97, 111, 14, 143, 101, 113, 240, 112, 101, 113, 135, 135, 234, 101, 120, 120, 234, 101, 240, 112, 101, 113, 120, 120, 234, 101, 14, 143, 101, 113, 135, 135, 234, 101, 240, 112, 167, 133, 240, 112, 97, 111, 14, 143, 167, 133, 14, 143, 97, 111, 195, 195, 0, 0, 195, 195, 145, 5, 135, 135, 0, 0, 135, 135, 145, 5, 59, 124, 100, 1, 135, 135, 61, 100, 120, 120, 61, 100, 120, 120, 145, 5, 255, 255, 0, 0, 255, 255, 145, 5, 225, 225, 0, 0, 225, 225, 145, 5, 14, 143, 97, 111, 14, 143, 167, 133, 240, 112, 97, 111, 240, 112, 167, 133, 0, 0, 145, 5, 0, 0, 0, 0, 29, 30, 145, 5, 29, 30, 0, 0, 14, 143, 145, 5, 240, 112, 145, 5, 14, 143, 0, 0, 240, 112, 0, 0, 135, 135, 61, 100, 120, 120, 61, 100, 135, 135, 145, 5, 120, 120, 145, 5, 240, 112, 254, 180, 240, 112, 218, 169, 14, 143, 254, 180, 120, 120, 183, 158, 120, 120, 112, 136, 135, 135, 183, 158, 14, 143, 218, 169, 135, 135, 112, 136, 120, 120, 61, 100, 120, 120, 145, 5, 135, 135, 61, 100, 120, 120, 0, 0, 195, 131, 100, 1, 135, 135, 145, 5, 59, 60, 0, 0, 59, 60, 145, 5, 155, 226, 0, 0, 155, 226, 145, 5, 144, 195, 0, 0, 144, 195, 145, 5, 14, 143, 167, 133, 240, 112, 167, 133, 14, 143, 97, 111, 240, 112, 97, 111, 14, 143, 101, 113, 240, 112, 101, 113, 135, 135, 234, 101, 120, 120, 234, 101, 99, 29, 145, 5, 99, 29, 0, 0, 110, 60, 145, 5, 110, 60, 0, 0, 135, 135, 112, 136, 135, 135, 183, 158, 120, 120, 112, 136, 120, 120, 183, 158),
+"format": 34896613399,
+"index_count": 168,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 6, 0, 5, 0, 7, 0, 5, 0, 6, 0, 8, 0, 10, 0, 9, 0, 11, 0, 9, 0, 10, 0, 12, 0, 14, 0, 13, 0, 15, 0, 13, 0, 14, 0, 16, 0, 18, 0, 17, 0, 19, 0, 17, 0, 18, 0, 20, 0, 22, 0, 21, 0, 23, 0, 21, 0, 22, 0, 24, 0, 26, 0, 25, 0, 27, 0, 25, 0, 26, 0, 28, 0, 30, 0, 29, 0, 31, 0, 29, 0, 30, 0, 32, 0, 34, 0, 33, 0, 35, 0, 33, 0, 34, 0, 36, 0, 38, 0, 37, 0, 39, 0, 37, 0, 38, 0, 40, 0, 39, 0, 38, 0, 41, 0, 39, 0, 40, 0, 42, 0, 41, 0, 40, 0, 43, 0, 42, 0, 40, 0, 44, 0, 46, 0, 45, 0, 47, 0, 45, 0, 46, 0, 48, 0, 50, 0, 49, 0, 51, 0, 49, 0, 50, 0, 52, 0, 54, 0, 53, 0, 55, 0, 53, 0, 54, 0, 56, 0, 58, 0, 57, 0, 59, 0, 57, 0, 58, 0, 60, 0, 62, 0, 61, 0, 63, 0, 61, 0, 62, 0, 64, 0, 66, 0, 65, 0, 67, 0, 65, 0, 66, 0, 68, 0, 67, 0, 66, 0, 69, 0, 68, 0, 66, 0, 70, 0, 69, 0, 66, 0, 69, 0, 71, 0, 68, 0, 72, 0, 74, 0, 73, 0, 75, 0, 73, 0, 74, 0, 76, 0, 75, 0, 74, 0, 77, 0, 76, 0, 74, 0, 75, 0, 78, 0, 73, 0, 79, 0, 73, 0, 78, 0, 80, 0, 82, 0, 81, 0, 83, 0, 81, 0, 82, 0, 84, 0, 86, 0, 85, 0, 87, 0, 85, 0, 86, 0, 88, 0, 90, 0, 89, 0, 91, 0, 89, 0, 90, 0, 92, 0, 94, 0, 93, 0, 95, 0, 93, 0, 94, 0, 96, 0, 98, 0, 97, 0, 99, 0, 97, 0, 98, 0),
+"material": SubResource("StandardMaterial3D_7h4uv"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(16.7323, 45.2441, 0, 0),
+"vertex_count": 100,
+"vertex_data": PackedByteArray(241, 255, 170, 42, 26, 202, 148, 4, 0, 0, 170, 42, 26, 202, 148, 4, 245, 191, 255, 63, 147, 215, 251, 9, 252, 63, 255, 63, 147, 215, 251, 9, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 26, 202, 0, 0, 241, 255, 0, 0, 255, 255, 0, 0, 241, 255, 0, 0, 26, 202, 0, 0, 252, 63, 255, 255, 147, 215, 0, 0, 252, 63, 84, 253, 201, 235, 0, 0, 245, 191, 255, 255, 147, 215, 0, 0, 245, 191, 84, 253, 201, 235, 0, 0, 245, 191, 255, 63, 147, 215, 0, 0, 252, 63, 255, 63, 147, 215, 0, 0, 245, 191, 84, 245, 147, 215, 0, 0, 252, 63, 84, 245, 147, 215, 0, 0, 252, 63, 84, 245, 133, 242, 0, 0, 245, 191, 84, 245, 133, 242, 0, 0, 252, 63, 84, 253, 201, 235, 0, 0, 245, 191, 84, 253, 201, 235, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 241, 255, 0, 0, 255, 255, 0, 0, 0, 0, 170, 42, 255, 255, 0, 0, 241, 255, 170, 42, 255, 255, 0, 0, 0, 0, 170, 42, 26, 202, 60, 3, 0, 0, 170, 42, 255, 255, 60, 3, 252, 63, 255, 63, 147, 215, 12, 7, 252, 63, 255, 63, 133, 242, 12, 7, 241, 255, 170, 42, 26, 202, 60, 3, 245, 191, 255, 63, 147, 215, 12, 7, 241, 255, 170, 42, 255, 255, 60, 3, 245, 191, 255, 63, 133, 242, 12, 7, 241, 255, 0, 0, 26, 202, 0, 0, 241, 255, 170, 42, 26, 202, 60, 3, 241, 255, 0, 0, 255, 255, 0, 0, 241, 255, 170, 42, 255, 255, 60, 3, 252, 63, 255, 255, 201, 107, 0, 0, 252, 63, 84, 245, 201, 107, 0, 0, 252, 63, 255, 255, 147, 215, 0, 0, 252, 63, 84, 245, 147, 215, 0, 0, 252, 63, 84, 253, 201, 235, 0, 0, 252, 63, 255, 63, 147, 215, 0, 0, 252, 63, 255, 63, 133, 242, 0, 0, 252, 63, 84, 245, 133, 242, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 245, 0, 0, 0, 0, 0, 0, 255, 255, 228, 53, 0, 0, 0, 0, 84, 245, 228, 53, 0, 0, 0, 0, 170, 42, 26, 202, 60, 3, 0, 0, 0, 0, 26, 202, 0, 0, 0, 0, 170, 42, 255, 255, 60, 3, 0, 0, 0, 0, 255, 255, 0, 0, 241, 255, 84, 245, 0, 0, 0, 0, 241, 255, 255, 255, 0, 0, 0, 0, 241, 255, 84, 245, 228, 53, 0, 0, 241, 255, 255, 255, 228, 53, 0, 0, 241, 255, 84, 245, 0, 0, 0, 0, 0, 0, 84, 245, 0, 0, 0, 0, 241, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 252, 63, 255, 63, 133, 242, 0, 0, 245, 191, 255, 63, 133, 242, 0, 0, 252, 63, 84, 245, 133, 242, 0, 0, 245, 191, 84, 245, 133, 242, 0, 0, 0, 0, 255, 255, 0, 0, 255, 63, 0, 0, 255, 255, 228, 53, 255, 63, 241, 255, 255, 255, 0, 0, 255, 63, 252, 63, 255, 255, 201, 107, 255, 63, 252, 63, 255, 255, 147, 215, 255, 63, 245, 191, 255, 255, 201, 107, 255, 63, 241, 255, 255, 255, 228, 53, 255, 63, 245, 191, 255, 255, 147, 215, 255, 63, 245, 191, 255, 63, 147, 215, 0, 0, 245, 191, 84, 245, 147, 215, 0, 0, 245, 191, 255, 63, 133, 242, 0, 0, 245, 191, 255, 255, 147, 215, 0, 0, 245, 191, 84, 253, 201, 235, 0, 0, 245, 191, 84, 245, 133, 242, 0, 0, 245, 191, 255, 255, 201, 107, 0, 0, 245, 191, 84, 245, 201, 107, 0, 0, 0, 0, 255, 255, 228, 53, 0, 0, 0, 0, 84, 245, 228, 53, 0, 0, 252, 63, 255, 255, 201, 107, 0, 0, 252, 63, 84, 245, 201, 107, 0, 0, 241, 255, 0, 0, 26, 202, 0, 0, 0, 0, 0, 0, 26, 202, 0, 0, 241, 255, 170, 42, 26, 202, 148, 4, 0, 0, 170, 42, 26, 202, 148, 4, 0, 0, 170, 42, 255, 255, 0, 0, 241, 255, 170, 42, 255, 255, 0, 0, 252, 63, 255, 63, 133, 242, 0, 0, 245, 191, 255, 63, 133, 242, 0, 0, 241, 255, 84, 245, 228, 53, 0, 0, 241, 255, 255, 255, 228, 53, 0, 0, 245, 191, 84, 245, 201, 107, 0, 0, 245, 191, 255, 255, 201, 107, 0, 0, 252, 63, 84, 245, 147, 215, 0, 0, 252, 63, 84, 245, 201, 107, 0, 0, 245, 191, 84, 245, 147, 215, 0, 0, 245, 191, 84, 245, 201, 107, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 156, 181, 255, 127, 156, 181, 255, 127, 156, 181, 255, 127, 156, 181, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 222, 145, 255, 127, 222, 145, 255, 127, 222, 145, 255, 127, 222, 145, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 208, 134, 255, 127, 208, 134, 126, 252, 63, 62, 126, 252, 63, 62, 147, 248, 73, 60, 147, 248, 73, 60, 62, 190, 128, 131, 73, 188, 107, 135, 62, 190, 128, 131, 73, 188, 107, 135, 255, 191, 255, 127, 62, 190, 128, 131, 255, 191, 255, 127, 62, 190, 128, 131, 236, 67, 255, 127, 236, 67, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 236, 67, 255, 127, 236, 67, 255, 127, 126, 252, 63, 62, 255, 63, 255, 127, 126, 252, 63, 62, 255, 63, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 18, 188, 255, 127, 18, 188, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 18, 188, 255, 127, 18, 188, 255, 127, 236, 67, 255, 127, 236, 67, 255, 127, 236, 67, 255, 127, 236, 67, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 208, 134, 255, 127, 208, 134, 255, 127, 7, 142, 255, 127, 7, 142, 18, 188, 255, 127, 18, 188, 255, 127, 18, 188, 255, 127, 18, 188, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63)
+}, {
+"aabb": AABB(-0.025, 0.575, -0.2125, 0.05, 1.00136e-05, 0.1),
+"attribute_data": PackedByteArray(255, 255, 24, 229, 255, 255, 255, 255, 255, 191, 49, 202, 0, 0, 255, 255, 255, 63, 49, 202, 0, 0, 24, 229),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 3, 0, 2, 0, 5, 0, 3, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_qux82"),
+"name": "light",
+"primitive": 3,
+"uv_scale": Vector4(1.9685, 18.7323, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 63, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hr0vc")
+
+[sub_resource type="Gradient" id="Gradient_mqf4n"]
+colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uprfa"]
+gradient = SubResource("Gradient_mqf4n")
+use_hdr = true
+fill_from = Vector2(1, 1)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
+night_sky = SubResource("GradientTexture2D_uprfa")
+
+[sub_resource type="Sky" id="Sky_21e36"]
+sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
+
+[sub_resource type="Environment" id="Environment_211gl"]
+background_mode = 2
+sky = SubResource("Sky_21e36")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nx4ob"]
+resource_name = "pavement"
+cull_mode = 2
+albedo_color = Color(0.756863, 0.756863, 0.8, 1)
+metallic = 0.5
+roughness = 0.0960784
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kqfsx"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.08001, 1.00001),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 6, 0, 5, 0, 7, 0, 5, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 8, 0, 7, 0, 10, 0, 12, 0, 11, 0, 13, 0, 11, 0, 12, 0, 6, 0, 14, 0, 7, 0, 9, 0, 7, 0, 14, 0, 15, 0, 14, 0, 4, 0, 6, 0, 4, 0, 14, 0, 5, 0, 8, 0, 4, 0, 15, 0, 4, 0, 8, 0, 11, 0, 2, 0, 10, 0, 0, 0, 10, 0, 2, 0, 13, 0, 3, 0, 11, 0, 2, 0, 11, 0, 3, 0, 15, 0, 8, 0, 14, 0, 9, 0, 14, 0, 8, 0, 13, 0, 12, 0, 3, 0, 1, 0, 3, 0, 12, 0, 10, 0, 0, 0, 12, 0, 1, 0, 12, 0, 0, 0),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray(80, 248, 246, 255, 254, 255, 0, 0, 255, 255, 246, 255, 254, 255, 0, 0, 80, 248, 246, 255, 0, 0, 0, 0, 255, 255, 246, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 204, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 204, 12, 0, 0, 254, 255, 0, 0, 174, 7, 246, 255, 0, 0, 0, 0, 174, 7, 246, 255, 254, 255, 0, 0, 50, 243, 0, 0, 254, 255, 0, 0, 50, 243, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 246, 255, 254, 255, 0, 0, 0, 0, 246, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oy81o"]
+resource_name = "Mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.08001, 1.00001),
+"attribute_data": PackedByteArray(80, 248, 96, 12, 255, 255, 96, 12, 80, 248, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 50, 243, 255, 255, 255, 255, 96, 12, 50, 243, 96, 12, 0, 0, 152, 107, 0, 0, 129, 87, 255, 255, 152, 107, 255, 255, 129, 87, 204, 12, 96, 12, 204, 12, 255, 255, 0, 0, 96, 12, 0, 0, 255, 255, 255, 255, 47, 134, 50, 243, 47, 134, 255, 255, 178, 114, 80, 248, 178, 114, 255, 255, 178, 114, 255, 255, 47, 134, 0, 0, 178, 114, 0, 0, 47, 134, 204, 12, 47, 134, 0, 0, 47, 134, 174, 7, 178, 114, 0, 0, 178, 114, 255, 255, 152, 107, 0, 0, 152, 107, 255, 255, 129, 87, 0, 0, 129, 87, 255, 255, 47, 134, 50, 243, 47, 134, 255, 255, 178, 114, 80, 248, 178, 114, 0, 0, 255, 255, 0, 0, 96, 12, 174, 7, 255, 255, 174, 7, 96, 12, 0, 0, 47, 134, 0, 0, 178, 114, 255, 255, 47, 134, 255, 255, 178, 114, 204, 12, 47, 134, 0, 0, 47, 134, 174, 7, 178, 114, 0, 0, 178, 114),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 4, 0, 6, 0, 5, 0, 7, 0, 5, 0, 6, 0, 8, 0, 10, 0, 9, 0, 11, 0, 9, 0, 10, 0, 12, 0, 14, 0, 13, 0, 15, 0, 13, 0, 14, 0, 16, 0, 18, 0, 17, 0, 19, 0, 17, 0, 18, 0, 20, 0, 22, 0, 21, 0, 23, 0, 21, 0, 22, 0, 24, 0, 26, 0, 25, 0, 27, 0, 25, 0, 26, 0, 28, 0, 30, 0, 29, 0, 31, 0, 29, 0, 30, 0, 32, 0, 34, 0, 33, 0, 35, 0, 33, 0, 34, 0, 36, 0, 38, 0, 37, 0, 39, 0, 37, 0, 38, 0, 40, 0, 42, 0, 41, 0, 43, 0, 41, 0, 42, 0, 44, 0, 46, 0, 45, 0, 47, 0, 45, 0, 46, 0),
+"material": SubResource("StandardMaterial3D_nx4ob"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(39.3701, 41.3701, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray(80, 248, 246, 255, 254, 255, 255, 63, 255, 255, 246, 255, 254, 255, 255, 63, 80, 248, 246, 255, 0, 0, 255, 63, 255, 255, 246, 255, 0, 0, 255, 63, 0, 0, 0, 0, 0, 0, 0, 0, 204, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 204, 12, 0, 0, 254, 255, 0, 0, 204, 12, 0, 0, 0, 0, 12, 7, 174, 7, 246, 255, 0, 0, 12, 7, 204, 12, 0, 0, 254, 255, 12, 7, 174, 7, 246, 255, 254, 255, 12, 7, 50, 243, 0, 0, 254, 255, 0, 0, 50, 243, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 204, 12, 0, 0, 254, 255, 0, 0, 0, 0, 246, 255, 254, 255, 0, 0, 174, 7, 246, 255, 254, 255, 0, 0, 0, 0, 246, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 246, 255, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 204, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 174, 7, 246, 255, 0, 0, 0, 0, 0, 0, 246, 255, 0, 0, 0, 0, 50, 243, 0, 0, 0, 0, 12, 7, 50, 243, 0, 0, 254, 255, 12, 7, 80, 248, 246, 255, 0, 0, 12, 7, 80, 248, 246, 255, 254, 255, 12, 7, 255, 255, 0, 0, 0, 0, 0, 0, 50, 243, 0, 0, 0, 0, 0, 0, 255, 255, 246, 255, 0, 0, 0, 0, 80, 248, 246, 255, 0, 0, 0, 0, 0, 0, 246, 255, 0, 0, 255, 63, 0, 0, 246, 255, 254, 255, 255, 63, 174, 7, 246, 255, 0, 0, 255, 63, 174, 7, 246, 255, 254, 255, 255, 63, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 246, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 246, 255, 254, 255, 0, 0, 50, 243, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 80, 248, 246, 255, 254, 255, 0, 0, 255, 255, 246, 255, 254, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 73, 188, 107, 135, 73, 188, 107, 135, 73, 188, 107, 135, 73, 188, 107, 135, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 147, 248, 73, 60, 147, 248, 73, 60, 147, 248, 73, 60, 147, 248, 73, 60, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kqfsx")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1itmd"]
+points = PackedVector3Array(0.460322, 0.0872923, 0.507937, 0.444444, -0.00792719, -0.507937, 0.50793, -0.00792719, -0.507937, 0.444444, -0.00792719, 0.507937, 0.50793, 0.0872923, -0.507937, 0.50793, -0.00792719, 0.507937, 0.444444, 0.0555462, -0.507937, 0.50793, 0.0872923, 0.507937, 0.460322, 0.0872923, -0.507937, 0.444444, 0.0555462, 0.507937)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k08rn"]
+points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.00792719, -0.507937, -0.444444, -0.00792719, -0.507937, -0.50793, -0.00792719, 0.507937, -0.50793, 0.0872923, -0.507937, -0.444444, -0.00792719, 0.507937, -0.444444, 0.0555462, -0.507937, -0.50793, 0.0872923, 0.507937, -0.460322, 0.0872923, -0.507937, -0.444444, 0.0555462, 0.507937)
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 script = ExtResource("1_fqr60")
@@ -105,11 +239,20 @@ mesh = SubResource("PlaneMesh_8f5xi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, -43)
 mesh = SubResource("PlaneMesh_8f5xi")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPlatform"]
+transform = Transform3D(0.791021, 0, -0.611789, 0, 1, 0, 0.611789, 0, 0.791021, -28.9629, 0, -9.7886)
+shape = SubResource("BoxShape3D_1qlql")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="SpawnPlatform"]
+transform = Transform3D(0.795674, 0, 0.605725, 0, 1, 0, -0.605725, 0, 0.795674, 29.0371, 0, -9.97192)
+shape = SubResource("BoxShape3D_1qlql")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="SpawnPlatform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -214.672)
+shape = SubResource("BoxShape3D_1qlql")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0157074, 0.999877, 0, -0.999877, -0.0157074, 0, 5.33467, 0)
 
 [node name="SpawnPoint1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0, -2.71861)
@@ -131,5 +274,416 @@ offset_bottom = 2108.0
 theme_override_font_sizes/font_size = 120
 text = "Press A 
 to Start"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="light_square" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -8.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square2" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -8.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square2"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square2"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square2"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square3" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -48.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square3"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square3"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square3"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square4" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -48.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square4"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square4"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square4"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square5" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -48.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square5"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square5"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square5"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square6" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -48.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square6"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square6"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square6"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square7" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -91.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square7"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square7"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square7"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square8" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -91.5368)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square8"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square8"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square8"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square9" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -131.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square9"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square9"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square9"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square10" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -131.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square10"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square10"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square10"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square11" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -173.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square11"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square11"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square11"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square12" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -173.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square12"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square12"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square12"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square13" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -213.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square13"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square13"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square13"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square14" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -213.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square14"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square14"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square14"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square15" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -246.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square15"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square15"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square15"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square16" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -246.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square16"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square16"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square16"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="light_square17" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 40, 0, -40, 0, -1.74846e-06, 53.6621, -0.499992, -246.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square17"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square17"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square17"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square18" type="Node3D" parent="Node"]
+transform = Transform3D(-1.74846e-06, 0, -40, 0, 40, 0, 40, 0, -1.74846e-06, -54.3379, -0.499992, -246.537)
+
+[node name="light_square" type="MeshInstance3D" parent="Node/light_square18"]
+mesh = SubResource("ArrayMesh_wl5fi")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node/light_square18"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node/light_square18"]
+transform = Transform3D(0.025, 1.09278e-09, 1.09278e-09, -1.09278e-09, -1.09278e-09, 0.025, 1.09278e-09, -0.025, -1.09278e-09, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 71.592
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node"]
+transform = Transform3D(1, 0, 4.44089e-15, 0, 1, 0, -4.44089e-15, 0, 1, 0, 24.563, -20.1869)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node"]
+transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -20.1869)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 77.0965
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Node"]
+transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -85.1869)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 77.0965
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Node"]
+transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -172.187)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 77.0965
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Node"]
+transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -172.187)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 77.0965
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_211gl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="road_straightBarrier" type="Node3D" parent="."]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -27.1706)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
+
+[node name="road_straightBarrier2" type="Node3D" parent="."]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -152.005)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier2"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
 
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
