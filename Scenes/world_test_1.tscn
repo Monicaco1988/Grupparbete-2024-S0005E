@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://borau12h05riq"]
 
-[ext_resource type="MeshLibrary" uid="uid://qiepqui6qlwb" path="res://Scenes/Tiles/Tiles.tres" id="1_dj4it"]
+[ext_resource type="MeshLibrary" uid="uid://xaaxbd4hgk7w" path="res://Scenes/Tiles/CollisionRoadTiles.tres" id="1_dj4it"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ei8j"]
 size = Vector3(2000, 1, 2000)

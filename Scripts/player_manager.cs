@@ -89,7 +89,14 @@ public partial class player_manager : Node3D
             if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
             {
                 _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
-                QueueFree();
+
+                GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
+                GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
+                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
+                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
+                GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
+                GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
+                //QueueFree();road_straightBarrier
             }
 
         }
@@ -102,7 +109,7 @@ public partial class player_manager : Node3D
         if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
         {
             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-            QueueFree();//removes PlayerManager Scene
+            //QueueFree();//removes PlayerManager Scene
         }
     }
 
