@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b758r13annrad"
-path="res://.godot/imported/wall_solid.glb-d5599692e39c1b6c510516060258e06c.scn"
+path="res://.godot/imported/wall_solid.glb-ab3b5fcc46c88b82026298145ae38e12.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/GLTF format/wall_solid.glb"
-dest_files=["res://.godot/imported/wall_solid.glb-d5599692e39c1b6c510516060258e06c.scn"]
+source_file="res://Art/KenneyCityKit/GLTF format/wall_solid.glb"
+dest_files=["res://.godot/imported/wall_solid.glb-ab3b5fcc46c88b82026298145ae38e12.scn"]
 
 [params]
 

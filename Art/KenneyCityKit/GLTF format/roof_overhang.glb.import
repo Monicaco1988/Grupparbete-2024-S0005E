@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://egvt02kiu4su"
-path="res://.godot/imported/roof_overhang.glb-684760c2647a21377cb8a1b78e80599c.scn"
+path="res://.godot/imported/roof_overhang.glb-509fba4fa7ad610e956ca70486eeadce.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/GLTF format/roof_overhang.glb"
-dest_files=["res://.godot/imported/roof_overhang.glb-684760c2647a21377cb8a1b78e80599c.scn"]
+source_file="res://Art/KenneyCityKit/GLTF format/roof_overhang.glb"
+dest_files=["res://.godot/imported/roof_overhang.glb-509fba4fa7ad610e956ca70486eeadce.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bv2wiq7cucqne"
-path="res://.godot/imported/ambulance.dae-ef8ce730c6527e941228c75fcef52ca0.scn"
+path="res://.godot/imported/ambulance.dae-27309c0e1bc9e2302801db7814004e2f.scn"
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Models/DAE format/ambulance.dae"
-dest_files=["res://.godot/imported/ambulance.dae-ef8ce730c6527e941228c75fcef52ca0.scn"]
+source_file="res://Art/kenney_car-kit/Models/DAE format/ambulance.dae"
+dest_files=["res://.godot/imported/ambulance.dae-27309c0e1bc9e2302801db7814004e2f.scn"]
 
 [params]
 
