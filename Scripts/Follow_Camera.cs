@@ -31,14 +31,14 @@ public partial class Follow_Camera : Marker3D
 		//GD.Print("Player entered:" + playerContainer + _player.GetChild<RigidBody3D>(0));
 
 		// logic to switch camera between the players depending on what player gets to collisionShape3d first
-		if (playerContainer == _player.GetChild<RigidBody3D>(playerId)) // for some reason it wants explicitly use Godot.CharacterBody3D instead of CharacterBody3D. probably because there are several CharacterBody3Ds
-		{
-			playerId = 0;
-		}
-		else if (playerContainer != _player.GetChild<RigidBody3D>(playerId))// for some reason it wants explicitly use Godot.CharacterBody3D instead of CharacterBody3D. probably because there are several CharacterBody3Ds
-		{
-		 this.GlobalPosition = playerContainer.GlobalPosition; 
-		}
+		//if (playerContainer == _player.GetChild<RigidBody3D>(playerId)) // for some reason it wants explicitly use Godot.CharacterBody3D instead of CharacterBody3D. probably because there are several CharacterBody3Ds
+		//{
+		//	playerId = 0;
+		//}
+		//else if (playerContainer != _player.GetChild<RigidBody3D>(playerId))// for some reason it wants explicitly use Godot.CharacterBody3D instead of CharacterBody3D. probably because there are several CharacterBody3Ds
+		//{
+		// this.GlobalPosition = playerContainer.GlobalPosition; 
+		//}
 
 		//destroy the collisionshape after a player passes through it!
 		areaNodeToDequeue.GetChild<CollisionShape3D>(collisionshapes).QueueFree();
