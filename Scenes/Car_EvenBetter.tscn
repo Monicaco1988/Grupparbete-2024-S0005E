@@ -529,6 +529,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0, 1, 1), Color(0, 0, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance/doorLeft/OmniLight3D:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 1, 1), Color(0, 0, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarMesh/ambulance/doorRight/OmniLight3D:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8gxp6"]
 _data = {
@@ -562,19 +586,49 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46999, -0.747112)
-light_color = Color(0, 0, 1, 1)
+light_color = Color(0.999997, 0, 3.02722e-06, 1)
 light_energy = 16.0
 omni_range = 1.12512
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410291, 0.434126, -1.57652)
+omni_range = 0.247119
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394527, 0.434126, -1.56433)
+omni_range = 0.247119
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.496597, 0.659873, -1.75175)
+spot_range = 8.11911
+spot_angle = 44.6188
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.34659, 0.659873, -1.75175)
+spot_range = 10.2262
+spot_angle = 47.147
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
 mesh = SubResource("ArrayMesh_bk8vp")
 skeleton = NodePath("")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/doorLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08502, 1.48626, 0.177077)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.25157
+
 [node name="doorRight" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 0.4, 1.575)
 mesh = SubResource("ArrayMesh_h0afo")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/doorRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.818134, 1.48626, 0.177077)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.24662
 
 [node name="wheel_backLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0.91)
