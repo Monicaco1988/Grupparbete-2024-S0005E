@@ -1,6 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://dc8qdkv73dwx0"]
+[gd_scene load_steps=30 format=3 uid="uid://dc8qdkv73dwx0"]
 
-[ext_resource type="MeshLibrary" uid="uid://xaaxbd4hgk7w" path="res://Scenes/Tiles/CollisionRoadTiles.tres" id="2_ergas"]
+[ext_resource type="MeshLibrary" uid="uid://crb17vbmj1yf8" path="res://Scenes/Tiles/CollisionGrid3.tres" id="1_yku7e"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
 [ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
 [ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="5_jmusw"]
@@ -29,6 +29,10 @@ albedo_color = Color(0.0156863, 0, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_733qs"]
 material = SubResource("StandardMaterial3D_qwhoh")
 size = Vector2(2000, 2000)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2f6r0"]
+rough = true
+bounce = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkf4w"]
 size = Vector3(1, 1, 1.06863)
@@ -117,7 +121,8 @@ shape = SubResource("BoxShape3D_2srti")
 mesh = SubResource("PlaneMesh_733qs")
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("2_ergas")
+mesh_library = ExtResource("1_yku7e")
+physics_material = SubResource("PhysicsMaterial_2f6r0")
 cell_size = Vector3(30, 0.1, 30)
 cell_scale = 30.0
 data = {

@@ -5,14 +5,12 @@ resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8a6m"]
 resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhbv8"]
 resource_name = "asphaltEdge"
@@ -4613,28 +4611,24 @@ resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qb0fo"]
 resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yowj3"]
 resource_name = "asphaltEdge"
 cull_mode = 2
 albedo_color = Color(0.321569, 0.337255, 0.396078, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bti6m"]
 resource_name = "line"
 cull_mode = 2
 albedo_color = Color(0.54902, 0.576471, 0.678431, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ta2pe"]
 _surfaces = [{
@@ -4889,7 +4883,6 @@ shadow_mesh = SubResource("ArrayMesh_hr0vc")
 [node name="TilesRoads" type="Node3D"]
 
 [node name="road_bend" type="Node3D" parent="."]
-visible = false
 
 [node name="road_bend" type="MeshInstance3D" parent="road_bend"]
 mesh = SubResource("ArrayMesh_tpvjp")
@@ -5440,6 +5433,7 @@ skeleton = NodePath("")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="road_straight"]
 
 [node name="road_straightBarrier" type="Node3D" parent="."]
+visible = false
 
 [node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier"]
 mesh = SubResource("ArrayMesh_n5tmp")
@@ -5468,6 +5462,7 @@ shape = SubResource("ConcavePolygonShape3D_wf4xe")
 
 [node name="street_light" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53, 0, 0)
+visible = false
 
 [node name="street_light" type="MeshInstance3D" parent="street_light"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
