@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kc24lpa8ckbv"
-path="res://.godot/imported/light_curvedDouble_NE.png-26f41dff277e202a23246a46bb237e39.ctex"
+path="res://.godot/imported/light_curvedDouble_NE.png-fbe60b4754ed68c5dfbf2d098023825d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/light_curvedDouble_NE.png"
-dest_files=["res://.godot/imported/light_curvedDouble_NE.png-26f41dff277e202a23246a46bb237e39.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/light_curvedDouble_NE.png"
+dest_files=["res://.godot/imported/light_curvedDouble_NE.png-fbe60b4754ed68c5dfbf2d098023825d.ctex"]
 
 [params]
 

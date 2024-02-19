@@ -47,7 +47,7 @@ public partial class GameManager : Node
 
     private void HandleLevelSelect()
     {
-        var sceneWorld = ResourceLoader.Load<PackedScene>("res://Scenes/Test_layouts.tscn").Instantiate<Node3D>();
+        var sceneWorld = ResourceLoader.Load<PackedScene>("res://Scenes/RacingScene_Multiplayer.tscn").Instantiate<Node3D>();
         AddChild(sceneWorld);
     }
     private void HandlePlayerSelect()

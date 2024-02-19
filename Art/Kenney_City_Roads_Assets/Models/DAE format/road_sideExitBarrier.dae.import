@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfmh1stoqiojm"
-path="res://.godot/imported/road_sideExitBarrier.dae-f515b66435b7d7cd6d37b23a4246e591.scn"
+path="res://.godot/imported/road_sideExitBarrier.dae-112e7783ff18849ba20c7f184dfb381d.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_sideExitBarrier.dae"
-dest_files=["res://.godot/imported/road_sideExitBarrier.dae-f515b66435b7d7cd6d37b23a4246e591.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_sideExitBarrier.dae"
+dest_files=["res://.godot/imported/road_sideExitBarrier.dae-112e7783ff18849ba20c7f184dfb381d.scn"]
 
 [params]
 

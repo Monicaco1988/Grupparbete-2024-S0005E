@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d21avc6s2s5kg"
-path="res://.godot/imported/road_sideEntry.dae-0eac239a3754d9a81364bb07aca4375d.scn"
+path="res://.godot/imported/road_sideEntry.dae-b1f71ee29e190b3d93db544de69eeeb9.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_sideEntry.dae"
-dest_files=["res://.godot/imported/road_sideEntry.dae-0eac239a3754d9a81364bb07aca4375d.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_sideEntry.dae"
+dest_files=["res://.godot/imported/road_sideEntry.dae-b1f71ee29e190b3d93db544de69eeeb9.scn"]
 
 [params]
 
