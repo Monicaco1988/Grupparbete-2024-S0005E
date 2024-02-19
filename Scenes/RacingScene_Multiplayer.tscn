@@ -1,6 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://dc8qdkv73dwx0"]
+[gd_scene load_steps=25 format=3 uid="uid://dc8qdkv73dwx0"]
 
 [ext_resource type="MeshLibrary" uid="uid://xaaxbd4hgk7w" path="res://Scenes/Tiles/CollisionRoadTiles.tres" id="2_ergas"]
+[ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
+[ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
+[ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="5_jmusw"]
 [ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
 [ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
 [ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
@@ -12,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
 [ext_resource type="PackedScene" uid="uid://dloek8k1vmean" path="res://art/KenneyCityKit/GLTF format/small_buildingD.glb" id="15_udt6a"]
 [ext_resource type="PackedScene" uid="uid://que0va60dcy" path="res://art/KenneyCityKit/GLTF format/small_buildingE.glb" id="16_3fc1x"]
-[ext_resource type="Script" path="res://Scenes/Follow_Camera.cs" id="16_71xdf"]
+[ext_resource type="Script" path="res://Scripts/Follow_Camera.cs" id="16_71xdf"]
 [ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
 [ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
 [ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
@@ -31,7 +34,7 @@ size = Vector2(2000, 2000)
 size = Vector3(1, 1, 1.06863)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5milq"]
-size = Vector3(22.2235, 9.11499, 23.6609)
+size = Vector3(22.2235, 9.11499, 9.71432)
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
@@ -2201,15 +2204,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -859.096, 0, 989)
 script = ExtResource("16_71xdf")
 areaNodeToDequeue = NodePath("../CollisionaraDestroy")
 
-[node name="Node3D" type="Node3D" parent="Follow_Camera"]
+[node name="CameraPole1" type="Marker3D" parent="Follow_Camera"]
+script = ExtResource("3_gu15p")
 
-[node name="Camera3D" type="Camera3D" parent="Follow_Camera/Node3D"]
-transform = Transform3D(0.815522, -0.377739, 0.438449, 0, 0.757611, 0.652707, -0.578726, -0.532297, 0.617848, 19.9769, 31.5738, 21.362)
+[node name="CameraPole2" type="Marker3D" parent="Follow_Camera/CameraPole1"]
+script = ExtResource("4_4usss")
+
+[node name="CameraPole3" type="Marker3D" parent="Follow_Camera/CameraPole1/CameraPole2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.2617, 0)
+script = ExtResource("5_jmusw")
+
+[node name="Camera3D" type="Camera3D" parent="Follow_Camera/CameraPole1/CameraPole2/CameraPole3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="CollisionaraDestroy" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionaraDestroy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 951.115)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 975.767)
 shape = SubResource("BoxShape3D_5milq")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="CollisionaraDestroy"]
@@ -2218,6 +2233,34 @@ shape = SubResource("BoxShape3D_5milq")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="CollisionaraDestroy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 902.742)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 878.768)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 855.224)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 832.145)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -831.575, 5.4425, 795.432)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -809.811, 5.4425, 795.432)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -788.137, 5.4425, 795.432)
+shape = SubResource("BoxShape3D_5milq")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -764.644, 5.4425, 815.74)
 shape = SubResource("BoxShape3D_5milq")
 
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]

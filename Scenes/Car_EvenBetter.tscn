@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=24 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 
@@ -514,6 +514,27 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q6f1c")
 
+[sub_resource type="Animation" id="Animation_pu1ql"]
+resource_name = "lights"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarMesh/ambulance/body/OmniLight3D:light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0, 1, 1), Color(0, 0, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8gxp6"]
+_data = {
+"lights": SubResource("Animation_pu1ql")
+}
+
 [node name="PlayerRoot" type="Node3D"]
 
 [node name="Player" type="RigidBody3D" parent="."]
@@ -538,6 +559,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60956e-14, 0.2, 0)
 mesh = SubResource("ArrayMesh_l45pp")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46999, -0.747112)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+omni_range = 1.12512
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
@@ -577,3 +604,9 @@ skeleton = NodePath("")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8gxp6")
+}
+autoplay = "lights"
