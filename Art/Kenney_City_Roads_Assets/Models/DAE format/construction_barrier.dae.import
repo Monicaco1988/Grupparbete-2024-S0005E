@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://drgqvckf8okji"
-path="res://.godot/imported/construction_barrier.dae-515c4fd0f6cbb1c40e3bdc46bb3ca4f4.scn"
+path="res://.godot/imported/construction_barrier.dae-a3219fe767e9270ad0a526d03f92cc08.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_barrier.dae"
-dest_files=["res://.godot/imported/construction_barrier.dae-515c4fd0f6cbb1c40e3bdc46bb3ca4f4.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_barrier.dae"
+dest_files=["res://.godot/imported/construction_barrier.dae-a3219fe767e9270ad0a526d03f92cc08.scn"]
 
 [params]
 

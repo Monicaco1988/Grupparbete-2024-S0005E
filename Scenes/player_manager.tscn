@@ -32,7 +32,7 @@ albedo_color = Color(0.945098, 0.94902, 0.964706, 1)
 metallic = 0.5
 roughness = 0.0960784
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_hr0vc"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2b282"]
 _surfaces = [{
 "aabb": AABB(-0.025, 0, -0.2125, 0.05001, 0.6, 0.2375),
 "format": 34896613377,
@@ -84,7 +84,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 63, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_hr0vc")
+shadow_mesh = SubResource("ArrayMesh_2b282")
 
 [sub_resource type="Gradient" id="Gradient_mqf4n"]
 colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)

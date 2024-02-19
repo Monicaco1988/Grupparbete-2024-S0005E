@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://pdnahs42hf8s"
-path="res://.godot/imported/wheelTractorDarkFront.glb-cea73aaa4a81fe37a789b8043f86f775.scn"
+path="res://.godot/imported/wheelTractorDarkFront.glb-85c7c7424f9ff34e8f5fbee011f10722.scn"
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Models/GLTF format/wheelTractorDarkFront.glb"
-dest_files=["res://.godot/imported/wheelTractorDarkFront.glb-cea73aaa4a81fe37a789b8043f86f775.scn"]
+source_file="res://Art/kenney_car-kit/Models/GLTF format/wheelTractorDarkFront.glb"
+dest_files=["res://.godot/imported/wheelTractorDarkFront.glb-85c7c7424f9ff34e8f5fbee011f10722.scn"]
 
 [params]
 

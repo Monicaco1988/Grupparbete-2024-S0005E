@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yx1s5fit5a88"
-path="res://.godot/imported/construction_pylon_SE.png-5450c41c5e6af060a18ef54aef73fd17.ctex"
+path="res://.godot/imported/construction_pylon_SE.png-1599864eba243e773e2dda8f63771a0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/construction_pylon_SE.png"
-dest_files=["res://.godot/imported/construction_pylon_SE.png-5450c41c5e6af060a18ef54aef73fd17.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/construction_pylon_SE.png"
+dest_files=["res://.godot/imported/construction_pylon_SE.png-1599864eba243e773e2dda8f63771a0f.ctex"]
 
 [params]
 

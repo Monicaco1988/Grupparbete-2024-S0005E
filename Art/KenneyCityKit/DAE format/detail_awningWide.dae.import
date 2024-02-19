@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cgd8ltf6liga0"
-path="res://.godot/imported/detail_awningWide.dae-af09f9c5fa13e408f76175043ab27145.scn"
+path="res://.godot/imported/detail_awningWide.dae-4419b032013a16c7f5fa6c5c1a8a479e.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/DAE format/detail_awningWide.dae"
-dest_files=["res://.godot/imported/detail_awningWide.dae-af09f9c5fa13e408f76175043ab27145.scn"]
+source_file="res://Art/KenneyCityKit/DAE format/detail_awningWide.dae"
+dest_files=["res://.godot/imported/detail_awningWide.dae-4419b032013a16c7f5fa6c5c1a8a479e.scn"]
 
 [params]
 
