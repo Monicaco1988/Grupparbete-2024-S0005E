@@ -4,7 +4,7 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
-bounce = 1.0
+bounce = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_syqvy"]
 radius = 1.0
