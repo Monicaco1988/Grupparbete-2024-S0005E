@@ -5,28 +5,24 @@ resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8a6m"]
 resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhbv8"]
 resource_name = "asphaltEdge"
 cull_mode = 2
 albedo_color = Color(0.321569, 0.337255, 0.396078, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukfy2"]
 resource_name = "line"
 cull_mode = 2
 albedo_color = Color(0.54902, 0.576471, 0.678431, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cdl87"]
 _surfaces = [{
@@ -2598,28 +2594,24 @@ resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5h1md"]
 resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5mye"]
 resource_name = "asphaltEdge"
 cull_mode = 2
 albedo_color = Color(0.321569, 0.337255, 0.396078, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktwx7"]
 resource_name = "line"
 cull_mode = 2
 albedo_color = Color(0.54902, 0.576471, 0.678431, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c1pf2"]
 _surfaces = [{
@@ -2724,28 +2716,24 @@ resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xy6sg"]
 resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gstad"]
 resource_name = "line"
 cull_mode = 2
 albedo_color = Color(0.54902, 0.576471, 0.678431, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g317c"]
 resource_name = "asphaltEdge"
 cull_mode = 2
 albedo_color = Color(0.321569, 0.337255, 0.396078, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_armyl"]
 _surfaces = [{
@@ -4613,28 +4601,24 @@ resource_name = "pavement"
 cull_mode = 2
 albedo_color = Color(0.756863, 0.756863, 0.8, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qb0fo"]
 resource_name = "asphalt"
 cull_mode = 2
 albedo_color = Color(0.431373, 0.454902, 0.529412, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yowj3"]
 resource_name = "asphaltEdge"
 cull_mode = 2
 albedo_color = Color(0.321569, 0.337255, 0.396078, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bti6m"]
 resource_name = "line"
 cull_mode = 2
 albedo_color = Color(0.54902, 0.576471, 0.678431, 1)
 metallic = 0.5
-roughness = 0.0960784
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ta2pe"]
 _surfaces = [{

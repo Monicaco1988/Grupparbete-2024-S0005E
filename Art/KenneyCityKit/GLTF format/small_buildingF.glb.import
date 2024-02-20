@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blqo5owbijtu2"
-path="res://.godot/imported/small_buildingF.glb-44bc05a368c4154aa76143dfd57a6f35.scn"
+path="res://.godot/imported/small_buildingF.glb-af9440ad578dfdaf2614c5733c8705dd.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/GLTF format/small_buildingF.glb"
-dest_files=["res://.godot/imported/small_buildingF.glb-44bc05a368c4154aa76143dfd57a6f35.scn"]
+source_file="res://art/KenneyCityKit/GLTF format/small_buildingF.glb"
+dest_files=["res://.godot/imported/small_buildingF.glb-af9440ad578dfdaf2614c5733c8705dd.scn"]
 
 [params]
 

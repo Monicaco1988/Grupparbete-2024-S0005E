@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bkjkomose0i8x"
-path="res://.godot/imported/road_slantFlatCurve.dae-7a5b3fc805b60a45f2fcda8091f527d9.scn"
+path="res://.godot/imported/road_slantFlatCurve.dae-57e9a12efaf3b8394678d9d81e40d07c.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_slantFlatCurve.dae"
-dest_files=["res://.godot/imported/road_slantFlatCurve.dae-7a5b3fc805b60a45f2fcda8091f527d9.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_slantFlatCurve.dae"
+dest_files=["res://.godot/imported/road_slantFlatCurve.dae-57e9a12efaf3b8394678d9d81e40d07c.scn"]
 
 [params]
 

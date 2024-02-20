@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brejks5jmcgll"
-path="res://.godot/imported/road_end.png-83155b01dc0a2093b158da4772f063bc.ctex"
+path="res://.godot/imported/road_end.png-9ec309acd6db7626de1f1f888a844446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Side/road_end.png"
-dest_files=["res://.godot/imported/road_end.png-83155b01dc0a2093b158da4772f063bc.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Side/road_end.png"
+dest_files=["res://.godot/imported/road_end.png-9ec309acd6db7626de1f1f888a844446.ctex"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://311n1u64skxr"
-path="res://.godot/imported/taxi.obj-527d5f7729af86ea551821e65ee84ff3.mesh"
+path="res://.godot/imported/taxi.obj-7a6c1729c639382c53bf55c98025aaa0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/taxi.obj-527d5f7729af86ea551821e65ee84ff3.mesh"]
+files=["res://.godot/imported/taxi.obj-7a6c1729c639382c53bf55c98025aaa0.mesh"]
 
-source_file="res://Art/kenney_car-kit/Models/OBJ format/taxi.obj"
-dest_files=["res://.godot/imported/taxi.obj-527d5f7729af86ea551821e65ee84ff3.mesh", "res://.godot/imported/taxi.obj-527d5f7729af86ea551821e65ee84ff3.mesh"]
+source_file="res://art/kenney_car-kit/Models/OBJ format/taxi.obj"
+dest_files=["res://.godot/imported/taxi.obj-7a6c1729c639382c53bf55c98025aaa0.mesh", "res://.godot/imported/taxi.obj-7a6c1729c639382c53bf55c98025aaa0.mesh"]
 
 [params]
 

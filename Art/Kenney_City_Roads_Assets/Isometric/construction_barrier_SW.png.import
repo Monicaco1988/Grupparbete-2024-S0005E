@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://878pypycrvkj"
-path.s3tc="res://.godot/imported/construction_barrier_SW.png-7d6f2bc57fc3e7cc7495569917b07ba5.s3tc.ctex"
+path.s3tc="res://.godot/imported/construction_barrier_SW.png-5d408136465514ca76773b7f0f7b1e38.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/construction_barrier_SW.png"
-dest_files=["res://.godot/imported/construction_barrier_SW.png-7d6f2bc57fc3e7cc7495569917b07ba5.s3tc.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/construction_barrier_SW.png"
+dest_files=["res://.godot/imported/construction_barrier_SW.png-5d408136465514ca76773b7f0f7b1e38.s3tc.ctex"]
 
 [params]
 

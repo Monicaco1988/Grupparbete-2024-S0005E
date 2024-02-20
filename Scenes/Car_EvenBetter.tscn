@@ -4,7 +4,7 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
-bounce = 0.1
+bounce = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_syqvy"]
 radius = 1.0
@@ -600,13 +600,15 @@ omni_range = 0.247119
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.496597, 0.659873, -1.75175)
-spot_range = 8.11911
-spot_angle = 44.6188
+light_energy = 16.0
+spot_range = 26.0
+spot_angle = 22.4853
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.34659, 0.659873, -1.75175)
-spot_range = 10.2262
-spot_angle = 47.147
+light_energy = 16.0
+spot_range = 27.0
+spot_angle = 23.9404
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
