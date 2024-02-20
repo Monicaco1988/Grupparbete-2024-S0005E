@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bcpr82lh1vkuy"
-path="res://.godot/imported/light_curvedDouble.dae-9c40c6b405c457d541a7309bf9efee74.scn"
+path="res://.godot/imported/light_curvedDouble.dae-7511ff7b5264ffd63583578fc3b3920f.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/light_curvedDouble.dae"
-dest_files=["res://.godot/imported/light_curvedDouble.dae-9c40c6b405c457d541a7309bf9efee74.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/light_curvedDouble.dae"
+dest_files=["res://.godot/imported/light_curvedDouble.dae-7511ff7b5264ffd63583578fc3b3920f.scn"]
 
 [params]
 

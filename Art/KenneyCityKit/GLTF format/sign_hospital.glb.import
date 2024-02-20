@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://6luiastx664u"
-path="res://.godot/imported/sign_hospital.glb-42368d83604033b4a7bd27884fb93776.scn"
+path="res://.godot/imported/sign_hospital.glb-84f6bf414b4bb45c8b149027df73d69d.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/GLTF format/sign_hospital.glb"
-dest_files=["res://.godot/imported/sign_hospital.glb-42368d83604033b4a7bd27884fb93776.scn"]
+source_file="res://art/KenneyCityKit/GLTF format/sign_hospital.glb"
+dest_files=["res://.godot/imported/sign_hospital.glb-84f6bf414b4bb45c8b149027df73d69d.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mq05isxpetgj"
-path="res://.godot/imported/road_bridge.dae-436992e6f3cfa27bc10acc773d5463ec.scn"
+path="res://.godot/imported/road_bridge.dae-cd12f4415e73d5dae96b7a628ed45ec0.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_bridge.dae"
-dest_files=["res://.godot/imported/road_bridge.dae-436992e6f3cfa27bc10acc773d5463ec.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_bridge.dae"
+dest_files=["res://.godot/imported/road_bridge.dae-cd12f4415e73d5dae96b7a628ed45ec0.scn"]
 
 [params]
 

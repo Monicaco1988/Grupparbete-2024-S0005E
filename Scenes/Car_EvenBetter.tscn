@@ -565,8 +565,32 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.60956e-14, 1.72707, -0.708554)
 light_color = Color(0, 0, 1, 1)
 light_energy = 16.0
+<<<<<<< Updated upstream
 omni_range = 2.768
 omni_attenuation = 19.0273
+=======
+omni_range = 1.12512
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410291, 0.434126, -1.57652)
+omni_range = 0.247119
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394527, 0.434126, -1.56433)
+omni_range = 0.247119
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.496597, 0.659873, -1.75175)
+light_energy = 16.0
+spot_range = 28.9497
+spot_angle = 20.2652
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CarMesh/ambulance/body"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.34659, 0.659873, -1.75175)
+light_energy = 16.0
+spot_range = 30.2414
+spot_angle = 20.3688
+>>>>>>> Stashed changes
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)

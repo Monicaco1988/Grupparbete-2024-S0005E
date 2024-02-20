@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dpu0ee0xv7avv"
-path="res://.godot/imported/detail_overhang.glb-b30195a57288e42cfd5e3db3b016d96b.scn"
+path="res://.godot/imported/detail_overhang.glb-5e6640145bfe4eccc715500678093c7a.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/GLTF format/detail_overhang.glb"
-dest_files=["res://.godot/imported/detail_overhang.glb-b30195a57288e42cfd5e3db3b016d96b.scn"]
+source_file="res://art/KenneyCityKit/GLTF format/detail_overhang.glb"
+dest_files=["res://.godot/imported/detail_overhang.glb-5e6640145bfe4eccc715500678093c7a.scn"]
 
 [params]
 
