@@ -23,7 +23,7 @@ public partial class betterCar : RigidBody3D
 		IN_ACTIVE
 	}
 
-	Node3D carMesh;
+	public Node3D carMesh;
 	Node3D bodyMesh;
 	RayCast3D groundRay;
 	MeshInstance3D rightWheel;
@@ -33,6 +33,7 @@ public partial class betterCar : RigidBody3D
 	PackedScene trackScene;
 	Node3D rightSkid;
 	Node3D leftSkid;
+	//Node3D playerRoot;
 
 
 
@@ -74,6 +75,7 @@ public partial class betterCar : RigidBody3D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+		
         carMesh = GetParent().GetNode<Node3D>("CarMesh");
         bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
         groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
@@ -84,6 +86,8 @@ public partial class betterCar : RigidBody3D
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 		
     }
+
+	
 
 	public void addTireTracks()
 	{

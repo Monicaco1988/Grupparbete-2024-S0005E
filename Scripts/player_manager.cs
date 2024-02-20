@@ -37,6 +37,14 @@ public partial class player_manager : Node3D
         _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
     }
 
+    public void moveToSpawnLocation()
+    {
+        foreach (var ambulance in ambulances)
+        {
+            ambulance.GlobalPosition = Spawnpoints[ambulance.id].GlobalPosition;
+            ambulance.carMesh.Rotation = Vector3.Zero;
+        }
+    }
 
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -97,6 +105,7 @@ public partial class player_manager : Node3D
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
                 GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
+                moveToSpawnLocation();
                 //QueueFree();
             }
 
