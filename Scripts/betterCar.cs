@@ -23,13 +23,27 @@ public partial class betterCar : RigidBody3D
 		IN_ACTIVE
 	}
 
-	public Node3D carMesh;
+    public enum PowerUp
+    {
+        SPEED_BOOST,
+        DEFIBRILLATOR,
+		P3,
+		P4,
+		P5,
+		P6,
+		P7,
+		P8,
+		NO_POWER
+    }
+
+    public Node3D carMesh;
 	Node3D bodyMesh;
 	RayCast3D groundRay;
 	MeshInstance3D rightWheel;
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
+	PowerUp powerUp = PowerUp.SPEED_BOOST;
 	PackedScene trackScene;
 	Node3D rightSkid;
 	Node3D leftSkid;
@@ -47,6 +61,7 @@ public partial class betterCar : RigidBody3D
 	float bodyTilt = 35;
 	float gasInput;
 	float turnInput2;
+	float speedBoost = 25;
 	bool isDrifting = false;
 
    
@@ -109,6 +124,49 @@ public partial class betterCar : RigidBody3D
 		}
 	}
 
+	public void usePowerUp(double delta)
+	{
+        if (Input.IsJoyButtonPressed(id, JoyButton.X))
+        {
+            switch (powerUp)
+            {
+                case PowerUp.SPEED_BOOST:
+					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
+                    break;
+
+                case PowerUp.DEFIBRILLATOR:
+                    //Do P2 Shit
+                    break;
+
+                case PowerUp.P3:
+                    //Do P3 shit
+                    break;
+
+                case PowerUp.P4:
+                    //Do P4 shit
+                    break;
+
+                case PowerUp.P5:
+                    //Do P5 shit
+                    break;
+
+                case PowerUp.P6:
+                    //Do P6 shit
+                    break;
+
+                case PowerUp.P7:
+                    //Do P7 shit
+                    break;
+
+                case PowerUp.P8:
+                    //Do P8 shit
+                    break;
+
+                default: break;
+            }
+        }
+	}
+
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
@@ -128,6 +186,7 @@ public partial class betterCar : RigidBody3D
 
 	public override void _Process(double delta)
 	{
+		usePowerUp(delta);
 		//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
 		velocity = this.LinearVelocity.Length();
 
