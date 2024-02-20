@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lywu2oj24us8"
+path="res://.godot/imported/7.5 Scarlet Woods - Loop3 - Blue Lava.wav-aa244beb85ac56a149791e25e03295fb.sample"
+
+[deps]
+
+source_file="res://Audio/7.5 Scarlet Woods - Loop3 - Blue Lava.wav"
+dest_files=["res://.godot/imported/7.5 Scarlet Woods - Loop3 - Blue Lava.wav-aa244beb85ac56a149791e25e03295fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

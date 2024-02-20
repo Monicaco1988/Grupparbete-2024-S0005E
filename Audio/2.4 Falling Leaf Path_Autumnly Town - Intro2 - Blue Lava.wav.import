@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4irehfj7wr5t"
+path="res://.godot/imported/2.4 Falling Leaf Path_Autumnly Town - Intro2 - Blue Lava.wav-a27f71a3105b28ef57cc0cba2600819f.sample"
+
+[deps]
+
+source_file="res://Audio/2.4 Falling Leaf Path_Autumnly Town - Intro2 - Blue Lava.wav"
+dest_files=["res://.godot/imported/2.4 Falling Leaf Path_Autumnly Town - Intro2 - Blue Lava.wav-a27f71a3105b28ef57cc0cba2600819f.sample"]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
