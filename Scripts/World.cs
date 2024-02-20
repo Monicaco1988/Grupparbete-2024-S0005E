@@ -13,9 +13,9 @@ public partial class World : Node3D
 	}
     public override void _Ready()
     {
-        playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
-        var playerRoot = playerScene.Instantiate<Node3D>();
-        AddChild(playerRoot);
+        //playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
+        //var playerRoot = playerScene.Instantiate<Node3D>();
+        //AddChild(playerRoot);
     }
 
 }

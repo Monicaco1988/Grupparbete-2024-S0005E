@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dswm1pni78n63"
-path="res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"
+path="res://.godot/imported/ambulance.obj-ec8d8bd427d489a76d24a6bd87a3df46.mesh"
 
 [deps]
 
-files=["res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"]
+files=["res://.godot/imported/ambulance.obj-ec8d8bd427d489a76d24a6bd87a3df46.mesh"]
 
-source_file="res://Art/kenney_car-kit/Models/OBJ format/ambulance.obj"
-dest_files=["res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh", "res://.godot/imported/ambulance.obj-ea69676bc1184ecfcb5b556ead49e5ab.mesh"]
+source_file="res://art/kenney_car-kit/Models/OBJ format/ambulance.obj"
+dest_files=["res://.godot/imported/ambulance.obj-ec8d8bd427d489a76d24a6bd87a3df46.mesh", "res://.godot/imported/ambulance.obj-ec8d8bd427d489a76d24a6bd87a3df46.mesh"]
 
 [params]
 

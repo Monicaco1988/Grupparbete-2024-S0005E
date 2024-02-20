@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bwysxd7foykk3"
-path="res://.godot/imported/road_slantCurveBarrier.dae-6bdf196a071fef200ea518bce9033730.scn"
+path="res://.godot/imported/road_slantCurveBarrier.dae-9bcdbea559bd185b2579c56800659d70.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_slantCurveBarrier.dae"
-dest_files=["res://.godot/imported/road_slantCurveBarrier.dae-6bdf196a071fef200ea518bce9033730.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_slantCurveBarrier.dae"
+dest_files=["res://.godot/imported/road_slantCurveBarrier.dae-9bcdbea559bd185b2579c56800659d70.scn"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmgvfwr48irtb"
-path="res://.godot/imported/road_drivewayDoubleBarrier_NW.png-18658f3c7475587396755d61bc8a3b29.ctex"
+path="res://.godot/imported/road_drivewayDoubleBarrier_NW.png-185a54e8705e1b13eada66ceff674174.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_drivewayDoubleBarrier_NW.png"
-dest_files=["res://.godot/imported/road_drivewayDoubleBarrier_NW.png-18658f3c7475587396755d61bc8a3b29.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_drivewayDoubleBarrier_NW.png"
+dest_files=["res://.godot/imported/road_drivewayDoubleBarrier_NW.png-185a54e8705e1b13eada66ceff674174.ctex"]
 
 [params]
 

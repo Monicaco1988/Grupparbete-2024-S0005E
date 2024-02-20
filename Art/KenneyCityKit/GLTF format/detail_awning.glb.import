@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bunx1xry44fg6"
-path="res://.godot/imported/detail_awning.glb-d628e8460c8dbb28e4409d67f9f7d0d1.scn"
+path="res://.godot/imported/detail_awning.glb-257caa25cb6c3941f7a1cd5d405bfdd3.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/GLTF format/detail_awning.glb"
-dest_files=["res://.godot/imported/detail_awning.glb-d628e8460c8dbb28e4409d67f9f7d0d1.scn"]
+source_file="res://art/KenneyCityKit/GLTF format/detail_awning.glb"
+dest_files=["res://.godot/imported/detail_awning.glb-257caa25cb6c3941f7a1cd5d405bfdd3.scn"]
 
 [params]
 

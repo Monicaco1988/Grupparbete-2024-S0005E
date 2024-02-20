@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3fj7jccwoay7"
-path.s3tc="res://.godot/imported/bridge_pillar.png-945a3bf5008bf485519081ffe1fef8ea.s3tc.ctex"
+path.s3tc="res://.godot/imported/bridge_pillar.png-004dc4b8ba7f7777649b9075d801f837.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Side/bridge_pillar.png"
-dest_files=["res://.godot/imported/bridge_pillar.png-945a3bf5008bf485519081ffe1fef8ea.s3tc.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Side/bridge_pillar.png"
+dest_files=["res://.godot/imported/bridge_pillar.png-004dc4b8ba7f7777649b9075d801f837.s3tc.ctex"]
 
 [params]
 
