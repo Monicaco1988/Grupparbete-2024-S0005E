@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dc8qdkv73dwx0"]
+[gd_scene load_steps=36 format=3 uid="uid://dc8qdkv73dwx0"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
 [ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
 [ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
+[ext_resource type="Script" path="res://Scripts/ExplosionMarker.cs" id="20_rhcxc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
 size = Vector3(2000, 1, 2000)
@@ -109,6 +110,24 @@ size = Vector3(22.2235, 9.11499, 9.71432)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yn5xg"]
 size = Vector3(22.2235, 5.71069, 9.71432)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5vmq5"]
+emission_shape = 1
+emission_sphere_radius = 2.0
+spread = 180.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgcse"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oyu5c"]
+material = SubResource("StandardMaterial3D_tgcse")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gms06"]
+top_radius = 1.0
+bottom_radius = 1.0
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
@@ -14341,4 +14360,28 @@ shape = SubResource("BoxShape3D_yn5xg")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -750.097, 4.36691, 884.906)
 shape = SubResource("BoxShape3D_yn5xg")
 
+[node name="ExplosionMarker" type="Marker3D" parent="." node_paths=PackedStringArray("explosion")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 0)
+script = ExtResource("20_rhcxc")
+explosion = NodePath("GPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="ExplosionMarker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.06915)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="ExplosionMarker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90101, 0)
+emitting = false
+amount = 50
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_5vmq5")
+draw_pass_1 = SubResource("BoxMesh_oyu5c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ExplosionMarker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16194, 0)
+visible = false
+mesh = SubResource("CylinderMesh_gms06")
+
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
+[connection signal="screen_exited" from="ExplosionMarker/VisibleOnScreenEnabler3D" to="ExplosionMarker" method="OnScreenExist"]
