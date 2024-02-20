@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dc8qdkv73dwx0"]
+[gd_scene load_steps=30 format=3 uid="uid://dc8qdkv73dwx0"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -29,6 +29,9 @@ albedo_color = Color(0.0156863, 0, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_733qs"]
 material = SubResource("StandardMaterial3D_qwhoh")
 size = Vector2(2000, 2000)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_88ewm"]
+bounce = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkf4w"]
 size = Vector3(1, 1, 1.06863)
@@ -118,6 +121,7 @@ mesh = SubResource("PlaneMesh_733qs")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_6qkno")
+physics_material = SubResource("PhysicsMaterial_88ewm")
 cell_size = Vector3(30, 0.1, 30)
 cell_scale = 30.0
 data = {
