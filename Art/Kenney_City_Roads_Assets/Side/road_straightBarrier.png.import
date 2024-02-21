@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8uh6qwfid2yt"
-path="res://.godot/imported/road_straightBarrier.png-a9f5900679dbc48a423259b5e3d5710a.ctex"
+path="res://.godot/imported/road_straightBarrier.png-eb5e8e96e53606d95b42aff31695367d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Side/road_straightBarrier.png"
-dest_files=["res://.godot/imported/road_straightBarrier.png-a9f5900679dbc48a423259b5e3d5710a.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Side/road_straightBarrier.png"
+dest_files=["res://.godot/imported/road_straightBarrier.png-eb5e8e96e53606d95b42aff31695367d.ctex"]
 
 [params]
 

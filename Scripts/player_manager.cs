@@ -5,8 +5,8 @@ using System;
 public partial class player_manager : Node3D
 {
 <<<<<<< Updated upstream
-    //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
-    private GameManager _GetStateGameManager;
+	//Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
+	private GameManager _GetStateGameManager;
 =======
 	private int lockAButton = 0;
 
@@ -104,19 +104,19 @@ public partial class player_manager : Node3D
 			}
 
 <<<<<<< Updated upstream
-            // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
-            {
-                _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
+			// same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
+			if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
+			{
+				_GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
 
-                GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
-                GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
-                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
-                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
-                GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
-                GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
-                //QueueFree();road_straightBarrier
-            }
+				GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
+				GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
+				GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
+				GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
+				GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
+				GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
+				//QueueFree();road_straightBarrier
+			}
 =======
 			// same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
 			if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0 && lockAButton == 0)
@@ -143,15 +143,15 @@ public partial class player_manager : Node3D
 	}
 
 <<<<<<< Updated upstream
-    //When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
-    public void OnButtonPressed()
-    {
-        if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
-        {
-            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-            //QueueFree();//removes PlayerManager Scene
-        }
-    }
+	//When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
+	public void OnButtonPressed()
+	{
+		if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
+		{
+			_GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
+			//QueueFree();//removes PlayerManager Scene
+		}
+	}
 =======
 	//When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
 	public void OnButtonPressed()

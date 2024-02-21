@@ -72,20 +72,20 @@ public partial class betterCar : RigidBody3D
 		this.state = newState;    
 	}
 
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
-        carMesh = GetParent().GetNode<Node3D>("CarMesh");
-        bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
-        groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
-        rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+		carMesh = GetParent().GetNode<Node3D>("CarMesh");
+		bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
+		groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
+		rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
 		leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
 		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
-        leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
-        trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+		leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
+		trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 
-        lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
-    }
+		lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
+	}
 
 	public void addTireTracks()
 	{
@@ -174,8 +174,8 @@ public partial class betterCar : RigidBody3D
 
 	}
 
-    public override void _UnhandledInput(InputEvent @event)
-    {
+	public override void _UnhandledInput(InputEvent @event)
+	{
 		////switches lights on/off
 		//if (@event.IsActionPressed("lights") && lights.Visible == true)
 		//{
@@ -185,9 +185,9 @@ public partial class betterCar : RigidBody3D
 		//{
   //          lights.Visible = true;
   //      }
-    }
+	}
 
-    public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
+	public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
 	{
 		xForm.Basis.Y = newY;
 		xForm.Basis.X = -xForm.Basis.Z.Cross(newY);

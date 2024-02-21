@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://d06fgctd0ikml"
-path="res://.godot/imported/truckFlat.obj-161f1026068736ae9acf20948d024f7f.mesh"
+path="res://.godot/imported/truckFlat.obj-2c7adce664979afa3ca25c5035dee6f4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/truckFlat.obj-161f1026068736ae9acf20948d024f7f.mesh"]
+files=["res://.godot/imported/truckFlat.obj-2c7adce664979afa3ca25c5035dee6f4.mesh"]
 
-source_file="res://art/kenney_car-kit/Models/OBJ format/truckFlat.obj"
-dest_files=["res://.godot/imported/truckFlat.obj-161f1026068736ae9acf20948d024f7f.mesh", "res://.godot/imported/truckFlat.obj-161f1026068736ae9acf20948d024f7f.mesh"]
+source_file="res://Art/kenney_car-kit/Models/OBJ format/truckFlat.obj"
+dest_files=["res://.godot/imported/truckFlat.obj-2c7adce664979afa3ca25c5035dee6f4.mesh", "res://.godot/imported/truckFlat.obj-2c7adce664979afa3ca25c5035dee6f4.mesh"]
 
 [params]
 
