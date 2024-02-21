@@ -96,6 +96,8 @@ public partial class player_manager : Node3D
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
             if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
             {
+                //Moved location of spawnLocation so that the cars are visible when spawned in map
+                moveToSpawnLocation();
                 _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
 
 
@@ -105,7 +107,7 @@ public partial class player_manager : Node3D
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
                 GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
-                moveToSpawnLocation();
+                
                 //QueueFree();
             }
 
@@ -118,6 +120,7 @@ public partial class player_manager : Node3D
     {
         if (numberOfPlayers >= 2) // "Start Game" only works if there are atleast 2 players
         {
+            moveToSpawnLocation();
             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
 
 
