@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bet7akf10lmqp"
-path="res://.godot/imported/low_buildingC.dae-36efc4798b367cb0ba400edf82941eb4.scn"
+path="res://.godot/imported/low_buildingC.dae-5dbd9bcf81374765e5e8cb161a389d49.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/DAE format/low_buildingC.dae"
-dest_files=["res://.godot/imported/low_buildingC.dae-36efc4798b367cb0ba400edf82941eb4.scn"]
+source_file="res://Art/KenneyCityKit/DAE format/low_buildingC.dae"
+dest_files=["res://.godot/imported/low_buildingC.dae-5dbd9bcf81374765e5e8cb161a389d49.scn"]
 
 [params]
 

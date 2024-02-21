@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://48emc5kv7gjl"
-path="res://.godot/imported/skyscraperD.dae-cbc56760244676a3fa00c75db9fd7862.scn"
+path="res://.godot/imported/skyscraperD.dae-ab0492eed7585ef27beda75338798497.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/DAE format/skyscraperD.dae"
-dest_files=["res://.godot/imported/skyscraperD.dae-cbc56760244676a3fa00c75db9fd7862.scn"]
+source_file="res://Art/KenneyCityKit/DAE format/skyscraperD.dae"
+dest_files=["res://.godot/imported/skyscraperD.dae-ab0492eed7585ef27beda75338798497.scn"]
 
 [params]
 

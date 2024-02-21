@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://n6wvv85w2pm8"
-path="res://.godot/imported/hatchbackSports.dae-41936042d318faa7bf28413c6906ca64.scn"
+path="res://.godot/imported/hatchbackSports.dae-cf434cfcc3624f6fe84e24712dac339b.scn"
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Models/DAE format/hatchbackSports.dae"
-dest_files=["res://.godot/imported/hatchbackSports.dae-41936042d318faa7bf28413c6906ca64.scn"]
+source_file="res://Art/kenney_car-kit/Models/DAE format/hatchbackSports.dae"
+dest_files=["res://.godot/imported/hatchbackSports.dae-cf434cfcc3624f6fe84e24712dac339b.scn"]
 
 [params]
 

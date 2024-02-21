@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0cimkrx3giqh"
-path="res://.godot/imported/tractorShovel.png-5fd514b0ee469fd65124daa2ffa8b640.ctex"
+path="res://.godot/imported/tractorShovel.png-9b590639bbf0c9b3800e23dba954177b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/tractorShovel.png"
-dest_files=["res://.godot/imported/tractorShovel.png-5fd514b0ee469fd65124daa2ffa8b640.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/tractorShovel.png"
+dest_files=["res://.godot/imported/tractorShovel.png-9b590639bbf0c9b3800e23dba954177b.ctex"]
 
 [params]
 
