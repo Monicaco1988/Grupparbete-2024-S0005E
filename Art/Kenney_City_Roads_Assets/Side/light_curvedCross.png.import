@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mpulvmqduknk"
-path="res://.godot/imported/light_curvedCross.png-850fd167c401b9427fc02527a09350d6.ctex"
+path="res://.godot/imported/light_curvedCross.png-842fb8fb81f56c2a2261e1be59af6a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Side/light_curvedCross.png"
-dest_files=["res://.godot/imported/light_curvedCross.png-850fd167c401b9427fc02527a09350d6.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Side/light_curvedCross.png"
+dest_files=["res://.godot/imported/light_curvedCross.png-842fb8fb81f56c2a2261e1be59af6a07.ctex"]
 
 [params]
 

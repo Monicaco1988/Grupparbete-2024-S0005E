@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d32kn8818fwcf"
-path="res://.godot/imported/wall_windowE.dae-14e6f9e9d7651c63c3ae9d985744b83b.scn"
+path="res://.godot/imported/wall_windowE.dae-6049cb2c1ae21db20e2e9dce0c7a4a8e.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/DAE format/wall_windowE.dae"
-dest_files=["res://.godot/imported/wall_windowE.dae-14e6f9e9d7651c63c3ae9d985744b83b.scn"]
+source_file="res://art/KenneyCityKit/DAE format/wall_windowE.dae"
+dest_files=["res://.godot/imported/wall_windowE.dae-6049cb2c1ae21db20e2e9dce0c7a4a8e.scn"]
 
 [params]
 

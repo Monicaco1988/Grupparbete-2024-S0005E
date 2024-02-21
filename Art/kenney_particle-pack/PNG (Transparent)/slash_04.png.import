@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://druqe8eda333t"
-path="res://.godot/imported/slash_04.png-e0f887fbff76d9714b732c0da2ef4bda.ctex"
+path="res://.godot/imported/slash_04.png-55d7d5679cc8fee9d628fd26b6267755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/kenney_particle-pack/PNG (Transparent)/slash_04.png"
-dest_files=["res://.godot/imported/slash_04.png-e0f887fbff76d9714b732c0da2ef4bda.ctex"]
+source_file="res://art/kenney_particle-pack/PNG (Transparent)/slash_04.png"
+dest_files=["res://.godot/imported/slash_04.png-55d7d5679cc8fee9d628fd26b6267755.ctex"]
 
 [params]
 

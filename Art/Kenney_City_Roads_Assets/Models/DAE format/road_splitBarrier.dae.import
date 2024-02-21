@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dmnuwvte35h6j"
-path="res://.godot/imported/road_splitBarrier.dae-0d9a7fda08a3077647606f911151ed36.scn"
+path="res://.godot/imported/road_splitBarrier.dae-723dfff047aa2f8b5a19fbb4b0af1334.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_splitBarrier.dae"
-dest_files=["res://.godot/imported/road_splitBarrier.dae-0d9a7fda08a3077647606f911151ed36.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_splitBarrier.dae"
+dest_files=["res://.godot/imported/road_splitBarrier.dae-723dfff047aa2f8b5a19fbb4b0af1334.scn"]
 
 [params]
 

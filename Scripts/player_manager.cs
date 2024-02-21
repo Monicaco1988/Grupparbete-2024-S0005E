@@ -4,6 +4,8 @@ using System;
 
 public partial class player_manager : Node3D
 {
+    private int lockAButton = 0;
+
     //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
     private GameManager _GetStateGameManager;
 
@@ -94,7 +96,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
+            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0 && lockAButton == 0)
             {
                 //Moved location of spawnLocation so that the cars are visible when spawned in map
                 moveToSpawnLocation();
@@ -107,8 +109,9 @@ public partial class player_manager : Node3D
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
                 GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
-                
+
                 //QueueFree();
+                lockAButton++;
             }
 
         }

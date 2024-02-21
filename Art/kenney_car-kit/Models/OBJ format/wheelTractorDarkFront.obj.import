@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bcwnekfg5gj5e"
-path="res://.godot/imported/wheelTractorDarkFront.obj-200850d55698f54dcca931bdb95024c9.mesh"
+path="res://.godot/imported/wheelTractorDarkFront.obj-872c45f0ab320fc224380ddfb7230717.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wheelTractorDarkFront.obj-200850d55698f54dcca931bdb95024c9.mesh"]
+files=["res://.godot/imported/wheelTractorDarkFront.obj-872c45f0ab320fc224380ddfb7230717.mesh"]
 
-source_file="res://Art/kenney_car-kit/Models/OBJ format/wheelTractorDarkFront.obj"
-dest_files=["res://.godot/imported/wheelTractorDarkFront.obj-200850d55698f54dcca931bdb95024c9.mesh", "res://.godot/imported/wheelTractorDarkFront.obj-200850d55698f54dcca931bdb95024c9.mesh"]
+source_file="res://art/kenney_car-kit/Models/OBJ format/wheelTractorDarkFront.obj"
+dest_files=["res://.godot/imported/wheelTractorDarkFront.obj-872c45f0ab320fc224380ddfb7230717.mesh", "res://.godot/imported/wheelTractorDarkFront.obj-872c45f0ab320fc224380ddfb7230717.mesh"]
 
 [params]
 

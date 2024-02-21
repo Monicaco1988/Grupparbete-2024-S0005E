@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vlsh6g7llqwi"
-path="res://.godot/imported/road_crossroad_SW.png-f50b0e3d4be93a8839c5de3f83380eb6.ctex"
+path="res://.godot/imported/road_crossroad_SW.png-c036a628feaeba946e2b187c54c21193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_crossroad_SW.png"
-dest_files=["res://.godot/imported/road_crossroad_SW.png-f50b0e3d4be93a8839c5de3f83380eb6.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_crossroad_SW.png"
+dest_files=["res://.godot/imported/road_crossroad_SW.png-c036a628feaeba946e2b187c54c21193.ctex"]
 
 [params]
 
