@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=25 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
+[ext_resource type="PackedScene" uid="uid://bmtnk2kw6jbas" path="res://Scenes/smoke.tscn" id="2_su82p"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
@@ -660,6 +661,9 @@ skeleton = NodePath("")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Smoke" parent="CarMesh" instance=ExtResource("2_su82p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

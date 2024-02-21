@@ -17,20 +17,20 @@ public partial class Testlayouts : Node3D
 	int numberOfPlayers;
 	int controllerID = 0;
 
-    Array<betterCar> ambulances = new Array<betterCar>();
-    public PlayerManagerState state = PlayerManagerState.ACTIVE;
+	Array<betterCar> ambulances = new Array<betterCar>();
+	public PlayerManagerState state = PlayerManagerState.ACTIVE;
 
-    public enum PlayerManagerState
-    {
-        ACTIVE,
-        IN_ACTIVE
-    }
+	public enum PlayerManagerState
+	{
+		ACTIVE,
+		IN_ACTIVE
+	}
 
 
-    public void setPlayerManagerState(PlayerManagerState setState)
-    {
-        this.state = setState;
-    }
+	public void setPlayerManagerState(PlayerManagerState setState)
+	{
+		this.state = setState;
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -47,31 +47,31 @@ public partial class Testlayouts : Node3D
 	public override void _Process(double delta)
 	{	
 		if (this.state == PlayerManagerState.IN_ACTIVE)
-        {
-            return;
-        }
+		{
+			return;
+		}
 
 		if (player != null)
 		{
 			camera.GlobalPosition = player.GlobalPosition + cameraOffset;
 		}
 
-        
-        
-        bool playerStateFlag = false;
-        if (Input.IsActionJustPressed("spawn1"))
-        {
+		
+		
+		bool playerStateFlag = false;
+		if (Input.IsActionJustPressed("spawn1"))
+		{
 			if(numberOfPlayers == 1)
 			{
 				player.GlobalPosition = spawn1.GlobalPosition;
 			}
 
-            if (ambulances.Count != 0)
-            {
-                    
-                playerStateFlag = true;
-                     
-            }
+			if (ambulances.Count != 0)
+			{
+					
+				playerStateFlag = true;
+					 
+			}
 
 			if(!playerStateFlag)
 			{
@@ -80,26 +80,26 @@ public partial class Testlayouts : Node3D
 				playerRoot.GlobalPosition = spawn1.GlobalPosition;
 				player = playerRoot.GetNode("Player") as betterCar;
 				player.setId(controllerID);
-                player.SetState(betterCar.PlayerState.ACTIVE);
-                this.ambulances.Add(player);
-                numberOfPlayers++;
-                GD.Print("player created, with player id: " + controllerID);
+				player.SetState(betterCar.PlayerState.ACTIVE);
+				this.ambulances.Add(player);
+				numberOfPlayers++;
+				GD.Print("player created, with player id: " + controllerID);
 			}
 		}
 		if (Input.IsActionJustPressed("spawn2"))
-        {
+		{
 
 			if(numberOfPlayers == 1)
 			{
 				player.GlobalPosition = spawn2.GlobalPosition;
 			}
 
-            if (ambulances.Count != 0)
-            {
-                    
-                playerStateFlag = true;
-                     
-            }
+			if (ambulances.Count != 0)
+			{
+					
+				playerStateFlag = true;
+					 
+			}
 
 			if(!playerStateFlag)
 			{
@@ -108,25 +108,25 @@ public partial class Testlayouts : Node3D
 				playerRoot.GlobalPosition = spawn1.GlobalPosition;
 				player = playerRoot.GetNode("Player") as betterCar;
 				player.setId(controllerID);
-                player.SetState(betterCar.PlayerState.ACTIVE);
-                this.ambulances.Add(player);
-                numberOfPlayers++;
-                GD.Print("player created, with player id: " + controllerID);
+				player.SetState(betterCar.PlayerState.ACTIVE);
+				this.ambulances.Add(player);
+				numberOfPlayers++;
+				GD.Print("player created, with player id: " + controllerID);
 			}
 		}
 		if (Input.IsActionJustPressed("spawn3"))
-        {
+		{
 			if(numberOfPlayers == 1)
 			{
 				player.GlobalPosition = spawn3.GlobalPosition;
 			}
 
-            if (ambulances.Count != 0)
-            {
-                    
-                playerStateFlag = true;
-                     
-            }
+			if (ambulances.Count != 0)
+			{
+					
+				playerStateFlag = true;
+					 
+			}
 
 			if(!playerStateFlag)
 			{
@@ -135,25 +135,25 @@ public partial class Testlayouts : Node3D
 				playerRoot.GlobalPosition = spawn1.GlobalPosition;
 				player = playerRoot.GetNode("Player") as betterCar;
 				player.setId(controllerID);
-                player.SetState(betterCar.PlayerState.ACTIVE);
-                this.ambulances.Add(player);
-                numberOfPlayers++;
-                GD.Print("player created, with player id: " + controllerID);
+				player.SetState(betterCar.PlayerState.ACTIVE);
+				this.ambulances.Add(player);
+				numberOfPlayers++;
+				GD.Print("player created, with player id: " + controllerID);
 			}
 		}
 		if (Input.IsActionJustPressed("spawn4"))
-        {
+		{
 			if(numberOfPlayers == 1)
 			{
 				player.GlobalPosition = spawn4.GlobalPosition;
 			}
 
-            if (ambulances.Count != 0)
-            {
-                    
-                playerStateFlag = true;
-                     
-            }
+			if (ambulances.Count != 0)
+			{
+					
+				playerStateFlag = true;
+					 
+			}
 
 			if(!playerStateFlag)
 			{
@@ -162,10 +162,10 @@ public partial class Testlayouts : Node3D
 				playerRoot.GlobalPosition = spawn1.GlobalPosition;
 				player = playerRoot.GetNode("Player") as betterCar;
 				player.setId(controllerID);
-                player.SetState(betterCar.PlayerState.ACTIVE);
-                this.ambulances.Add(player);
-                numberOfPlayers++;
-                GD.Print("player created, with player id: " + controllerID);
+				player.SetState(betterCar.PlayerState.ACTIVE);
+				this.ambulances.Add(player);
+				numberOfPlayers++;
+				GD.Print("player created, with player id: " + controllerID);
 			}
 		}
 		if (Input.IsKeyLabelPressed(Key.Key0))
@@ -189,13 +189,13 @@ public partial class Testlayouts : Node3D
 
 	}
 
-    public override void _UnhandledInput(InputEvent @event)
-    {
+	public override void _UnhandledInput(InputEvent @event)
+	{
 
-        if (Input.IsJoyButtonPressed(controllerID, JoyButton.Back))
-        {
-            GetTree().Quit();
-        }
-    }
+		if (Input.IsJoyButtonPressed(controllerID, JoyButton.Back))
+		{
+			GetTree().Quit();
+		}
+	}
 }
 
