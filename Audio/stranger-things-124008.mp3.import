@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/stranger-things-124008.mp3-8e1dff3e7a09d31a03
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
