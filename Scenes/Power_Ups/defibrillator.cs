@@ -20,13 +20,13 @@ public partial class defibrillator : Node3D
 
     public void BodyEntered(Node3D Player)
     {
-        if (triggered)
-        {
-            return;
-        }
-        triggered = true;
+        //if (triggered)
+        //{
+        //    return;
+        //}
+        //triggered = true;
         this.Visible = false;
-        GD.Print((Player as betterCar).id);
+        GD.Print((Player as betterCar));
 
         this.player = (Player as betterCar);
 

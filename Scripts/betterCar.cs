@@ -228,7 +228,6 @@ public partial class betterCar : RigidBody3D
 			else
 			{
 				steering = 18.0f;
-				smoke.Hide();
 				isDrifting = false;
 			}
 
