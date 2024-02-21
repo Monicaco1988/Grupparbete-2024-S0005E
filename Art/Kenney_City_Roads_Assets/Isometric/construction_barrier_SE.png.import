@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3bh705adfst"
-path="res://.godot/imported/construction_barrier_SE.png-58fac171c5e797b6a9e0aa266653cc3d.ctex"
+path="res://.godot/imported/construction_barrier_SE.png-33b1408b207142fadacdd4a78fdb0161.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/construction_barrier_SE.png"
-dest_files=["res://.godot/imported/construction_barrier_SE.png-58fac171c5e797b6a9e0aa266653cc3d.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/construction_barrier_SE.png"
+dest_files=["res://.godot/imported/construction_barrier_SE.png-33b1408b207142fadacdd4a78fdb0161.ctex"]
 
 [params]
 

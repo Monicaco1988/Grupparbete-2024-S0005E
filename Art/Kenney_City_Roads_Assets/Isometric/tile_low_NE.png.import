@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crkrex23xktx"
-path="res://.godot/imported/tile_low_NE.png-ed0ab206309b1769351cdcff367a0b57.ctex"
+path="res://.godot/imported/tile_low_NE.png-927e9e3d7e17fd69d45876d5e156cdde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/tile_low_NE.png"
-dest_files=["res://.godot/imported/tile_low_NE.png-ed0ab206309b1769351cdcff367a0b57.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/tile_low_NE.png"
+dest_files=["res://.godot/imported/tile_low_NE.png-927e9e3d7e17fd69d45876d5e156cdde.ctex"]
 
 [params]
 

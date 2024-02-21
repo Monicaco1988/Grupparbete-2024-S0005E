@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0xshupdwfhjo"
-path="res://.godot/imported/road_sideEntryBarrier.png-6d712f99044cdce3545d94aa3540e0ec.ctex"
+path="res://.godot/imported/road_sideEntryBarrier.png-ec1377651f9647c21b8a32eaff09956b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Side/road_sideEntryBarrier.png"
-dest_files=["res://.godot/imported/road_sideEntryBarrier.png-6d712f99044cdce3545d94aa3540e0ec.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Side/road_sideEntryBarrier.png"
+dest_files=["res://.godot/imported/road_sideEntryBarrier.png-ec1377651f9647c21b8a32eaff09956b.ctex"]
 
 [params]
 
