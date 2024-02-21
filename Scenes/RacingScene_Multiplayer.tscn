@@ -27,7 +27,7 @@
 size = Vector3(2000, 1, 2000)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_88ewm"]
-bounce = 1.0
+bounce = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkf4w"]
 size = Vector3(1, 1, 1.06863)
@@ -101,7 +101,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3mljp")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5milq"]
-size = Vector3(22.2235, 9.11499, 9.71432)
+size = Vector3(24.858, 9.11499, 9.71432)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yn5xg"]
 size = Vector3(22.2235, 5.71069, 9.71432)
@@ -111,6 +111,13 @@ size = Vector3(22.2235, 5.71069, 9.71432)
 [sub_resource type="CylinderMesh" id="CylinderMesh_gms06"]
 top_radius = 1.0
 bottom_radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwhoh"]
+albedo_color = Color(0.0156863, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_733qs"]
+material = SubResource("StandardMaterial3D_qwhoh")
+size = Vector2(2000, 2000)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5vmq5"]
 emission_shape = 1
@@ -125,13 +132,6 @@ scale_max = 1.5
 
 [sub_resource type="BoxMesh" id="BoxMesh_oyu5c"]
 material = SubResource("StandardMaterial3D_tgcse")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwhoh"]
-albedo_color = Color(0.0156863, 0, 0, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_733qs"]
-material = SubResource("StandardMaterial3D_qwhoh")
-size = Vector2(2000, 2000)
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
@@ -14214,7 +14214,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 [node name="CollisionaraDestroy" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionaraDestroy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 951.115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.366, 5.91552, 951.115)
 shape = SubResource("BoxShape3D_5milq")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="CollisionaraDestroy"]
@@ -14374,16 +14374,19 @@ script = ExtResource("21_unkyi")
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Test"]
 emitting = false
 amount = 80
+lifetime = 1.4
 one_shot = true
+speed_scale = 2.0
 explosiveness = 1.0
-fixed_fps = 30
+fixed_fps = 60
 mesh = SubResource("BoxMesh_dajqp")
 emission_shape = 1
-emission_sphere_radius = 4.0
+emission_sphere_radius = 8.0
 direction = Vector3(0, 0, 0)
 spread = 180.0
+flatness = 1.0
 gravity = Vector3(0, 0, 0)
-initial_velocity_max = 30.0
+initial_velocity_max = 50.0
 scale_amount_min = 0.5
 scale_amount_max = 1.5
 
@@ -14391,18 +14394,6 @@ scale_amount_max = 1.5
 visible = false
 mesh = SubResource("CylinderMesh_gms06")
 skeleton = NodePath("../../ExplosionMarker")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Test"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 4.29803)
-visible = false
-emitting = false
-amount = 50
-lifetime = 1.5
-one_shot = true
-explosiveness = 1.0
-visibility_aabb = AABB(-23.1686, -9.43619, -26.45, 46.3373, 18.8724, 52.9)
-process_material = SubResource("ParticleProcessMaterial_5vmq5")
-draw_pass_1 = SubResource("BoxMesh_oyu5c")
 
 [node name="ExplosionMarker2" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 0)
