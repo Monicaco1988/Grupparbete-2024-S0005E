@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dkcnmbk64hxes"
-path="res://.godot/imported/road_end.dae-6d099f4b90c1abd32ac6aecb5aaf43fd.scn"
+path="res://.godot/imported/road_end.dae-d84143a6f10289c23471d90d54cae3ef.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_end.dae"
-dest_files=["res://.godot/imported/road_end.dae-6d099f4b90c1abd32ac6aecb5aaf43fd.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_end.dae"
+dest_files=["res://.godot/imported/road_end.dae-d84143a6f10289c23471d90d54cae3ef.scn"]
 
 [params]
 

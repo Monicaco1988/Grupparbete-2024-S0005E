@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ddl1kus50bsgg"
-path="res://.godot/imported/road_straightBarrierEnd.dae-2155bbf419cc026cd00647a043498dde.scn"
+path="res://.godot/imported/road_straightBarrierEnd.dae-93c1bd776238ef9560a92721fc40dd3f.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_straightBarrierEnd.dae"
-dest_files=["res://.godot/imported/road_straightBarrierEnd.dae-2155bbf419cc026cd00647a043498dde.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_straightBarrierEnd.dae"
+dest_files=["res://.godot/imported/road_straightBarrierEnd.dae-93c1bd776238ef9560a92721fc40dd3f.scn"]
 
 [params]
 

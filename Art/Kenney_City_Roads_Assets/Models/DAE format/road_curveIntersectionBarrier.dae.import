@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dagexlet6s343"
-path="res://.godot/imported/road_curveIntersectionBarrier.dae-15dd4dad5c6e3f6e66758691f136021c.scn"
+path="res://.godot/imported/road_curveIntersectionBarrier.dae-4642e6b95c93d51bfc25e3c38f47f974.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_curveIntersectionBarrier.dae"
-dest_files=["res://.godot/imported/road_curveIntersectionBarrier.dae-15dd4dad5c6e3f6e66758691f136021c.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_curveIntersectionBarrier.dae"
+dest_files=["res://.godot/imported/road_curveIntersectionBarrier.dae-4642e6b95c93d51bfc25e3c38f47f974.scn"]
 
 [params]
 
