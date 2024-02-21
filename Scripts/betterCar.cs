@@ -188,11 +188,7 @@ public partial class betterCar : RigidBody3D
 
 	public override void _Process(double delta)
 	{
-        if (state == PlayerState.IN_ACTIVE)
-        {
-			return;
-        }
-        usePowerUp(delta);
+		usePowerUp(delta);
 		//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
 		velocity = this.LinearVelocity.Length();
 

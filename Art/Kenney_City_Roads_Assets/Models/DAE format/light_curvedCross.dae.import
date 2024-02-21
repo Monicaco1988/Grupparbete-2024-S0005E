@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://kpwl1057iaxg"
-path="res://.godot/imported/light_curvedCross.dae-52de6b87ff52284d20ba75e164ff5971.scn"
+path="res://.godot/imported/light_curvedCross.dae-62fcc321b177eb52f8952379f1184bcb.scn"
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/light_curvedCross.dae"
-dest_files=["res://.godot/imported/light_curvedCross.dae-52de6b87ff52284d20ba75e164ff5971.scn"]
+source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/light_curvedCross.dae"
+dest_files=["res://.godot/imported/light_curvedCross.dae-62fcc321b177eb52f8952379f1184bcb.scn"]
 
 [params]
 
