@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbrx4ta4r4fsu"
-path="res://.godot/imported/deliveryFlat.png-cb8446493e4a3baa8e647a945f69c86e.ctex"
+path="res://.godot/imported/deliveryFlat.png-a550867ce67a6fee8dec08c635443d2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/deliveryFlat.png"
-dest_files=["res://.godot/imported/deliveryFlat.png-cb8446493e4a3baa8e647a945f69c86e.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/deliveryFlat.png"
+dest_files=["res://.godot/imported/deliveryFlat.png-a550867ce67a6fee8dec08c635443d2e.ctex"]
 
 [params]
 

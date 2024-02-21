@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btb26q5papx0f"
-path="res://.godot/imported/road_roundabout_NW.png-8f5ca08b1257954ce75e78e16f77612d.ctex"
+path="res://.godot/imported/road_roundabout_NW.png-835785849500e11aa0c53f6b8868ecd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_roundabout_NW.png"
-dest_files=["res://.godot/imported/road_roundabout_NW.png-8f5ca08b1257954ce75e78e16f77612d.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_roundabout_NW.png"
+dest_files=["res://.godot/imported/road_roundabout_NW.png-835785849500e11aa0c53f6b8868ecd3.ctex"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bbljqd5u5lysp"
-path="res://.godot/imported/firetruck.obj-67c0a1bcd9c5415586da71aaa262d858.mesh"
+path="res://.godot/imported/firetruck.obj-4cfe59685cf5fffee128b6211501e22f.mesh"
 
 [deps]
 
-files=["res://.godot/imported/firetruck.obj-67c0a1bcd9c5415586da71aaa262d858.mesh"]
+files=["res://.godot/imported/firetruck.obj-4cfe59685cf5fffee128b6211501e22f.mesh"]
 
-source_file="res://art/kenney_car-kit/Models/OBJ format/firetruck.obj"
-dest_files=["res://.godot/imported/firetruck.obj-67c0a1bcd9c5415586da71aaa262d858.mesh", "res://.godot/imported/firetruck.obj-67c0a1bcd9c5415586da71aaa262d858.mesh"]
+source_file="res://Art/kenney_car-kit/Models/OBJ format/firetruck.obj"
+dest_files=["res://.godot/imported/firetruck.obj-4cfe59685cf5fffee128b6211501e22f.mesh", "res://.godot/imported/firetruck.obj-4cfe59685cf5fffee128b6211501e22f.mesh"]
 
 [params]
 

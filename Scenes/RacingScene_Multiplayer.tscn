@@ -1,26 +1,38 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=38 format=3 uid="uid://dc8qdkv73dwx0"]
+=======
+[gd_scene load_steps=37 format=3 uid="uid://dc8qdkv73dwx0"]
+>>>>>>> Stashed changes
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
 [ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
 [ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="5_jmusw"]
-[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
-[ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
-[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
-[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
-[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
-[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
-[ext_resource type="PackedScene" uid="uid://u1a8p1xl7mhr" path="res://art/KenneyCityKit/GLTF format/large_buildingD.glb" id="12_jfejh"]
-[ext_resource type="PackedScene" uid="uid://b0b6tm6xyni0u" path="res://art/KenneyCityKit/GLTF format/large_buildingE.glb" id="13_qmq4y"]
-[ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
-[ext_resource type="PackedScene" uid="uid://dloek8k1vmean" path="res://art/KenneyCityKit/GLTF format/small_buildingD.glb" id="15_udt6a"]
-[ext_resource type="PackedScene" uid="uid://que0va60dcy" path="res://art/KenneyCityKit/GLTF format/small_buildingE.glb" id="16_3fc1x"]
+[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
+[ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://Art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
+[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://Art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
+[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://Art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
+[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://Art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
+[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://Art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
+[ext_resource type="PackedScene" uid="uid://u1a8p1xl7mhr" path="res://Art/KenneyCityKit/GLTF format/large_buildingD.glb" id="12_jfejh"]
+[ext_resource type="PackedScene" uid="uid://b0b6tm6xyni0u" path="res://Art/KenneyCityKit/GLTF format/large_buildingE.glb" id="13_qmq4y"]
+[ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://Art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
+[ext_resource type="PackedScene" uid="uid://dloek8k1vmean" path="res://Art/KenneyCityKit/GLTF format/small_buildingD.glb" id="15_udt6a"]
+[ext_resource type="PackedScene" uid="uid://que0va60dcy" path="res://Art/KenneyCityKit/GLTF format/small_buildingE.glb" id="16_3fc1x"]
 [ext_resource type="Script" path="res://Scripts/Follow_Camera.cs" id="16_71xdf"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
 [ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
 [ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
+=======
+[ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://Art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
+[ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://Art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
+[ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://Art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
+[ext_resource type="Script" path="res://Scripts/ExplosionMarker.cs" id="20_rhcxc"]
+[ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="21_urlmh"]
+>>>>>>> Stashed changes
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
 size = Vector3(2000, 1, 2000)
@@ -14444,6 +14456,9 @@ explosiveness = 1.0
 visibility_aabb = AABB(-23.1686, -9.43619, -26.45, 46.3373, 18.8724, 52.9)
 process_material = SubResource("ParticleProcessMaterial_5vmq5")
 draw_pass_1 = SubResource("BoxMesh_oyu5c")
+
+[node name="Defibrillator" parent="." instance=ExtResource("21_urlmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.965, 2.33704, 823.424)
 
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
 [connection signal="screen_exited" from="ExplosionMarker/VisibleOnScreenEnabler3D" to="ExplosionMarker" method="OnScreenExist"]

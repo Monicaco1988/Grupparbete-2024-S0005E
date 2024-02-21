@@ -1,14 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://x53335hqnfrx"]
+[gd_scene load_steps=5 format=3 uid="uid://x53335hqnfrx"]
+
+[ext_resource type="Script" path="res://Scripts/Power_Up_Scripts/defibrillator.cs" id="1_t1bb0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dsgog"]
+size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbl76"]
 albedo_color = Color(0.937255, 0.207843, 0.188235, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3e16p"]
 material = SubResource("StandardMaterial3D_cbl76")
+size = Vector3(2, 2, 2)
 
 [node name="Defibrillator" type="Node3D"]
+script = ExtResource("1_t1bb0")
 
 [node name="Pivot" type="Node3D" parent="."]
 
@@ -19,3 +24,8 @@ shape = SubResource("BoxShape3D_dsgog")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot/Area3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_3e16p")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Pivot/Area3D" to="." method="BodyEntered"]
+[connection signal="timeout" from="Timer" to="." method="defibTimeOut"]

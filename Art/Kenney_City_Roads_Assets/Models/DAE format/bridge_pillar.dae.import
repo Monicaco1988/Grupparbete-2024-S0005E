@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tij10wvtdj8t"
-path="res://.godot/imported/bridge_pillar.dae-041ba4cd204fc4988d07d34b9b52780b.scn"
+path="res://.godot/imported/bridge_pillar.dae-7f6596b37873dd8ffbe3202ce721272d.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/bridge_pillar.dae"
-dest_files=["res://.godot/imported/bridge_pillar.dae-041ba4cd204fc4988d07d34b9b52780b.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/bridge_pillar.dae"
+dest_files=["res://.godot/imported/bridge_pillar.dae-7f6596b37873dd8ffbe3202ce721272d.scn"]
 
 [params]
 

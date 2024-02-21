@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgr8cfipfrqxo"
-path="res://.godot/imported/road_curveBarrier.png-32caf0dc4d098777f1ee1908b39c5c9c.ctex"
+path="res://.godot/imported/road_curveBarrier.png-648379c15a43ba97bef3709572f41939.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Side/road_curveBarrier.png"
-dest_files=["res://.godot/imported/road_curveBarrier.png-32caf0dc4d098777f1ee1908b39c5c9c.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Side/road_curveBarrier.png"
+dest_files=["res://.godot/imported/road_curveBarrier.png-648379c15a43ba97bef3709572f41939.ctex"]
 
 [params]
 

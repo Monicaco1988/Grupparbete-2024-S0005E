@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c45ekvklqv2dq"
-path="res://.godot/imported/police.obj-8a299b198ff5bc3c7761a0dd169f71d7.mesh"
+path="res://.godot/imported/police.obj-27ef4b1d29c9bb0fd82f060e6893accf.mesh"
 
 [deps]
 
-files=["res://.godot/imported/police.obj-8a299b198ff5bc3c7761a0dd169f71d7.mesh"]
+files=["res://.godot/imported/police.obj-27ef4b1d29c9bb0fd82f060e6893accf.mesh"]
 
-source_file="res://art/kenney_car-kit/Models/OBJ format/police.obj"
-dest_files=["res://.godot/imported/police.obj-8a299b198ff5bc3c7761a0dd169f71d7.mesh", "res://.godot/imported/police.obj-8a299b198ff5bc3c7761a0dd169f71d7.mesh"]
+source_file="res://Art/kenney_car-kit/Models/OBJ format/police.obj"
+dest_files=["res://.godot/imported/police.obj-27ef4b1d29c9bb0fd82f060e6893accf.mesh", "res://.godot/imported/police.obj-27ef4b1d29c9bb0fd82f060e6893accf.mesh"]
 
 [params]
 

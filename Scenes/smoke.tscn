@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bmtnk2kw6jbas"]
 
-[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="1_bqb3a"]
+[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://Art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="1_bqb3a"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4lyg2"]
 
