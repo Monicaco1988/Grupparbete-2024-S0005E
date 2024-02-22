@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
@@ -23,10 +24,10 @@ public partial class betterCar : RigidBody3D
 		IN_ACTIVE
 	}
 
-	public enum PowerUp
-	{
-		SPEED_BOOST,
-		DEFIBRILLATOR,
+    public enum PowerUp
+    {
+        SPEED_BOOST,
+        DEFIBRILLATOR,
 		P3,
 		P4,
 		P5,
@@ -34,24 +35,27 @@ public partial class betterCar : RigidBody3D
 		P7,
 		P8,
 		NO_POWER
-	}
+    }
 
-	public Node3D carMesh;
+    public Node3D carMesh;
 	Node3D bodyMesh;
 	RayCast3D groundRay;
 	MeshInstance3D rightWheel;
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
-	PowerUp powerUp = PowerUp.SPEED_BOOST;
+	PowerUp powerUp = PowerUp.DEFIBRILLATOR;
 	PackedScene trackScene;
 	Node3D rightSkid;
 	Node3D leftSkid;
+	Node3D dropPoint;
 	//Node3D playerRoot;
 
 	OmniLight3D lights;
-	Node3D smoke;
+	AnimationPlayer doorAnimation;
 
+	//POWER UPS
+	PackedScene defib;
 
 	float acceleration = 2500;
 	float velocity;
@@ -89,22 +93,26 @@ public partial class betterCar : RigidBody3D
 		this.state = newState;    
 	}
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
 		
-		carMesh = GetParent().GetNode<Node3D>("CarMesh");
-		bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
-		groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
-		rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
+        carMesh = GetParent().GetNode<Node3D>("CarMesh");
+        bodyMesh = GetParent().GetNode<Node3D>("CarMesh/ambulance");
+        groundRay = GetParent().GetNode<RayCast3D>("CarMesh/RayCast3D");
+        rightWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontRight");
 		leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
 		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
-		leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
-		trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+        leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
+		dropPoint = GetParent().GetNode<Node3D>("CarMesh/ambulance/DropPoint");
+        trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 
-		lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
-		smoke = GetParent().GetNode<Node3D>("CarMesh/Smoke");
-	}
+        lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
+		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
+
+		defib = GD.Load<PackedScene>("res://Scenes/Power_Ups/defibrillator.tscn");
+        //pU = 
+    }
 
 	
 
@@ -113,67 +121,74 @@ public partial class betterCar : RigidBody3D
 
 		if (Mathf.Abs(turnInput2) > 0.3f)
 		{
-			smoke.Show();
-			//var trackS = trackScene.Instantiate();
-			//GetParent().GetParent().AddChild(trackS);
+			var trackS = trackScene.Instantiate();
+			GetParent().GetParent().AddChild(trackS);
 
-			//var trackL = trackS.GetNode<Decal>("DecalLeft");
-			//var trackR = trackS.GetNode<Decal>("DecalRight");
-			//trackL.GlobalPosition = leftSkid.GlobalPosition;
-			//trackR.GlobalPosition = rightSkid.GlobalPosition;
+			var trackL = trackS.GetNode<Decal>("DecalLeft");
+			var trackR = trackS.GetNode<Decal>("DecalRight");
+			trackL.GlobalPosition = leftSkid.GlobalPosition;
+			trackR.GlobalPosition = rightSkid.GlobalPosition;
 			//GD.Print(track.GlobalPosition);
-			//var rL = leftSkid.Rotation;
-			//var rR = rightSkid.Rotation;
-			//trackR.Rotation = rR;
-			//trackL.Rotation = rL;
-			
-			//smoke.Show();
+			var rL = leftSkid.Rotation;
+			var rR = rightSkid.Rotation;
+			trackR.Rotation = rR;
+			trackL.Rotation = rL;
 		}
-		
-		
 	}
+
+	public void playDoorAnimation()
+	{
+        doorAnimation.Play("DoorAnimation");
+    }
 
 	public void usePowerUp(double delta)
 	{
-		if (Input.IsJoyButtonPressed(id, JoyButton.X))
-		{
+        if (Input.IsJoyButtonPressed(id, JoyButton.X))
+        {
 			switch (powerUp)
 			{
 				case PowerUp.SPEED_BOOST:
 					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
+					playDoorAnimation();
 					break;
 
 				case PowerUp.DEFIBRILLATOR:
-					//Do P2 Shit
+					var d = defib.Instantiate();
+					GetParent().GetParent().AddChild(d);
+
+					playDoorAnimation();
+					var obj = d.GetNode<Node3D>("Pivot");
+					obj.GlobalPosition = dropPoint.GlobalPosition;
+					//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
 					break;
 
-				case PowerUp.P3:
-					//Do P3 shit
-					break;
+                case PowerUp.P3:
+                    //Do P3 shit
+                    break;
 
-				case PowerUp.P4:
-					//Do P4 shit
-					break;
+                case PowerUp.P4:
+                    //Do P4 shit
+                    break;
 
-				case PowerUp.P5:
-					//Do P5 shit
-					break;
+                case PowerUp.P5:
+                    //Do P5 shit
+                    break;
 
-				case PowerUp.P6:
-					//Do P6 shit
-					break;
+                case PowerUp.P6:
+                    //Do P6 shit
+                    break;
 
-				case PowerUp.P7:
-					//Do P7 shit
-					break;
+                case PowerUp.P7:
+                    //Do P7 shit
+                    break;
 
-				case PowerUp.P8:
-					//Do P8 shit
-					break;
+                case PowerUp.P8:
+                    //Do P8 shit
+                    break;
 
-				default: break;
-			}
-		}
+                default: break;
+            }
+        }
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -195,8 +210,11 @@ public partial class betterCar : RigidBody3D
 
 	public override void _Process(double delta)
 	{
-		
-		usePowerUp(delta);
+        if (state == PlayerState.IN_ACTIVE)
+        {
+			return;
+        }
+        usePowerUp(delta);
 		//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
 		velocity = this.LinearVelocity.Length();
 
@@ -218,12 +236,11 @@ public partial class betterCar : RigidBody3D
 			var newBasis = carMesh.GlobalBasis.Rotated(carMesh.GlobalBasis.Y, turnInput2);
 			carMesh.GlobalBasis = carMesh.GlobalBasis.Slerp(newBasis, (float)(turnSpeed * delta));
 			carMesh.GlobalTransform = carMesh.GlobalTransform.Orthonormalized();
-			
+
 			if (isDrifting)
 			{
 				steering = 30.0f;
 				addTireTracks();
-				
 			}
 			else
 			{
@@ -243,14 +260,11 @@ public partial class betterCar : RigidBody3D
 				carMesh.GlobalTransform = carMesh.GlobalTransform.InterpolateWith(xForm, (float)(10 * delta));
 			}
 		}
-		if(!isDrifting){
-			smoke.Hide();
-		}
 
 	}
 
-	public override void _UnhandledInput(InputEvent @event)
-	{
+    public override void _UnhandledInput(InputEvent @event)
+    {
 		////switches lights on/off
 		//if (@event.IsActionPressed("lights") && lights.Visible == true)
 		//{
@@ -260,9 +274,9 @@ public partial class betterCar : RigidBody3D
 		//{
   //          lights.Visible = true;
   //      }
-	}
+    }
 
-	public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
+    public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
 	{
 		xForm.Basis.Y = newY;
 		xForm.Basis.X = -xForm.Basis.Z.Cross(newY);
