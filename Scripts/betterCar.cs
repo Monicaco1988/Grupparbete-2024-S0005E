@@ -46,9 +46,11 @@ public partial class betterCar : RigidBody3D
 	PlayerState state = PlayerState.IN_ACTIVE;
 	PowerUp powerUp = PowerUp.DEFIBRILLATOR;
 	PackedScene trackScene;
+	GpuParticles3D smoke;
 	Node3D rightSkid;
 	Node3D leftSkid;
 	Node3D dropPoint;
+	
 	//Node3D playerRoot;
 
 	OmniLight3D lights;
@@ -105,22 +107,26 @@ public partial class betterCar : RigidBody3D
 		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
         leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
 		dropPoint = GetParent().GetNode<Node3D>("CarMesh/ambulance/DropPoint");
+
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+		smoke = GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/Smoke/smokeParticle");
 
         lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
 		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
 
 		defib = GD.Load<PackedScene>("res://Scenes/Power_Ups/defibrillator.tscn");
         //pU = 
+        //var smokeP = smoke.GetNode<GpuParticles3D>("SmokeParticle");
+        //PlayerManager / PlayerRoot / CarMesh / ambulance / Smoke / smokeParticle
     }
 
 	
 
 	public void addTireTracks()
 	{
-
 		if (Mathf.Abs(turnInput2) > 0.3f)
 		{
+			
 			var trackS = trackScene.Instantiate();
 			GetParent().GetParent().AddChild(trackS);
 
@@ -241,11 +247,13 @@ public partial class betterCar : RigidBody3D
 			{
 				steering = 30.0f;
 				addTireTracks();
-			}
+                smoke.Emitting = true;
+            }
 			else
 			{
 				steering = 18.0f;
-				isDrifting = false;
+                smoke.Emitting = false;
+                isDrifting = false;
 			}
 
 			var tilted = -turnInput2 * LinearVelocity.Length() / bodyTilt;

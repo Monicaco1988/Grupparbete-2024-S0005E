@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqbeuun24fau1"
-path="res://.godot/imported/road_bendSquare_SW.png-08c3ef6df0c08ba6c4323b25caeaa407.ctex"
+path="res://.godot/imported/road_bendSquare_SW.png-4100ee29bbd10383f2a01b2eafdb49e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_bendSquare_SW.png"
-dest_files=["res://.godot/imported/road_bendSquare_SW.png-08c3ef6df0c08ba6c4323b25caeaa407.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_bendSquare_SW.png"
+dest_files=["res://.godot/imported/road_bendSquare_SW.png-4100ee29bbd10383f2a01b2eafdb49e2.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b1lvaxn2uv2a0"
-path="res://.godot/imported/road_curvePavement.dae-2cb77e81364ca6c83f1b37c74408a1dc.scn"
+path="res://.godot/imported/road_curvePavement.dae-94d2d95e89c6e783d4f6115bce83b4e8.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_curvePavement.dae"
-dest_files=["res://.godot/imported/road_curvePavement.dae-2cb77e81364ca6c83f1b37c74408a1dc.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_curvePavement.dae"
+dest_files=["res://.godot/imported/road_curvePavement.dae-94d2d95e89c6e783d4f6115bce83b4e8.scn"]
 
 [params]
 

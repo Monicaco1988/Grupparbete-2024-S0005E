@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bl8howvxtwnex"
-path="res://.godot/imported/detail_umbrellaDetailed.dae-519c4987b7367a610c1ffdb859242da3.scn"
+path="res://.godot/imported/detail_umbrellaDetailed.dae-23c4b1db49d34485cc58076b9a63fdfc.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/DAE format/detail_umbrellaDetailed.dae"
-dest_files=["res://.godot/imported/detail_umbrellaDetailed.dae-519c4987b7367a610c1ffdb859242da3.scn"]
+source_file="res://Art/KenneyCityKit/DAE format/detail_umbrellaDetailed.dae"
+dest_files=["res://.godot/imported/detail_umbrellaDetailed.dae-23c4b1db49d34485cc58076b9a63fdfc.scn"]
 
 [params]
 
