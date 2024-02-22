@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
@@ -43,14 +44,18 @@ public partial class betterCar : RigidBody3D
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
-	PowerUp powerUp = PowerUp.SPEED_BOOST;
+	PowerUp powerUp = PowerUp.DEFIBRILLATOR;
 	PackedScene trackScene;
 	Node3D rightSkid;
 	Node3D leftSkid;
+	Node3D dropPoint;
 	//Node3D playerRoot;
 
 	OmniLight3D lights;
+	AnimationPlayer doorAnimation;
 
+	//POWER UPS
+	PackedScene defib;
 
 	float acceleration = 2500;
 	float velocity;
@@ -99,9 +104,14 @@ public partial class betterCar : RigidBody3D
 		leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
 		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
         leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
+		dropPoint = GetParent().GetNode<Node3D>("CarMesh/ambulance/DropPoint");
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 
         lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
+		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
+
+		defib = GD.Load<PackedScene>("res://Scenes/Power_Ups/defibrillator.tscn");
+        //pU = 
     }
 
 	
@@ -126,19 +136,31 @@ public partial class betterCar : RigidBody3D
 		}
 	}
 
+	public void playDoorAnimation()
+	{
+        doorAnimation.Play("DoorAnimation");
+    }
+
 	public void usePowerUp(double delta)
 	{
         if (Input.IsJoyButtonPressed(id, JoyButton.X))
         {
-            switch (powerUp)
-            {
-                case PowerUp.SPEED_BOOST:
+			switch (powerUp)
+			{
+				case PowerUp.SPEED_BOOST:
 					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
-                    break;
+					playDoorAnimation();
+					break;
 
-                case PowerUp.DEFIBRILLATOR:
-                    //Do P2 Shit
-                    break;
+				case PowerUp.DEFIBRILLATOR:
+					var d = defib.Instantiate();
+					GetParent().GetParent().AddChild(d);
+
+					playDoorAnimation();
+					var obj = d.GetNode<Node3D>("Pivot");
+					obj.GlobalPosition = dropPoint.GlobalPosition;
+					//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
+					break;
 
                 case PowerUp.P3:
                     //Do P3 shit

@@ -117,3 +117,7 @@ lights={
 "deadzone": 0.5,
 "events": []
 }
+
+[rendering]
+
+limits/cluster_builder/max_clustered_elements=2048.0

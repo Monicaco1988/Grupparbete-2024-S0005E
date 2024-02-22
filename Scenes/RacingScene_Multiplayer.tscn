@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=38 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://Art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
-[ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
 size = Vector3(2000, 1, 2000)
@@ -14447,9 +14446,6 @@ explosiveness = 1.0
 visibility_aabb = AABB(-23.1686, -9.43619, -26.45, 46.3373, 18.8724, 52.9)
 process_material = SubResource("ParticleProcessMaterial_5vmq5")
 draw_pass_1 = SubResource("BoxMesh_oyu5c")
-
-[node name="Defibrillator" parent="." instance=ExtResource("22_k4dsp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -856.365, 1.34029, 811.371)
 
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
 [connection signal="screen_exited" from="ExplosionMarker/VisibleOnScreenEnabler3D" to="ExplosionMarker" method="OnScreenExist"]
