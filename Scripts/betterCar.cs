@@ -71,7 +71,7 @@ public partial class betterCar : RigidBody3D
 	float turnInput2;
 	float speedBoost = 25;
 	bool isDrifting = false;
-
+	int onoff = 1;
    
 
 	public PlayerState GetState(PlayerState state)
@@ -111,7 +111,7 @@ public partial class betterCar : RigidBody3D
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 		smoke = GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/Smoke/smokeParticle");
 
-        lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
+        lights = GetParent().GetNode<OmniLight3D>("CarMesh/ambulance/body/OmniLight3D");
 		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
 
 		defib = GD.Load<PackedScene>("res://Scenes/Power_Ups/defibrillator.tscn");
@@ -268,23 +268,29 @@ public partial class betterCar : RigidBody3D
 				carMesh.GlobalTransform = carMesh.GlobalTransform.InterpolateWith(xForm, (float)(10 * delta));
 			}
 		}
-
-	}
-
-    public override void _UnhandledInput(InputEvent @event)
-    {
-		////switches lights on/off
-		//if (@event.IsActionPressed("lights") && lights.Visible == true)
-		//{
-		//	lights.Visible = false;
-		//}
-		//else if (@event.IsActionPressed("lights") && lights.Visible == false)
-		//{
-  //          lights.Visible = true;
-  //      }
+		TurnLightsOnOff();
     }
 
-    public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
+	public void TurnLightsOnOff()
+	{
+		////switches lights on/offInput.IsJoyButtonPressed(id, JoyButton.X)
+		//if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
+		if(Input.IsActionJustPressed("lights") && lights.Visible == true && onoff == 1)
+		{
+			lights.Visible = false;
+			onoff--;
+		}
+
+		//else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
+		else if (Input.IsActionJustPressed("lights") && lights.Visible == false && onoff == 0)
+
+        {
+			lights.Visible = true;
+			onoff++;
+		}
+	}
+
+	public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
 	{
 		xForm.Basis.Y = newY;
 		xForm.Basis.X = -xForm.Basis.Z.Cross(newY);

@@ -578,7 +578,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CarMesh/ambulance/body/BackRightOmniLight3D:light_color")
+tracks/1/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackRightOmniLight3D:light_color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -590,7 +590,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CarMesh/ambulance/body/BackLeftOmniLight3D:light_color")
+tracks/2/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D:light_color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -696,6 +696,18 @@ light_color = Color(0, 0, 1, 1)
 light_energy = 16.0
 omni_range = 1.12512
 
+[node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53502, 0.21627, 2.49919)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.25157
+
+[node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 0.21627, 2.49919)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.24662
+
 [node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410291, 0.434126, -1.57652)
 omni_range = 0.247119
@@ -715,18 +727,6 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 light_energy = 16.0
 spot_range = 27.0
 spot_angle = 23.9404
-
-[node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53502, 1.68626, 1.75208)
-light_color = Color(0, 0, 0, 1)
-light_energy = 16.0
-omni_range = 1.25157
-
-[node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 1.68626, 1.75208)
-light_color = Color(1, 0, 0, 1)
-light_energy = 16.0
-omni_range = 1.24662
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
