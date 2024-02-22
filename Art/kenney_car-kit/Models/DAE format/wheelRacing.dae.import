@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://td2872c4e2hn"
-path="res://.godot/imported/wheelRacing.dae-3d3a478f7586e2aa1b7dc3154d4612e7.scn"
+path="res://.godot/imported/wheelRacing.dae-9c934222b6cae05bf9f0b068b460e63e.scn"
 
 [deps]
 
-source_file="res://Art/kenney_car-kit/Models/DAE format/wheelRacing.dae"
-dest_files=["res://.godot/imported/wheelRacing.dae-3d3a478f7586e2aa1b7dc3154d4612e7.scn"]
+source_file="res://art/kenney_car-kit/Models/DAE format/wheelRacing.dae"
+dest_files=["res://.godot/imported/wheelRacing.dae-9c934222b6cae05bf9f0b068b460e63e.scn"]
 
 [params]
 
