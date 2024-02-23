@@ -1,56 +1,58 @@
 [gd_scene load_steps=10 format=3 uid="uid://bmtnk2kw6jbas"]
 
+[ext_resource type="Script" path="res://Scenes/Smoke.cs" id="1_04ivm"]
 [ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://Art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="1_bqb3a"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_4lyg2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vn47k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i5dg"]
+transparency = 1
 blend_mode = 1
-diffuse_mode = 3
+no_depth_test = true
+shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_bqb3a")
+albedo_texture_msdf = true
 billboard_mode = 3
+billboard_keep_scale = true
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="Gradient" id="Gradient_kqsn8"]
-offsets = PackedFloat32Array(0.126984, 0.640212, 1)
-colors = PackedColorArray(0.147668, 0.0799125, 0.0654725, 1, 0.408124, 0.498743, 0.539191, 1, 0.831373, 1, 1, 1)
+[sub_resource type="Gradient" id="Gradient_q76c2"]
+offsets = PackedFloat32Array(0.116402, 0.587302, 1)
+colors = PackedColorArray(0.384314, 0, 0, 1, 0.649432, 0.235422, 0.285739, 1, 0.987215, 0.384747, 0.3839, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_yp4q4"]
-gradient = SubResource("Gradient_kqsn8")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5nnsv"]
+gradient = SubResource("Gradient_q76c2")
 
-[sub_resource type="Curve" id="Curve_r07po"]
-max_value = 10.0
-_data = [Vector2(0, 0.527472), 0.0, 0.0, 0, 0, Vector2(0.308756, 2.96703), 4.51143, 4.51143, 0, 0, Vector2(0.562212, 6.7033), 10.3945, 10.3945, 0, 0, Vector2(0.834101, 8.9011), 0.108392, 0.108392, 0, 0, Vector2(1, 9.89011), 0.170331, 0.0, 0, 0]
+[sub_resource type="Curve" id="Curve_5vo1i"]
+max_value = 5.0
+_data = [Vector2(0, 3.9011), 0.0, 0.0, 0, 0, Vector2(0.258065, 4.45055), 0.887299, 0.887299, 0, 0, Vector2(0.483871, 4.50549), 4.51144, 4.51144, 0, 0, Vector2(0.746544, 4.67033), 0.0, 0.0, 0, 0, Vector2(0.990783, 4.28571), 0.0, 0.0, 0, 0]
 point_count = 5
 
-[sub_resource type="CurveTexture" id="CurveTexture_80ts8"]
-curve = SubResource("Curve_r07po")
+[sub_resource type="CurveTexture" id="CurveTexture_sp7ef"]
+curve = SubResource("Curve_5vo1i")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rrkwd"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gs2pt"]
+lifetime_randomness = 0.05
 emission_shape = 1
-emission_sphere_radius = 0.2
+emission_sphere_radius = 0.1
 angle_max = 360.0
-angular_velocity_min = 5.0
-angular_velocity_max = 150.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
 gravity = Vector3(0, 0, 0)
-scale_min = 0.0
-scale_max = 0.0
-scale_curve = SubResource("CurveTexture_80ts8")
-color_ramp = SubResource("GradientTexture1D_yp4q4")
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_sp7ef")
+color_ramp = SubResource("GradientTexture1D_5nnsv")
 
-[sub_resource type="QuadMesh" id="QuadMesh_rh200"]
+[sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
 
-[node name="smoke" type="RigidBody3D"]
+[node name="Smoke" type="Node3D"]
+script = ExtResource("1_04ivm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_4lyg2")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-material_override = SubResource("StandardMaterial3D_vn47k")
-amount = 26
-amount_ratio = 0.8249
-process_material = SubResource("ParticleProcessMaterial_rrkwd")
-draw_pass_1 = SubResource("QuadMesh_rh200")
+[node name="smokeParticle" type="GPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8i5dg")
+amount = 100
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_gs2pt")
+draw_pass_1 = SubResource("QuadMesh_wbcc1")

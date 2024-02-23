@@ -1,6 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=36 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
+[ext_resource type="Script" path="res://Scenes/Smoke.cs" id="2_qcwma"]
+[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://Art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="3_bvmy7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
@@ -514,6 +516,50 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q6f1c")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i5dg"]
+transparency = 1
+blend_mode = 1
+no_depth_test = true
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.772549, 0.176471, 0.207843, 1)
+albedo_texture = ExtResource("3_bvmy7")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_q76c2"]
+offsets = PackedFloat32Array(0.116402, 0.587302, 1)
+colors = PackedColorArray(0.384314, 0, 0, 1, 0.649432, 0.235422, 0.285739, 1, 0.987215, 0.384747, 0.3839, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5nnsv"]
+gradient = SubResource("Gradient_q76c2")
+
+[sub_resource type="Curve" id="Curve_5vo1i"]
+max_value = 5.0
+_data = [Vector2(0, 3.9011), 0.0, 0.0, 0, 0, Vector2(0.258065, 4.45055), 0.887299, 0.887299, 0, 0, Vector2(0.483871, 4.50549), 4.51144, 4.51144, 0, 0, Vector2(0.746544, 4.67033), 0.0, 0.0, 0, 0, Vector2(0.990783, 4.28571), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_sp7ef"]
+curve = SubResource("Curve_5vo1i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gs2pt"]
+lifetime_randomness = 0.05
+emission_shape = 1
+emission_sphere_radius = 0.1
+angle_max = 360.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_sp7ef")
+color_ramp = SubResource("GradientTexture1D_5nnsv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
+
 [sub_resource type="Animation" id="Animation_pu1ql"]
 resource_name = "lights"
 loop_mode = 1
@@ -532,7 +578,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CarMesh/ambulance/doorLeft/OmniLight3D:light_color")
+tracks/1/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackRightOmniLight3D:light_color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -544,7 +590,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CarMesh/ambulance/doorRight/OmniLight3D:light_color")
+tracks/2/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D:light_color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -557,6 +603,66 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8gxp6"]
 _data = {
 "lights": SubResource("Animation_pu1ql")
+}
+
+[sub_resource type="Animation" id="Animation_7v4xw"]
+resource_name = "DoorAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.89778, 0), Vector3(0, -1.93334, 0), Vector3(0, -1.2991, 0), Vector3(0, -0.683593, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance/doorRight:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.02154, 0), Vector3(0, 2.19325, 0), Vector3(0, 1.75631, 0), Vector3(0, 0.885946, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xsvdq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance/doorRight:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pu1i6"]
+_data = {
+"DoorAnimation": SubResource("Animation_7v4xw"),
+"RESET": SubResource("Animation_xsvdq")
 }
 
 [node name="PlayerRoot" type="Node3D"]
@@ -586,9 +692,21 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46999, -0.747112)
-light_color = Color(0.999997, 0, 3.02722e-06, 1)
+light_color = Color(0, 0, 1, 1)
 light_energy = 16.0
 omni_range = 1.12512
+
+[node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53502, 0.21627, 2.49919)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.25157
+
+[node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 0.21627, 2.49919)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+omni_range = 1.24662
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410291, 0.434126, -1.57652)
@@ -615,22 +733,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
 mesh = SubResource("ArrayMesh_bk8vp")
 skeleton = NodePath("")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/doorLeft"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08502, 1.48626, 0.177077)
-light_color = Color(0, 0, 0, 1)
-light_energy = 16.0
-omni_range = 1.25157
-
 [node name="doorRight" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 0.4, 1.575)
 mesh = SubResource("ArrayMesh_h0afo")
 skeleton = NodePath("")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/doorRight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.818134, 1.48626, 0.177077)
-light_color = Color(1, 0, 0, 1)
-light_energy = 16.0
-omni_range = 1.24662
 
 [node name="wheel_backLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.3, 0.91)
@@ -658,6 +764,23 @@ transform = Transform3D(1, 0, 8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.3, 0.3
 mesh = SubResource("ArrayMesh_4hcrp")
 skeleton = NodePath("")
 
+[node name="DropPoint" type="Node3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679478, 2.90478)
+
+[node name="Smoke" type="Node3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.88237)
+script = ExtResource("2_qcwma")
+
+[node name="smokeParticle" type="GPUParticles3D" parent="CarMesh/ambulance/Smoke"]
+material_override = SubResource("StandardMaterial3D_8i5dg")
+emitting = false
+amount = 100
+one_shot = true
+randomness = 1.0
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_gs2pt")
+draw_pass_1 = SubResource("QuadMesh_wbcc1")
+
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
@@ -666,3 +789,8 @@ libraries = {
 "": SubResource("AnimationLibrary_8gxp6")
 }
 autoplay = "lights"
+
+[node name="DoorAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pu1i6")
+}

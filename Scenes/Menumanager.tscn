@@ -20,16 +20,16 @@ script = ExtResource("1_brujs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 3841.0
+offset_right = 3275.0
 offset_bottom = 2160.0
 texture = ExtResource("2_nyspe")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 740.0
-offset_top = 235.0
-offset_right = 3087.0
-offset_bottom = 2010.0
+offset_left = -450.0
+offset_top = 190.0
+offset_right = 3675.0
+offset_bottom = 1965.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -51,7 +51,7 @@ theme_override_constants/shadow_offset_x = 18
 theme_override_constants/shadow_offset_y = 18
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_2tpmv")
-theme_override_font_sizes/font_size = 500
+theme_override_font_sizes/font_size = 350
 text = "Saving Grandma!"
 horizontal_alignment = 1
 vertical_alignment = 1

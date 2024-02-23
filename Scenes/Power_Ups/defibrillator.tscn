@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://x53335hqnfrx"]
+[gd_scene load_steps=8 format=3 uid="uid://x53335hqnfrx"]
 
-[ext_resource type="Script" path="res://Scenes/Power_Ups/defibrillator.cs" id="1_v0ltg"]
+[ext_resource type="Script" path="res://Scripts/Power_up_Script/defibrillator.cs" id="1_rp6u7"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dsgog"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ndck"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbl76"]
 albedo_color = Color(0.937255, 0.207843, 0.188235, 1)
@@ -10,20 +10,61 @@ albedo_color = Color(0.937255, 0.207843, 0.188235, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_3e16p"]
 material = SubResource("StandardMaterial3D_cbl76")
 
+[sub_resource type="Animation" id="Animation_vshxk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lh2a6"]
+resource_name = "Throw"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.801238, -0.909709), Vector3(0, 0, -2.64744)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1rywu"]
+_data = {
+"RESET": SubResource("Animation_vshxk"),
+"Throw": SubResource("Animation_lh2a6")
+}
+
 [node name="Defibrillator" type="Node3D"]
-script = ExtResource("1_v0ltg")
+script = ExtResource("1_rp6u7")
 
 [node name="Pivot" type="Node3D" parent="."]
 
 [node name="Area3D" type="Area3D" parent="Pivot"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/Area3D"]
-shape = SubResource("BoxShape3D_dsgog")
+shape = SubResource("BoxShape3D_6ndck")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot/Area3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_3e16p")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1rywu")
+}
 
 [connection signal="body_entered" from="Pivot/Area3D" to="." method="BodyEntered"]
 [connection signal="timeout" from="Timer" to="." method="defibTimeOut"]

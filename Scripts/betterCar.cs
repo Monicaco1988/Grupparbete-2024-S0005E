@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 public partial class betterCar : RigidBody3D
@@ -43,14 +44,20 @@ public partial class betterCar : RigidBody3D
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
-	PowerUp powerUp = PowerUp.SPEED_BOOST;
+	PowerUp powerUp = PowerUp.DEFIBRILLATOR;
 	PackedScene trackScene;
+	GpuParticles3D smoke;
 	Node3D rightSkid;
 	Node3D leftSkid;
+	Node3D dropPoint;
+	
 	//Node3D playerRoot;
 
 	OmniLight3D lights;
+	AnimationPlayer doorAnimation;
 
+	//POWER UPS
+	PackedScene defib;
 
 	float acceleration = 2500;
 	float velocity;
@@ -64,7 +71,7 @@ public partial class betterCar : RigidBody3D
 	float turnInput2;
 	float speedBoost = 25;
 	bool isDrifting = false;
-
+	int onoff = 1;
    
 
 	public PlayerState GetState(PlayerState state)
@@ -99,18 +106,27 @@ public partial class betterCar : RigidBody3D
 		leftWheel = GetParent().GetNode<MeshInstance3D>("CarMesh/ambulance/wheel_frontLeft");
 		rightSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backRight/SkidRight");
         leftSkid = GetParent().GetNode<Node3D>("CarMesh/ambulance/wheel_backLeft/SkidLeft");
-        trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+		dropPoint = GetParent().GetNode<Node3D>("CarMesh/ambulance/DropPoint");
 
-        lights = GetNode<OmniLight3D>("/root/GameManager/PlayerManager/PlayerRoot/CarMesh/ambulance/body/OmniLight3D");
+        trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
+		smoke = GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/Smoke/smokeParticle");
+
+        lights = GetParent().GetNode<OmniLight3D>("CarMesh/ambulance/body/OmniLight3D");
+		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
+
+		defib = GD.Load<PackedScene>("res://Scenes/Power_Ups/defibrillator.tscn");
+        //pU = 
+        //var smokeP = smoke.GetNode<GpuParticles3D>("SmokeParticle");
+        //PlayerManager / PlayerRoot / CarMesh / ambulance / Smoke / smokeParticle
     }
 
 	
 
 	public void addTireTracks()
 	{
-
 		if (Mathf.Abs(turnInput2) > 0.3f)
 		{
+			
 			var trackS = trackScene.Instantiate();
 			GetParent().GetParent().AddChild(trackS);
 
@@ -126,19 +142,31 @@ public partial class betterCar : RigidBody3D
 		}
 	}
 
+	public void playDoorAnimation()
+	{
+        doorAnimation.Play("DoorAnimation");
+    }
+
 	public void usePowerUp(double delta)
 	{
         if (Input.IsJoyButtonPressed(id, JoyButton.X))
         {
-            switch (powerUp)
-            {
-                case PowerUp.SPEED_BOOST:
+			switch (powerUp)
+			{
+				case PowerUp.SPEED_BOOST:
 					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
-                    break;
+					playDoorAnimation();
+					break;
 
-                case PowerUp.DEFIBRILLATOR:
-                    //Do P2 Shit
-                    break;
+				case PowerUp.DEFIBRILLATOR:
+					var d = defib.Instantiate();
+					GetParent().GetParent().AddChild(d);
+
+					playDoorAnimation();
+					var obj = d.GetNode<Node3D>("Pivot");
+					obj.GlobalPosition = dropPoint.GlobalPosition;
+					//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
+					break;
 
                 case PowerUp.P3:
                     //Do P3 shit
@@ -219,11 +247,13 @@ public partial class betterCar : RigidBody3D
 			{
 				steering = 30.0f;
 				addTireTracks();
-			}
+                smoke.Emitting = true;
+            }
 			else
 			{
 				steering = 18.0f;
-				isDrifting = false;
+                smoke.Emitting = false;
+                isDrifting = false;
 			}
 
 			var tilted = -turnInput2 * LinearVelocity.Length() / bodyTilt;
@@ -238,23 +268,29 @@ public partial class betterCar : RigidBody3D
 				carMesh.GlobalTransform = carMesh.GlobalTransform.InterpolateWith(xForm, (float)(10 * delta));
 			}
 		}
-
-	}
-
-    public override void _UnhandledInput(InputEvent @event)
-    {
-		////switches lights on/off
-		//if (@event.IsActionPressed("lights") && lights.Visible == true)
-		//{
-		//	lights.Visible = false;
-		//}
-		//else if (@event.IsActionPressed("lights") && lights.Visible == false)
-		//{
-  //          lights.Visible = true;
-  //      }
+		TurnLightsOnOff();
     }
 
-    public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
+	public void TurnLightsOnOff()
+	{
+		////switches lights on/offInput.IsJoyButtonPressed(id, JoyButton.X)
+		//if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
+		if(Input.IsActionJustPressed("lights") && lights.Visible == true && onoff == 1)
+		{
+			lights.Visible = false;
+			onoff--;
+		}
+
+		//else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
+		else if (Input.IsActionJustPressed("lights") && lights.Visible == false && onoff == 0)
+
+        {
+			lights.Visible = true;
+			onoff++;
+		}
+	}
+
+	public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
 	{
 		xForm.Basis.Y = newY;
 		xForm.Basis.X = -xForm.Basis.Z.Cross(newY);

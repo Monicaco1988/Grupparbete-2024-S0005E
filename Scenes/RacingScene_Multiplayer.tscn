@@ -1,12 +1,18 @@
-[gd_scene load_steps=39 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=40 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
 [ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker2.cs" id="4_a77at"]
 [ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="5_jmusw"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test2.cs" id="5_r10hf"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker3.cs" id="6_3qfgj"]
 [ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
 [ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://Art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test3.cs" id="7_scl8t"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker4.cs" id="8_2evqc"]
 [ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://Art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
+[ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test4.cs" id="9_6sp11"]
 [ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://Art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
 [ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://Art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
 [ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://Art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
@@ -27,7 +33,13 @@
 size = Vector3(2000, 1, 2000)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_88ewm"]
-bounce = 1.0
+bounce = 0.2
+
+[sub_resource type="BoxMesh" id="BoxMesh_dajqp"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gms06"]
+top_radius = 1.0
+bottom_radius = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkf4w"]
 size = Vector3(1, 1, 1.06863)
@@ -101,37 +113,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3mljp")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5milq"]
-size = Vector3(22.2235, 9.11499, 9.71432)
+size = Vector3(24.858, 9.11499, 9.71432)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yn5xg"]
 size = Vector3(22.2235, 5.71069, 9.71432)
-
-[sub_resource type="BoxMesh" id="BoxMesh_dajqp"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_gms06"]
-top_radius = 1.0
-bottom_radius = 1.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5vmq5"]
-emission_shape = 1
-emission_sphere_radius = 2.0
-spread = 180.0
-initial_velocity_max = 30.0
-gravity = Vector3(0, 0, 0)
-scale_min = 0.5
-scale_max = 1.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgcse"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_oyu5c"]
-material = SubResource("StandardMaterial3D_tgcse")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwhoh"]
-albedo_color = Color(0.0156863, 0, 0, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_733qs"]
-material = SubResource("StandardMaterial3D_qwhoh")
-size = Vector2(2000, 2000)
 
 [node name="World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
@@ -152,8 +137,135 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="Spawn1" type="Marker3D" parent="."]
+[node name="Spawn1_Explosion" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -853.628, 1.97422, 943.842)
+
+[node name="ExplosionMarker" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.890693, -943.842)
+script = ExtResource("20_rhcxc")
+explosion = NodePath("../Test/CPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker"]
+
+[node name="Test" type="Marker3D" parent="Spawn1_Explosion"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
+script = ExtResource("21_unkyi")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Spawn1_Explosion/Test"]
+emitting = false
+amount = 80
+lifetime = 1.4
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+fixed_fps = 60
+mesh = SubResource("BoxMesh_dajqp")
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 50.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Spawn1_Explosion/Test"]
+visible = false
+mesh = SubResource("CylinderMesh_gms06")
+skeleton = NodePath("../../ExplosionMarker")
+
+[node name="ExplosionMarker2" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
+script = ExtResource("4_a77at")
+explosion = NodePath("../Test2/CPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker2"]
+
+[node name="Test2" type="Marker3D" parent="Spawn1_Explosion"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
+script = ExtResource("5_r10hf")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Spawn1_Explosion/Test2"]
+emitting = false
+amount = 80
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 30
+mesh = SubResource("BoxMesh_dajqp")
+emission_shape = 1
+emission_sphere_radius = 4.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Spawn1_Explosion/Test2"]
+visible = false
+mesh = SubResource("CylinderMesh_gms06")
+skeleton = NodePath("../../ExplosionMarker")
+
+[node name="ExplosionMarker3" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
+script = ExtResource("6_3qfgj")
+explosion = NodePath("../Test3/CPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker3"]
+
+[node name="Test3" type="Marker3D" parent="Spawn1_Explosion"]
+script = ExtResource("7_scl8t")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Spawn1_Explosion/Test3"]
+emitting = false
+amount = 80
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 30
+mesh = SubResource("BoxMesh_dajqp")
+emission_shape = 1
+emission_sphere_radius = 4.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Spawn1_Explosion/Test3"]
+visible = false
+mesh = SubResource("CylinderMesh_gms06")
+skeleton = NodePath("../../ExplosionMarker")
+
+[node name="ExplosionMarker4" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
+script = ExtResource("8_2evqc")
+explosion = NodePath("../Test4/CPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker4"]
+
+[node name="Test4" type="Marker3D" parent="Spawn1_Explosion"]
+script = ExtResource("9_6sp11")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Spawn1_Explosion/Test4"]
+emitting = false
+amount = 80
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 30
+mesh = SubResource("BoxMesh_dajqp")
+emission_shape = 1
+emission_sphere_radius = 4.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Spawn1_Explosion/Test4"]
+visible = false
+mesh = SubResource("CylinderMesh_gms06")
+skeleton = NodePath("../../ExplosionMarker")
 
 [node name="Obstacles" type="Node3D" parent="."]
 transform = Transform3D(29, 0, 0, 0, 29, 0, 0, 0, 29, 0, 0, 0)
@@ -14214,7 +14326,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 [node name="CollisionaraDestroy" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionaraDestroy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -855.683, 5.4425, 951.115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.366, 5.91552, 951.115)
 shape = SubResource("BoxShape3D_5milq")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="CollisionaraDestroy"]
@@ -14361,96 +14473,10 @@ shape = SubResource("BoxShape3D_yn5xg")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -750.097, 4.36691, 884.906)
 shape = SubResource("BoxShape3D_yn5xg")
 
-[node name="ExplosionMarker" type="Marker3D" parent="." node_paths=PackedStringArray("explosion")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 0)
-script = ExtResource("20_rhcxc")
-explosion = NodePath("../Test/CPUParticles3D")
-
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="ExplosionMarker"]
-
-[node name="Test" type="Marker3D" parent="."]
-script = ExtResource("21_unkyi")
-
-[node name="CPUParticles3D" type="CPUParticles3D" parent="Test"]
-emitting = false
-amount = 80
-one_shot = true
-explosiveness = 1.0
-fixed_fps = 30
-mesh = SubResource("BoxMesh_dajqp")
-emission_shape = 1
-emission_sphere_radius = 4.0
-direction = Vector3(0, 0, 0)
-spread = 180.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_max = 30.0
-scale_amount_min = 0.5
-scale_amount_max = 1.5
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Test"]
-visible = false
-mesh = SubResource("CylinderMesh_gms06")
-skeleton = NodePath("../../ExplosionMarker")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Test"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 4.29803)
-visible = false
-emitting = false
-amount = 50
-lifetime = 1.5
-one_shot = true
-explosiveness = 1.0
-visibility_aabb = AABB(-23.1686, -9.43619, -26.45, 46.3373, 18.8724, 52.9)
-process_material = SubResource("ParticleProcessMaterial_5vmq5")
-draw_pass_1 = SubResource("BoxMesh_oyu5c")
-
-[node name="ExplosionMarker2" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 0)
-
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="ExplosionMarker2"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ExplosionMarker2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.831, -0.0835266, 359.06)
-mesh = SubResource("PlaneMesh_733qs")
-skeleton = NodePath("../../Ground/CollisionShape3D")
-
-[node name="Test2" type="Marker3D" parent="."]
-
-[node name="CPUParticles3D" type="CPUParticles3D" parent="Test2"]
-emitting = false
-amount = 80
-one_shot = true
-explosiveness = 1.0
-fixed_fps = 30
-mesh = SubResource("BoxMesh_dajqp")
-emission_shape = 1
-emission_sphere_radius = 4.0
-direction = Vector3(0, 0, 0)
-spread = 180.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_max = 30.0
-scale_amount_min = 0.5
-scale_amount_max = 1.5
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Test2"]
-mesh = SubResource("CylinderMesh_gms06")
-skeleton = NodePath("../../ExplosionMarker")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Test2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0835266, 4.29803)
-visible = false
-emitting = false
-amount = 50
-lifetime = 1.5
-one_shot = true
-explosiveness = 1.0
-visibility_aabb = AABB(-23.1686, -9.43619, -26.45, 46.3373, 18.8724, 52.9)
-process_material = SubResource("ParticleProcessMaterial_5vmq5")
-draw_pass_1 = SubResource("BoxMesh_oyu5c")
-
 [node name="Defibrillator" parent="." instance=ExtResource("22_k4dsp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -856.365, 1.34029, 811.371)
 
+[connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker" method="OnScreenExist"]
+[connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker2/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker2" method="OnScreenExist"]
+[connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker3/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker3" method="OnScreenExist"]
+[connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker4/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker4" method="OnScreenExist"]
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
-[connection signal="screen_exited" from="ExplosionMarker/VisibleOnScreenEnabler3D" to="ExplosionMarker" method="OnScreenExist"]
-[connection signal="screen_exited" from="ExplosionMarker2/VisibleOnScreenEnabler3D" to="ExplosionMarker2" method="OnScreenExist"]
