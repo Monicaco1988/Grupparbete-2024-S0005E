@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx8b3n6w0yud2"]
 
 [ext_resource type="Script" path="res://Scripts/MenuManager.cs" id="1_brujs"]
-[ext_resource type="Texture2D" uid="uid://60ip2nyy30hl" path="res://Art/MenuManager/pexels-pixabay-531880.jpg" id="2_nyspe"]
+[ext_resource type="Texture2D" uid="uid://csv71w0kdv1e1" path="res://Art/Storyart/4.png" id="2_xmxy5"]
 
 [sub_resource type="SystemFont" id="SystemFont_2tpmv"]
 font_names = PackedStringArray("Chiller")
@@ -22,14 +22,14 @@ script = ExtResource("1_brujs")
 layout_mode = 0
 offset_right = 3275.0
 offset_bottom = 2160.0
-texture = ExtResource("2_nyspe")
+texture = ExtResource("2_xmxy5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -450.0
-offset_top = 190.0
-offset_right = 3675.0
-offset_bottom = 1965.0
+offset_left = -451.0
+offset_top = 675.0
+offset_right = 3674.0
+offset_bottom = 2450.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -65,10 +65,6 @@ alignment = 1
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
-
-[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2

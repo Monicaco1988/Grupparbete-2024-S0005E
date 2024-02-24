@@ -104,6 +104,8 @@ public partial class player_manager : Node3D
 
 
                 GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
+                //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D").QueueFree();
+                //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D6").QueueFree();
                 GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
@@ -112,6 +114,7 @@ public partial class player_manager : Node3D
 
                 //QueueFree();
                 lockAButton++;
+                // Add timer so start scene can run and 3 sec countdown...
             }
 
         }

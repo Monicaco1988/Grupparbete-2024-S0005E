@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=24 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 [ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
@@ -18,7 +18,7 @@ points = PackedVector3Array(-55.5, -0.5, -55.5, -55.5, 0.5, -55.5, 55.5, -0.5, -
 size = Vector2(1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qlql"]
-size = Vector3(73.1895, 20, 1)
+size = Vector3(118.449, 20, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4uv"]
 resource_name = "pavement"
@@ -151,6 +151,9 @@ points = PackedVector3Array(0.460322, 0.0872923, 0.507937, 0.444444, -0.00792719
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k08rn"]
 points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.00792719, -0.507937, -0.444444, -0.00792719, -0.507937, -0.50793, -0.00792719, 0.507937, -0.50793, 0.0872923, -0.507937, -0.444444, -0.00792719, 0.507937, -0.444444, 0.0555462, -0.507937, -0.50793, 0.0872923, 0.507937, -0.460322, 0.0872923, -0.507937, -0.444444, 0.0555462, 0.507937)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xo2eb"]
+size = Vector3(30, 1, 57.7539)
+
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 script = ExtResource("1_fqr60")
 Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4")]
@@ -250,7 +253,7 @@ transform = Transform3D(0.795674, 0, 0.605725, 0, 1, 0, -0.605725, 0, 0.795674, 
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="SpawnPlatform"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -214.672)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97135, 0, -214.672)
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -700,5 +703,11 @@ offset_top = 873.0
 offset_right = 352.0
 offset_bottom = 1061.0
 texture = ExtResource("3_bnsm7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.35455)
+shape = SubResource("BoxShape3D_xo2eb")
 
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]

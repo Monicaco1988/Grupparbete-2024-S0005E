@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=37 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 [ext_resource type="Script" path="res://Scenes/Smoke.cs" id="2_qcwma"]
@@ -560,6 +560,8 @@ color_ramp = SubResource("GradientTexture1D_5nnsv")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_do464"]
+
 [sub_resource type="Animation" id="Animation_pu1ql"]
 resource_name = "lights"
 loop_mode = 1
@@ -785,6 +787,13 @@ draw_pass_1 = SubResource("QuadMesh_wbcc1")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Marker3D" type="Marker3D" parent="CarMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.25908)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarMesh/Marker3D"]
+visible = false
+mesh = SubResource("SphereMesh_do464")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

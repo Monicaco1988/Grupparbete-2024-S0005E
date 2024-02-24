@@ -26,6 +26,9 @@ public partial class GameManager : Node
 			case GameState.PlayerManager:
 				HandlePlayerSelect();
 				break;
+			case GameState.StoryManager:
+				HanldeStorySelect();
+				break;
 			case GameState.LevelManager:
 				HandleLevelSelect();
 				break;
@@ -38,7 +41,13 @@ public partial class GameManager : Node
 
 	}
 
-	private void HandleAudioSelect()
+    private void HanldeStorySelect()
+    {
+        var sceneStory = ResourceLoader.Load<PackedScene>("res://Scenes/Storyart_before_start.tscn").Instantiate<Control>();
+        AddChild(sceneStory);
+    }
+
+    private void HandleAudioSelect()
 	{
 	//throw new NotImplementedException();
 		var sceneAudio = ResourceLoader.Load<PackedScene>("res://Scenes/audio_manager.tscn").Instantiate<Control>();
@@ -79,6 +88,8 @@ public enum GameState
 {
 	Menu,
 	PlayerManager,
-	LevelManager,
-	AudioManager
+    StoryManager,
+    LevelManager,
+	AudioManager,
+    
 }
