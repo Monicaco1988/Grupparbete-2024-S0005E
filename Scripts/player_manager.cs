@@ -124,15 +124,18 @@ public partial class player_manager : Node3D
             {
                 if (!GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == true || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true && lockAButton > 0)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
                 {
-                    GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
-                    GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
+                    if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false)
+                        GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
+
+                    if (GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false)
+                        GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
 
                     var offset = new Vector3(0, 0, 0);
                     foreach (var ambulance in ambulances)
                     {
-                        ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
+                        ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset+ new Vector3(0, 0, 0);
                         ambulance.LinearVelocity = Vector3.Zero;
-                        offset += new Vector3(-5,0,0);
+                        offset += new Vector3(-5,-5,0);
                     }
                     //moveToSpawnLocation();
 

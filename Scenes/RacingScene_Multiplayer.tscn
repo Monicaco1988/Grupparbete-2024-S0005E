@@ -15332,4 +15332,5 @@ autostart = true
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker3/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker3" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker4/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker4" method="OnScreenExist"]
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
+[connection signal="timeout" from="Countdown/Timer" to="Follow_Camera" method="OnTimerTimeout"]
 [connection signal="timeout" from="Countdown/Timer" to="Countdown" method="OnTimerTimeout"]

@@ -21,15 +21,21 @@ public partial class ExplosionMarker : Marker3D
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
-		this.GlobalPosition = this.GlobalPosition.Lerp(_player.GetChild<RigidBody3D>(playerId).GlobalPosition, (float)delta * 30f);
+	//public override void _Process(double delta)
+	//{
+	//	//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
+	//	this.GlobalPosition = this.GlobalPosition.Lerp(_player.GetChild<RigidBody3D>(playerId).GlobalPosition, (float)delta * 30f);
 
 
-	}
+	//}
 
-	public void OnScreenExist()
+    public override void _PhysicsProcess(double delta)
+    {
+        this.GlobalPosition = this.GlobalPosition.Lerp(_player.GetChild<RigidBody3D>(playerId).GlobalPosition, (float)delta * 30f);
+
+    }
+
+    public void OnScreenExist()
 	{
 		explosion.Emitting = true;
 		GD.Print("Player exited screen");

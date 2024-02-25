@@ -3,6 +3,8 @@ using System;
 
 public partial class Follow_Camera : Marker3D
 {
+	int timer = 0;
+	
 	//constants for identifying the different objects
 	private int playerId = 0;
 	private int collisionshapes = 0;
@@ -19,8 +21,8 @@ public partial class Follow_Camera : Marker3D
 	public override void _Ready()
 	{
 		//instantiates the attributes and objects from playermanager
-        _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
-		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
+        //_player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
+		//this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
 	}
 
 
@@ -28,16 +30,30 @@ public partial class Follow_Camera : Marker3D
 	{
 		playerContainer1 = playerContainer;
 
-		//destroy the collisionshape after a player passes through it!
-		areaNodeToDequeue.GetChild<CollisionShape3D>(collisionshapes).QueueFree();
-    }
+		if (timer == 4)
+		{
+			//destroy the collisionshape after a player passes through it!
+			areaNodeToDequeue.GetChild<CollisionShape3D>(collisionshapes).QueueFree();
+
+		}
+	}
 
 
-
-    public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
-
-		//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
-        this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);
-    }
+		GD.Print(timer);
+		if (timer == 4)
+		{
+			//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
+			this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);
+		}
+	}
+	private void OnTimerTimeout()
+	{
+        if (timer<5)
+			timer++;
+        _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
+        this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
+        
+	}
 }

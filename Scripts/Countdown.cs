@@ -13,6 +13,8 @@ public partial class Countdown : Control
         Node1 = GetNode<Control>("/root/GameManager/World/Countdown");//.QueueFree();
     }
 
+
+
     public void OnTimerTimeout()
     {
         this.GetChild<TextEdit>(scene).Hide();
