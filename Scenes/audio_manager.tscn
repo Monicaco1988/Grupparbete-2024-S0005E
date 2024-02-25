@@ -1,8 +1,17 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://cdxpk65dui66t"]
 
 [ext_resource type="AudioStream" uid="uid://bvd0p4dpnpck" path="res://Audio/stranger-things-124008.mp3" id="1_jwaps"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://cdxpk65dui66t"]
+
+[ext_resource type="AudioStream" uid="uid://bvd0p4dpnpck" path="res://Audio/stranger-things-124008.mp3" id="1_jwaps"]
+[ext_resource type="AudioStream" uid="uid://d3cmrgeqym20u" path="res://Audio/creepy-devil-dance-166764.mp3" id="1_sn0fh"]
+[ext_resource type="AudioStream" uid="uid://bja06ew5l0sis" path="res://Audio/8-bit-arcade-138828.mp3" id="1_yqlgy"]
+>>>>>>> Stashed changes
 
 [node name="AudioManager" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,5 +20,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+<<<<<<< Updated upstream
+=======
+stream = ExtResource("1_sn0fh")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_yqlgy")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+>>>>>>> Stashed changes
 stream = ExtResource("1_jwaps")
 autoplay = true

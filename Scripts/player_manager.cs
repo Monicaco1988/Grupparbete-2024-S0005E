@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using System;
+using System.Threading;
 
 public partial class player_manager : Node3D
 {
@@ -86,7 +87,11 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
+<<<<<<< Updated upstream
             if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0)
+=======
+            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
+>>>>>>> Stashed changes
             {
                 _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
 
@@ -107,10 +112,10 @@ public partial class player_manager : Node3D
     //When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
     public void OnButtonPressed()
     {
-        if (numberOfPlayers >= 2) // "Start Game" only works if there are atleast 2 players
+        if (numberOfPlayers >= 0) // "Start Game" only works if there are atleast 2 players
         {
             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-
+            
 
             GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
             GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
@@ -120,8 +125,31 @@ public partial class player_manager : Node3D
             GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
 
             //QueueFree();//removes PlayerManager Scene
+
+            
         }
     }
 
+    private void OnTimerTimeout()
+    {
+        //Moved location of spawnLocation so that the cars are visible when spawned in map
+        moveToSpawnLocation();
+        _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2);
+
+
+        GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
+        //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D").QueueFree();
+        //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D6").QueueFree();
+        GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
+        GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
+        GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
+        GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
+        GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
+
+        //QueueFree();
+        lockAButton++;
+        // Add timer so start scene can run and 3 sec countdown...
+    }
 
 }
+

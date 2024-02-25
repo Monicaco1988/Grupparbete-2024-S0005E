@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://nlhb1u2rf5oo"]
+
+[node name="EndScene" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

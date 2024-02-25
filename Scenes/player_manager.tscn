@@ -150,6 +150,7 @@ points = PackedVector3Array(0.460322, 0.0872923, 0.507937, 0.444444, -0.00792719
 points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.00792719, -0.507937, -0.444444, -0.00792719, -0.507937, -0.50793, -0.00792719, 0.507937, -0.50793, 0.0872923, -0.507937, -0.444444, -0.00792719, 0.507937, -0.444444, 0.0555462, -0.507937, -0.50793, 0.0872923, 0.507937, -0.460322, 0.0872923, -0.507937, -0.444444, 0.0555462, 0.507937)
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
+process_mode = 1
 script = ExtResource("1_fqr60")
 Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4")]
 
@@ -267,10 +268,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 0, 2.68194)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 0, 2.66987)
 
 [node name="Button" type="Button" parent="."]
-offset_left = 3353.0
-offset_top = 1770.0
-offset_right = 3794.0
-offset_bottom = 2108.0
+offset_left = 3421.0
+offset_top = 1774.0
+offset_right = 3862.0
+offset_bottom = 2112.0
 theme_override_font_sizes/font_size = 120
 text = "Press A 
 to Start"
@@ -685,4 +686,32 @@ shape = SubResource("ConvexPolygonShape3D_1itmd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k08rn")
 
+<<<<<<< Updated upstream
+=======
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 393.0
+offset_top = 873.0
+offset_right = 581.0
+offset_bottom = 1061.0
+texture = ExtResource("2_sfmpp")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 164.0
+offset_top = 873.0
+offset_right = 352.0
+offset_bottom = 1061.0
+texture = ExtResource("3_bnsm7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 2.35455)
+shape = SubResource("BoxShape3D_xo2eb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 11.0
+one_shot = true
+
+>>>>>>> Stashed changes
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

@@ -513,6 +513,55 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q6f1c")
 
+<<<<<<< Updated upstream
+=======
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8i5dg"]
+transparency = 1
+blend_mode = 1
+no_depth_test = true
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.317647, 0.317647, 0.317647, 0.8)
+albedo_texture = ExtResource("3_bvmy7")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_q76c2"]
+offsets = PackedFloat32Array(0.116402, 0.587302, 1)
+colors = PackedColorArray(0.384314, 0, 0, 1, 0.649432, 0.235422, 0.285739, 1, 0.987215, 0.384747, 0.3839, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5nnsv"]
+gradient = SubResource("Gradient_q76c2")
+
+[sub_resource type="Curve" id="Curve_5vo1i"]
+max_value = 5.0
+_data = [Vector2(0, 3.9011), 0.0, 0.0, 0, 0, Vector2(0.258065, 4.45055), 0.887299, 0.887299, 0, 0, Vector2(0.483871, 4.50549), 4.51144, 4.51144, 0, 0, Vector2(0.746544, 4.67033), 0.0, 0.0, 0, 0, Vector2(0.990783, 4.28571), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_sp7ef"]
+curve = SubResource("Curve_5vo1i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gs2pt"]
+lifetime_randomness = 0.05
+emission_shape = 1
+emission_sphere_radius = 0.1
+angle_max = 360.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_sp7ef")
+color_ramp = SubResource("GradientTexture1D_5nnsv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_do464"]
+
+>>>>>>> Stashed changes
 [sub_resource type="Animation" id="Animation_pu1ql"]
 resource_name = "lights"
 loop_mode = 1
@@ -559,6 +608,7 @@ _data = {
 }
 
 [node name="PlayerRoot" type="Node3D"]
+process_mode = 3
 
 [node name="Player" type="RigidBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_xca33")
@@ -657,6 +707,27 @@ transform = Transform3D(1, 0, 8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.3, 0.3
 mesh = SubResource("ArrayMesh_4hcrp")
 skeleton = NodePath("")
 
+<<<<<<< Updated upstream
+=======
+[node name="DropPoint" type="Node3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679478, 2.90478)
+
+[node name="Smoke" type="Node3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.88237)
+script = ExtResource("2_qcwma")
+
+[node name="smokeParticle" type="GPUParticles3D" parent="CarMesh/ambulance/Smoke"]
+material_override = SubResource("StandardMaterial3D_8i5dg")
+emitting = false
+amount = 100
+lifetime = 0.2
+one_shot = true
+randomness = 1.0
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_gs2pt")
+draw_pass_1 = SubResource("QuadMesh_wbcc1")
+
+>>>>>>> Stashed changes
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 

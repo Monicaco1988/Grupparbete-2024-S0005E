@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://ggkrw60mowyo"]
+
+[ext_resource type="Script" path="res://Scenes/Storyart.cs" id="1_tno08"]
+[ext_resource type="Texture2D" uid="uid://pj14sciwonpl" path="res://Art/Storyart/1.png" id="2_4r26x"]
+[ext_resource type="Texture2D" uid="uid://cnli3u4eq4008" path="res://Art/Storyart/2.png" id="3_2saw2"]
+[ext_resource type="Texture2D" uid="uid://cclsbcqi2rhvf" path="res://Art/Storyart/319IWOGnEGL._AC_UF894,1000_QL80_.jpg" id="4_0v28x"]
+[ext_resource type="Texture2D" uid="uid://bxg23kemsds0l" path="res://Art/Storyart/3.png" id="4_wvo0m"]
+
+[node name="Storyart" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tno08")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 3280.0
+offset_bottom = 2160.0
+texture = ExtResource("2_4r26x")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 3280.0
+offset_bottom = 2160.0
+texture = ExtResource("3_2saw2")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 831.0
+offset_right = 2471.0
+offset_bottom = 2160.0
+texture = ExtResource("4_wvo0m")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 831.0
+offset_right = 2471.0
+offset_bottom = 2160.0
+texture = ExtResource("4_0v28x")
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 2
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

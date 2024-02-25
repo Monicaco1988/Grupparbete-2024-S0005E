@@ -36,10 +36,10 @@ public partial class betterCar : RigidBody3D
 
 
 
-	float acceleration = 2500;
+	float acceleration = 3000;
 	float velocity;
-	float steering = 18.0f;
-	float turnSpeed = 4.0f;
+	float steering = 24.0f;
+	float turnSpeed = 6.0f;
 	float turnStopLimit = 0.75f;
 	float speedInput = 0;
 	float turnInput = 0;
@@ -108,15 +108,16 @@ public partial class betterCar : RigidBody3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		carMesh.Position = Position + sphereOffset;
+
+        carMesh.Position = Position + sphereOffset;
 		if (groundRay.IsColliding())//
 		{
-			//if (Mathf.Abs(this.LinearVelocity.Length()) < 4)
-			//{
-			//    ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput);
-			//}
-
-			ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+            //if (Mathf.Abs(this.LinearVelocity.Length()) < 4)
+            //{
+            //    ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput);
+            //}
+            
+            ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
 		}
 		//GD.Print(carMesh.Position);
 
@@ -170,6 +171,7 @@ public partial class betterCar : RigidBody3D
 			}
 		}
 
+<<<<<<< Updated upstream
 
 
 
@@ -177,6 +179,29 @@ public partial class betterCar : RigidBody3D
 
 
 	}
+=======
+	public void TurnLightsOnOff()
+	{
+        
+        ////switches lights on/offInput.IsJoyButtonPressed(id, JoyButton.X)
+        //if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
+        if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
+		{
+			lights.Visible = false;
+			onoff--;
+			
+        }
+
+        //else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
+        else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
+
+        {
+			lights.Visible = true;
+			onoff++;
+		}
+
+    }
+>>>>>>> Stashed changes
 
 	public Transform3D AlignWithY(Transform3D xForm, Vector3 newY)
 	{
