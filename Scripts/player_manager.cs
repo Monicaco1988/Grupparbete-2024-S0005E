@@ -8,6 +8,7 @@ public partial class player_manager : Node3D
 
     //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
     private GameManager _GetStateGameManager;
+    //Marker3D lastCollision;
 
     PackedScene playerScene;
     int numberOfPlayers;
@@ -37,6 +38,7 @@ public partial class player_manager : Node3D
         
         //Gets the class information from GameManager to the variable _GetStateGameManager 
         _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
+        //lastCollision = GetNode<Marker3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy");
     }
 
     public void moveToSpawnLocation()
@@ -122,11 +124,18 @@ public partial class player_manager : Node3D
             {
                 if (!GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == true || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true && lockAButton > 0)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
                 {
-
-                    moveToSpawnLocation();
                     GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
                     GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
-                    GetNode<Control>("/root/GameManager/World/Countdown");
+
+                    var offset = new Vector3(0, 0, 0);
+                    foreach (var ambulance in ambulances)
+                    {
+                        ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
+                        ambulance.LinearVelocity = Vector3.Zero;
+                        offset += new Vector3(-5,0,0);
+                    }
+                    //moveToSpawnLocation();
+
                 }
             }
         }
