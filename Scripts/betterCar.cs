@@ -59,10 +59,10 @@ public partial class betterCar : RigidBody3D
 	//POWER UPS
 	PackedScene defib;
 
-	float acceleration = 2500;
+	float acceleration = 3000;
 	float velocity;
-	float steering = 18.0f;
-	float turnSpeed = 4.0f;
+	float steering = 24.0f;
+	float turnSpeed = 6.0f;
 	float turnStopLimit = 0.75f;
 	float speedInput = 0;
 	float turnInput = 0;
@@ -275,14 +275,14 @@ public partial class betterCar : RigidBody3D
 	{
 		////switches lights on/offInput.IsJoyButtonPressed(id, JoyButton.X)
 		//if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
-		if(Input.IsActionJustPressed("lights") && lights.Visible == true && onoff == 1)
+		if(Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
 		{
 			lights.Visible = false;
 			onoff--;
 		}
 
 		//else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
-		else if (Input.IsActionJustPressed("lights") && lights.Visible == false && onoff == 0)
+		else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
 
         {
 			lights.Visible = true;

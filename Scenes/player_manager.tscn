@@ -692,6 +692,7 @@ shape = SubResource("ConvexPolygonShape3D_1itmd")
 shape = SubResource("ConvexPolygonShape3D_k08rn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = 393.0
 offset_top = 873.0
 offset_right = 581.0
@@ -699,6 +700,7 @@ offset_bottom = 1061.0
 texture = ExtResource("2_sfmpp")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 offset_left = 164.0
 offset_top = 873.0
 offset_right = 352.0

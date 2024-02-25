@@ -117,6 +117,18 @@ public partial class player_manager : Node3D
                 // Add timer so start scene can run and 3 sec countdown...
             }
 
+            //trying to add simple function to resett players if a player is hidden
+            if (lockAButton > 0)
+            {
+                if (!GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == true || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true && lockAButton > 0)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
+                {
+
+                    moveToSpawnLocation();
+                    GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
+                    GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
+                    GetNode<Control>("/root/GameManager/World/Countdown");
+                }
+            }
         }
 
     }

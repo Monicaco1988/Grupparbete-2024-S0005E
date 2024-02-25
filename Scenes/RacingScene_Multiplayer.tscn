@@ -1,6 +1,7 @@
-[gd_scene load_steps=40 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=41 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
+[ext_resource type="Script" path="res://Scenes/RacingScene_Multiplayer.cs" id="1_f0n8e"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
 [ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker2.cs" id="4_a77at"]
@@ -119,6 +120,7 @@ size = Vector3(30, 10, 30)
 [node name="World" type="Node3D"]
 process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
+script = ExtResource("1_f0n8e")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.831, 0, 359.06)
@@ -15292,6 +15294,7 @@ text = " 3"
 
 [node name="TextEdit2" type="TextEdit" parent="Countdown"]
 visible = false
+layout_mode = 0
 offset_left = 1490.0
 offset_top = 637.0
 offset_right = 2040.0
@@ -15301,6 +15304,7 @@ text = " 2"
 
 [node name="TextEdit3" type="TextEdit" parent="Countdown"]
 visible = false
+layout_mode = 0
 offset_left = 1490.0
 offset_top = 637.0
 offset_right = 2040.0
@@ -15310,6 +15314,7 @@ text = " 1"
 
 [node name="TextEdit4" type="TextEdit" parent="Countdown"]
 visible = false
+layout_mode = 0
 offset_left = 1341.0
 offset_top = 637.0
 offset_right = 2248.0

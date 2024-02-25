@@ -36,6 +36,7 @@ public partial class Follow_Camera : Marker3D
 
     public override void _Process(double delta)
 	{
+
 		//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
         this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);
     }
