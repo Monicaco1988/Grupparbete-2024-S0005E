@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=40 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -28,6 +28,7 @@
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
 [ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
+[ext_resource type="Script" path="res://Scripts/Countdown.cs" id="29_d68i3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
 size = Vector3(2000, 1, 2000)
@@ -116,6 +117,7 @@ shadow_mesh = SubResource("ArrayMesh_3mljp")
 size = Vector3(30, 10, 30)
 
 [node name="World" type="Node3D"]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, -3, -973)
 
 [node name="Ground" type="StaticBody3D" parent="."]
@@ -15271,8 +15273,56 @@ shape = SubResource("BoxShape3D_5milq")
 
 [node name="Defibrillator" parent="." instance=ExtResource("22_k4dsp")]
 
+[node name="Countdown" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("29_d68i3")
+
+[node name="TextEdit" type="TextEdit" parent="Countdown"]
+visible = false
+layout_mode = 0
+offset_left = 1490.0
+offset_top = 637.0
+offset_right = 2040.0
+offset_bottom = 1337.0
+theme_override_font_sizes/font_size = 500
+text = " 3"
+
+[node name="TextEdit2" type="TextEdit" parent="Countdown"]
+visible = false
+offset_left = 1490.0
+offset_top = 637.0
+offset_right = 2040.0
+offset_bottom = 1337.0
+theme_override_font_sizes/font_size = 500
+text = " 2"
+
+[node name="TextEdit3" type="TextEdit" parent="Countdown"]
+visible = false
+offset_left = 1490.0
+offset_top = 637.0
+offset_right = 2040.0
+offset_bottom = 1337.0
+theme_override_font_sizes/font_size = 500
+text = " 1"
+
+[node name="TextEdit4" type="TextEdit" parent="Countdown"]
+visible = false
+offset_left = 1341.0
+offset_top = 637.0
+offset_right = 2248.0
+offset_bottom = 1337.0
+theme_override_font_sizes/font_size = 500
+text = "Go!"
+
+[node name="Timer" type="Timer" parent="Countdown"]
+autostart = true
+
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker2/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker2" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker3/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker3" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker4/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker4" method="OnScreenExist"]
 [connection signal="body_entered" from="CollisionaraDestroy" to="Follow_Camera" method="OnPlayerEnter"]
+[connection signal="timeout" from="Countdown/Timer" to="Countdown" method="OnTimerTimeout"]

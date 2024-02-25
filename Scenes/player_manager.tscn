@@ -155,6 +155,7 @@ points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.0079271
 size = Vector3(30, 1, 57.7539)
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
+process_mode = 1
 script = ExtResource("1_fqr60")
 Spawnpoints = [NodePath("SpawnPoint1"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4")]
 
@@ -705,6 +706,7 @@ offset_bottom = 1061.0
 texture = ExtResource("3_bnsm7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.35455)

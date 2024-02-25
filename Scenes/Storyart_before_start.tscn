@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cclsbcqi2rhvf" path="res://Art/Storyart/319IWOGnEGL._AC_UF894,1000_QL80_.jpg" id="5_cfeio"]
 
 [node name="Storyart" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_5u7bf")
@@ -19,6 +20,7 @@ offset_bottom = 2160.0
 texture = ExtResource("2_wjqgg")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+process_mode = 3
 visible = false
 layout_mode = 0
 offset_right = 3280.0

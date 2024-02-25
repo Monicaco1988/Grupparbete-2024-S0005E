@@ -23,6 +23,8 @@ public partial class Storyart_before_start : Control
     private void OnTimerTimeout()
 	{
         GD.Print(scene);
+        this.GetChild<TextureRect>(scene).Hide();
+        scene++;
         if (scene == 3)
         {
 
@@ -31,8 +33,7 @@ public partial class Storyart_before_start : Control
             _GetSignalFromGameManager.UpdateGameState2 -= Test2;
             this.QueueFree();
         }
-        this.GetChild<TextureRect>(scene).Hide();
-        scene++;
+       
         this.GetChild<TextureRect>(scene).Show();
     }
 }

@@ -522,7 +522,7 @@ blend_mode = 1
 no_depth_test = true
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.772549, 0.176471, 0.207843, 1)
+albedo_color = Color(0.568627, 0.568627, 0.568627, 0.686275)
 albedo_texture = ExtResource("3_bvmy7")
 billboard_mode = 3
 billboard_keep_scale = true
@@ -668,6 +668,7 @@ _data = {
 }
 
 [node name="PlayerRoot" type="Node3D"]
+process_mode = 3
 
 [node name="Player" type="RigidBody3D" parent="."]
 collision_layer = 3
@@ -779,6 +780,7 @@ script = ExtResource("2_qcwma")
 material_override = SubResource("StandardMaterial3D_8i5dg")
 emitting = false
 amount = 100
+lifetime = 0.2
 one_shot = true
 randomness = 1.0
 trail_enabled = true

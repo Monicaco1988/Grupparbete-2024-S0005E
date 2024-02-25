@@ -15,7 +15,9 @@ public partial class GameManager : Node
 		UpdateGameState(GameState.Menu);
 	}
 
-	public void UpdateGameState(GameState newState)
+
+
+    public void UpdateGameState(GameState newState)
 	{
 		State = newState;
 		switch (newState)
@@ -43,6 +45,7 @@ public partial class GameManager : Node
 
     private void HanldeStorySelect()
     {
+		GetTree().Paused = true;
         var sceneStory = ResourceLoader.Load<PackedScene>("res://Scenes/Storyart_before_start.tscn").Instantiate<Control>();
         AddChild(sceneStory);
     }
