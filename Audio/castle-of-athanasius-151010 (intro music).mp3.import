@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://capmsop5hxh4n"
+path="res://.godot/imported/castle-of-athanasius-151010 (intro music).mp3-bdf8b5e280585333b91d112944a189c4.mp3str"
+
+[deps]
+
+source_file="res://Audio/castle-of-athanasius-151010 (intro music).mp3"
+dest_files=["res://.godot/imported/castle-of-athanasius-151010 (intro music).mp3-bdf8b5e280585333b91d112944a189c4.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

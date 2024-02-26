@@ -147,6 +147,8 @@ script = ExtResource("20_rhcxc")
 explosion = NodePath("../Test/CPUParticles3D")
 
 [node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker"]
+process_mode = 3
+enable_mode = 1
 
 [node name="Test" type="Marker3D" parent="Spawn1_Explosion"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
@@ -182,6 +184,8 @@ script = ExtResource("4_a77at")
 explosion = NodePath("../Test2/CPUParticles3D")
 
 [node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker2"]
+process_mode = 3
+enable_mode = 1
 
 [node name="Test2" type="Marker3D" parent="Spawn1_Explosion"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
@@ -15275,12 +15279,13 @@ shape = SubResource("BoxShape3D_5milq")
 
 [node name="Defibrillator" parent="." instance=ExtResource("22_k4dsp")]
 
-[node name="Countdown" type="Control" parent="."]
+[node name="Countdown" type="Control" parent="." node_paths=PackedStringArray("timeToStart")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("29_d68i3")
+timeToStart = NodePath("Timer")
 
 [node name="TextEdit" type="TextEdit" parent="Countdown"]
 visible = false
@@ -15323,9 +15328,7 @@ theme_override_font_sizes/font_size = 500
 text = "Go!"
 
 [node name="Timer" type="Timer" parent="Countdown"]
-autostart = true
-
-[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker2/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker2" method="OnScreenExist"]

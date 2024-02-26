@@ -3,32 +3,40 @@ using System;
 
 public partial class Countdown : Control
 {
-    Control Node1;
+    [Export]
+    Timer timeToStart;
 
-    int scene = 0;
+    private int scene = 0;
 
     public override void _Ready()
     {
         this.GetChild<TextEdit>(scene).Show();
-        Node1 = GetNode<Control>("/root/GameManager/World/Countdown");//.QueueFree();
+        timeToStart.Start();
     }
 
 
 
     public void OnTimerTimeout()
     {
-        this.GetChild<TextEdit>(scene).Hide();
+
         scene++;
         GD.Print(scene);
+        this.GetChild<TextEdit>(scene-1).Hide();
         if (scene == 4)
         {
+            scene = 0;
             GetTree().Paused = false;
-
-            Node1.QueueFree();
+            timeToStart.Stop();
         }
-        if (scene < 4)
-        {
+        else {
+            
             this.GetChild<TextEdit>(scene).Show();
+            timeToStart.Start(); 
         }
+        //if (scene < 4)
+        //{
+        //    this.GetChild<TextEdit>(scene).Show();
+        //}
+        
     }
 }

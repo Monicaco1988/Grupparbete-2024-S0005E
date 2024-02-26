@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdxpk65dui66t"]
 
+[ext_resource type="AudioStream" uid="uid://capmsop5hxh4n" path="res://Audio/castle-of-athanasius-151010 (intro music).mp3" id="1_8jrjl"]
 [ext_resource type="AudioStream" uid="uid://bvd0p4dpnpck" path="res://Audio/stranger-things-124008.mp3" id="1_jwaps"]
-[ext_resource type="AudioStream" uid="uid://d3cmrgeqym20u" path="res://Audio/creepy-devil-dance-166764.mp3" id="1_sn0fh"]
 [ext_resource type="AudioStream" uid="uid://bja06ew5l0sis" path="res://Audio/8-bit-arcade-138828.mp3" id="1_yqlgy"]
 
 [node name="AudioManager" type="Control"]
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_sn0fh")
+stream = ExtResource("1_8jrjl")
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]

@@ -3,11 +3,12 @@ using System;
 
 public partial class ExplosionMarker : Marker3D
 {
+
 	[Export]
 	CpuParticles3D explosion;
 
 	//constants for identifying the different objects
-	private int playerId = 0;
+	//private int playerId = 0;
 
 	public Node3D _player;
 
@@ -17,7 +18,7 @@ public partial class ExplosionMarker : Marker3D
 	{
 		//instantiates the attributes and objects from playermanager
 		_player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
-		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
+		this.GlobalPosition = _player.GetChild<RigidBody3D>(0).GlobalPosition;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,7 +32,7 @@ public partial class ExplosionMarker : Marker3D
 
     public override void _PhysicsProcess(double delta)
     {
-        this.GlobalPosition = this.GlobalPosition.Lerp(_player.GetChild<RigidBody3D>(playerId).GlobalPosition, (float)delta * 30f);
+        this.GlobalPosition = this.GlobalPosition.Lerp(_player.GetChild<RigidBody3D>(0).GlobalPosition, (float)delta * 30f);
 
     }
 
