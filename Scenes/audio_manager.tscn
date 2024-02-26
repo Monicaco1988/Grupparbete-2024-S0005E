@@ -1,8 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdxpk65dui66t"]
 
 [ext_resource type="AudioStream" uid="uid://capmsop5hxh4n" path="res://Audio/castle-of-athanasius-151010 (intro music).mp3" id="1_8jrjl"]
+<<<<<<< Updated upstream
 [ext_resource type="AudioStream" uid="uid://bvd0p4dpnpck" path="res://Audio/stranger-things-124008.mp3" id="1_jwaps"]
 [ext_resource type="AudioStream" uid="uid://bja06ew5l0sis" path="res://Audio/8-bit-arcade-138828.mp3" id="1_yqlgy"]
+=======
+[ext_resource type="Script" path="res://Scripts/audio_manager.cs" id="1_16nn1"]
+[ext_resource type="AudioStream" uid="uid://dysxr7h35exqn" path="res://Audio/game-music-7408 (Choose player music).mp3" id="3_m6yol"]
+[ext_resource type="AudioStream" uid="uid://f4l0ps2yv16y" path="res://Audio/my-kind-of-madness-mad-scientist-instrumental-electronic-dance-136405 (gameplay music loop).mp3" id="4_11lt4"]
+[ext_resource type="AudioStream" uid="uid://d3cmrgeqym20u" path="res://Audio/creepy-devil-dance-166764.mp3" id="5_ubmhl"]
+>>>>>>> Stashed changes
 
 [node name="AudioManager" type="Control"]
 process_mode = 3
@@ -18,7 +25,17 @@ stream = ExtResource("1_8jrjl")
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+<<<<<<< Updated upstream
 stream = ExtResource("1_yqlgy")
+=======
+stream = ExtResource("3_m6yol")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_11lt4")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ubmhl")
+>>>>>>> Stashed changes
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_jwaps")
