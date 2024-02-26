@@ -1,7 +1,7 @@
 [gd_scene load_steps=41 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
-[ext_resource type="Script" path="res://Scenes/RacingScene_Multiplayer.cs" id="1_f0n8e"]
+[ext_resource type="Script" path="res://Scripts/RacingScene_Multiplayer.cs" id="1_f0n8e"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
 [ext_resource type="Script" path="res://Scripts/CameraPole2.cs" id="4_4usss"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker2.cs" id="4_a77at"]

@@ -72,9 +72,10 @@ public partial class betterCar : RigidBody3D
 	float speedBoost = 25;
 	bool isDrifting = false;
 	int onoff = 1;
-   
+	float jumpInput;
+	float jumpInput2;
 
-	public PlayerState GetState(PlayerState state)
+    public PlayerState GetState(PlayerState state)
 	{
 		PlayerState returnState = PlayerState.IN_ACTIVE;
 		switch (state)
@@ -209,10 +210,14 @@ public partial class betterCar : RigidBody3D
 			//}
 
 			ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
-		}
-		//GD.Print(carMesh.Position);
 
-	}
+            // Handle Jump
+            ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
+        }
+        //GD.Print(carMesh.Position);
+        
+
+    }
 
 	public override void _Process(double delta)
 	{
@@ -228,16 +233,24 @@ public partial class betterCar : RigidBody3D
 		{
 			return;
 		}
+
 		gasInput = (Input.GetJoyAxis(id, JoyAxis.TriggerRight) - Input.GetJoyAxis(id, JoyAxis.TriggerLeft)) * acceleration;
-		//turnInput = Input.GetAxis("steerRight", "steerLeft") * Mathf.DegToRad(steering);
-		turnInput2 = -Input.GetJoyAxis(id, JoyAxis.LeftX) * Mathf.DegToRad(steering);
+
+		jumpInput = jumpInput2 * acceleration*2.5f;
+        //turnInput = Input.GetAxis("steerRight", "steerLeft") * Mathf.DegToRad(steering);
+        turnInput2 = -Input.GetJoyAxis(id, JoyAxis.LeftX) * Mathf.DegToRad(steering);
 		isDrifting = Input.IsJoyButtonPressed(id, JoyButton.LeftShoulder);
 
 		rightWheel.Rotation = new Vector3(0, turnInput2, Mathf.DegToRad(-180));
 		leftWheel.Rotation = new Vector3(0, turnInput2, 0);
 
 
-		if (LinearVelocity.Length() > turnStopLimit)
+		if (Input.IsJoyButtonPressed(id, JoyButton.A))
+			jumpInput2 = 1;
+		else
+			jumpInput2 = 0;
+
+        if (LinearVelocity.Length() > turnStopLimit)
 		{
 			var newBasis = carMesh.GlobalBasis.Rotated(carMesh.GlobalBasis.Y, turnInput2);
 			carMesh.GlobalBasis = carMesh.GlobalBasis.Slerp(newBasis, (float)(turnSpeed * delta));

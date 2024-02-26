@@ -98,7 +98,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 2 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
+            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 0 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
             {
                 //Moved location of spawnLocation so that the cars are visible when spawned in map
                 moveToSpawnLocation();
