@@ -15,6 +15,7 @@ public partial class betterCar : RigidBody3D
 	public void setId(int newId)
 	{
 		this.id = newId;
+		setPlayerLabel(newId);
 	}
 
 
@@ -50,6 +51,7 @@ public partial class betterCar : RigidBody3D
 	Node3D rightSkid;
 	Node3D leftSkid;
 	Node3D dropPoint;
+	Label3D label;
 	
 	//Node3D playerRoot;
 
@@ -96,6 +98,31 @@ public partial class betterCar : RigidBody3D
 		this.state = newState;    
 	}
 
+	private void setPlayerLabel(int pId)
+	{
+		int temp = pId + 1;
+		label.Text = "P"+temp;
+		switch(temp)
+		{
+			case 1:
+				label.Modulate = Godot.Colors.Red;
+				break;
+			case 2:
+                label.Modulate = Godot.Colors.Green;
+                break;
+			case 3:
+                label.Modulate = Godot.Colors.Blue;
+                break;
+			case 4:
+                label.Modulate = Godot.Colors.Yellow;
+				break;
+			default:
+                label.Modulate = Godot.Colors.White;
+				break;
+        }
+		
+	}
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -111,6 +138,7 @@ public partial class betterCar : RigidBody3D
 
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 		smoke = GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/Smoke/smokeParticle");
+		label = GetParent().GetNode<Label3D>("CarMesh/ambulance/PlayerLabel");
 
         lights = GetParent().GetNode<OmniLight3D>("CarMesh/ambulance/body/OmniLight3D");
 		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");

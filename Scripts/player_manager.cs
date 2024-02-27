@@ -61,19 +61,23 @@ public partial class player_manager : Node3D
         }
 
         var controllers = Input.GetConnectedJoypads();
+        //GD.Print(controllers);
 
         foreach (var controller in controllers)
         {
+            
             bool playerStateFlag = false;
             if (Input.IsJoyButtonPressed(controller, JoyButton.Start))
             {
                 if (ambulances.Count != 0)
                 {
+                    GD.Print("Bajskorv");
                     foreach (var ambulance in ambulances)
                     {
                         if (ambulance.id == controller)
                         {
                             playerStateFlag = true;
+                            
                         }
                     }
                 }
@@ -81,16 +85,17 @@ public partial class player_manager : Node3D
                 if (!playerStateFlag)
                 {
 
-                    GD.Print(playerScene.ResourcePath);
+                    //GD.Print(playerScene.ResourcePath);
 
                     var playerRoot = playerScene.Instantiate<Node3D>();
                     AddChild(playerRoot);
                     playerRoot.GlobalPosition = Spawnpoints[controller].GlobalPosition;
                     var player = playerRoot.GetNode("Player") as betterCar;
-
+                    GD.Print(numberOfPlayers);
                     player.setId(controller);
                     player.SetState(betterCar.PlayerState.ACTIVE);
                     this.ambulances.Add(player);
+                    GD.Print(ambulances);
                     numberOfPlayers++;
                     GD.Print("player created, with player id: " + controller);
                 }

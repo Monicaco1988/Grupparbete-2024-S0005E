@@ -787,6 +787,13 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_gs2pt")
 draw_pass_1 = SubResource("QuadMesh_wbcc1")
 
+[node name="PlayerLabel" type="Label3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66498, 0.29995)
+pixel_size = 0.03
+billboard = 1
+text = "P0
+"
+
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
