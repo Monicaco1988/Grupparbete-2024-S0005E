@@ -46,7 +46,7 @@ public partial class betterCar : RigidBody3D
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
-	PowerUp powerUp = PowerUp.DEFIBRILLATOR;
+	PowerUp powerUp = PowerUp.SWITCHAROO;
 	PackedScene trackScene;
 	GpuParticles3D smoke;
 	Node3D rightSkid;
@@ -220,6 +220,14 @@ public partial class betterCar : RigidBody3D
 
                 case PowerUp.SWITCHAROO:
 					Array<betterCar> players = player_manager.instance.ambulances;
+					betterCar switchCar = this;
+                    while (this == switchCar)
+                    {
+                        switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers-1)];
+                    }
+					Vector3 switchPos = this.GlobalPosition;
+                    this.GlobalPosition = switchCar.GlobalPosition;
+					switchCar.GlobalPosition = switchPos;
                     //Do P8 shit
                     break;
 
@@ -231,6 +239,7 @@ public partial class betterCar : RigidBody3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
+		GD.Print((this.GetParent() as Node3D).GlobalPosition);
 		carMesh.Position = Position + sphereOffset;
 		if (groundRay.IsColliding())//
 		{

@@ -12,7 +12,7 @@ public partial class player_manager : Node3D
     //Marker3D lastCollision;
 
     PackedScene playerScene;
-    int numberOfPlayers;
+    public int numberOfPlayers;
 
     public Array<betterCar> ambulances = new Array<betterCar>();
     [Export] Array<Marker3D> Spawnpoints = new Array<Marker3D>();
