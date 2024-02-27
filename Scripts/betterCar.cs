@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
+using Godot.Collections;
 
 public partial class betterCar : RigidBody3D
 {
@@ -34,7 +35,7 @@ public partial class betterCar : RigidBody3D
 		P5,
 		P6,
 		P7,
-		P8,
+		SWITCHAROO,
 		NO_POWER
     }
 
@@ -217,7 +218,8 @@ public partial class betterCar : RigidBody3D
                     //Do P7 shit
                     break;
 
-                case PowerUp.P8:
+                case PowerUp.SWITCHAROO:
+					Array<betterCar> players = player_manager.instance.ambulances;
                     //Do P8 shit
                     break;
 

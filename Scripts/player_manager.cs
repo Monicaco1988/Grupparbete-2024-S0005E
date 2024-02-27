@@ -4,6 +4,7 @@ using System;
 
 public partial class player_manager : Node3D
 {
+    public static player_manager instance {  get; private set; }
     private int lockAButton = 0;
 
     //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
@@ -13,7 +14,7 @@ public partial class player_manager : Node3D
     PackedScene playerScene;
     int numberOfPlayers;
 
-    Array<betterCar> ambulances = new Array<betterCar>();
+    public Array<betterCar> ambulances = new Array<betterCar>();
     [Export] Array<Marker3D> Spawnpoints = new Array<Marker3D>();
     public PlayerManagerState state = PlayerManagerState.ACTIVE;
 
@@ -33,6 +34,7 @@ public partial class player_manager : Node3D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        instance = this;
         playerScene = GD.Load<PackedScene>("res://Scenes/Car_EvenBetter.tscn");
         GD.Print("ready");
         
