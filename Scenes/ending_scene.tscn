@@ -4,13 +4,16 @@
 
 [sub_resource type="SystemFont" id="SystemFont_im0pw"]
 
-[node name="EndingScene" type="Node3D"]
+[node name="EndingScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 3280.0
 offset_bottom = 2160.0
 texture = ExtResource("1_04ywa")

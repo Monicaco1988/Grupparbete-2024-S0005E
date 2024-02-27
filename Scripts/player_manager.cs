@@ -4,6 +4,7 @@ using System;
 
 public partial class player_manager : Node3D
 {
+    private int Score = 0;
     public static player_manager instance {  get; private set; }
     private int lockAButton = 0;
 
@@ -131,6 +132,8 @@ public partial class player_manager : Node3D
             {
                 if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
                 {
+                    Score++;
+
                     var offset = new Vector3(0, 0, 0);
                     foreach (var ambulance in ambulances)
                     {
@@ -142,10 +145,17 @@ public partial class player_manager : Node3D
                     Visibility();
 
                     GetTree().Paused = true;
-                    GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
-                    
-                    //moveToSpawnLocation();
 
+                    if (Score < 4)
+                    {
+                        GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
+                    }
+                    //moveToSpawnLocation();
+                    
+                    if(Score == 4)
+                    {
+                        _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+                    }
                 }
             }
         }

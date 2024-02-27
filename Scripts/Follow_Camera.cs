@@ -45,7 +45,9 @@ public partial class Follow_Camera : Marker3D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		(playerContainer1 as betterCar).setFirst(true);
+        if (timer > 3)
+        {
+            (playerContainer1 as betterCar).setFirst(true);
         foreach (var ambulance in player_manager.instance.ambulances)
         {
 			if (ambulance != (playerContainer1 as betterCar))
@@ -54,8 +56,8 @@ public partial class Follow_Camera : Marker3D
 			}
         }
         //GD.Print(timer);
-        if (timer > 3)
-		{
+  //      if (timer > 3)
+		//{
 			//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
 			this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);
 		}

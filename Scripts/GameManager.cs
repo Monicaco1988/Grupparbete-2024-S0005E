@@ -37,11 +37,22 @@ public partial class GameManager : Node
 			case GameState.AudioManager:
 				HandleAudioSelect();
 				break;
-			default:
+            case GameState.EndingManager:
+                HandleEndingSelect();
+                break;
+            default:
 				throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
 		}
 
 	}
+
+    private void HandleEndingSelect()
+    {
+        //throw new NotImplementedException();
+        GetTree().Paused = true;
+        var sceneStory = ResourceLoader.Load<PackedScene>("res://Scenes/ending_scene.tscn").Instantiate<Control>();
+        AddChild(sceneStory);
+    }
 
     private void HanldeStorySelect()
     {
@@ -94,5 +105,6 @@ public enum GameState
     StoryManager,
     LevelManager,
 	AudioManager,
-    
+    EndingManager,
+
 }
