@@ -3,7 +3,9 @@ using System;
 
 public partial class Follow_Camera : Marker3D
 {
-	int timer = 0;
+	public static Follow_Camera instance { get; private set; }
+
+    int timer = 0;
 	
 	//constants for identifying the different objects
 	static private int playerId = 0;
@@ -20,6 +22,7 @@ public partial class Follow_Camera : Marker3D
 
 	public override void _Ready()
 	{
+		instance = this;
 		//instantiates the attributes and objects from playermanager
         _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
 		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
@@ -42,8 +45,16 @@ public partial class Follow_Camera : Marker3D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		//GD.Print(timer);
-		if (timer > 3)
+		(playerContainer1 as betterCar).setFirst(true);
+        foreach (var ambulance in player_manager.instance.ambulances)
+        {
+			if (ambulance != (playerContainer1 as betterCar))
+			{
+				ambulance.setFirst(false);
+			}
+        }
+        //GD.Print(timer);
+        if (timer > 3)
 		{
 			//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
 			this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);

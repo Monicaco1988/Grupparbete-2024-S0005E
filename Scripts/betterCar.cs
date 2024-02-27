@@ -63,6 +63,7 @@ public partial class betterCar : RigidBody3D
 	PackedScene defib;
 
 	float acceleration = 3000;
+	float cappedAcceleration = 1800;
 	float velocity;
 	float steering = 24.0f;
 	float turnSpeed = 6.0f;
@@ -74,6 +75,7 @@ public partial class betterCar : RigidBody3D
 	float turnInput2;
 	float speedBoost = 25;
 	bool isDrifting = false;
+	bool isFirst = false;
 	int onoff = 1;
 	float jumpInput;
 	float jumpInput2;
@@ -150,7 +152,10 @@ public partial class betterCar : RigidBody3D
         //PlayerManager / PlayerRoot / CarMesh / ambulance / Smoke / smokeParticle
     }
 
-	
+	public void setFirst(bool newSetFirst)
+	{
+		this.isFirst = newSetFirst;
+	}
 
 	public void addTireTracks()
 	{
@@ -239,16 +244,26 @@ public partial class betterCar : RigidBody3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		GD.Print((this.GetParent() as Node3D).GlobalPosition);
+		//GD.Print((this.GetParent() as Node3D).GlobalPosition);
 		carMesh.Position = Position + sphereOffset;
 		if (groundRay.IsColliding())//
 		{
-			//if (Mathf.Abs(this.LinearVelocity.Length()) < 4)
-			//{
-			//    ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput);
-			//}
-
-			ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+			
+			//GD.Print(Follow_Camera.instance.playerContainer1);
+			//GD.Print(this.GetParent());
+            if (isFirst)
+            {
+				GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+                if (Mathf.Abs(this.LinearVelocity.Length()) < 36)
+                {
+                ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+                }
+            }
+            else
+            {
+                ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+            }
+            
 
             // Handle Jump
             ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
