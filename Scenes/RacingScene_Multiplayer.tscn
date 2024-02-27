@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=39 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
 [ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
+[ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="26_55yi6"]
 [ext_resource type="Script" path="res://Scripts/Countdown.cs" id="29_d68i3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
@@ -115,6 +116,9 @@ size = Vector3(30, 10, 30)
 [sub_resource type="SystemFont" id="SystemFont_g5igb"]
 font_names = PackedStringArray("Chiller")
 subpixel_positioning = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v4ght"]
+size = Vector3(0.1, 0.1, 0.777466)
 
 [node name="World" type="Node3D"]
 process_mode = 3
@@ -15327,6 +15331,126 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 11, 921)
 light_color = Color(1, 1, 0, 1)
 light_energy = 9.99
 
+[node name="OmniLight3D20" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 35, 895)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 19, 895)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 43, 895)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 27, 895)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 43, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 27, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D26" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 35, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 19, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D28" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 35, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D29" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 19, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D30" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 43, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D31" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 27, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D32" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 65, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 49, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 65, 894)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D35" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 49, 894)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 65, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D37" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 49, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D38" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 73, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D39" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 57, 887)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D40" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 73, 894)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D41" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 57, 894)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D42" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 73, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
+[node name="OmniLight3D43" type="OmniLight3D" parent="BuildingLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876, 57, 879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 9.99
+
 [node name="OmniLight3D11" type="OmniLight3D" parent="BuildingLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -873, 27, 962)
 light_color = Color(1, 1, 0, 1)
@@ -15401,6 +15525,146 @@ light_energy = 9.99
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -875, 20, 791)
 light_color = Color(1, 1, 0, 1)
 light_energy = 9.99
+
+[node name="construction_light" parent="." instance=ExtResource("26_55yi6")]
+transform = Transform3D(1.21942, 0, -14.9504, 0, 15, 0, 14.9504, 0, 1.21942, -864, 1, 944)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="construction_light"]
+transform = Transform3D(0.999987, 0, -1.78814e-07, 0, 0.999999, 0, 1.78814e-07, 0, 0.999987, -0.0603216, 0, -0.0805061)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="construction_light/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1.00001, 0, 0, 0, 1, 0.105693, 0.0563721, -0.102646)
+shape = SubResource("BoxShape3D_v4ght")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light2" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light2"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light3" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light3"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light4" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light4"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light5" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light5"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light6" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light6"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light7" parent="construction_light" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light/construction_light7"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light2" parent="." instance=ExtResource("26_55yi6")]
+transform = Transform3D(1.21942, 0, -14.9504, 0, 15, 0, 14.9504, 0, 1.21942, -849, 1, 842)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light2" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light2"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light3" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light3"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light4" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light4"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light5" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light5"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light6" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light6"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="construction_light7" parent="construction_light2" instance=ExtResource("26_55yi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="construction_light2/construction_light7"]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 5.49385
+
+[node name="StaticBody3D" type="StaticBody3D" parent="construction_light2"]
+transform = Transform3D(0.999986, 0, -1.71363e-07, 0, 0.999999, 0, 1.71363e-07, 0, 0.999986, -0.0603218, 0, -0.0805061)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="construction_light2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.19209e-07)
+shape = SubResource("BoxShape3D_v4ght")
 
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker" method="OnScreenExist"]
 [connection signal="screen_exited" from="Spawn1_Explosion/ExplosionMarker2/VisibleOnScreenEnabler3D" to="Spawn1_Explosion/ExplosionMarker2" method="OnScreenExist"]

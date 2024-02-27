@@ -25,7 +25,7 @@ public partial class Storyart_before_start : Control
         GD.Print(scene);
         this.GetChild<TextureRect>(scene).Hide();
         scene++;
-        if (scene == 4)
+        if (scene == 6)
         {
 
             _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 3);

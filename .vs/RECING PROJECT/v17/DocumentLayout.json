@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\player_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\player_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\explosionscripts\\test3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Countdown.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Countdown.cs",
               "RelativeDocumentMoniker": "Scripts\\Countdown.cs",
@@ -90,20 +90,20 @@
               "RelativeToolTip": "Scripts\\Countdown.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T12:23:38.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-25T12:23:38.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Storyart_before_start.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Storyart_before_start.cs",
               "RelativeDocumentMoniker": "Scripts\\Storyart_before_start.cs",
               "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Storyart_before_start.cs",
               "RelativeToolTip": "Scripts\\Storyart_before_start.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBsAAAAWAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T12:15:44.704Z"
+              "WhenOpened": "2024-02-25T12:15:44.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -119,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "player_manager.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_manager.cs",
               "RelativeDocumentMoniker": "Scripts\\player_manager.cs",
@@ -144,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Scripts\\GameManager.cs",
