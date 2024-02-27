@@ -10,7 +10,7 @@ public partial class Countdown : Control
 
     public override void _Ready()
     {
-        this.GetChild<TextEdit>(scene).Show();
+        this.GetChild<Label>(scene).Show();
         timeToStart.Start();
     }
 
@@ -21,7 +21,7 @@ public partial class Countdown : Control
 
         scene++;
         GD.Print(scene);
-        this.GetChild<TextEdit>(scene-1).Hide();
+        this.GetChild<Label>(scene-1).Hide();
         if (scene == 4)
         {
             scene = 0;
@@ -30,13 +30,13 @@ public partial class Countdown : Control
         }
         else {
             
-            this.GetChild<TextEdit>(scene).Show();
+            this.GetChild<Label>(scene).Show();
             timeToStart.Start(); 
         }
         //if (scene < 4)
         //{
-        //    this.GetChild<TextEdit>(scene).Show();
+        //    this.GetChild<Label>(scene).Show();
         //}
-        
+
     }
 }
