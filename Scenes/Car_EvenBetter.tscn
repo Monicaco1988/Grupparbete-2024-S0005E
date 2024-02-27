@@ -722,16 +722,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394527, 0.434126, -1.56433)
 omni_range = 0.247119
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CarMesh/ambulance/body"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.496597, 0.659873, -1.75175)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.398275, 0.659873, -1.41776)
 light_energy = 16.0
-spot_range = 26.0
-spot_angle = 22.4853
+spot_range = 40.7525
+spot_angle = 22.3975
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="CarMesh/ambulance/body"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.34659, 0.659873, -1.75175)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.388489, 0.659873, -1.40507)
 light_energy = 16.0
-spot_range = 27.0
-spot_angle = 23.9404
+spot_range = 40.4823
+spot_angle = 22.8446
 
 [node name="doorLeft" type="MeshInstance3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0.4, 1.575)
