@@ -253,7 +253,7 @@ public partial class betterCar : RigidBody3D
 			//GD.Print(this.GetParent());
             if (isFirst)
             {
-				GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+				//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
                 if (Mathf.Abs(this.LinearVelocity.Length()) < 36)
                 {
                 ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);

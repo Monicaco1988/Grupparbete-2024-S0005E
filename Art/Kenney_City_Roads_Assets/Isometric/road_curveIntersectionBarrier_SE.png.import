@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://slhmm3b3saqx"
-path="res://.godot/imported/road_curveIntersectionBarrier_SE.png-619475f6ea13acda0d6cba9686c6968c.ctex"
+path="res://.godot/imported/road_curveIntersectionBarrier_SE.png-16ab847827b611ceb768d3b7ef38ca98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_curveIntersectionBarrier_SE.png"
-dest_files=["res://.godot/imported/road_curveIntersectionBarrier_SE.png-619475f6ea13acda0d6cba9686c6968c.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_curveIntersectionBarrier_SE.png"
+dest_files=["res://.godot/imported/road_curveIntersectionBarrier_SE.png-16ab847827b611ceb768d3b7ef38ca98.ctex"]
 
 [params]
 

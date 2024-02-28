@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://0vj7y6cqeae1"
-path="res://.godot/imported/road_bendSidewalk.dae-07e863e4491be4b633b711dab5f7ad40.scn"
+path="res://.godot/imported/road_bendSidewalk.dae-ccf2d3239cd0540281817b0b471125ee.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_bendSidewalk.dae"
-dest_files=["res://.godot/imported/road_bendSidewalk.dae-07e863e4491be4b633b711dab5f7ad40.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_bendSidewalk.dae"
+dest_files=["res://.godot/imported/road_bendSidewalk.dae-ccf2d3239cd0540281817b0b471125ee.scn"]
 
 [params]
 

@@ -13,6 +13,7 @@ public partial class player_manager : Node3D
     //Marker3D lastCollision;
 
     PackedScene playerScene;
+    PackedScene player_gui;
     public int numberOfPlayers;
 
     public Array<betterCar> ambulances = new Array<betterCar>();
@@ -42,6 +43,15 @@ public partial class player_manager : Node3D
         //Gets the class information from GameManager to the variable _GetStateGameManager 
         _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
         //lastCollision = GetNode<Marker3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy");
+        HandelPlayerGui();
+    }
+
+    private void HandelPlayerGui() 
+    {
+        player_gui = GD.Load<PackedScene>("res://Scenes/player_gui.tscn");
+        var playerGUI = player_gui.Instantiate();
+        AddChild(playerGUI);
+        
     }
 
     public void moveToSpawnLocation()
@@ -194,5 +204,8 @@ public partial class player_manager : Node3D
         }
     }
 
-
+    public int GetPNum() 
+    {
+        return numberOfPlayers;
+    }
 }

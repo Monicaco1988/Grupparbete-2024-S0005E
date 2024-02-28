@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cvwh6h6gl3igk"
-path="res://.godot/imported/road_bendSquare.dae-04677140559687c9c09fa383a8a55728.scn"
+path="res://.godot/imported/road_bendSquare.dae-1ea236e35ddb683f67a3111c34be267a.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_bendSquare.dae"
-dest_files=["res://.godot/imported/road_bendSquare.dae-04677140559687c9c09fa383a8a55728.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_bendSquare.dae"
+dest_files=["res://.godot/imported/road_bendSquare.dae-1ea236e35ddb683f67a3111c34be267a.scn"]
 
 [params]
 
