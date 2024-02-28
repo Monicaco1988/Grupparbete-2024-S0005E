@@ -140,11 +140,13 @@ public partial class player_manager : Node3D
             //trying to add simple function to reset players if a player is hidden
             if (lockAButton > 0)
             {
-                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false 
-                    || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
+                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)
                 {
                     Score++;
-
+                    if (Score == 3)
+                    {
+                        _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+                    }
                     var offset = new Vector3(0, 0, 0);
                     foreach (var ambulance in ambulances)
                     {
@@ -161,12 +163,7 @@ public partial class player_manager : Node3D
                     {
                         GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
                     }
-                    //moveToSpawnLocation();
-                    
-                    if(Score == 3)
-                    {
-                        _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
-                    }
+
                 }
             }
         }
@@ -182,28 +179,9 @@ public partial class player_manager : Node3D
         GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
 
         GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible = true;
-
+        GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible = true;
     }
 
-    //When "Start Game" is pressed GameState in GameManager will change to LevelManager and the Level Scene will get loaded
-    public void OnButtonPressed()
-    {
-        if (numberOfPlayers >= 2) // "Start Game" only works if there are atleast 2 players
-        {
-            moveToSpawnLocation();
-            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 2); // changes Manager State to LevelManager
-
-
-            GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
-            GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
-            GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
-            GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
-            GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
-            GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
-
-            //QueueFree();//removes PlayerManager Scene
-        }
-    }
 
     public int GetPNum() 
     {

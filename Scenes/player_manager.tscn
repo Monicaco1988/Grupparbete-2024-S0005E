@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
-[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
-[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
+[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
+[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://Art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)
