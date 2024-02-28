@@ -521,8 +521,7 @@ transparency = 1
 blend_mode = 1
 no_depth_test = true
 shading_mode = 0
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.568627, 0.568627, 0.568627, 0.686275)
+albedo_color = Color(0.301961, 0.301961, 0.301961, 0.705882)
 albedo_texture = ExtResource("3_bvmy7")
 billboard_mode = 3
 billboard_keep_scale = true
@@ -704,13 +703,13 @@ omni_range = 1.12512
 [node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53502, 0.21627, 2.49919)
 light_color = Color(0, 0, 0, 1)
-light_energy = 16.0
+light_energy = 50.0
 omni_range = 1.25157
 
 [node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 0.21627, 2.49919)
 light_color = Color(1, 0, 0, 1)
-light_energy = 16.0
+light_energy = 50.0
 omni_range = 1.24662
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]

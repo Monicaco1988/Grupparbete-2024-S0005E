@@ -140,7 +140,8 @@ public partial class player_manager : Node3D
             //trying to add simple function to reset players if a player is hidden
             if (lockAButton > 0)
             {
-                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
+                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false 
+                    || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)// || !GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == true)
                 {
                     Score++;
 
@@ -156,13 +157,13 @@ public partial class player_manager : Node3D
 
                     GetTree().Paused = true;
 
-                    if (Score < 4)
+                    if (Score < 3)
                     {
                         GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
                     }
                     //moveToSpawnLocation();
                     
-                    if(Score == 4)
+                    if(Score == 3)
                     {
                         _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                     }
