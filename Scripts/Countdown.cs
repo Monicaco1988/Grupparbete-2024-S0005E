@@ -33,10 +33,6 @@ public partial class Countdown : Control
             this.GetChild<Label>(scene).Show();
             timeToStart.Start(); 
         }
-        //if (scene < 4)
-        //{
-        //    this.GetChild<Label>(scene).Show();
-        //}
 
     }
 }
