@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdxpk65dui66t"]
 
-[ext_resource type="AudioStream" uid="uid://capmsop5hxh4n" path="res://Audio/castle-of-athanasius-151010 (intro music).mp3" id="1_8jrjl"]
 [ext_resource type="Script" path="res://Scripts/audio_manager.cs" id="1_16nn1"]
-[ext_resource type="AudioStream" uid="uid://bja06ew5l0sis" path="res://Audio/8-bit-arcade-138828.mp3" id="1_yqlgy"]
-[ext_resource type="AudioStream" uid="uid://dysxr7h35exqn" path="res://Audio/game-music-7408 (Choose player music).mp3" id="3_m6yol"]
-[ext_resource type="AudioStream" uid="uid://f4l0ps2yv16y" path="res://Audio/my-kind-of-madness-mad-scientist-instrumental-electronic-dance-136405 (gameplay music loop).mp3" id="4_11lt4"]
+[ext_resource type="AudioStream" uid="uid://efxao7mw316x" path="res://Audio/dark-country-rock-138300 (game music).mp3" id="2_ncu4p"]
+[ext_resource type="AudioStream" uid="uid://bkihk2banfdd7" path="res://Audio/my-kind-of-madness-mad-scientist-instrumental-electronic-dance-136405.wav" id="3_iwtn2"]
+[ext_resource type="AudioStream" uid="uid://d3cmrgeqym20u" path="res://Audio/creepy-devil-dance-166764.mp3" id="5_4xu14"]
+[ext_resource type="AudioStream" uid="uid://deman4c3mx4g6" path="res://Audio/hard-work-109531 (game music).mp3" id="5_vheqw"]
 
-[node name="AudioManager" type="Control" node_paths=PackedStringArray("track_1", "track_2", "track_3", "track_4")]
+[node name="AudioManager" type="Control" node_paths=PackedStringArray("track_1", "track_2", "track_3", "track_4", "track_5")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -19,17 +19,22 @@ track_1 = NodePath("AudioStreamPlayer")
 track_2 = NodePath("AudioStreamPlayer2")
 track_3 = NodePath("AudioStreamPlayer3")
 track_4 = NodePath("AudioStreamPlayer4")
+track_5 = NodePath("AudioStreamPlayer5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_8jrjl")
+stream = ExtResource("2_ncu4p")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_m6yol")
+stream = ExtResource("2_ncu4p")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_11lt4")
+stream = ExtResource("3_iwtn2")
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_yqlgy")
+stream = ExtResource("5_vheqw")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4xu14")
+pitch_scale = 0.75
 
 [connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer2" method="OnFinished"]

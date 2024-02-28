@@ -650,6 +650,12 @@ light_color = Color(1, 1, 0.627451, 1)
 light_energy = 16.0
 spot_range = 77.0965
 
+[node name="SpotLight3D5" type="SpotLight3D" parent="Node"]
+transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -134.664)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 77.0965
+
 [node name="SpotLight3D4" type="SpotLight3D" parent="Node"]
 transform = Transform3D(1, -0.000351299, -0.000242627, 0.000242697, 0.000199248, 1, -0.000351251, -1, 0.000199333, 0, 34.563, -172.187)
 light_color = Color(1, 1, 0.627451, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=51 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://dfi7qcluoynjg" path="res://Scenes/Tiles/NoRefl3.tres" id="1_6qkno"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -36,6 +36,10 @@ size = Vector3(2000, 1, 2000)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_88ewm"]
 bounce = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r31kc"]
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dajqp"]
 
@@ -196,6 +200,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
 script = ExtResource("21_unkyi")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Spawn1_Explosion/Test"]
+material_override = SubResource("StandardMaterial3D_r31kc")
 emitting = false
 amount = 80
 lifetime = 1.4
@@ -14380,7 +14385,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.2617, 0)
 script = ExtResource("5_jmusw")
 
 [node name="Camera3D" type="Camera3D" parent="Follow_Camera/CameraPole1/CameraPole2/CameraPole3"]
-transform = Transform3D(0.769626, -0.612898, 0.178973, 0.0474465, 0.334427, 0.941226, -0.636729, -0.715901, 0.286464, 22.7308, 55.2228, -3.29862)
+transform = Transform3D(0.769626, -0.612898, 0.178972, 0.0474465, 0.334427, 0.941227, -0.636729, -0.715901, 0.286464, 22.7308, 55.2228, 19.7014)
 fov = 54.4534
 
 [node name="CollisionaraDestroy" type="Area3D" parent="."]
@@ -15418,6 +15423,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="Countdown"]
+wait_time = 1.5
 one_shot = true
 
 [node name="BuildingLights" type="Node3D" parent="."]
@@ -16103,6 +16109,34 @@ mesh = SubResource("PlaneMesh_t1k5h")
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, 3.82137e-15, 4.37114e-08, -1, -1, 1.31134e-07, 1.91069e-15, 8.47431, 0, -9)
 mesh = SubResource("PrismMesh_fnbkr")
 
+[node name="arrow4" type="Node3D" parent="GuidingArrows"]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -673.043, 17.945, 737)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
+mesh = SubResource("PlaneMesh_u4vpr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
+mesh = SubResource("PlaneMesh_t1k5h")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
+transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
+mesh = SubResource("PrismMesh_fnbkr")
+
+[node name="arrow5" type="Node3D" parent="GuidingArrows"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -643.043, 17.945, 702)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
+mesh = SubResource("PlaneMesh_u4vpr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
+mesh = SubResource("PlaneMesh_t1k5h")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
+transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
+mesh = SubResource("PrismMesh_fnbkr")
+
 [node name="arrow6" type="Node3D" parent="GuidingArrows"]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -798.043, 17.945, 677)
 
@@ -16115,6 +16149,20 @@ mesh = SubResource("PlaneMesh_t1k5h")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow6"]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, 3.82137e-15, 4.37114e-08, -1, -1, 1.31134e-07, 1.91069e-15, 8.47431, 0, -9)
+mesh = SubResource("PrismMesh_fnbkr")
+
+[node name="arrow7" type="Node3D" parent="GuidingArrows"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -737.043, 17.945, 588)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
+mesh = SubResource("PlaneMesh_u4vpr")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
+mesh = SubResource("PlaneMesh_t1k5h")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
+transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
 mesh = SubResource("PrismMesh_fnbkr")
 
 [node name="arrow8" type="Node3D" parent="GuidingArrows"]
@@ -16145,45 +16193,31 @@ mesh = SubResource("PlaneMesh_t1k5h")
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, 3.82137e-15, 4.37114e-08, -1, -1, 1.31134e-07, 1.91069e-15, 8.47431, 0, -9)
 mesh = SubResource("PrismMesh_fnbkr")
 
-[node name="arrow4" type="Node3D" parent="GuidingArrows"]
-transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -673.043, 17.945, 737)
+[node name="arrow10" type="Node3D" parent="GuidingArrows"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -553.043, 17.945, 703)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow10"]
 mesh = SubResource("PlaneMesh_u4vpr")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48584, 0, -8.99536)
 mesh = SubResource("PlaneMesh_t1k5h")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow4"]
-transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow10"]
+transform = Transform3D(1.31134e-07, 1, 4.37114e-08, 3.82137e-15, 4.37114e-08, -1, -1, 1.31134e-07, 1.91069e-15, 8.47431, 0, -9)
 mesh = SubResource("PrismMesh_fnbkr")
 
-[node name="arrow7" type="Node3D" parent="GuidingArrows"]
-transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -737.043, 17.945, 588)
+[node name="arrow11" type="Node3D" parent="GuidingArrows"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -617.043, 17.945, 817)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow11"]
 mesh = SubResource("PlaneMesh_u4vpr")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow11"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
 mesh = SubResource("PlaneMesh_t1k5h")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow7"]
-transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
-mesh = SubResource("PrismMesh_fnbkr")
-
-[node name="arrow5" type="Node3D" parent="GuidingArrows"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -643.043, 17.945, 702)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
-mesh = SubResource("PlaneMesh_u4vpr")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.5257, 0, -9)
-mesh = SubResource("PlaneMesh_t1k5h")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow5"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuidingArrows/arrow11"]
 transform = Transform3D(-2.18557e-07, -1, -4.37114e-08, 3.82137e-15, 4.37114e-08, -1, 1, -2.18557e-07, -5.73206e-15, -8.51416, 0, -8.99536)
 mesh = SubResource("PrismMesh_fnbkr")
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpavv8jmgslem"
+path="res://.godot/imported/running-fiddlers-country-band-7742 (game music).mp3-042073acaf4d2171bc26dafd17ae54d8.mp3str"
+
+[deps]
+
+source_file="res://Audio/running-fiddlers-country-band-7742 (game music).mp3"
+dest_files=["res://.godot/imported/running-fiddlers-country-band-7742 (game music).mp3-042073acaf4d2171bc26dafd17ae54d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

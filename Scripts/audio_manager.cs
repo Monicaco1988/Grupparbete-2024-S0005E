@@ -15,6 +15,9 @@ public partial class audio_manager : Control
     [Export]
     AudioStreamPlayer track_4;
 
+    [Export]
+    AudioStreamPlayer track_5;
+
     private GameManager _GetSignalFromGameManager;
     
 	// Called when the node enters the scene tree for the first time.
@@ -30,15 +33,15 @@ public partial class audio_manager : Control
     {
         GD.Print(newState); // debugging
         //case use this logic if it works down here
-        if(newState == GameState.PlayerManager) // newState and _GetSignalFromGameManager.State  are the same
-        {
-            track_1.Playing = false;
-            track_2.Playing = true;
-        }
+        //if(newState == GameState.PlayerManager) // newState and _GetSignalFromGameManager.State  are the same
+        //{
+        //    track_1.Playing = false;
+        //    track_2.Playing = true;
+        //}
 
         if (_GetSignalFromGameManager.State == GameState.StoryManager)
         {
-            track_2.Playing = false;
+            track_1.Playing = false;
             track_3.Playing = true;
         }
 
@@ -46,6 +49,12 @@ public partial class audio_manager : Control
         {
             track_3.Playing = false;
             track_4.Playing = true;
+        }
+
+        if (_GetSignalFromGameManager.State == GameState.EndingManager)
+        {
+            track_4.Playing = false;
+            track_5.Playing = true;
         }
     }
 

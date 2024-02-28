@@ -25,6 +25,7 @@ public partial class Storyart_before_start : Control
         GD.Print(scene);
         this.GetChild<TextureRect>(scene).Hide();
         scene++;
+
         if (scene == 6)
         {
 

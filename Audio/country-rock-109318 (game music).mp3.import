@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4wqvrc7867tp"
+path="res://.godot/imported/country-rock-109318 (game music).mp3-ecf61bbd1f0e76564e6c3ad7fba08e7d.mp3str"
+
+[deps]
+
+source_file="res://Audio/country-rock-109318 (game music).mp3"
+dest_files=["res://.godot/imported/country-rock-109318 (game music).mp3-ecf61bbd1f0e76564e6c3ad7fba08e7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

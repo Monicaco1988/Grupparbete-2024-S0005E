@@ -140,7 +140,7 @@ public partial class player_manager : Node3D
             //trying to add simple function to reset players if a player is hidden
             if (lockAButton > 0)
             {
-                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)
+                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false )//|| GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)
                 {
                     Score++;
                     if (Score == 3)
@@ -178,8 +178,8 @@ public partial class player_manager : Node3D
         //if (GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false)
         GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
 
-        GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible = true;
-        GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible = true;
+        //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible = true;
+        //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible = true;
     }
 
 
