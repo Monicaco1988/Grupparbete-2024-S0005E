@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7vwah8prrbox"
-path="res://.godot/imported/playstation_button_circle.png-80621808165da9786b324a1d429c46cb.ctex"
+path="res://.godot/imported/playstation_button_circle.png-e7fce0abb5086dbfb061e2a08f95a717.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Default/playstation_button_circle.png"
-dest_files=["res://.godot/imported/playstation_button_circle.png-80621808165da9786b324a1d429c46cb.ctex"]
+source_file="res://Art/Default/playstation_button_circle.png"
+dest_files=["res://.godot/imported/playstation_button_circle.png-e7fce0abb5086dbfb061e2a08f95a717.ctex"]
 
 [params]
 

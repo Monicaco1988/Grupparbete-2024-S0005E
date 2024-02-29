@@ -1,8 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=31 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
-[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
-[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
+[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
+[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://Art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
+[ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://Art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
+[ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://Art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)
@@ -153,6 +155,49 @@ points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.0079271
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xo2eb"]
 size = Vector3(30, 1, 57.7539)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ki05v"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_prx51"]
+font_size = 60
+
+[sub_resource type="Animation" id="Animation_fj4a2"]
+resource_name = "Fade"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b5c27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtynd"]
+_data = {
+"Fade": SubResource("Animation_fj4a2"),
+"RESET": SubResource("Animation_b5c27")
+}
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 process_mode = 1
@@ -697,27 +742,88 @@ shape = SubResource("ConvexPolygonShape3D_1itmd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k08rn")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-offset_left = 393.0
-offset_top = 873.0
-offset_right = 581.0
-offset_bottom = 1061.0
-texture = ExtResource("2_sfmpp")
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-offset_left = 164.0
-offset_top = 873.0
-offset_right = 352.0
-offset_bottom = 1061.0
-texture = ExtResource("3_bnsm7")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.35455)
 shape = SubResource("BoxShape3D_xo2eb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3282.0
+offset_bottom = 2162.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 1622.0
+offset_right = 1508.0
+offset_bottom = 1877.0
+text = "HOLD            TO ACCELERATE
+
+HOLD            TO REVERSE"
+label_settings = SubResource("LabelSettings_ki05v")
+
+[node name="Label2" type="Label" parent="Control"]
+offset_left = 1741.0
+offset_top = 1622.0
+offset_right = 2527.0
+offset_bottom = 1877.0
+text = "STEER USING
+
+HOLD            TO DRIFT"
+label_settings = SubResource("LabelSettings_ki05v")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+offset_left = 891.0
+offset_top = 1564.0
+offset_right = 1079.0
+offset_bottom = 1752.0
+texture = ExtResource("2_sfmpp")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+offset_left = 893.0
+offset_top = 1738.0
+offset_right = 1081.0
+offset_bottom = 1926.0
+texture = ExtResource("3_bnsm7")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+offset_left = 2122.0
+offset_top = 1564.0
+offset_right = 2310.0
+offset_bottom = 1752.0
+texture = ExtResource("4_o0y5g")
+
+[node name="TextureRect4" type="TextureRect" parent="Control"]
+offset_left = 1914.0
+offset_top = 1738.0
+offset_right = 2102.0
+offset_bottom = 1926.0
+texture = ExtResource("5_fpf58")
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -41.5
+offset_right = 306.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "PRESS START TO JOIN"
+label_settings = SubResource("LabelSettings_prx51")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Label3"]
+libraries = {
+"": SubResource("AnimationLibrary_gtynd")
+}
+autoplay = "Fade"
 
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]

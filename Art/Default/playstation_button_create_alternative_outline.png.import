@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxy3r8dph6euq"
-path="res://.godot/imported/playstation_button_create_alternative_outline.png-7dfa6a1d2970c62178e6b112c5a4573a.ctex"
+path="res://.godot/imported/playstation_button_create_alternative_outline.png-bc5a25ca91e77f0387b6b29e45e9d4b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Default/playstation_button_create_alternative_outline.png"
-dest_files=["res://.godot/imported/playstation_button_create_alternative_outline.png-7dfa6a1d2970c62178e6b112c5a4573a.ctex"]
+source_file="res://Art/Default/playstation_button_create_alternative_outline.png"
+dest_files=["res://.godot/imported/playstation_button_create_alternative_outline.png-bc5a25ca91e77f0387b6b29e45e9d4b4.ctex"]
 
 [params]
 
