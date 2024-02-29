@@ -11,7 +11,7 @@ public partial class GameManager : Node
 	public override void _Ready()
 	{
 		UpdateGameState2 += UpdateGameState;
-		UpdateGameState(GameState.AudioManager);
+		//UpdateGameState(GameState.AudioManager);
 		UpdateGameState(GameState.Menu);
 	}
 
@@ -82,7 +82,8 @@ public partial class GameManager : Node
 	}
 	private void HandleMenuSelect()
 	{
-		var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate<Control>();
+		HandleAudioSelect();
+        var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate<Control>();
 		AddChild(sceneMenu);
 	}
 

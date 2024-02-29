@@ -33,15 +33,17 @@ public partial class audio_manager : Control
     {
         GD.Print(newState); // debugging
         //case use this logic if it works down here
-        //if(newState == GameState.PlayerManager) // newState and _GetSignalFromGameManager.State  are the same
-        //{
-        //    track_1.Playing = false;
-        //    track_2.Playing = true;
-        //}
+        if (newState == GameState.Menu) // newState and _GetSignalFromGameManager.State  are the same
+        {
+            track_5.Playing = false;
+            //track_1.Playing = true;
+            //track_2.Playing = true;
+        }
 
         if (_GetSignalFromGameManager.State == GameState.StoryManager)
         {
             track_1.Playing = false;
+            track_5.Playing = false;
             track_3.Playing = true;
         }
 

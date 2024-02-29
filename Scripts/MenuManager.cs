@@ -14,7 +14,8 @@ public partial class MenuManager : Control
 
 	public override void _Ready()
 	{
-		_GetSignalFromGameManager = GetNode<GameManager>("/root/GameManager");
+        
+        _GetSignalFromGameManager = GetNode<GameManager>("/root/GameManager");
 		_GetSignalFromGameManager.UpdateGameState2 += Test2;
 	}
 

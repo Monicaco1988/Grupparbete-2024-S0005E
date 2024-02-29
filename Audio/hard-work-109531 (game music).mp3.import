@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/hard-work-109531 (game music).mp3-b0a275763ad
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

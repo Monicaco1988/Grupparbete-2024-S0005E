@@ -118,7 +118,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.A) && numberOfPlayers >= 2 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Y) && numberOfPlayers >= 2 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
             {
                 //Moved location of spawnLocation so that the cars are visible when spawned in map
                 moveToSpawnLocation();
@@ -132,7 +132,7 @@ public partial class player_manager : Node3D
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
                 GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
-                GetNode<Button>("/root/GameManager/PlayerManager/Button").QueueFree();
+                GetNode<Control>("/root/GameManager/PlayerManager/Control").QueueFree();
 
                 //QueueFree();
                 lockAButton++;
@@ -147,6 +147,9 @@ public partial class player_manager : Node3D
                     Score++;
                     if (Score == 3)
                     {
+                        GetNode<Node3D>("/root/GameManager/World").QueueFree();
+                        
+                        this.QueueFree();
                         _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                     }
                     var offset = new Vector3(0, 0, 0);

@@ -319,16 +319,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 0, 2.68194)
 [node name="SpawnPoint4" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 0, 2.66987)
 
-[node name="Button" type="Button" parent="."]
-offset_left = 3353.0
-offset_top = 1770.0
-offset_right = 3794.0
-offset_bottom = 2108.0
-theme_override_font_sizes/font_size = 120
-text = "Press A 
-to Start"
-metadata/_edit_use_anchors_ = true
-
 [node name="Node" type="Node" parent="."]
 
 [node name="light_square" type="Node3D" parent="Node"]
@@ -769,6 +759,7 @@ HOLD            TO REVERSE"
 label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 1310.0
 offset_top = 1651.0
 offset_right = 2096.0
@@ -779,6 +770,7 @@ HOLD            TO DRIFT"
 label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 460.0
 offset_top = 1593.0
 offset_right = 648.0
@@ -786,6 +778,7 @@ offset_bottom = 1781.0
 texture = ExtResource("2_sfmpp")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 462.0
 offset_top = 1767.0
 offset_right = 650.0
@@ -793,6 +786,7 @@ offset_bottom = 1955.0
 texture = ExtResource("3_bnsm7")
 
 [node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 1691.0
 offset_top = 1593.0
 offset_right = 1879.0
@@ -800,6 +794,7 @@ offset_bottom = 1781.0
 texture = ExtResource("4_o0y5g")
 
 [node name="TextureRect4" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 1483.0
 offset_top = 1767.0
 offset_right = 1671.0
@@ -829,6 +824,7 @@ libraries = {
 autoplay = "Fade"
 
 [node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 2144.0
 offset_top = 1651.0
 offset_right = 2962.0
@@ -839,6 +835,7 @@ PRESS            TO JUMP"
 label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="TextureRect5" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 2317.0
 offset_top = 1593.0
 offset_right = 2505.0
@@ -846,10 +843,18 @@ offset_bottom = 1781.0
 texture = ExtResource("6_pygoy")
 
 [node name="TextureRect6" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 2320.0
 offset_top = 1771.0
 offset_right = 2508.0
 offset_bottom = 1959.0
 texture = ExtResource("7_febm6")
 
-[connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
+[node name="Label6" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2676.0
+offset_top = 2070.0
+offset_right = 3261.0
+offset_bottom = 2139.0
+theme_override_font_sizes/font_size = 50
+text = "PRESS Y TO START GAME"
