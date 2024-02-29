@@ -20,7 +20,7 @@ script = ExtResource("1_brujs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 3275.0
+offset_right = 3279.0
 offset_bottom = 2160.0
 texture = ExtResource("2_xmxy5")
 
