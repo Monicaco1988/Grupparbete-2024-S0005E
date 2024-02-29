@@ -528,7 +528,35 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 0.8, 1.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
+<<<<<<< Updated upstream
 "values": [Color(0, 0, 1, 1), Color(1, 0, 0, 1), Color(0, 0, 1, 1), Color(0, 0, 1, 1)]
+=======
+"values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0.294118, 1, 1), Color(0, 0.294118, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackRightOmniLight3D:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0.294118, 1, 1), Color(0, 0.294118, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
+>>>>>>> Stashed changes
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dljfn"]
@@ -562,8 +590,13 @@ mesh = SubResource("ArrayMesh_l45pp")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
+<<<<<<< Updated upstream
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.60956e-14, 1.72707, -0.708554)
 light_color = Color(0, 0, 1, 1)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46999, -0.747112)
+light_color = Color(0.99993, 0, 6.97173e-05, 1)
+>>>>>>> Stashed changes
 light_energy = 16.0
 <<<<<<< Updated upstream
 omni_range = 2.768
@@ -571,6 +604,21 @@ omni_attenuation = 19.0273
 =======
 omni_range = 1.12512
 
+<<<<<<< Updated upstream
+=======
+[node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.304759, 0.280294, 2.54237)
+light_color = Color(0, 0.294118, 1, 1)
+light_energy = 75.0
+omni_range = 1.25157
+
+[node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 0.21627, 2.49919)
+light_color = Color(0, 0, 0, 1)
+light_energy = 5.0
+omni_range = 1.24662
+
+>>>>>>> Stashed changes
 [node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410291, 0.434126, -1.57652)
 omni_range = 0.247119

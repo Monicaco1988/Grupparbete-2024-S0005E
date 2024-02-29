@@ -89,20 +89,20 @@ shadow_mesh = SubResource("ArrayMesh_hr0vc")
 [sub_resource type="Gradient" id="Gradient_mqf4n"]
 colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uprfa"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tk2be"]
 gradient = SubResource("Gradient_mqf4n")
 use_hdr = true
 fill_from = Vector2(1, 1)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
-night_sky = SubResource("GradientTexture2D_uprfa")
+night_sky = SubResource("GradientTexture2D_tk2be")
 
-[sub_resource type="Sky" id="Sky_21e36"]
+[sub_resource type="Sky" id="Sky_q5ub8"]
 sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
 
 [sub_resource type="Environment" id="Environment_211gl"]
 background_mode = 2
-sky = SubResource("Sky_21e36")
+sky = SubResource("Sky_q5ub8")
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 script = ExtResource("1_fqr60")
@@ -221,6 +221,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 0, 2.68194)
 [node name="SpawnPoint4" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 0, 2.66987)
 
+<<<<<<< Updated upstream
 [node name="Button" type="Button" parent="."]
 offset_left = 3353.0
 offset_top = 1770.0
@@ -230,6 +231,8 @@ theme_override_font_sizes/font_size = 120
 text = "Press A 
 to Start"
 
+=======
+>>>>>>> Stashed changes
 [node name="Node" type="Node" parent="."]
 
 [node name="light_square" type="Node3D" parent="Node"]
@@ -608,5 +611,61 @@ spot_range = 77.0965
 environment = SubResource("Environment_211gl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+visible = false
 
+<<<<<<< Updated upstream
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
+=======
+[node name="road_straightBarrier" type="Node3D" parent="."]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -27.1706)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier"]
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
+
+[node name="road_straightBarrier2" type="Node3D" parent="."]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -152.005)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier2"]
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier2"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_left = 393.0
+offset_top = 873.0
+offset_right = 581.0
+offset_bottom = 1061.0
+texture = ExtResource("2_sfmpp")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_left = 164.0
+offset_top = 873.0
+offset_right = 352.0
+offset_bottom = 1061.0
+texture = ExtResource("3_bnsm7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.35455)
+shape = SubResource("BoxShape3D_xo2eb")
+>>>>>>> Stashed changes

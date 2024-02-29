@@ -97,5 +97,23 @@ theme_override_font_sizes/font_size = 120
 text = "QUIT"
 flat = true
 
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+offset_left = -409.0
+offset_top = -169.0
+offset_right = 3692.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 18
+theme_override_constants/shadow_offset_y = 18
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_2tpmv")
+theme_override_font_sizes/font_size = 150
+text = "Are you man enough?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="OnButtonPressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button2" to="." method="OnButtonPressed2"]
