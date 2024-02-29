@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dovk8gktmeqpx"
-path="res://.godot/imported/truckFlat.glb-e5f82845ab6d2ac2dff9dacbd3478cc2.scn"
+path="res://.godot/imported/truckFlat.glb-65bb5cc636cd16ca4ea66a6cce4eacc8.scn"
 
 [deps]
 
-source_file="res://Art/kenney_car-kit/Models/GLTF format/truckFlat.glb"
-dest_files=["res://.godot/imported/truckFlat.glb-e5f82845ab6d2ac2dff9dacbd3478cc2.scn"]
+source_file="res://art/kenney_car-kit/Models/GLTF format/truckFlat.glb"
+dest_files=["res://.godot/imported/truckFlat.glb-65bb5cc636cd16ca4ea66a6cce4eacc8.scn"]
 
 [params]
 
