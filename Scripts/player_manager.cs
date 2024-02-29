@@ -61,6 +61,7 @@ public partial class player_manager : Node3D
         {
             ambulance.GlobalPosition = Spawnpoints[ambulance.id].GlobalPosition;
             ambulance.carMesh.Rotation = Vector3.Zero;
+            ambulance.LinearVelocity = Vector3.Zero;
         }
     }
 
@@ -149,10 +150,12 @@ public partial class player_manager : Node3D
                         _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                     }
                     var offset = new Vector3(0, 0, 0);
+
                     foreach (var ambulance in ambulances)
                     {
                         ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                         ambulance.LinearVelocity = Vector3.Zero;
+                        ambulance.carMesh.Rotation = Vector3.Zero;
                         //ambulance.Visible = true;
                         offset += new Vector3(-5,0,0);
                     }

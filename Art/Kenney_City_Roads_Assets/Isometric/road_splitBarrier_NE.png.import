@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvl4ab3nvpqe2"
-path="res://.godot/imported/road_splitBarrier_NE.png-b870e3e6fdbe7800bbc95fe01a4e5a5a.ctex"
+path="res://.godot/imported/road_splitBarrier_NE.png-cfd0a8b6526eecbeb0910d656df63681.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_splitBarrier_NE.png"
-dest_files=["res://.godot/imported/road_splitBarrier_NE.png-b870e3e6fdbe7800bbc95fe01a4e5a5a.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_splitBarrier_NE.png"
+dest_files=["res://.godot/imported/road_splitBarrier_NE.png-cfd0a8b6526eecbeb0910d656df63681.ctex"]
 
 [params]
 

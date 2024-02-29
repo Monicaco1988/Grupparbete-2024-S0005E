@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dul7scafyb86f"
-path="res://.godot/imported/garbageTruck.png-34cb5154d1a94704aaef705d639d580c.ctex"
+path="res://.godot/imported/garbageTruck.png-b5c8a11d3e8bb2956e8054216f04849e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/kenney_car-kit/Previews/garbageTruck.png"
-dest_files=["res://.godot/imported/garbageTruck.png-34cb5154d1a94704aaef705d639d580c.ctex"]
+source_file="res://art/kenney_car-kit/Previews/garbageTruck.png"
+dest_files=["res://.godot/imported/garbageTruck.png-b5c8a11d3e8bb2956e8054216f04849e.ctex"]
 
 [params]
 
