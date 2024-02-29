@@ -1,10 +1,12 @@
-[gd_scene load_steps=31 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=33 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 [ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
 [ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://Art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
 [ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://Art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
 [ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://Art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
+[ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://Art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
+[ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://Art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)
@@ -757,51 +759,51 @@ offset_bottom = 2162.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 722.0
-offset_top = 1622.0
-offset_right = 1508.0
-offset_bottom = 1877.0
+offset_left = 291.0
+offset_top = 1651.0
+offset_right = 1109.0
+offset_bottom = 1906.0
 text = "HOLD            TO ACCELERATE
 
 HOLD            TO REVERSE"
 label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="Label2" type="Label" parent="Control"]
-offset_left = 1741.0
-offset_top = 1622.0
-offset_right = 2527.0
-offset_bottom = 1877.0
+offset_left = 1310.0
+offset_top = 1651.0
+offset_right = 2096.0
+offset_bottom = 1906.0
 text = "STEER USING
 
 HOLD            TO DRIFT"
 label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-offset_left = 891.0
-offset_top = 1564.0
-offset_right = 1079.0
-offset_bottom = 1752.0
+offset_left = 460.0
+offset_top = 1593.0
+offset_right = 648.0
+offset_bottom = 1781.0
 texture = ExtResource("2_sfmpp")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
-offset_left = 893.0
-offset_top = 1738.0
-offset_right = 1081.0
-offset_bottom = 1926.0
+offset_left = 462.0
+offset_top = 1767.0
+offset_right = 650.0
+offset_bottom = 1955.0
 texture = ExtResource("3_bnsm7")
 
 [node name="TextureRect3" type="TextureRect" parent="Control"]
-offset_left = 2122.0
-offset_top = 1564.0
-offset_right = 2310.0
-offset_bottom = 1752.0
+offset_left = 1691.0
+offset_top = 1593.0
+offset_right = 1879.0
+offset_bottom = 1781.0
 texture = ExtResource("4_o0y5g")
 
 [node name="TextureRect4" type="TextureRect" parent="Control"]
-offset_left = 1914.0
-offset_top = 1738.0
-offset_right = 2102.0
-offset_bottom = 1926.0
+offset_left = 1483.0
+offset_top = 1767.0
+offset_right = 1671.0
+offset_bottom = 1955.0
 texture = ExtResource("5_fpf58")
 
 [node name="Label3" type="Label" parent="Control"]
@@ -812,9 +814,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -306.0
-offset_top = -41.5
+offset_top = -252.0
 offset_right = 306.0
-offset_bottom = 41.5
+offset_bottom = -169.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "PRESS START TO JOIN"
@@ -825,5 +827,29 @@ libraries = {
 "": SubResource("AnimationLibrary_gtynd")
 }
 autoplay = "Fade"
+
+[node name="Label4" type="Label" parent="Control"]
+offset_left = 2144.0
+offset_top = 1651.0
+offset_right = 2962.0
+offset_bottom = 1906.0
+text = "PRESS            TO USE POWERUPS
+
+PRESS            TO JUMP"
+label_settings = SubResource("LabelSettings_ki05v")
+
+[node name="TextureRect5" type="TextureRect" parent="Control"]
+offset_left = 2317.0
+offset_top = 1593.0
+offset_right = 2505.0
+offset_bottom = 1781.0
+texture = ExtResource("6_pygoy")
+
+[node name="TextureRect6" type="TextureRect" parent="Control"]
+offset_left = 2320.0
+offset_top = 1771.0
+offset_right = 2508.0
+offset_bottom = 1959.0
+texture = ExtResource("7_febm6")
 
 [connection signal="pressed" from="Button" to="." method="OnButtonPressed"]
