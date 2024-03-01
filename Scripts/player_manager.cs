@@ -152,10 +152,7 @@ public partial class player_manager : Node3D
                         Score++;
                         if (Score == 3)
                         {
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test3").QueueFree(); //Spawn1_Explosion/Test2
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test4").QueueFree();
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker3").QueueFree(); //Spawn1_Explosion/Test2
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker4").QueueFree();
+
 
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
@@ -194,8 +191,6 @@ public partial class player_manager : Node3D
                         Score++;
                         if (Score == 3)
                         {
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test4").QueueFree();
-                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker4").QueueFree();
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
                             this.QueueFree();

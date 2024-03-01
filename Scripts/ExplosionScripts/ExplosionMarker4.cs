@@ -33,6 +33,7 @@ public partial class ExplosionMarker4 : Marker3D
             _body = _player.GetChild<RigidBody3D>(0);
             this.GlobalPosition = _body.GlobalPosition;
         }
+        else { this.QueueFree(); }
     }
 
     public override void _PhysicsProcess(double delta)

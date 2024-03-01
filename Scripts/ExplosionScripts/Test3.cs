@@ -25,7 +25,7 @@ public partial class Test3 : Marker3D
             _body = _player.GetChild<RigidBody3D>(0);
             this.GlobalPosition = _body.GlobalPosition;
         }
-
+        else { this.QueueFree(); }
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
