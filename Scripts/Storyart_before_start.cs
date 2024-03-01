@@ -34,7 +34,9 @@ public partial class Storyart_before_start : Control
             _GetSignalFromGameManager.UpdateGameState2 -= Test2;
             this.QueueFree();
         }
-       
-        this.GetChild<TextureRect>(scene).Show();
+        if (scene < 6)
+        { 
+            this.GetChild<TextureRect>(scene).Show();
+        }
     }
 }

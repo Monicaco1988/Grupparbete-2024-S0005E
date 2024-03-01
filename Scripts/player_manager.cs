@@ -80,7 +80,7 @@ public partial class player_manager : Node3D
 
         foreach (var controller in controllers)
         {
-            
+
             bool playerStateFlag = false;
             if (Input.IsJoyButtonPressed(controller, JoyButton.Start))
             {
@@ -92,7 +92,7 @@ public partial class player_manager : Node3D
                         if (ambulance.id == controller)
                         {
                             playerStateFlag = true;
-                            
+
                         }
                     }
                 }
@@ -129,8 +129,8 @@ public partial class player_manager : Node3D
                 //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D").QueueFree();
                 //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D6").QueueFree();
                 GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
-                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
-                GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
+                //GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
+                //GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
                 GetNode<Control>("/root/GameManager/PlayerManager/Control").QueueFree();
 
@@ -142,50 +142,143 @@ public partial class player_manager : Node3D
             //trying to add simple function to reset players if a player is hidden
             if (lockAButton > 0)
             {
-                if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false )//|| GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible == false || GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible == false)
+                if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 10)// if there are 2 player
                 {
-                    Score++;
-                    if (Score == 3)
+                    var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
+                    var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
+
+                    if (player_1.Visible == false || player_2.Visible == false)
                     {
-                        GetNode<Node3D>("/root/GameManager/World").QueueFree();
-                        
-                        this.QueueFree();
-                        _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
-                    }
-                    var offset = new Vector3(0, 0, 0);
+                        Score++;
+                        if (Score == 3)
+                        {
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test3").QueueFree(); //Spawn1_Explosion/Test2
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test4").QueueFree();
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker3").QueueFree(); //Spawn1_Explosion/Test2
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker4").QueueFree();
 
-                    foreach (var ambulance in ambulances)
+                            GetNode<Node3D>("/root/GameManager/World").QueueFree();
+
+                            this.QueueFree();
+                            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+                        }
+                        var offset = new Vector3(5, 0, 0);
+
+                        foreach (var ambulance in ambulances)
+                        {
+                            ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
+                            ambulance.LinearVelocity = Vector3.Zero;
+                            ambulance.carMesh.Rotation = Vector3.Zero;
+                            //ambulance.Visible = true;
+                            offset += new Vector3(-5, 0, 0);
+                        }
+                        Visibility();
+
+                        GetTree().Paused = true;
+
+                        if (Score < 3)
+                        {
+                            GetNode<Control>("/root/GameManager/World/Countdown").GetChild<Label>(0).Show();
+                            GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
+                        }
+                    }
+                }
+                else if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 11) // if there are 3 player
+                {
+                    var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
+                    var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
+                    var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
+
+                    if (player_1.Visible == false || player_2.Visible == false || player_3.Visible == false)
                     {
-                        ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
-                        ambulance.LinearVelocity = Vector3.Zero;
-                        ambulance.carMesh.Rotation = Vector3.Zero;
-                        //ambulance.Visible = true;
-                        offset += new Vector3(-5,0,0);
+                        Score++;
+                        if (Score == 3)
+                        {
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/Test4").QueueFree();
+                            GetNode<Node3D>("/root/GameManager/World/Spawn1_Explosion/ExplosionMarker4").QueueFree();
+                            GetNode<Node3D>("/root/GameManager/World").QueueFree();
+
+                            this.QueueFree();
+                            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+                        }
+                        var offset = new Vector3(5, 0, 0);
+
+                        foreach (var ambulance in ambulances)
+                        {
+                            ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
+                            ambulance.LinearVelocity = Vector3.Zero;
+                            ambulance.carMesh.Rotation = Vector3.Zero;
+                            //ambulance.Visible = true;
+                            offset += new Vector3(-5, 0, 0);
+                        }
+                        Visibility();
+
+                        GetTree().Paused = true;
+
+                        if (Score < 3)
+                        {
+                            GetNode<Control>("/root/GameManager/World/Countdown").GetChild<Label>(0).Show();
+                            GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
+                        }
                     }
-                    Visibility();
+                }
+                else if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 12) // if there are 4 player
+                {
+                    var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
+                    var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
+                    var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
+                    var player_4 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11);
 
-                    GetTree().Paused = true;
-
-                    if (Score < 3)
+                    if (player_1.Visible == false || player_2.Visible == false || player_3.Visible == false || player_4.Visible == false)
                     {
-                        GetNode<Control>("/root/GameManager/World/Countdown").GetChild<Label>(0).Show();
-                        GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
-                    }
+                        Score++;
+                        if (Score == 3)
+                        {
+                            GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
+                            this.QueueFree();
+                            _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+                        }
+                        var offset = new Vector3(5, 0, 0);
+
+                        foreach (var ambulance in ambulances)
+                        {
+                            ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
+                            ambulance.LinearVelocity = Vector3.Zero;
+                            ambulance.carMesh.Rotation = Vector3.Zero;
+                            //ambulance.Visible = true;
+                            offset += new Vector3(-5, 0, 0);
+                        }
+                        Visibility();
+
+                        GetTree().Paused = true;
+
+                        if (Score < 3)
+                        {
+                            GetNode<Control>("/root/GameManager/World/Countdown").GetChild<Label>(0).Show();
+                            GetNode<Timer>("/root/GameManager/World/Countdown/Timer").Start();
+                        }
+                    }
                 }
             }
         }
-
     }
 
     public void Visibility()
     {
         //if (GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible == false)
         GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
+        GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9).Visible = true;
 
+        if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() > 10)
+        {
+            GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10).Visible = true;
+        }
+        if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() > 11)
+        {
+            GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11).Visible = true;
+        }
         //if (GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false)
-        GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible = true;
-
         //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible = true;
         //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible = true;
     }

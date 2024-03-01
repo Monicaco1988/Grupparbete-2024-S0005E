@@ -92,24 +92,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2b282")
 
-[sub_resource type="Gradient" id="Gradient_mqf4n"]
-colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uprfa"]
-gradient = SubResource("Gradient_mqf4n")
-use_hdr = true
-fill_from = Vector2(1, 1)
-
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
-night_sky = SubResource("GradientTexture2D_uprfa")
-
-[sub_resource type="Sky" id="Sky_21e36"]
-sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
-
-[sub_resource type="Environment" id="Environment_211gl"]
-background_mode = 2
-sky = SubResource("Sky_21e36")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nx4ob"]
 resource_name = "pavement"
 cull_mode = 2
@@ -154,6 +136,24 @@ points = PackedVector3Array(0.460322, 0.0872923, 0.507937, 0.444444, -0.00792719
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k08rn"]
 points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.00792719, -0.507937, -0.444444, -0.00792719, -0.507937, -0.50793, -0.00792719, 0.507937, -0.50793, 0.0872923, -0.507937, -0.444444, -0.00792719, 0.507937, -0.444444, 0.0555462, -0.507937, -0.50793, 0.0872923, 0.507937, -0.460322, 0.0872923, -0.507937, -0.444444, 0.0555462, 0.507937)
+
+[sub_resource type="Gradient" id="Gradient_mqf4n"]
+colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uprfa"]
+gradient = SubResource("Gradient_mqf4n")
+use_hdr = true
+fill_from = Vector2(1, 1)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
+night_sky = SubResource("GradientTexture2D_uprfa")
+
+[sub_resource type="Sky" id="Sky_21e36"]
+sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
+
+[sub_resource type="Environment" id="Environment_211gl"]
+background_mode = 2
+sky = SubResource("Sky_21e36")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xo2eb"]
 size = Vector3(30, 1, 57.7539)
@@ -699,40 +699,40 @@ light_color = Color(1, 1, 0.627451, 1)
 light_energy = 16.0
 spot_range = 77.0965
 
+[node name="road_straightBarrier" type="Node3D" parent="Node"]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -27.1706)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="Node/road_straightBarrier"]
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node/road_straightBarrier"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="Node/road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/road_straightBarrier/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
+
+[node name="road_straightBarrier2" type="Node3D" parent="Node"]
+transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -152.005)
+
+[node name="road_straightBarrier" type="MeshInstance3D" parent="Node/road_straightBarrier2"]
+mesh = SubResource("ArrayMesh_oy81o")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node/road_straightBarrier2"]
+
+[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="Node/road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1itmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/road_straightBarrier2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_k08rn")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_211gl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
-[node name="road_straightBarrier" type="Node3D" parent="."]
-transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -27.1706)
-
-[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier"]
-mesh = SubResource("ArrayMesh_oy81o")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier"]
-
-[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_1itmd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_k08rn")
-
-[node name="road_straightBarrier2" type="Node3D" parent="."]
-transform = Transform3D(125, 0, 0, 0, 125, 0, 0, 0, 125, -0.240103, -0.499992, -152.005)
-
-[node name="road_straightBarrier" type="MeshInstance3D" parent="road_straightBarrier2"]
-mesh = SubResource("ArrayMesh_oy81o")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road_straightBarrier2"]
-
-[node name="_CollisionShape3D_42971" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_1itmd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straightBarrier2/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_k08rn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
