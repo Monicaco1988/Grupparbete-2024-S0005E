@@ -150,7 +150,7 @@ public partial class player_manager : Node3D
                     if (player_1.Visible == false || player_2.Visible == false)
                     {
                         Score++;
-                        if (Score == 3)
+                        if (Score == 6) // next fix is score system
                         {
 
 
@@ -165,8 +165,8 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            ambulance.carMesh.Rotation = Vector3.Zero;
-                            //ambulance.Visible = true;
+                            //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
+                            ambulance.carMesh.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             offset += new Vector3(-5, 0, 0);
                         }
                         Visibility();
@@ -202,7 +202,7 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            ambulance.carMesh.Rotation = Vector3.Zero;
+                            ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             //ambulance.Visible = true;
                             offset += new Vector3(-5, 0, 0);
                         }
@@ -240,7 +240,7 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            ambulance.carMesh.Rotation = Vector3.Zero;
+                            ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             //ambulance.Visible = true;
                             offset += new Vector3(-5, 0, 0);
                         }
