@@ -22,17 +22,27 @@ public partial class Countdown : Control
         scene++;
         GD.Print(scene);
         this.GetChild<Label>(scene-1).Hide();
+
+
         if (scene == 4)
         {
-            scene = 0;
+            
             GetTree().Paused = false;
+            this.GetChild<Label>(scene).Show();
+            timeToStart.Start();
+        }
+        else if (scene == 5)
+        {
             timeToStart.Stop();
+            scene = 0;
         }
         else {
             
             this.GetChild<Label>(scene).Show();
             timeToStart.Start(); 
         }
+
+       
 
     }
 }

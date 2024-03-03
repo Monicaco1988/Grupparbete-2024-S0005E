@@ -118,7 +118,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.Y) && numberOfPlayers >= 2 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Y) && numberOfPlayers >= 0 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
             {
                 //Moved location of spawnLocation so that the cars are visible when spawned in map
                 moveToSpawnLocation();
@@ -126,11 +126,8 @@ public partial class player_manager : Node3D
 
 
                 GetNode<StaticBody3D>("/root/GameManager/PlayerManager/SpawnPlatform").QueueFree();
-                //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D").QueueFree();
-                //GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/SpawnPlatform/CollisionShape3D6").QueueFree();
                 GetNode<Node>("/root/GameManager/PlayerManager/Node").QueueFree();
-                //GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier").QueueFree();
-                //GetNode<Node3D>("/root/GameManager/PlayerManager/road_straightBarrier2").QueueFree();
+
                 GetNode<Camera3D>("/root/GameManager/PlayerManager/Camera3D").QueueFree();
                 GetNode<Control>("/root/GameManager/PlayerManager/Control").QueueFree();
 
@@ -150,7 +147,7 @@ public partial class player_manager : Node3D
                     if (player_1.Visible == false || player_2.Visible == false)
                     {
                         Score++;
-                        if (Score == 6) // next fix is score system
+                        if (Score == 3) // next fix is score system
                         {
 
 
@@ -165,7 +162,7 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
+             //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
                             ambulance.carMesh.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             offset += new Vector3(-5, 0, 0);
                         }

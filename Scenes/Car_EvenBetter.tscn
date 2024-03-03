@@ -50,7 +50,7 @@ metallic = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxisd"]
 resource_name = "window"
-albedo_color = Color(0.937255, 0.937255, 0.937255, 1)
+albedo_color = Color(0.313726, 0.521569, 1, 1)
 metallic = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4c0f"]
@@ -574,7 +574,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0, 1, 1), Color(0, 0, 1, 1)]
+"values": [Color(1, 0.337255, 0.270588, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0.207843, 1, 1), Color(0, 0.207843, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -586,7 +586,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 1, 1), Color(0, 0, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+"values": [Color(0, 0.207843, 1, 1), Color(0, 0.207843, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -696,20 +696,20 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46999, -0.747112)
-light_color = Color(0.999935, 0, 6.46356e-05, 1)
+light_color = Color(0.999956, 0.164376, 0.131927, 1)
 light_energy = 16.0
 omni_range = 1.12512
 
 [node name="BackRightOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53502, 0.21627, 2.49919)
-light_color = Color(0, 0, 1, 1)
+light_color = Color(0, 0.207843, 1, 1)
 light_energy = 50.0
 omni_range = 1.25157
 
 [node name="BackLeftOmniLight3D" type="OmniLight3D" parent="CarMesh/ambulance/body/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268134, 0.21627, 2.49919)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305667, 0.295321, 2.499)
 light_color = Color(0, 0, 0, 1)
-light_energy = 50.0
+light_energy = 20.0
 omni_range = 1.24662
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="CarMesh/ambulance/body"]
