@@ -52,11 +52,13 @@ offset_bottom = 2160.0
 [node name="ColorRect2" type="ColorRect" parent="TextureRect4"]
 modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
+layout_mode = 0
 offset_left = -831.0
 offset_right = 2449.0
 offset_bottom = 2160.0
 
 [node name="Label" type="Label" parent="TextureRect4"]
+layout_mode = 0
 offset_left = -831.0
 offset_top = 718.0
 offset_right = 2557.0
@@ -73,6 +75,7 @@ Or if you make it to the Hospital first"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="TextureRect4"]
+layout_mode = 0
 offset_left = -655.0
 offset_top = 222.0
 offset_right = 2287.0
@@ -94,11 +97,13 @@ offset_bottom = 2160.0
 [node name="ColorRect2" type="ColorRect" parent="TextureRect5"]
 modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
+layout_mode = 0
 offset_left = -831.0
 offset_right = 2449.0
 offset_bottom = 2160.0
 
 [node name="Label" type="Label" parent="TextureRect5"]
+layout_mode = 0
 offset_left = -831.0
 offset_top = 718.0
 offset_right = 2557.0
@@ -115,6 +120,7 @@ Or if you make it to the Hospital first"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="TextureRect5"]
+layout_mode = 0
 offset_left = -655.0
 offset_top = 222.0
 offset_right = 2287.0
@@ -155,6 +161,7 @@ text = "Attention!"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="TextureRect6/Label4"]
+layout_mode = 0
 offset_left = -176.0
 offset_top = 496.0
 offset_right = 3212.0

@@ -183,7 +183,7 @@ public partial class player_manager : Node3D
                     var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
                     var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
 
-                    if (player_1.Visible == false || player_2.Visible == false || player_3.Visible == false)
+                    if ((player_1.Visible == false && player_2.Visible == false) || (player_3.Visible == false && player_2.Visible == false) || (player_1.Visible == false && player_3.Visible == false) ) // this works
                     {
                         Score++;
                         if (Score == 3)
@@ -221,7 +221,7 @@ public partial class player_manager : Node3D
                     var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
                     var player_4 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11);
 
-                    if (player_1.Visible == false || player_2.Visible == false || player_3.Visible == false || player_4.Visible == false)
+                    if ((player_1.Visible == false && player_2.Visible == false && player_3.Visible == false ) || (player_1.Visible == false && player_2.Visible == false && player_4.Visible == false) || (player_4.Visible == false && player_2.Visible == false && player_3.Visible == false) || (player_1.Visible == false && player_4.Visible == false && player_3.Visible == false))
                     {
                         Score++;
                         if (Score == 3)
