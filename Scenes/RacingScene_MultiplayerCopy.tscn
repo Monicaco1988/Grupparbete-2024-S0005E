@@ -28,7 +28,7 @@
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
 [ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
-[ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="26_55yi6"]
+[ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/construction_light.dae" id="26_55yi6"]
 [ext_resource type="Script" path="res://Scripts/Countdown.cs" id="29_d68i3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]

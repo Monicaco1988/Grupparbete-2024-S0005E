@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\bettercar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\bettercar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\explosionscripts\\test2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\explosionscripts\\test2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\explosionscripts\\explosionmarker2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\explosionscripts\\explosionmarker2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\player_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\player_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\bettercar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\bettercar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\camerapole2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\camerapole2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|solutionrelative:scripts\\storyart_before_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE945256-DBF7-4CD0-8FA3-8BC9E74DE7A8}|recing project.csproj|c:\\users\\mono\\documents\\github\\grupparbete-2024-s0005e\\scripts\\countdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +50,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ExplosionMarker2.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\ExplosionScripts\\ExplosionMarker2.cs",
+              "RelativeDocumentMoniker": "Scripts\\ExplosionScripts\\ExplosionMarker2.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\ExplosionScripts\\ExplosionMarker2.cs",
+              "RelativeToolTip": "Scripts\\ExplosionScripts\\ExplosionMarker2.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCAAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T23:54:37.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Storyart_before_start.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Storyart_before_start.cs",
+              "RelativeDocumentMoniker": "Scripts\\Storyart_before_start.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Storyart_before_start.cs",
+              "RelativeToolTip": "Scripts\\Storyart_before_start.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T22:10:45.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Countdown.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Countdown.cs",
               "RelativeDocumentMoniker": "Scripts\\Countdown.cs",
@@ -42,34 +83,57 @@
               "RelativeToolTip": "Scripts\\Countdown.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T19:34:30.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-03T19:34:30.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "betterCar.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\betterCar.cs",
               "RelativeDocumentMoniker": "Scripts\\betterCar.cs",
               "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\betterCar.cs",
               "RelativeToolTip": "Scripts\\betterCar.cs",
-              "ViewState": "AQIAAP4AAAAAAAAAAAAIwBMBAAANAAAA",
+              "ViewState": "AQIAAB0BAAAAAAAAAABRwDABAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-01T23:13:51.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-01T23:13:51.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "player_manager.cs",
               "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_manager.cs",
               "RelativeDocumentMoniker": "Scripts\\player_manager.cs",
               "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_manager.cs",
               "RelativeToolTip": "Scripts\\player_manager.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAuwKsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T16:26:35.584Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test2.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\ExplosionScripts\\Test2.cs",
+              "RelativeDocumentMoniker": "Scripts\\ExplosionScripts\\Test2.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\ExplosionScripts\\Test2.cs",
+              "RelativeToolTip": "Scripts\\ExplosionScripts\\Test2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T23:57:03.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CameraPole2.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraPole2.cs",
+              "RelativeDocumentMoniker": "Scripts\\CameraPole2.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraPole2.cs",
+              "RelativeToolTip": "Scripts\\CameraPole2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T23:15:22.665Z"
             }
           ]
         },

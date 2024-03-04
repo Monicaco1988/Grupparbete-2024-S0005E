@@ -137,24 +137,6 @@ points = PackedVector3Array(0.460322, 0.0872923, 0.507937, 0.444444, -0.00792719
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k08rn"]
 points = PackedVector3Array(-0.460322, 0.0872923, 0.507937, -0.50793, -0.00792719, -0.507937, -0.444444, -0.00792719, -0.507937, -0.50793, -0.00792719, 0.507937, -0.50793, 0.0872923, -0.507937, -0.444444, -0.00792719, 0.507937, -0.444444, 0.0555462, -0.507937, -0.50793, 0.0872923, 0.507937, -0.460322, 0.0872923, -0.507937, -0.444444, 0.0555462, 0.507937)
 
-[sub_resource type="Gradient" id="Gradient_mqf4n"]
-colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uprfa"]
-gradient = SubResource("Gradient_mqf4n")
-use_hdr = true
-fill_from = Vector2(1, 1)
-
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
-night_sky = SubResource("GradientTexture2D_uprfa")
-
-[sub_resource type="Sky" id="Sky_21e36"]
-sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
-
-[sub_resource type="Environment" id="Environment_211gl"]
-background_mode = 2
-sky = SubResource("Sky_21e36")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_xo2eb"]
 size = Vector3(30, 1, 57.7539)
 
@@ -200,6 +182,24 @@ _data = {
 "Fade": SubResource("Animation_fj4a2"),
 "RESET": SubResource("Animation_b5c27")
 }
+
+[sub_resource type="Gradient" id="Gradient_mqf4n"]
+colors = PackedColorArray(0, 0, 0.541176, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3b4j4"]
+gradient = SubResource("Gradient_mqf4n")
+use_hdr = true
+fill_from = Vector2(1, 1)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ihb3n"]
+night_sky = SubResource("GradientTexture2D_3b4j4")
+
+[sub_resource type="Sky" id="Sky_5uo6g"]
+sky_material = SubResource("PhysicalSkyMaterial_ihb3n")
+
+[sub_resource type="Environment" id="Environment_211gl"]
+background_mode = 2
+sky = SubResource("Sky_5uo6g")
 
 [node name="PlayerManager" type="Node3D" node_paths=PackedStringArray("Spawnpoints")]
 process_mode = 1
@@ -786,11 +786,6 @@ shape = SubResource("ConvexPolygonShape3D_1itmd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node/road_straightBarrier3/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_k08rn")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_211gl")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
@@ -915,3 +910,8 @@ offset_right = 3261.0
 offset_bottom = 2139.0
 theme_override_font_sizes/font_size = 50
 text = "PRESS Y TO START GAME"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Control"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Control"]
+environment = SubResource("Environment_211gl")

@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ggkrw60mowyo"]
+[gd_scene load_steps=5 format=3 uid="uid://ggkrw60mowyo"]
 
 [ext_resource type="Script" path="res://Scripts/Storyart_before_start.cs" id="1_5u7bf"]
-[ext_resource type="Texture2D" uid="uid://pj14sciwonpl" path="res://Art/Storyart/1.png" id="2_wjqgg"]
-[ext_resource type="Texture2D" uid="uid://ck5pd2bonvcx6" path="res://Art/Storyart/6.png" id="3_2io1b"]
 [ext_resource type="Texture2D" uid="uid://cnli3u4eq4008" path="res://Art/Storyart/2.png" id="3_g85bw"]
 [ext_resource type="Texture2D" uid="uid://bxg23kemsds0l" path="res://Art/Storyart/3.png" id="4_4qbc7"]
-[ext_resource type="Texture2D" uid="uid://cclsbcqi2rhvf" path="res://Art/Storyart/319IWOGnEGL._AC_UF894,1000_QL80_.jpg" id="6_loumn"]
+
+[sub_resource type="SystemFont" id="SystemFont_cu8ad"]
+font_names = PackedStringArray("Cursive")
 
 [node name="Storyart" type="Control"]
 process_mode = 3
@@ -18,23 +18,7 @@ visible = false
 layout_mode = 0
 offset_right = 3280.0
 offset_bottom = 2160.0
-texture = ExtResource("2_wjqgg")
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 1406.0
-offset_right = 2430.0
-offset_bottom = 2160.0
-texture = ExtResource("3_2io1b")
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect2"]
-modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-layout_mode = 0
-offset_left = -1406.0
-offset_right = 1874.0
-offset_bottom = 2160.0
+texture = ExtResource("3_g85bw")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 process_mode = 3
@@ -42,7 +26,16 @@ visible = false
 layout_mode = 0
 offset_right = 3280.0
 offset_bottom = 2160.0
-texture = ExtResource("3_g85bw")
+texture = ExtResource("4_4qbc7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect3"]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 3280.0
+offset_bottom = 2160.0
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 visible = false
@@ -50,47 +43,110 @@ layout_mode = 0
 offset_left = 831.0
 offset_right = 2471.0
 offset_bottom = 2160.0
-texture = ExtResource("4_4qbc7")
 
-[node name="ColorRect2" type="ColorRect" parent="TextureRect4"]
-modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
+[node name="TextEdit3" type="TextEdit" parent="TextureRect4"]
 layout_mode = 0
-offset_left = -831.0
-offset_right = 2449.0
-offset_bottom = 2160.0
+offset_left = -825.0
+offset_top = -85.0
+offset_right = 2455.0
+offset_bottom = 2156.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_cu8ad")
+theme_override_font_sizes/font_size = 150
+text = "
+	If you fall behind you lose
+
+	If you are faster then your colleague 3
+	times you win
+
+	If you get to the hospital first you win 
+
+							Simple right?"
 
 [node name="TextureRect5" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 831.0
+offset_top = 4.0
 offset_right = 2471.0
 offset_bottom = 2160.0
-texture = ExtResource("6_loumn")
 
-[node name="ColorRect2" type="ColorRect" parent="TextureRect5"]
-modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
+[node name="TextEdit2" type="TextEdit" parent="TextureRect5"]
 layout_mode = 0
-offset_left = -831.0
-offset_right = 2449.0
-offset_bottom = 2160.0
+offset_left = -825.0
+offset_top = -89.0
+offset_right = 2455.0
+offset_bottom = 2152.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_cu8ad")
+theme_override_font_sizes/font_size = 150
+text = "
+	If you fall behind you lose
+
+	If you are faster then your colleague 3
+	times you win
+
+	If you get to the hospital first you win 
+
+							Simple right?"
 
 [node name="TextureRect6" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 831.0
-offset_right = 2471.0
-offset_bottom = 2160.0
-texture = ExtResource("6_loumn")
+offset_left = 544.0
+offset_top = 295.0
+offset_right = 2184.0
+offset_bottom = 2455.0
 
-[node name="ColorRect2" type="ColorRect" parent="TextureRect6"]
-modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
+[node name="TextEdit3" type="TextEdit" parent="TextureRect6"]
 layout_mode = 0
-offset_left = -831.0
-offset_right = 2449.0
-offset_bottom = 2160.0
+offset_left = -538.0
+offset_top = -380.0
+offset_right = 2742.0
+offset_bottom = 1861.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_cu8ad")
+theme_override_font_sizes/font_size = 150
+text = "
+	If you fall behind you lose
+
+	If you are faster then your colleague 3
+	times you win
+
+	If you get to the hospital first you win 
+
+							Simple right?"
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 544.0
+offset_top = 295.0
+offset_right = 2184.0
+offset_bottom = 2455.0
+
+[node name="TextEdit4" type="TextEdit" parent="TextureRect7"]
+layout_mode = 0
+offset_left = -538.0
+offset_top = -380.0
+offset_right = 2742.0
+offset_bottom = 1861.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_cu8ad")
+theme_override_font_sizes/font_size = 150
+text = "
+	If you fall behind you lose
+
+	If you are faster then your colleague 3
+	times you win
+
+	If you get to the hospital first you win 
+
+							Simple right?"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.74
