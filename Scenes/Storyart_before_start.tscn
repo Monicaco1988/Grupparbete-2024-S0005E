@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ggkrw60mowyo"]
+[gd_scene load_steps=5 format=3 uid="uid://ggkrw60mowyo"]
 
 [ext_resource type="Script" path="res://Scripts/Storyart_before_start.cs" id="1_5u7bf"]
 [ext_resource type="Texture2D" uid="uid://pj14sciwonpl" path="res://Art/Storyart/1.png" id="2_wjqgg"]
-[ext_resource type="Texture2D" uid="uid://ck5pd2bonvcx6" path="res://Art/Storyart/6.png" id="3_2io1b"]
 [ext_resource type="Texture2D" uid="uid://cnli3u4eq4008" path="res://Art/Storyart/2.png" id="3_g85bw"]
 [ext_resource type="Texture2D" uid="uid://bxg23kemsds0l" path="res://Art/Storyart/3.png" id="4_4qbc7"]
-[ext_resource type="Texture2D" uid="uid://cclsbcqi2rhvf" path="res://Art/Storyart/319IWOGnEGL._AC_UF894,1000_QL80_.jpg" id="6_loumn"]
 
 [node name="Storyart" type="Control"]
 process_mode = 3
@@ -23,18 +21,10 @@ texture = ExtResource("2_wjqgg")
 [node name="TextureRect2" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 1406.0
-offset_right = 2430.0
+offset_right = 3566.0
 offset_bottom = 2160.0
-texture = ExtResource("3_2io1b")
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect2"]
-modulate = Color(0, 0, 0, 1)
-show_behind_parent = true
-layout_mode = 0
-offset_left = -1406.0
-offset_right = 1874.0
-offset_bottom = 2160.0
+texture = ExtResource("3_g85bw")
+expand_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 process_mode = 3
@@ -42,7 +32,15 @@ visible = false
 layout_mode = 0
 offset_right = 3280.0
 offset_bottom = 2160.0
-texture = ExtResource("3_g85bw")
+texture = ExtResource("4_4qbc7")
+stretch_mode = 5
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect3"]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 3280.0
+offset_bottom = 2160.0
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 visible = false
@@ -50,15 +48,41 @@ layout_mode = 0
 offset_left = 831.0
 offset_right = 2471.0
 offset_bottom = 2160.0
-texture = ExtResource("4_4qbc7")
 
 [node name="ColorRect2" type="ColorRect" parent="TextureRect4"]
 modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
-layout_mode = 0
 offset_left = -831.0
 offset_right = 2449.0
 offset_bottom = 2160.0
+
+[node name="Label" type="Label" parent="TextureRect4"]
+offset_left = -831.0
+offset_top = 718.0
+offset_right = 2557.0
+offset_bottom = 1785.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "This is a modern battleroyal racing game!
+
+You win by outrunning your colleague 3 times
+
+Or if you make it to the Hospital first"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect4"]
+offset_left = -655.0
+offset_top = 222.0
+offset_right = 2287.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "Attention!"
+horizontal_alignment = 1
 
 [node name="TextureRect5" type="TextureRect" parent="."]
 visible = false
@@ -66,15 +90,41 @@ layout_mode = 0
 offset_left = 831.0
 offset_right = 2471.0
 offset_bottom = 2160.0
-texture = ExtResource("6_loumn")
 
 [node name="ColorRect2" type="ColorRect" parent="TextureRect5"]
 modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
-layout_mode = 0
 offset_left = -831.0
 offset_right = 2449.0
 offset_bottom = 2160.0
+
+[node name="Label" type="Label" parent="TextureRect5"]
+offset_left = -831.0
+offset_top = 718.0
+offset_right = 2557.0
+offset_bottom = 1785.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "This is a modern battleroyal racing game!
+
+You win by outrunning your colleague 3 times
+
+Or if you make it to the Hospital first"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect5"]
+offset_left = -655.0
+offset_top = 222.0
+offset_right = 2287.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "Attention!"
+horizontal_alignment = 1
 
 [node name="TextureRect6" type="TextureRect" parent="."]
 visible = false
@@ -82,7 +132,6 @@ layout_mode = 0
 offset_left = 831.0
 offset_right = 2471.0
 offset_bottom = 2160.0
-texture = ExtResource("6_loumn")
 
 [node name="ColorRect2" type="ColorRect" parent="TextureRect6"]
 modulate = Color(0, 0, 0, 1)
@@ -91,6 +140,35 @@ layout_mode = 0
 offset_left = -831.0
 offset_right = 2449.0
 offset_bottom = 2160.0
+
+[node name="Label4" type="Label" parent="TextureRect6"]
+layout_mode = 0
+offset_left = -655.0
+offset_top = 222.0
+offset_right = 2287.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "Attention!"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect6/Label4"]
+offset_left = -176.0
+offset_top = 496.0
+offset_right = 3212.0
+offset_bottom = 1563.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "This is a modern battleroyal racing game!
+
+You win by outrunning your colleague 3 times
+
+Or if you make it to the Hospital first"
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.74

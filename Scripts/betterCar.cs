@@ -3,6 +3,8 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using Godot.Collections;
+using static betterCar;
+using System.Threading;
 
 public partial class betterCar : RigidBody3D
 {
@@ -46,7 +48,9 @@ public partial class betterCar : RigidBody3D
 	MeshInstance3D leftWheel;
 	Vector3 sphereOffset = Vector3.Down;
 	PlayerState state = PlayerState.IN_ACTIVE;
-	PowerUp powerUp = PowerUp.SWITCHAROO;
+
+	PowerUp powerUp = PowerUp.SPEED_BOOST;
+	
 	PackedScene trackScene;
 	GpuParticles3D smoke;
 	Node3D rightSkid;
@@ -62,7 +66,12 @@ public partial class betterCar : RigidBody3D
 	//POWER UPS
 	PackedScene defib;
 
-	float acceleration = 3000;
+    int pwrUpSpeed = 1;
+    int pwrUpDefib = 1;
+    int pwrUpSwitch = 1;
+
+
+    float acceleration = 3000;
 	float cappedAcceleration = 1800;
 	float velocity;
 	float steering = 24.0f;
@@ -184,24 +193,36 @@ public partial class betterCar : RigidBody3D
 
 	public void usePowerUp(double delta)
 	{
+
+
+
         if (Input.IsJoyButtonPressed(id, JoyButton.X))
         {
 			switch (powerUp)
 			{
 				case PowerUp.SPEED_BOOST:
-					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
-					playDoorAnimation();
+					if (pwrUpSpeed == 1)
+						{
+						ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * 0.5f);// * (float)delta);
+						//playDoorAnimation();
+
+						pwrUpSpeed--;
+						} 
 					break;
 
 				case PowerUp.DEFIBRILLATOR:
-					var d = defib.Instantiate();
-					GetParent().GetParent().AddChild(d);
+					if (pwrUpDefib == 1)
+					{
+						var d = defib.Instantiate();
+						GetParent().GetParent().AddChild(d);
 
-					playDoorAnimation();
-					var obj = d.GetNode<Node3D>("Pivot");
-					obj.GlobalPosition = dropPoint.GlobalPosition;
-					//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
-					break;
+						playDoorAnimation();
+						var obj = d.GetNode<Node3D>("Pivot");
+						obj.GlobalPosition = dropPoint.GlobalPosition;
+						//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
+						pwrUpDefib--;
+					}
+                    break;
 
                 case PowerUp.P3:
                     //Do P3 shit
@@ -224,16 +245,20 @@ public partial class betterCar : RigidBody3D
                     break;
 
                 case PowerUp.SWITCHAROO:
-					Array<betterCar> players = player_manager.instance.ambulances;
-					betterCar switchCar = this;
-                    while (this == switchCar)
-                    {
-                        switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers-1)];
-                    }
-					Vector3 switchPos = this.GlobalPosition;
-                    this.GlobalPosition = switchCar.GlobalPosition;
-					switchCar.GlobalPosition = switchPos;
-                    //Do P8 shit
+					if (pwrUpSwitch == 1)
+					{
+						Array<betterCar> players = player_manager.instance.ambulances;
+						betterCar switchCar = this;
+						while (this == switchCar)
+						{
+							switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers - 1)];
+						}
+						Vector3 switchPos = this.GlobalPosition;
+						this.GlobalPosition = switchCar.GlobalPosition;
+						switchCar.GlobalPosition = switchPos;
+						//Do P8 shit
+						pwrUpSwitch--;
+					}
                     break;
 
                 default: break;
@@ -242,46 +267,84 @@ public partial class betterCar : RigidBody3D
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _PhysicsProcess(double delta)
+	public override async void _PhysicsProcess(double delta)
 	{
-		//GD.Print((this.GetParent() as Node3D).GlobalPosition);
-		carMesh.Position = Position + sphereOffset;
+
+
+
+        //GD.Print((this.GetParent() as Node3D).GlobalPosition);
+        carMesh.Position = Position + sphereOffset;
 		if (groundRay.IsColliding())//
 		{
-			
+
 			//GD.Print(Follow_Camera.instance.playerContainer1);
 			//GD.Print(this.GetParent());
-            if (isFirst)
+			//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+
+			// this change makes the speedboost work if you are player on first place. if the player on first place press the boost and gets over 37 velocity then the cap at 36 is ignored for 3 seconds
+            if (isFirst && Mathf.Abs(this.LinearVelocity.Length()) > 37)
             {
-				//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+                ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+                ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
+                await ToSignal(GetTree().CreateTimer(3.0f), SceneTreeTimer.SignalName.Timeout); // A  one-shot timer (3 seconds) managed by the scene tree, which emits timeout on completion. 
+
+            }
+            else if (isFirst)
+            {
+
                 if (Mathf.Abs(this.LinearVelocity.Length()) < 36)
                 {
-                ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+                    ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+                    ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
+
                 }
             }
             else
             {
                 ApplyCentralForce(-carMesh.GlobalBasis.Z * gasInput * (float)delta);
+                ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
             }
-            
+
 
             // Handle Jump
-            ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
+            //if (Mathf.Abs(this.LinearVelocity.Length()) < 36)
+            //  ApplyCentralForce(carMesh.GlobalBasis.Y * jumpInput * (float)delta);
+
+            if (pwrUpSpeed == 0 && pwrUpDefib == 1)
+            {
+                // 1 sec cooldown to next powerup
+                await ToSignal(GetTree().CreateTimer(0.5f), SceneTreeTimer.SignalName.Timeout);
+                powerUp = PowerUp.DEFIBRILLATOR;
+
+            }
+            else if (pwrUpDefib == 0)
+            {
+                // 1 sec cooldown to next powerup
+                await ToSignal(GetTree().CreateTimer(0.5f), SceneTreeTimer.SignalName.Timeout);
+                powerUp = PowerUp.SWITCHAROO;
+            }
+			else if (pwrUpSpeed == 0 && pwrUpDefib == 0 && pwrUpSwitch == 0)
+			{ }
         }
-        //GD.Print(carMesh.Position);
-        
+		//GD.Print(carMesh.Position);
+
 
     }
 
 	public override void _Process(double delta)
 	{
+
+
+
         if (state == PlayerState.IN_ACTIVE)
         {
 			return;
         }
         usePowerUp(delta);
-		//GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
-		velocity = this.LinearVelocity.Length();
+
+		
+        //GD.Print(Mathf.Abs(this.LinearVelocity.Length()));
+        velocity = this.LinearVelocity.Length();
 
 		if (!groundRay.IsColliding()) //
 		{
@@ -300,7 +363,12 @@ public partial class betterCar : RigidBody3D
 
 
 		if (Input.IsJoyButtonPressed(id, JoyButton.A))
+		{
 			jumpInput2 = 1;
+
+			// Just  for testing you have to jump after first powerup is used
+
+        }
 		else
 			jumpInput2 = 0;
 
@@ -326,9 +394,17 @@ public partial class betterCar : RigidBody3D
 			var tilted = -turnInput2 * LinearVelocity.Length() / bodyTilt;
 			bodyMesh.Rotation = new Vector3(0, 0, tilted);
 
+           GD.Print(velocity);
+            //GD.Print(tilted);
 
+            if (velocity > 60f)
+            {
 
-			if (groundRay.IsColliding())
+                bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
+                smoke.Emitting = true;
+            }
+
+            if (groundRay.IsColliding())
 			{
 				var normal = groundRay.GetCollisionNormal();
 				var xForm = AlignWithY(carMesh.GlobalTransform, normal);
@@ -365,4 +441,6 @@ public partial class betterCar : RigidBody3D
 
 		return xForm.Orthonormalized();
 	}
+
+
 }

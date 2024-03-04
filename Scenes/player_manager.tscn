@@ -22,7 +22,7 @@ points = PackedVector3Array(-55.5, -0.5, -55.5, -55.5, 0.5, -55.5, 55.5, -0.5, -
 size = Vector2(1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qlql"]
-size = Vector3(118.449, 20, 1)
+size = Vector3(156, 20, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4uv"]
 resource_name = "pavement"
@@ -253,6 +253,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -57)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, -1)
 mesh = SubResource("PlaneMesh_8f5xi")
 
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="SpawnPlatform/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, 57)
+mesh = SubResource("PlaneMesh_8f5xi")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="SpawnPlatform/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, 72.3184)
+mesh = SubResource("PlaneMesh_8f5xi")
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="SpawnPlatform/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, -15)
 mesh = SubResource("PlaneMesh_8f5xi")
@@ -293,19 +301,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.481495, -43)
 mesh = SubResource("PlaneMesh_8f5xi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnPlatform"]
-transform = Transform3D(0.791021, 0, -0.611789, 0, 1, 0, 0.611789, 0, 0.791021, -28.9629, 0, -9.7886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1874, 0, 7.42574)
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="SpawnPlatform"]
-transform = Transform3D(0.795674, 0, 0.605725, 0, 1, 0, -0.605725, 0, 0.795674, 29.0371, 0, -9.97192)
+transform = Transform3D(0.990939, 0, -0.134314, 0, 1, 0, 0.134314, 0, 0.990939, 29.0371, 0, 26.0281)
+visible = false
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="SpawnPlatform"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97135, 0, -214.672)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.803519, -0.237213, -168.656)
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.895704, 0.444651, 0, -0.444651, 0.895704, 0, 5.26042, 9.89258)
+transform = Transform3D(0.866025, -0.416466, 0.276688, 0, 0.553377, 0.832931, -0.5, -0.721339, 0.479238, 17.7308, 55.2228, 5.7014)
 
 [node name="SpawnPoint1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0, -2.71861)

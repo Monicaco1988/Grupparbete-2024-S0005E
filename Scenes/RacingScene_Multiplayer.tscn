@@ -761,7 +761,6 @@ shape = SubResource("BoxShape3D_nkf4w")
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="Lights(Grouped)" type="Node3D" parent="Lights"]
-visible = false
 
 [node name="Lights x2" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.507, 0, 948.369)
@@ -804,8 +803,50 @@ light_color = Color(1, 1, 0.627451, 1)
 light_energy = 16.0
 spot_range = 82.7753
 
+[node name="Lights x130" type="Node3D" parent="Lights/Lights(Grouped)"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.507, 0, 970.753)
+
+[node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x130"]
+transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
+
+[node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x130/light_square"]
+mesh = SubResource("ArrayMesh_0u2fg")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Lights(Grouped)/Lights x130/light_square"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x130/light_square"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
+[node name="light_square2" type="Node3D" parent="Lights/Lights(Grouped)/Lights x130"]
+transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, -16.4947, 0, 0)
+
+[node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x130/light_square2"]
+mesh = SubResource("ArrayMesh_0u2fg")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Lights(Grouped)/Lights x130/light_square2"]
+transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 16.0
+omni_range = 0.85727
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x130/light_square2"]
+transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+light_color = Color(1, 1, 0.627451, 1)
+light_energy = 16.0
+spot_range = 82.7753
+
 [node name="Lights x3" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.507, 0, 923.369)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x3"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -888,6 +929,7 @@ spot_range = 82.7753
 
 [node name="Lights x5" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.507, 0, 873.369)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x5"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -970,6 +1012,7 @@ spot_range = 82.7753
 
 [node name="Lights x7" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.507, 0, 823.882)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x7"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -1052,6 +1095,7 @@ spot_range = 82.7753
 
 [node name="Lights x9" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -810.546, 0, 795.662)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x9"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -1134,6 +1178,7 @@ spot_range = 82.7753
 
 [node name="Lights x11" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -714.708, 0, 735.599)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x11"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -1216,6 +1261,7 @@ spot_range = 82.7753
 
 [node name="Lights x13" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -665.221, 0, 735.599)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x13"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3083,6 +3129,7 @@ spot_range = 82.7753
 
 [node name="Lights x59" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -696.804, 0, 674.492)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x59"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3452,6 +3499,7 @@ spot_range = 82.7753
 
 [node name="Lights x68" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -583.594, 0, 614.351)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x68"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3492,7 +3540,7 @@ light_energy = 16.0
 spot_range = 82.7753
 
 [node name="Lights x69" type="Node3D" parent="Lights/Lights(Grouped)"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -608.594, 0, 614.351)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -608.594, 7, 614.351)
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x69"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3533,7 +3581,7 @@ light_energy = 16.0
 spot_range = 82.7753
 
 [node name="Lights x70" type="Node3D" parent="Lights/Lights(Grouped)"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -633.594, 0, 614.351)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -633.594, 13, 614.351)
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x70"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3574,7 +3622,7 @@ light_energy = 16.0
 spot_range = 82.7753
 
 [node name="Lights x71" type="Node3D" parent="Lights/Lights(Grouped)"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -658.594, 0, 614.351)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -658.594, 13, 614.351)
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x71"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3615,7 +3663,7 @@ light_energy = 16.0
 spot_range = 82.7753
 
 [node name="Lights x72" type="Node3D" parent="Lights/Lights(Grouped)"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -683.08, 0, 614.351)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -683.08, 4, 614.351)
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x72"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3739,6 +3787,7 @@ spot_range = 82.7753
 
 [node name="Lights x75" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -554.383, 0, 660.386)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x75"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3906,6 +3955,7 @@ spot_range = 82.7753
 
 [node name="Lights x80" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.535, 0, 866.449)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x80"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
