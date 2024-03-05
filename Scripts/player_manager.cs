@@ -5,6 +5,13 @@ using static System.Formats.Asn1.AsnWriter;
 
 public partial class player_manager : Node3D
 {
+    // tracking playerscore first to 3 wins
+    public int player1Score = 0;
+    public int player2Score = 0;
+    public int player3Score = 0;
+    public int player4Score = 0;
+
+
     private int Score = 0;
     public static player_manager instance {  get; private set; }
     private int lockAButton = 0;
@@ -147,7 +154,7 @@ public partial class player_manager : Node3D
                     if (player_1.Visible == false || player_2.Visible == false)
                     {
                         Score++;
-                        if (Score == 3) // next fix is score system
+                        if (Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null) // next fix is score system (added the logic if a player get to last node it triggers winning screen)
                         {
 
 
@@ -186,7 +193,7 @@ public partial class player_manager : Node3D
                     if ((player_1.Visible == false && player_2.Visible == false) || (player_3.Visible == false && player_2.Visible == false) || (player_1.Visible == false && player_3.Visible == false) ) // this works
                     {
                         Score++;
-                        if (Score == 3)
+                        if (Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
@@ -224,7 +231,7 @@ public partial class player_manager : Node3D
                     if ((player_1.Visible == false && player_2.Visible == false && player_3.Visible == false ) || (player_1.Visible == false && player_2.Visible == false && player_4.Visible == false) || (player_4.Visible == false && player_2.Visible == false && player_3.Visible == false) || (player_1.Visible == false && player_4.Visible == false && player_3.Visible == false))
                     {
                         Score++;
-                        if (Score == 3)
+                        if (Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 

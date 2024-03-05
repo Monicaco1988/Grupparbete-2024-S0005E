@@ -15387,6 +15387,10 @@ shape = SubResource("BoxShape3D_5milq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.971, 5.91552, 284.925)
 shape = SubResource("BoxShape3D_5milq")
 
+[node name="CollisionShape3D237" type="CollisionShape3D" parent="CollisionaraDestroy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.971, 5.91552, 255.918)
+shape = SubResource("BoxShape3D_5milq")
+
 [node name="Defibrillator" parent="." instance=ExtResource("22_k4dsp")]
 
 [node name="Countdown" type="Control" parent="." node_paths=PackedStringArray("timeToStart")]
