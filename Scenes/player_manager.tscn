@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=35 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 [ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
@@ -23,6 +23,40 @@ size = Vector2(1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qlql"]
 size = Vector3(156, 20, 1)
+
+[sub_resource type="Animation" id="Animation_tvven"]
+resource_name = "light_helicopter"
+length = 14.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1, 5.3, 8.2, 10, 12.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(13.677, 24.9925, -38.1893), Vector3(13.677, 20, -38.189), Vector3(19.8327, 24.9925, -78.6916), Vector3(-23.8846, 24.9925, -78.6916), Vector3(13.677, 24.9925, -38.1893), Vector3(-27.1253, 24.9925, -28.983)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.3, 4.9, 8.2),
+"transitions": PackedFloat32Array(0.933033, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 0, 0), Vector3(-1.11094, 1.5708, -1.5708), Vector3(-1.5708, 0, 0), Vector3(-1.74533, 0.349066, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0can0"]
+_data = {
+"light_helicopter": SubResource("Animation_tvven")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4uv"]
 resource_name = "pavement"
@@ -312,6 +346,18 @@ shape = SubResource("BoxShape3D_1qlql")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="SpawnPlatform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.803519, -0.237213, -168.656)
 shape = SubResource("BoxShape3D_1qlql")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpawnPlatform"]
+transform = Transform3D(0.974466, 0.0182126, 0.223796, -0.223796, 0.159625, 0.961475, -0.0182126, -0.98701, 0.159625, 13.677, 22.8433, -38.1892)
+light_energy = 200.0
+spot_range = 52.155
+spot_angle = 23.9595
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpawnPlatform/SpotLight3D"]
+libraries = {
+"": SubResource("AnimationLibrary_0can0")
+}
+autoplay = "light_helicopter"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.866025, -0.416466, 0.276689, 0, 0.553377, 0.832931, -0.5, -0.721339, 0.479238, 17.7308, 55.2228, 5.7014)
