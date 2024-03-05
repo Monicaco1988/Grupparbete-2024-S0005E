@@ -27,7 +27,7 @@ public partial class ExplosionMarker4 : Marker3D
         //instantiates the attributes and objects from playermanager
         _VirtualPlayer = GetNode<Node3D>("/root/GameManager/PlayerManager");
         // check if node exists
-        if (_VirtualPlayer.GetChildCount() > 10)
+        if (_VirtualPlayer.GetChildCount() > 11)
         {
             _player = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11);
             _body = _player.GetChild<RigidBody3D>(0);
@@ -38,7 +38,7 @@ public partial class ExplosionMarker4 : Marker3D
 
     public override void _PhysicsProcess(double delta)
     {
-        if (_VirtualPlayer.GetChildCount() > 10)//(_player.HasNode("/root/GameManager/PlayerManager/@Node3D@2")) old logic works but not if we respawn
+        if (_VirtualPlayer.GetChildCount() > 11)//(_player.HasNode("/root/GameManager/PlayerManager/@Node3D@2")) old logic works but not if we respawn
         {
             //update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
             this.GlobalPosition = this.GlobalPosition.Lerp(_body.GlobalPosition, (float)delta * 50f);
@@ -48,7 +48,7 @@ public partial class ExplosionMarker4 : Marker3D
 
     public void OnScreenExist()
     {
-        if (_VirtualPlayer.GetChildCount() > 10)//(_player.HasNode("/root/GameManager/PlayerManager/@Node3D@2"))
+        if (_VirtualPlayer.GetChildCount() > 11)//(_player.HasNode("/root/GameManager/PlayerManager/@Node3D@2"))
         {
             explosion.Emitting = true;
             GD.Print("Player exited screen");
