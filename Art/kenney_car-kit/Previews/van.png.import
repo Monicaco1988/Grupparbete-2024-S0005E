@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cam5tckrex4vc"
-path="res://.godot/imported/van.png-c16ab83383314cb891f64b4b56945fa7.ctex"
+path="res://.godot/imported/van.png-75bf99b6fb1e7c3c67bee303a846bc80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Previews/van.png"
-dest_files=["res://.godot/imported/van.png-c16ab83383314cb891f64b4b56945fa7.ctex"]
+source_file="res://Art/kenney_car-kit/Previews/van.png"
+dest_files=["res://.godot/imported/van.png-75bf99b6fb1e7c3c67bee303a846bc80.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bq385ru835o7v"
-path="res://.godot/imported/roof_overhang.dae-5bb9dd45c17fb7745ae2a813289f20ab.scn"
+path="res://.godot/imported/roof_overhang.dae-f23857b5130e1a834ad21fee566593d1.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/DAE format/roof_overhang.dae"
-dest_files=["res://.godot/imported/roof_overhang.dae-5bb9dd45c17fb7745ae2a813289f20ab.scn"]
+source_file="res://Art/KenneyCityKit/DAE format/roof_overhang.dae"
+dest_files=["res://.godot/imported/roof_overhang.dae-f23857b5130e1a834ad21fee566593d1.scn"]
 
 [params]
 

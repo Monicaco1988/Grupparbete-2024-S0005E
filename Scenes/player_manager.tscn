@@ -1,12 +1,12 @@
 [gd_scene load_steps=33 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
-[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
-[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
-[ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
-[ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
-[ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
-[ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
+[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
+[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://Art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
+[ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://Art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
+[ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://Art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
+[ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://Art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
+[ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://Art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)
@@ -758,10 +758,10 @@ offset_bottom = 2162.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 291.0
-offset_top = 1651.0
-offset_right = 1109.0
-offset_bottom = 1906.0
+offset_left = 284.0
+offset_top = 1615.0
+offset_right = 1102.0
+offset_bottom = 1870.0
 text = "HOLD            TO ACCELERATE
 
 HOLD            TO REVERSE"
@@ -769,10 +769,10 @@ label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 1310.0
-offset_top = 1651.0
-offset_right = 2096.0
-offset_bottom = 1906.0
+offset_left = 1303.0
+offset_top = 1615.0
+offset_right = 2089.0
+offset_bottom = 1870.0
 text = "STEER USING
 
 HOLD            TO DRIFT"
@@ -780,34 +780,34 @@ label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 460.0
-offset_top = 1593.0
-offset_right = 648.0
-offset_bottom = 1781.0
+offset_left = 453.0
+offset_top = 1557.0
+offset_right = 641.0
+offset_bottom = 1745.0
 texture = ExtResource("2_sfmpp")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 462.0
-offset_top = 1767.0
-offset_right = 650.0
-offset_bottom = 1955.0
+offset_left = 455.0
+offset_top = 1731.0
+offset_right = 643.0
+offset_bottom = 1919.0
 texture = ExtResource("3_bnsm7")
 
 [node name="TextureRect3" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 1691.0
-offset_top = 1593.0
-offset_right = 1879.0
-offset_bottom = 1781.0
+offset_left = 1684.0
+offset_top = 1557.0
+offset_right = 1872.0
+offset_bottom = 1745.0
 texture = ExtResource("4_o0y5g")
 
 [node name="TextureRect4" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 1483.0
-offset_top = 1767.0
-offset_right = 1671.0
-offset_bottom = 1955.0
+offset_left = 1476.0
+offset_top = 1731.0
+offset_right = 1664.0
+offset_bottom = 1919.0
 texture = ExtResource("5_fpf58")
 
 [node name="Label3" type="Label" parent="Control"]
@@ -834,10 +834,10 @@ autoplay = "Fade"
 
 [node name="Label4" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2144.0
-offset_top = 1651.0
-offset_right = 2962.0
-offset_bottom = 1906.0
+offset_left = 2137.0
+offset_top = 1615.0
+offset_right = 3054.0
+offset_bottom = 1870.0
 text = "PRESS            TO USE POWERUPS
 
 PRESS            TO JUMP"
@@ -845,25 +845,32 @@ label_settings = SubResource("LabelSettings_ki05v")
 
 [node name="TextureRect5" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 2317.0
-offset_top = 1593.0
-offset_right = 2505.0
-offset_bottom = 1781.0
+offset_left = 2310.0
+offset_top = 1557.0
+offset_right = 2498.0
+offset_bottom = 1745.0
 texture = ExtResource("6_pygoy")
 
 [node name="TextureRect6" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 2320.0
-offset_top = 1771.0
-offset_right = 2508.0
-offset_bottom = 1959.0
+offset_left = 2313.0
+offset_top = 1735.0
+offset_right = 2501.0
+offset_bottom = 1923.0
 texture = ExtResource("7_febm6")
 
 [node name="Label6" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1335.0
-offset_top = 2070.0
-offset_right = 1920.0
-offset_bottom = 2139.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_top = -159.0
+offset_right = 279.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "PRESS Y TO START GAME"
