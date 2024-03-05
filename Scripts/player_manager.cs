@@ -156,7 +156,7 @@ public partial class player_manager : Node3D
                             this.QueueFree();
                             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                         }
-                        var offset = new Vector3(5, 0, 0);
+                        var offset = new Vector3(10, 0, 0);
 
                         foreach (var ambulance in ambulances)
                         {
@@ -193,7 +193,7 @@ public partial class player_manager : Node3D
                             this.QueueFree();
                             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                         }
-                        var offset = new Vector3(5, 0, 0);
+                        var offset = new Vector3(7.5f, 0, 0);
 
                         foreach (var ambulance in ambulances)
                         {
@@ -231,7 +231,7 @@ public partial class player_manager : Node3D
                             this.QueueFree();
                             _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
                         }
-                        var offset = new Vector3(5, 0, 0);
+                        var offset = new Vector3(7.5f, 0, 0);
 
                         foreach (var ambulance in ambulances)
                         {
