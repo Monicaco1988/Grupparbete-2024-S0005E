@@ -769,7 +769,7 @@ mesh = SubResource("ArrayMesh_4hcrp")
 skeleton = NodePath("")
 
 [node name="DropPoint" type="Node3D" parent="CarMesh/ambulance"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679478, 2.90478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.261, 2.1)
 
 [node name="Smoke" type="Node3D" parent="CarMesh/ambulance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.88237)

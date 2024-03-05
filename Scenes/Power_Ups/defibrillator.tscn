@@ -1,14 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://x53335hqnfrx"]
+[gd_scene load_steps=7 format=3 uid="uid://x53335hqnfrx"]
 
 [ext_resource type="Script" path="res://Scripts/Power_up_Script/defibrillator.cs" id="1_rp6u7"]
+[ext_resource type="PackedScene" uid="uid://v1sj2k6xvw0f" path="res://Art/GLB format (conveyor)/box-small.glb" id="2_7muiv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ndck"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbl76"]
-albedo_color = Color(0.937255, 0.207843, 0.188235, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_3e16p"]
-material = SubResource("StandardMaterial3D_cbl76")
 
 [sub_resource type="Animation" id="Animation_vshxk"]
 length = 0.001
@@ -37,7 +32,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.801238, -0.909709), Vector3(0, 0, -2.64744)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.801, 0.91), Vector3(0, 0, 2.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1rywu"]
@@ -47,6 +42,7 @@ _data = {
 }
 
 [node name="Defibrillator" type="Node3D"]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("1_rp6u7")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -56,8 +52,8 @@ script = ExtResource("1_rp6u7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/Area3D"]
 shape = SubResource("BoxShape3D_6ndck")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot/Area3D/CollisionShape3D"]
-mesh = SubResource("BoxMesh_3e16p")
+[node name="box-small2" parent="Pivot/Area3D/CollisionShape3D" instance=ExtResource("2_7muiv")]
+transform = Transform3D(1.935, 0, 0, 0, 1.935, 0, 0, 0, 1.935, 0, -0.485665, 0)
 
 [node name="Timer" type="Timer" parent="."]
 
