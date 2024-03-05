@@ -15926,7 +15926,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15935,7 +15935,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15944,7 +15944,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15953,7 +15953,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15962,7 +15962,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15971,7 +15971,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15980,7 +15980,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15989,7 +15989,7 @@ transform = Transform3D(1.21942, 0, -14.9504, 0, 15, 0, 14.9504, 0, 1.21942, -84
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -15998,7 +15998,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16007,7 +16007,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16016,7 +16016,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16025,7 +16025,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16034,7 +16034,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16043,7 +16043,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light2/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16059,7 +16059,7 @@ transform = Transform3D(-14.9504, 0, -1.21942, 0, 15, 0, 1.21942, 0, -14.9504, -
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16068,7 +16068,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16077,7 +16077,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16086,7 +16086,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16095,7 +16095,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16104,7 +16104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16113,7 +16113,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light3/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16129,7 +16129,7 @@ transform = Transform3D(14.9922, 0, 0.485809, 0, 15, 0, -0.485809, 0, 14.9922, -
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16138,7 +16138,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16147,7 +16147,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16156,7 +16156,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16165,7 +16165,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16174,7 +16174,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16183,7 +16183,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light4/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16199,7 +16199,7 @@ transform = Transform3D(14.9922, 0, 0.485809, 0, 15, 0, -0.485809, 0, 14.9922, -
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16208,7 +16208,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16217,7 +16217,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16226,7 +16226,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16235,7 +16235,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16244,7 +16244,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16253,7 +16253,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light5/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16269,7 +16269,7 @@ transform = Transform3D(14.9922, 0, 0.485809, 0, 15, 0, -0.485809, 0, 14.9922, -
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16278,7 +16278,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16287,7 +16287,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16296,7 +16296,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16305,7 +16305,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16314,7 +16314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16323,7 +16323,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light6/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16346,7 +16346,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16355,7 +16355,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16364,7 +16364,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16373,7 +16373,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16382,7 +16382,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16391,7 +16391,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16400,7 +16400,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light7/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16416,7 +16416,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16425,7 +16425,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16434,7 +16434,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16443,7 +16443,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16452,7 +16452,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16461,7 +16461,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16470,7 +16470,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light8/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16486,7 +16486,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16495,7 +16495,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16504,7 +16504,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16513,7 +16513,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16522,7 +16522,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16531,7 +16531,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16540,7 +16540,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light10/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16556,7 +16556,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16565,7 +16565,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16574,7 +16574,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16583,7 +16583,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16592,7 +16592,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16601,7 +16601,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16610,7 +16610,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light11/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16626,7 +16626,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16635,7 +16635,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16644,7 +16644,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16653,7 +16653,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16662,7 +16662,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16671,7 +16671,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16680,7 +16680,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light12/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16696,7 +16696,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16705,7 +16705,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16714,7 +16714,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16723,7 +16723,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16732,7 +16732,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16741,7 +16741,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16750,7 +16750,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light13/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16766,7 +16766,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16775,7 +16775,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16784,7 +16784,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16793,7 +16793,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16802,7 +16802,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16811,7 +16811,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16820,7 +16820,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light14/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16836,7 +16836,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16845,7 +16845,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16854,7 +16854,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16863,7 +16863,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16872,7 +16872,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16881,7 +16881,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16890,7 +16890,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light15/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16906,7 +16906,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16915,7 +16915,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16924,7 +16924,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16933,7 +16933,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16942,7 +16942,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16951,7 +16951,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16960,7 +16960,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light16/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16976,7 +16976,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16985,7 +16985,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -16994,7 +16994,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17003,7 +17003,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17012,7 +17012,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17021,7 +17021,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17030,7 +17030,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light17/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17046,7 +17046,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17055,7 +17055,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17064,7 +17064,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17073,7 +17073,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17082,7 +17082,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17091,7 +17091,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17100,7 +17100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light18/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17116,7 +17116,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17125,7 +17125,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17134,7 +17134,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17143,7 +17143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17152,7 +17152,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17161,7 +17161,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17170,7 +17170,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light19/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17186,7 +17186,7 @@ shape = SubResource("BoxShape3D_v4ght")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17195,7 +17195,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107805, 0, -0.13217)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light2"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17204,7 +17204,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021543, 0, -0.264121)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light3"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17213,7 +17213,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033635, 0, -0.412372)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light4"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17222,7 +17222,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432342, 0, -0.530059)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light5"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17231,7 +17231,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00892901, 0, 0.109471)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light6"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 
@@ -17240,7 +17240,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0203154, 0, 0.249071)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Obstacles2/construction_light20/construction_light7"]
 transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0235521, 0.22082, -0.00312334)
-light_color = Color(1, 1, 0.54902, 1)
+light_color = Color(1, 1, 0.721569, 1)
 light_energy = 16.0
 omni_range = 5.49385
 

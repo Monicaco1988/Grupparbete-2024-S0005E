@@ -11,6 +11,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051, -1.10996, 0)
 size = Vector3(0.397339, 2, 0.5)
 texture_albedo = ExtResource("1_xkjmi")
 texture_normal = ExtResource("1_xkjmi")
+modulate = Color(0, 0, 0, 1)
 distance_fade_begin = 350.5
 distance_fade_length = 4096.0
 
