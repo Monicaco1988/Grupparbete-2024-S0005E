@@ -12,7 +12,7 @@ public partial class player_manager : Node3D
     public int player4Score = 0;
 
 
-    private int Score = 0;
+    public int Score = 0;
     public static player_manager instance {  get; private set; }
     private int lockAButton = 0;
 
@@ -154,7 +154,10 @@ public partial class player_manager : Node3D
                     if (player_1.Visible == false || player_2.Visible == false)
                     {
                         Score++;
-                        if (Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null) // next fix is score system (added the logic if a player get to last node it triggers winning screen)
+                        //if (player_1.Visible == true) player1Score++;
+                        //else if (player_2.Visible == true) player2Score++;
+
+                        if (Score == 3)// player2Score == 3 || player1Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null) // next fix is score system (added the logic if a player get to last node it triggers winning screen)
                         {
 
 
@@ -193,7 +196,7 @@ public partial class player_manager : Node3D
                     if ((player_1.Visible == false && player_2.Visible == false) || (player_3.Visible == false && player_2.Visible == false) || (player_1.Visible == false && player_3.Visible == false) ) // this works
                     {
                         Score++;
-                        if (Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
+                        if (Score == 3)// || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 

@@ -861,9 +861,9 @@ texture = ExtResource("7_febm6")
 
 [node name="Label6" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2676.0
+offset_left = 1335.0
 offset_top = 2070.0
-offset_right = 3261.0
+offset_right = 1920.0
 offset_bottom = 2139.0
 theme_override_font_sizes/font_size = 50
 text = "PRESS Y TO START GAME"

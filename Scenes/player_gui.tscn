@@ -58,7 +58,7 @@ offset_left = 68.0
 offset_top = 153.0
 offset_right = 255.0
 offset_bottom = 208.0
-text = "POSITION"
+text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle1" type="ReferenceRect" parent="Player1"]
@@ -111,7 +111,7 @@ offset_left = 3018.0
 offset_top = 157.0
 offset_right = 3205.0
 offset_bottom = 212.0
-text = "POSITION"
+text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle2" type="ReferenceRect" parent="Player2"]

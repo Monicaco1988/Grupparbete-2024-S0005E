@@ -8,6 +8,8 @@ public partial class player_gui : Control
     Control Player4;
     int nrp;
 
+    public Label scoreText;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -15,6 +17,10 @@ public partial class player_gui : Control
         Player2 = GetNode<Control>("Player2");
         Player3 = GetNode<Control>("Player3");
         Player4 = GetNode<Control>("Player4");
+
+        scoreText = (Label)GetNode("Player1/Player1/Position1");
+        Control score = GetNode<Control>("/root/GameManager/PlayerManager");
+        //scoreText.Text = "WINS: " + score.Score()
 
         hidePlayers();
     }
