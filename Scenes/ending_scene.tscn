@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bagj7asfgw3b"]
 
-[ext_resource type="Texture2D" uid="uid://b47omqybg8mxe" path="res://art/Storyart/5.png" id="1_04ywa"]
+[ext_resource type="Texture2D" uid="uid://b47omqybg8mxe" path="res://Art/Storyart/5.png" id="1_04ywa"]
 [ext_resource type="Script" path="res://Scripts/EndingScen.cs" id="1_r3jec"]
-[ext_resource type="FontFile" uid="uid://ccii14eo2t1mn" path="res://art/yoster-island/yoster.ttf" id="3_gnjxu"]
+[ext_resource type="FontFile" uid="uid://ccii14eo2t1mn" path="res://Art/yoster-island/yoster.ttf" id="3_gnjxu"]
 
 [node name="EndingScen" type="Control"]
 layout_mode = 3

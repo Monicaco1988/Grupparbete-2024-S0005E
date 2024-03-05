@@ -314,7 +314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.803519, -0.237213, -168.65
 shape = SubResource("BoxShape3D_1qlql")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.866025, -0.416466, 0.276688, 0, 0.553377, 0.832931, -0.5, -0.721339, 0.479238, 17.7308, 55.2228, 5.7014)
+transform = Transform3D(0.866025, -0.416466, 0.276689, 0, 0.553377, 0.832931, -0.5, -0.721339, 0.479238, 17.7308, 55.2228, 5.7014)
 
 [node name="SpawnPoint1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0, -2.71861)
@@ -742,6 +742,7 @@ shape = SubResource("ConvexPolygonShape3D_k08rn")
 environment = SubResource("Environment_211gl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0429742, -0.999076, 0, 0.999076, 0.0429742, 0, 0, 0)
 light_energy = 0.5
 shadow_enabled = true
 shadow_opacity = 0.5
