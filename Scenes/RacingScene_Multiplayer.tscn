@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=52 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://crmrar48pn4q6" path="res://Scenes/Tiles/NoRefl4.tres" id="1_0qgax"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
 [ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
 [ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="26_55yi6"]
+[ext_resource type="AudioStream" uid="uid://clramhkby8gd" path="res://Audio/helicopter-129052.mp3" id="28_50aq8"]
 [ext_resource type="Script" path="res://Scripts/Countdown.cs" id="29_d68i3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
@@ -1472,6 +1473,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -570.1
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x18"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
+visible = false
 
 [node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x18/light_square"]
 mesh = SubResource("ArrayMesh_0u2fg")
@@ -2043,6 +2045,7 @@ spot_range = 82.7753
 
 [node name="Lights x32" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -414.767, 0, 645.576)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x32"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -2058,7 +2061,7 @@ light_energy = 16.0
 omni_range = 0.85727
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x32/light_square"]
-transform = Transform3D(0.0249999, 6.83497e-05, 3.86968e-05, -3.88257e-05, 4.71379e-05, 0.0249999, 6.82765e-05, -0.0249999, 4.72438e-05, 1.49012e-08, 0.562978, -0.186929)
+transform = Transform3D(0.0333332, 9.11328e-05, 5.15956e-05, -5.17676e-05, 6.28504e-05, 0.0333332, 9.10352e-05, -0.0333331, 6.29917e-05, 0, 0.562978, -0.18693)
 light_color = Color(1, 1, 0.627451, 1)
 light_energy = 16.0
 spot_range = 82.7753
@@ -2084,6 +2087,7 @@ spot_range = 82.7753
 
 [node name="Lights x33" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -390.28, 0, 645.576)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x33"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -2125,6 +2129,7 @@ spot_range = 82.7753
 
 [node name="Lights x34" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -365.28, 0, 645.576)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x34"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -2166,6 +2171,7 @@ spot_range = 82.7753
 
 [node name="Lights x35" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.505, 0, 625.492)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x35"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3746,6 +3752,7 @@ spot_range = 82.7753
 
 [node name="Lights x74" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -554.383, 0, 685.386)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x74"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3768,6 +3775,7 @@ spot_range = 82.7753
 
 [node name="light_square2" type="Node3D" parent="Lights/Lights(Grouped)/Lights x74"]
 transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, -16.4947, 0, 0)
+visible = false
 
 [node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x74/light_square2"]
 mesh = SubResource("ArrayMesh_0u2fg")
@@ -3787,6 +3795,7 @@ spot_range = 82.7753
 
 [node name="Lights x75" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -554.383, 0, 660.386)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x75"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3828,6 +3837,7 @@ spot_range = 82.7753
 
 [node name="Lights x76" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -554.383, 0, 635.386)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x76"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3869,6 +3879,7 @@ spot_range = 82.7753
 
 [node name="Lights x77" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -585.409, 0, 734.5)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x77"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3891,6 +3902,7 @@ spot_range = 82.7753
 
 [node name="light_square2" type="Node3D" parent="Lights/Lights(Grouped)/Lights x77"]
 transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, -16.4947, 0, 0)
+visible = false
 
 [node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x77/light_square2"]
 mesh = SubResource("ArrayMesh_0u2fg")
@@ -3910,6 +3922,7 @@ spot_range = 82.7753
 
 [node name="Lights x78" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -610.409, 0, 734.5)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x78"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3976,6 +3989,7 @@ spot_range = 82.7753
 
 [node name="Lights x81" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.535, 0, 841.449)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x81"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -3998,6 +4012,7 @@ spot_range = 82.7753
 
 [node name="Lights x82" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.535, 0, 816.449)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x82"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -4102,6 +4117,7 @@ spot_range = 82.7753
 
 [node name="Lights x85" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -435.519, 0, 619.553)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x85"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -4124,6 +4140,7 @@ spot_range = 82.7753
 
 [node name="Lights x86" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -765.68, 0, 817.073)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x86"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -4134,6 +4151,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights/Lights(Grouped)/Lights x86/light_square"]
 transform = Transform3D(0.025, 0, 1.11022e-16, 0, 0.025, 0, -1.11022e-16, 0, 0.025, 0, 0.562978, -0.186929)
+visible = false
 light_color = Color(1, 1, 0.294118, 1)
 light_energy = 16.0
 omni_range = 0.85727
@@ -4146,6 +4164,7 @@ spot_range = 82.7753
 
 [node name="Lights x87" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -765.68, 0, 842.073)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x87"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -4168,6 +4187,7 @@ spot_range = 82.7753
 
 [node name="Lights x88" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -765.68, 0, 867.073)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x88"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -4190,6 +4210,7 @@ spot_range = 82.7753
 
 [node name="Lights x89" type="Node3D" parent="Lights/Lights(Grouped)"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -800.064, 0, 495.492)
+visible = false
 
 [node name="light_square" type="Node3D" parent="Lights/Lights(Grouped)/Lights x89"]
 transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 15.3964, 0, 0)
@@ -14724,6 +14745,14 @@ transform = Transform3D(0.781311, 0.616796, 0.0954786, -0.615586, 0.786773, -0.0
 light_energy = 400.0
 spot_range = 90.0
 spot_angle = 12.6202
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Follow_Camera/CameraPole1/CameraPole2/CameraPole3/Camera3D/SpotLight3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Follow_Camera/CameraPole1/CameraPole2/CameraPole3/Camera3D/SpotLight3D"]
+transform = Transform3D(1, 0, -2.23517e-08, 0, 1, -1.49012e-08, -5.58794e-09, 0, 1, 2.6226e-06, -3.00001, -1.99998)
+stream = ExtResource("28_50aq8")
+volume_db = -3.0
+autoplay = true
 
 [node name="CollisionaraDestroy" type="Area3D" parent="."]
 collision_layer = 2
