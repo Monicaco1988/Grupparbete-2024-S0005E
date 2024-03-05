@@ -69,6 +69,10 @@ public partial class player_manager : Node3D
             ambulance.GlobalPosition = Spawnpoints[ambulance.id].GlobalPosition;
             ambulance.carMesh.Rotation = Vector3.Zero;
             ambulance.LinearVelocity = Vector3.Zero;
+
+            ambulance.pwrUpDefib = 1;
+            ambulance.pwrUpSpeed = 1;
+            ambulance.pwrUpSwitch = 1;
         }
     }
 
@@ -125,7 +129,7 @@ public partial class player_manager : Node3D
             }
 
             // same as pushing start with the mouse on the button but its the A-button on the x-box controller instead
-            if (Input.IsJoyButtonPressed(controller, JoyButton.Y) && numberOfPlayers >= 0 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
+            if (Input.IsJoyButtonPressed(controller, JoyButton.Y) && numberOfPlayers >= 2 && lockAButton == 0) // if you want to change amount of players necessary to start game change >= 2.
             {
                 //Moved location of spawnLocation so that the cars are visible when spawned in map
                 moveToSpawnLocation();
@@ -176,6 +180,10 @@ public partial class player_manager : Node3D
              //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
                             ambulance.carMesh.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             offset += new Vector3(-5, 0, 0);
+
+                            ambulance.pwrUpDefib = 1;
+                            ambulance.pwrUpSpeed = 1;
+                            ambulance.pwrUpSwitch = 1;
                         }
                         Visibility();
 

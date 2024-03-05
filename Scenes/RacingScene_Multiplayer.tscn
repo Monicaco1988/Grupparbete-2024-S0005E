@@ -14496,7 +14496,6 @@ transform = Transform3D(-2.71011e-08, 0, -0.62, 0, 0.62, 0, 0.62, 0, -2.71011e-0
 [node name="tmpParent" type="Node3D" parent="Buildings/sign_hospital2"]
 
 [node name="sign_hospital" type="MeshInstance3D" parent="Buildings/sign_hospital2/tmpParent"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1xa2s")
 skeleton = NodePath("")
 
@@ -14913,22 +14912,22 @@ light_color = Color(1, 1, 0.294118, 1)
 light_energy = 7.0
 
 [node name="OmniLight3D68" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.073, 0.1, 12.3256)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.923, 0.1, 12.4256)
 light_color = Color(1, 1, 0.294118, 1)
 light_energy = 200.0
 omni_range = 12.0
 
 [node name="OmniLight3D69" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.523, 0.1, 12.3756)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 2.473, 0.1, 12.3756)
 light_color = Color(1, 1, 0.294118, 1)
 light_energy = 200.0
 omni_range = 12.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Buildings/MoreLightsBuildings/OmniLight3D69"]
-transform = Transform3D(1, 0, 0, 0, -0.454239, 0.89088, 0, -0.89088, -0.454239, -4, 8.9838, -0.434692)
+transform = Transform3D(1, 0, 0, 0, -0.669338, 0.742958, 0, -0.742958, -0.669338, -4, 11.2127, -2.44269)
 light_color = Color(1, 1, 0, 1)
 light_energy = 200.0
-spot_range = 50.0
+spot_range = 54.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Buildings/MoreLightsBuildings/OmniLight3D69"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7748, 28.5434, 5)

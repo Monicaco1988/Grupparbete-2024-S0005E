@@ -66,9 +66,9 @@ public partial class betterCar : RigidBody3D
 	//POWER UPS
 	PackedScene defib;
 
-    int pwrUpSpeed = 1;
-    int pwrUpDefib = 1;
-    int pwrUpSwitch = 1;
+    public int pwrUpSpeed = 1;
+    public int pwrUpDefib = 1;
+    public int pwrUpSwitch = 1;
 
 
     float acceleration = 3000;
@@ -323,8 +323,8 @@ public partial class betterCar : RigidBody3D
                 await ToSignal(GetTree().CreateTimer(0.5f), SceneTreeTimer.SignalName.Timeout);
                 powerUp = PowerUp.SWITCHAROO;
             }
-			else if (pwrUpSpeed == 0 && pwrUpDefib == 0 && pwrUpSwitch == 0)
-			{ }
+			else if (pwrUpSpeed == 1 && pwrUpDefib == 1 && pwrUpSwitch == 1)
+			{ powerUp = PowerUp.SPEED_BOOST; }
         }
 		//GD.Print(carMesh.Position);
 
@@ -422,7 +422,7 @@ public partial class betterCar : RigidBody3D
 		{
 			lights.Visible = false;
 			onoff--;
-		}
+        }
 
 		//else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
 		else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
