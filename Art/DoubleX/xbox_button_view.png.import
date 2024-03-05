@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvsen4m4nt1tg"
-path="res://.godot/imported/xbox_button_view.png-2f8a97a7a83b2f87ad83a70ac52592ec.ctex"
+path="res://.godot/imported/xbox_button_view.png-16539f21f57a87c3c9cd127073e8d313.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/DoubleX/xbox_button_view.png"
-dest_files=["res://.godot/imported/xbox_button_view.png-2f8a97a7a83b2f87ad83a70ac52592ec.ctex"]
+source_file="res://art/DoubleX/xbox_button_view.png"
+dest_files=["res://.godot/imported/xbox_button_view.png-16539f21f57a87c3c9cd127073e8d313.ctex"]
 
 [params]
 

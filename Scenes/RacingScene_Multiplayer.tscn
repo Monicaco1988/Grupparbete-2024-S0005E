@@ -7,28 +7,28 @@
 [ext_resource type="Script" path="res://Scripts/CameraPole3.cs" id="5_jmusw"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test2.cs" id="5_r10hf"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker3.cs" id="6_koyp3"]
-[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
-[ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://Art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
+[ext_resource type="PackedScene" uid="uid://cv2pmmdufi8b4" path="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_pylon.dae" id="6_t4rp4"]
+[ext_resource type="PackedScene" uid="uid://b6friulxruw7g" path="res://art/KenneyCityKit/GLTF format/skyscraperD.glb" id="7_42jhh"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test3.cs" id="7_ylwtf"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker4.cs" id="8_dd2ha"]
-[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://Art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
+[ext_resource type="PackedScene" uid="uid://o7uispmcbg4v" path="res://art/KenneyCityKit/GLTF format/skyscraperE.glb" id="8_vnulb"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test4.cs" id="9_26eae"]
-[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://Art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
-[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://Art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
-[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://Art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
-[ext_resource type="PackedScene" uid="uid://u1a8p1xl7mhr" path="res://Art/KenneyCityKit/GLTF format/large_buildingD.glb" id="12_jfejh"]
-[ext_resource type="PackedScene" uid="uid://b0b6tm6xyni0u" path="res://Art/KenneyCityKit/GLTF format/large_buildingE.glb" id="13_qmq4y"]
-[ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://Art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
-[ext_resource type="PackedScene" uid="uid://dloek8k1vmean" path="res://Art/KenneyCityKit/GLTF format/small_buildingD.glb" id="15_udt6a"]
-[ext_resource type="PackedScene" uid="uid://que0va60dcy" path="res://Art/KenneyCityKit/GLTF format/small_buildingE.glb" id="16_3fc1x"]
+[ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
+[ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
+[ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
+[ext_resource type="PackedScene" uid="uid://u1a8p1xl7mhr" path="res://art/KenneyCityKit/GLTF format/large_buildingD.glb" id="12_jfejh"]
+[ext_resource type="PackedScene" uid="uid://b0b6tm6xyni0u" path="res://art/KenneyCityKit/GLTF format/large_buildingE.glb" id="13_qmq4y"]
+[ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
+[ext_resource type="PackedScene" uid="uid://dloek8k1vmean" path="res://art/KenneyCityKit/GLTF format/small_buildingD.glb" id="15_udt6a"]
+[ext_resource type="PackedScene" uid="uid://que0va60dcy" path="res://art/KenneyCityKit/GLTF format/small_buildingE.glb" id="16_3fc1x"]
 [ext_resource type="Script" path="res://Scripts/Follow_Camera.cs" id="16_71xdf"]
-[ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://Art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
-[ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://Art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
-[ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://Art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
+[ext_resource type="PackedScene" uid="uid://ccoxhyt5qjesc" path="res://art/KenneyCityKit/GLTF format/small_buildingB.glb" id="17_fb1vp"]
+[ext_resource type="PackedScene" uid="uid://bi4j0wjv6adih" path="res://art/KenneyCityKit/GLTF format/large_buildingG.glb" id="18_4l88f"]
+[ext_resource type="PackedScene" uid="uid://6luiastx664u" path="res://art/KenneyCityKit/GLTF format/sign_hospital.glb" id="19_dsvwl"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/ExplosionMarker.cs" id="20_rhcxc"]
 [ext_resource type="Script" path="res://Scripts/ExplosionScripts/Test.cs" id="21_unkyi"]
 [ext_resource type="PackedScene" uid="uid://x53335hqnfrx" path="res://Scenes/Power_Ups/defibrillator.tscn" id="22_k4dsp"]
-[ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="26_55yi6"]
+[ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="26_55yi6"]
 [ext_resource type="Script" path="res://Scripts/Countdown.cs" id="29_d68i3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2srti"]
@@ -295,16 +295,6 @@ visible = false
 mesh = SubResource("CylinderMesh_gms06")
 skeleton = NodePath("../../ExplosionMarker")
 
-[node name="ExplosionMarker4" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
-script = ExtResource("8_dd2ha")
-explosion = NodePath("../Test4/CPUParticles3D")
-
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker4"]
-process_mode = 3
-enable_mode = 1
-enable_node_path = NodePath("")
-
 [node name="Test4" type="Marker3D" parent="Spawn1_Explosion"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
 script = ExtResource("9_26eae")
@@ -329,6 +319,16 @@ scale_amount_max = 1.5
 visible = false
 mesh = SubResource("CylinderMesh_gms06")
 skeleton = NodePath("../../ExplosionMarker")
+
+[node name="ExplosionMarker4" type="Marker3D" parent="Spawn1_Explosion" node_paths=PackedStringArray("explosion")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 853.628, -0.97422, -943.842)
+script = ExtResource("8_dd2ha")
+explosion = NodePath("../Test4/CPUParticles3D")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Spawn1_Explosion/ExplosionMarker4"]
+process_mode = 3
+enable_mode = 1
+enable_node_path = NodePath("")
 
 [node name="Obstacles" type="Node3D" parent="."]
 transform = Transform3D(29, 0, 0, 0, 29, 0, 0, 0, 29, 0, 0, 0)

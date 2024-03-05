@@ -19,7 +19,7 @@ public partial class Test2 : Marker3D
         //instantiates the attributes and objects from playermanager
         _VirtualPlayer = GetNode<Node3D>("/root/GameManager/PlayerManager");
         // check if node exists
-        if (_VirtualPlayer.GetChildCount() > 9)
+        if (_VirtualPlayer.GetChildCount() > 8)
         {
             _player = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
             _body = _player.GetChild<RigidBody3D>(0);
@@ -34,7 +34,7 @@ public partial class Test2 : Marker3D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _PhysicsProcess(double delta)
     {
-        if (_VirtualPlayer.GetChildCount() > 9)
+        if (_VirtualPlayer.GetChildCount() > 8)
         {
             //update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
             this.GlobalPosition = this.GlobalPosition.Lerp(_body.GlobalPosition, (float)delta * 30f);

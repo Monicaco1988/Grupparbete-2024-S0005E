@@ -139,7 +139,7 @@ public partial class player_manager : Node3D
             //trying to add simple function to reset players if a player is hidden
             if (lockAButton > 0)
             {
-                if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 10)// if there are 2 player
+                if (numberOfPlayers == 2)// if there are 2 player
                 {
                     var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
                     var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
@@ -177,7 +177,7 @@ public partial class player_manager : Node3D
                         }
                     }
                 }
-                else if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 11) // if there are 3 player
+                else if (numberOfPlayers == 3) // if there are 3 player
                 {
                     var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
                     var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
@@ -214,7 +214,7 @@ public partial class player_manager : Node3D
                         }
                     }
                 }
-                else if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() == 12) // if there are 4 player
+                else if (numberOfPlayers == 4) // if there are 4 player
                 {
                     var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
                     var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
@@ -262,11 +262,11 @@ public partial class player_manager : Node3D
         GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Visible = true;
         GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9).Visible = true;
 
-        if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() > 10)
+        if (numberOfPlayers > 2)
         {
             GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10).Visible = true;
         }
-        if (GetNode<Node3D>("/root/GameManager/PlayerManager").GetChildCount() > 11)
+        if (numberOfPlayers > 3)
         {
             GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11).Visible = true;
         }

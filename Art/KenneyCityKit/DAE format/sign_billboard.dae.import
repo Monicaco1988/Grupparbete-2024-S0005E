@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3jhyvaxhfn0b"
-path="res://.godot/imported/sign_billboard.dae-fe3400c16e99dd347767fee0ea4a10af.scn"
+path="res://.godot/imported/sign_billboard.dae-819d33e76315042ae497491f43a2c96e.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/DAE format/sign_billboard.dae"
-dest_files=["res://.godot/imported/sign_billboard.dae-fe3400c16e99dd347767fee0ea4a10af.scn"]
+source_file="res://art/KenneyCityKit/DAE format/sign_billboard.dae"
+dest_files=["res://.godot/imported/sign_billboard.dae-819d33e76315042ae497491f43a2c96e.scn"]
 
 [params]
 

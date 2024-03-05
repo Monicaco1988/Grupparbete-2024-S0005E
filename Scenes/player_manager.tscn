@@ -1,12 +1,12 @@
 [gd_scene load_steps=33 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
-[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://Art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
-[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://Art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
-[ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://Art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
-[ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://Art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
-[ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://Art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
-[ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://Art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
+[ext_resource type="Texture2D" uid="uid://8ptjtugucghe" path="res://art/Double/playstation_trigger_r2_alternative.png" id="2_sfmpp"]
+[ext_resource type="Texture2D" uid="uid://bji0vctes60qu" path="res://art/Double/playstation_trigger_l2_alternative.png" id="3_bnsm7"]
+[ext_resource type="Texture2D" uid="uid://blqpa14rs362a" path="res://art/Double/playstation_stick_l_horizontal.png" id="4_o0y5g"]
+[ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
+[ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
+[ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)

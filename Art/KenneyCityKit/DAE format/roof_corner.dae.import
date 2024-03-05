@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvr10eo0acyaq"
-path="res://.godot/imported/roof_corner.dae-23347efdb74f5337c2b709b0223ed1e5.scn"
+path="res://.godot/imported/roof_corner.dae-6ac97d7e1be71fc523f10cc3c1116032.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/DAE format/roof_corner.dae"
-dest_files=["res://.godot/imported/roof_corner.dae-23347efdb74f5337c2b709b0223ed1e5.scn"]
+source_file="res://art/KenneyCityKit/DAE format/roof_corner.dae"
+dest_files=["res://.godot/imported/roof_corner.dae-6ac97d7e1be71fc523f10cc3c1116032.scn"]
 
 [params]
 

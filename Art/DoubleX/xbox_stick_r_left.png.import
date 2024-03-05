@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp0jtbkoujfnr"
-path="res://.godot/imported/xbox_stick_r_left.png-715704882d2a1d2cea2dd80b2c3ef459.ctex"
+path="res://.godot/imported/xbox_stick_r_left.png-e683b160c0665a1ee0bebb9dbbf3155a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/DoubleX/xbox_stick_r_left.png"
-dest_files=["res://.godot/imported/xbox_stick_r_left.png-715704882d2a1d2cea2dd80b2c3ef459.ctex"]
+source_file="res://art/DoubleX/xbox_stick_r_left.png"
+dest_files=["res://.godot/imported/xbox_stick_r_left.png-e683b160c0665a1ee0bebb9dbbf3155a.ctex"]
 
 [params]
 
