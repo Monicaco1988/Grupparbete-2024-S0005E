@@ -1,15 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx8b3n6w0yud2"]
+[gd_scene load_steps=4 format=3 uid="uid://bx8b3n6w0yud2"]
 
 [ext_resource type="Script" path="res://Scripts/MenuManager.cs" id="1_brujs"]
 [ext_resource type="Texture2D" uid="uid://csv71w0kdv1e1" path="res://art/Storyart/4.png" id="2_xmxy5"]
-
-[sub_resource type="SystemFont" id="SystemFont_2tpmv"]
-font_names = PackedStringArray("Chiller")
-subpixel_positioning = 0
-
-[sub_resource type="SystemFont" id="SystemFont_cgk8v"]
-font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://ccii14eo2t1mn" path="res://art/yoster-island/yoster.ttf" id="3_1bdxr"]
 
 [node name="MenuManager" type="Control"]
 layout_mode = 3
@@ -26,10 +19,10 @@ texture = ExtResource("2_xmxy5")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -451.0
-offset_top = 675.0
-offset_right = 3674.0
-offset_bottom = 2450.0
+offset_left = -439.0
+offset_top = 848.0
+offset_right = 3686.0
+offset_bottom = 2623.0
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -50,8 +43,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 18
 theme_override_constants/shadow_offset_y = 18
 theme_override_constants/outline_size = 24
-theme_override_fonts/font = SubResource("SystemFont_2tpmv")
-theme_override_font_sizes/font_size = 350
+theme_override_fonts/font = ExtResource("3_1bdxr")
+theme_override_font_sizes/font_size = 315
 text = "Saving Grandma!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -73,8 +66,8 @@ theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
-theme_override_fonts/font = SubResource("SystemFont_cgk8v")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("3_1bdxr")
+theme_override_font_sizes/font_size = 160
 text = "START GAME"
 flat = true
 
@@ -88,8 +81,8 @@ theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
-theme_override_fonts/font = SubResource("SystemFont_cgk8v")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("3_1bdxr")
+theme_override_font_sizes/font_size = 160
 text = "QUIT"
 flat = true
 
