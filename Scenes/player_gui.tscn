@@ -15,6 +15,7 @@ material = SubResource("StandardMaterial3D_16x5l")
 font_size = 40
 
 [node name="Player_GUI" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -165,7 +166,7 @@ offset_left = 3033.0
 offset_top = 1990.0
 offset_right = 3220.0
 offset_bottom = 2045.0
-text = "POSITION"
+text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle3" type="ReferenceRect" parent="Player3"]
@@ -218,7 +219,7 @@ offset_left = 75.0
 offset_top = 1997.0
 offset_right = 262.0
 offset_bottom = 2052.0
-text = "POSITION"
+text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle4" type="ReferenceRect" parent="Player4"]

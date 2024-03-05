@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bagj7asfgw3b"]
 
-[ext_resource type="Texture2D" uid="uid://b47omqybg8mxe" path="res://Art/Storyart/5.png" id="1_04ywa"]
+[ext_resource type="Texture2D" uid="uid://b47omqybg8mxe" path="res://art/Storyart/5.png" id="1_04ywa"]
 [ext_resource type="Script" path="res://Scripts/EndingScen.cs" id="1_r3jec"]
 
 [sub_resource type="SystemFont" id="SystemFont_im0pw"]
@@ -34,6 +34,12 @@ theme_override_constants/outline_size = 14
 theme_override_fonts/font = SubResource("SystemFont_im0pw")
 theme_override_font_sizes/font_size = 200
 text = "Congrats! You saved a granny!"
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Contgrats! You saved a granny!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
