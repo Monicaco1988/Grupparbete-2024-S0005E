@@ -15473,6 +15473,7 @@ wait_time = 1.5
 one_shot = true
 
 [node name="BuildingLights" type="Node3D" parent="."]
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="BuildingLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -875.825, 28, 836)

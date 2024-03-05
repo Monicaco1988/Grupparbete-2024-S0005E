@@ -742,6 +742,7 @@ shape = SubResource("ConvexPolygonShape3D_k08rn")
 environment = SubResource("Environment_211gl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_energy = 0.5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
