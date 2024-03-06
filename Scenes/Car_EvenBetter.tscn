@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=40 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 [ext_resource type="Script" path="res://Scenes/Smoke.cs" id="2_qcwma"]
@@ -561,56 +561,62 @@ color_ramp = SubResource("GradientTexture1D_5nnsv")
 
 [sub_resource type="SphereMesh" id="SphereMesh_do464"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrwwk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1bxm7"]
+material = SubResource("StandardMaterial3D_qrwwk")
+
 [sub_resource type="Animation" id="Animation_pu1ql"]
 resource_name = "lights"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CarMesh/ambulance/body/OmniLight3D:light_color")
+tracks/0/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D2:light_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0.745098, 1, 1), Color(0, 0.745098, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackRightOmniLight3D:light_color")
+tracks/1/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D:light_color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0.745098, 1, 1), Color(0, 0.745098, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D:light_color")
+tracks/2/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackRightOmniLight3D:light_color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
+"values": [Color(0, 0.745098, 1, 1), Color(0, 0.745098, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CarMesh/ambulance/body/OmniLight3D/BackLeftOmniLight3D2:light_color")
+tracks/3/path = NodePath("CarMesh/ambulance/body/OmniLight3D:light_color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.6, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0.745098, 1, 1), Color(0, 0.745098, 1, 1)]
+"values": [Color(1, 0, 0, 1), Color(0.999914, 0, 8.58937e-05, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8gxp6"]
@@ -623,26 +629,26 @@ resource_name = "DoorAnimation"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
+tracks/0/path = NodePath("CarMesh/ambulance/doorRight:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.7, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -0.89778, 0), Vector3(0, -1.93334, 0), Vector3(0, -1.2991, 0), Vector3(0, -0.683593, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 1.02154, 0), Vector3(0, 2.19325, 0), Vector3(0, 1.75631, 0), Vector3(0, 0.885946, 0), Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CarMesh/ambulance/doorRight:rotation")
+tracks/1/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.7, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 1.02154, 0), Vector3(0, 2.19325, 0), Vector3(0, 1.75631, 0), Vector3(0, 0.885946, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, -0.89778, 0), Vector3(0, -1.93334, 0), Vector3(0, -1.2991, 0), Vector3(0, -0.683593, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xsvdq"]
@@ -650,7 +656,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
+tracks/0/path = NodePath("CarMesh/MeshInstance3D:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -671,10 +677,87 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarMesh/ambulance/doorLeft:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CarMesh/ambulance:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CarMesh/ambulance:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sg20v"]
+resource_name = "Hole"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarMesh/MeshInstance3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 294.067, 294.067),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(5, 0.01, 5), Vector3(0, 0.01, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1), Vector3(0, -2.58067, 1), Vector3(0, -2.58067, 1), Vector3(0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarMesh/ambulance:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.733702, 0, 0), Vector3(0.733702, 0, 0), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pu1i6"]
 _data = {
 "DoorAnimation": SubResource("Animation_7v4xw"),
+"Hole": SubResource("Animation_sg20v"),
 "RESET": SubResource("Animation_xsvdq")
 }
 
@@ -682,6 +765,7 @@ _data = {
 process_mode = 3
 
 [node name="Player" type="RigidBody3D" parent="."]
+visible = false
 collision_layer = 3
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_xca33")
@@ -690,13 +774,13 @@ angular_damp = 10.0
 script = ExtResource("1_wd3ea")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-visible = false
 shape = SubResource("SphereShape3D_syqvy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D"]
 mesh = SubResource("SphereMesh_ofj0k")
 
 [node name="CarMesh" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="ambulance" type="Node3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -823,6 +907,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.25908)
 visible = false
 mesh = SubResource("SphereMesh_do464")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CarMesh"]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.01892)
+mesh = SubResource("CylinderMesh_1bxm7")
+skeleton = NodePath("../..")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_8gxp6")
@@ -833,3 +922,7 @@ autoplay = "lights"
 libraries = {
 "": SubResource("AnimationLibrary_pu1i6")
 }
+
+[node name="SwitchTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

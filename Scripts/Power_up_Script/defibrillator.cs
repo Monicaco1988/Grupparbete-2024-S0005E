@@ -23,6 +23,10 @@ public partial class defibrillator : Node3D
 
     public void BodyEntered(Node3D Player)
     {
+        if ((Player as betterCar) == null)
+        {
+            return;
+        }
         if (triggered)
         {
             return;
@@ -33,7 +37,7 @@ public partial class defibrillator : Node3D
 
         this.player = (Player as betterCar);
 
-        (Player as betterCar).SetState(betterCar.PlayerState.IN_ACTIVE);
+        player.SetState(betterCar.PlayerState.IN_ACTIVE);
         defibTimer.Start();
 
     }

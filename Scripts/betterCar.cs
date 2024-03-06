@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using Godot.Collections;
 using static betterCar;
-using System.Threading;
+//using System.Threading;
 
 public partial class betterCar : RigidBody3D
 {
@@ -62,10 +62,12 @@ public partial class betterCar : RigidBody3D
 	Node3D leftSkid;
 	Node3D dropPoint;
 	Label3D label;
-	
-	//Node3D playerRoot;
+	Godot.Timer switchDelayTimer;
+	betterCar switchCar;
 
-	OmniLight3D lights;
+    //Node3D playerRoot;
+
+    OmniLight3D lights;
 	AnimationPlayer doorAnimation;
 
 	//POWER UPS
@@ -139,6 +141,15 @@ public partial class betterCar : RigidBody3D
 		
 	}
 
+	public void switcharoo()
+	{
+        Vector3 switchPos = this.GlobalPosition;
+        this.GlobalPosition = switchCar.GlobalPosition;
+        switchCar.GlobalPosition = switchPos;
+        //Do P8 shit
+        pwrUpSwitch--;
+    }
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
@@ -155,6 +166,9 @@ public partial class betterCar : RigidBody3D
         trackScene = GD.Load<PackedScene>("res://Scenes/track_decal.tscn");
 		smoke = GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/Smoke/smokeParticle");
 		label = GetParent().GetNode<Label3D>("CarMesh/ambulance/PlayerLabel");
+		switchDelayTimer = GetParent().GetNode<Timer>("SwitchTimer");
+		switchDelayTimer.Timeout += switcharoo;
+		switchCar = this;
 
         lights = GetParent().GetNode<OmniLight3D>("CarMesh/ambulance/body/OmniLight3D");
 		doorAnimation = GetParent().GetNode<AnimationPlayer>("DoorAnimationPlayer");
@@ -251,17 +265,16 @@ public partial class betterCar : RigidBody3D
                 case PowerUp.SWITCHAROO:
 					if (pwrUpSwitch == 1)
 					{
-						Array<betterCar> players = player_manager.instance.ambulances;
-						betterCar switchCar = this;
-						while (this == switchCar)
-						{
-							switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers - 1)];
-						}
-						Vector3 switchPos = this.GlobalPosition;
-						this.GlobalPosition = switchCar.GlobalPosition;
-						switchCar.GlobalPosition = switchPos;
-						//Do P8 shit
-						pwrUpSwitch--;
+                        Array<betterCar> players = player_manager.instance.ambulances;
+                        
+                        while (this == switchCar)
+                        {
+                            switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers - 1)];
+                        }
+						switchCar.doorAnimation.Play("Hole");
+                        switchDelayTimer.Start();
+						doorAnimation.Play("Hole");
+						
 					}
                     break;
 
