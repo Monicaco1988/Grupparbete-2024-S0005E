@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cybja1dhbhqqh"
-path="res://.godot/imported/road_intersection.dae-ba6bcd3f3051b9b65356faa1c974466b.scn"
+path="res://.godot/imported/road_intersection.dae-9cdb735d8d2301a4e5e35ab9a60473ef.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_intersection.dae"
-dest_files=["res://.godot/imported/road_intersection.dae-ba6bcd3f3051b9b65356faa1c974466b.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_intersection.dae"
+dest_files=["res://.godot/imported/road_intersection.dae-9cdb735d8d2301a4e5e35ab9a60473ef.scn"]
 
 [params]
 

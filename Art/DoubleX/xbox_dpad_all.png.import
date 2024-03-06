@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bey1uiye8r4sc"
-path="res://.godot/imported/xbox_dpad_all.png-b7fa4e7d18f5de3044294aeb14cb8000.ctex"
+path="res://.godot/imported/xbox_dpad_all.png-5c85af0590f769199be626bc4a1aa436.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/DoubleX/xbox_dpad_all.png"
-dest_files=["res://.godot/imported/xbox_dpad_all.png-b7fa4e7d18f5de3044294aeb14cb8000.ctex"]
+source_file="res://Art/DoubleX/xbox_dpad_all.png"
+dest_files=["res://.godot/imported/xbox_dpad_all.png-5c85af0590f769199be626bc4a1aa436.ctex"]
 
 [params]
 

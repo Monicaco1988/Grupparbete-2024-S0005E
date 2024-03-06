@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ct225bq1le8tv"
-path="res://.godot/imported/conveyor-long-sides.glb-9a12db615ab63c4694f02fa8c63acfeb.scn"
+path="res://.godot/imported/conveyor-long-sides.glb-a0fd9b251e2f12ea57c0560d0b434d30.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/conveyor-long-sides.glb"
-dest_files=["res://.godot/imported/conveyor-long-sides.glb-9a12db615ab63c4694f02fa8c63acfeb.scn"]
+source_file="res://Art/GLB format (conveyor)/conveyor-long-sides.glb"
+dest_files=["res://.godot/imported/conveyor-long-sides.glb-a0fd9b251e2f12ea57c0560d0b434d30.scn"]
 
 [params]
 

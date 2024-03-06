@@ -100,7 +100,7 @@ public partial class player_manager : Node3D
                     //GD.Print("Bajskorv");
                     foreach (var ambulance in ambulances)
                     {
-                        if (ambulance.id == controller)
+                        if (ambulance.controllerId == controller)
                         {
                             playerStateFlag = true;
 
@@ -112,15 +112,17 @@ public partial class player_manager : Node3D
                 {
 
                     //GD.Print(playerScene.ResourcePath);
-
+                    
                     var playerRoot = playerScene.Instantiate<Node3D>();
                     AddChild(playerRoot);
                     playerRoot.GlobalPosition = Spawnpoints[controller].GlobalPosition;
                     var player = playerRoot.GetNode("Player") as betterCar;
                     //GD.Print(numberOfPlayers);
-                    player.setId(controller);
+                    player.setControllerId(controller);
+                    
                     player.SetState(betterCar.PlayerState.ACTIVE);
                     this.ambulances.Add(player);
+                    player.setId(ambulances.IndexOf(player) + 1);
                     //GD.Print(ambulances);
                     numberOfPlayers++;
                     GD.Print("player created, with player id: " + controller);

@@ -10,6 +10,7 @@ public partial class betterCar : RigidBody3D
 {
 
 	public int id = -1;
+	public int controllerId = -1;
 	//public betterCar(int id)
 	//{
 	//    this.id = id;
@@ -17,8 +18,12 @@ public partial class betterCar : RigidBody3D
 
 	public void setId(int newId)
 	{
-		this.id = newId;
+		this.id = newId + 1;
 		setPlayerLabel(newId);
+	}
+	public void setControllerId(int newControllerId)
+	{
+		this.controllerId = newControllerId;
 	}
 
 
@@ -112,9 +117,8 @@ public partial class betterCar : RigidBody3D
 
 	private void setPlayerLabel(int pId)
 	{
-		int temp = pId + 1;
-		label.Text = "P"+temp;
-		switch(temp)
+		label.Text = "P"+pId;
+		switch(pId)
 		{
 			case 1:
 				label.Modulate = Godot.Colors.Red;
@@ -196,7 +200,7 @@ public partial class betterCar : RigidBody3D
 
 
 
-        if (Input.IsJoyButtonPressed(id, JoyButton.X))
+        if (Input.IsJoyButtonPressed(controllerId, JoyButton.X))
         {
 			switch (powerUp)
 			{
@@ -351,18 +355,18 @@ public partial class betterCar : RigidBody3D
 			return;
 		}
 
-		gasInput = (Input.GetJoyAxis(id, JoyAxis.TriggerRight) - Input.GetJoyAxis(id, JoyAxis.TriggerLeft)) * acceleration;
+		gasInput = (Input.GetJoyAxis(controllerId, JoyAxis.TriggerRight) - Input.GetJoyAxis(controllerId, JoyAxis.TriggerLeft)) * acceleration;
 
 		jumpInput = jumpInput2 * acceleration*2.5f;
         //turnInput = Input.GetAxis("steerRight", "steerLeft") * Mathf.DegToRad(steering);
-        turnInput2 = -Input.GetJoyAxis(id, JoyAxis.LeftX) * Mathf.DegToRad(steering);
-		isDrifting = Input.IsJoyButtonPressed(id, JoyButton.LeftShoulder);
+        turnInput2 = -Input.GetJoyAxis(controllerId, JoyAxis.LeftX) * Mathf.DegToRad(steering);
+		isDrifting = Input.IsJoyButtonPressed(controllerId, JoyButton.LeftShoulder);
 
 		rightWheel.Rotation = new Vector3(0, turnInput2, Mathf.DegToRad(-180));
 		leftWheel.Rotation = new Vector3(0, turnInput2, 0);
 
 
-		if (Input.IsJoyButtonPressed(id, JoyButton.A))
+		if (Input.IsJoyButtonPressed(controllerId, JoyButton.A))
 		{
 			jumpInput2 = 1;
 
@@ -418,14 +422,14 @@ public partial class betterCar : RigidBody3D
 	{
 		////switches lights on/offInput.IsJoyButtonPressed(id, JoyButton.X)
 		//if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
-		if(Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
+		if(Input.IsJoyButtonPressed(controllerId, JoyButton.RightShoulder) && lights.Visible == true && onoff == 1)
 		{
 			lights.Visible = false;
 			onoff--;
         }
 
 		//else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
-		else if (Input.IsJoyButtonPressed(id, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
+		else if (Input.IsJoyButtonPressed(controllerId, JoyButton.RightShoulder) && lights.Visible == false && onoff == 0)
 
         {
 			lights.Visible = true;

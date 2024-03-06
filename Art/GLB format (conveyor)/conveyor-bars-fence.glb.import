@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bu541bqil6ht6"
-path="res://.godot/imported/conveyor-bars-fence.glb-0086b699627e2e02292a0d43b2a6054a.scn"
+path="res://.godot/imported/conveyor-bars-fence.glb-deda03373a56be5e3fe41dd77457a0db.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/conveyor-bars-fence.glb"
-dest_files=["res://.godot/imported/conveyor-bars-fence.glb-0086b699627e2e02292a0d43b2a6054a.scn"]
+source_file="res://Art/GLB format (conveyor)/conveyor-bars-fence.glb"
+dest_files=["res://.godot/imported/conveyor-bars-fence.glb-deda03373a56be5e3fe41dd77457a0db.scn"]
 
 [params]
 

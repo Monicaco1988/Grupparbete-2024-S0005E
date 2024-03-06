@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqgrqgms6hdc6"
-path="res://.godot/imported/playstation_stick_side_r.png-87ba2a907311cc75927759cfd18bc05d.ctex"
+path="res://.godot/imported/playstation_stick_side_r.png-223cba885cc4e854d1dc8dea62ca3d67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Double/playstation_stick_side_r.png"
-dest_files=["res://.godot/imported/playstation_stick_side_r.png-87ba2a907311cc75927759cfd18bc05d.ctex"]
+source_file="res://Art/Double/playstation_stick_side_r.png"
+dest_files=["res://.godot/imported/playstation_stick_side_r.png-223cba885cc4e854d1dc8dea62ca3d67.ctex"]
 
 [params]
 

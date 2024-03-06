@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cvfbwyalvug7p"
-path="res://.godot/imported/road_split.dae-1da1b4cf596d04e8fdd00254700709d7.scn"
+path="res://.godot/imported/road_split.dae-605624c2759a9dcb6b3ab7333e8959e5.scn"
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Models/DAE format/road_split.dae"
-dest_files=["res://.godot/imported/road_split.dae-1da1b4cf596d04e8fdd00254700709d7.scn"]
+source_file="res://Art/Kenney_City_Roads_Assets/Models/DAE format/road_split.dae"
+dest_files=["res://.godot/imported/road_split.dae-605624c2759a9dcb6b3ab7333e8959e5.scn"]
 
 [params]
 

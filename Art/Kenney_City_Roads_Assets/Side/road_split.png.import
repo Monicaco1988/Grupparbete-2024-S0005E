@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bil5apfqtahe8"
-path="res://.godot/imported/road_split.png-8104818ab0b57e64a2302097808592f6.ctex"
+path="res://.godot/imported/road_split.png-9f488abc2b73a83665cfa619d73545cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Kenney_City_Roads_Assets/Side/road_split.png"
-dest_files=["res://.godot/imported/road_split.png-8104818ab0b57e64a2302097808592f6.ctex"]
+source_file="res://Art/Kenney_City_Roads_Assets/Side/road_split.png"
+dest_files=["res://.godot/imported/road_split.png-9f488abc2b73a83665cfa619d73545cc.ctex"]
 
 [params]
 

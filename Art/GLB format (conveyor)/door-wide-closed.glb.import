@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bq6cx1wuxdgn7"
-path="res://.godot/imported/door-wide-closed.glb-49996609c033dd0778bec08c1618d1aa.scn"
+path="res://.godot/imported/door-wide-closed.glb-3a49e9a37e5fbf76f92cbf8099f65a1a.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/door-wide-closed.glb"
-dest_files=["res://.godot/imported/door-wide-closed.glb-49996609c033dd0778bec08c1618d1aa.scn"]
+source_file="res://Art/GLB format (conveyor)/door-wide-closed.glb"
+dest_files=["res://.godot/imported/door-wide-closed.glb-3a49e9a37e5fbf76f92cbf8099f65a1a.scn"]
 
 [params]
 

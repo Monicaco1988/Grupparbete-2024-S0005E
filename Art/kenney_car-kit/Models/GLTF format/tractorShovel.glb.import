@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gyp5iv0ufl2r"
-path="res://.godot/imported/tractorShovel.glb-28ab82e4c435ecf488f680b6c0c2a0d4.scn"
+path="res://.godot/imported/tractorShovel.glb-6020a907473e59997f9d12f139d9f7d7.scn"
 
 [deps]
 
-source_file="res://art/kenney_car-kit/Models/GLTF format/tractorShovel.glb"
-dest_files=["res://.godot/imported/tractorShovel.glb-28ab82e4c435ecf488f680b6c0c2a0d4.scn"]
+source_file="res://Art/kenney_car-kit/Models/GLTF format/tractorShovel.glb"
+dest_files=["res://.godot/imported/tractorShovel.glb-6020a907473e59997f9d12f139d9f7d7.scn"]
 
 [params]
 

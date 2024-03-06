@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwtn07tx5oee8"
-path="res://.godot/imported/conveyor-bars-stripe-side.glb-9fe78ce5b3d0e4935541182fac75bbb6.scn"
+path="res://.godot/imported/conveyor-bars-stripe-side.glb-552aff1f322e06c53c3048e972e5af7b.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/conveyor-bars-stripe-side.glb"
-dest_files=["res://.godot/imported/conveyor-bars-stripe-side.glb-9fe78ce5b3d0e4935541182fac75bbb6.scn"]
+source_file="res://Art/GLB format (conveyor)/conveyor-bars-stripe-side.glb"
+dest_files=["res://.godot/imported/conveyor-bars-stripe-side.glb-552aff1f322e06c53c3048e972e5af7b.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dd58s45l2edrj"
-path="res://.godot/imported/detail_umbrellaDetailed.glb-9865894c30817f022edbfd93988958b2.scn"
+path="res://.godot/imported/detail_umbrellaDetailed.glb-9d22dd71c5f6f1b2d242ad7364d5b85d.scn"
 
 [deps]
 
-source_file="res://art/KenneyCityKit/GLTF format/detail_umbrellaDetailed.glb"
-dest_files=["res://.godot/imported/detail_umbrellaDetailed.glb-9865894c30817f022edbfd93988958b2.scn"]
+source_file="res://Art/KenneyCityKit/GLTF format/detail_umbrellaDetailed.glb"
+dest_files=["res://.godot/imported/detail_umbrellaDetailed.glb-9d22dd71c5f6f1b2d242ad7364d5b85d.scn"]
 
 [params]
 
