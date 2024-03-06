@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://y1jsl3mnpgbq"
-path="res://.godot/imported/robot-arm-b.glb-11eab0c5ca69ea4e7637365c06678d41.scn"
+path="res://.godot/imported/robot-arm-b.glb-617d8dee195d2ae6cae97936eabb54e4.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/robot-arm-b.glb"
-dest_files=["res://.godot/imported/robot-arm-b.glb-11eab0c5ca69ea4e7637365c06678d41.scn"]
+source_file="res://art/GLB format (conveyor)/robot-arm-b.glb"
+dest_files=["res://.godot/imported/robot-arm-b.glb-617d8dee195d2ae6cae97936eabb54e4.scn"]
 
 [params]
 

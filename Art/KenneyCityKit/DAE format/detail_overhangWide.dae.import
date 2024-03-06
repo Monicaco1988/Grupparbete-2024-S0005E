@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cukreowfv2dte"
-path="res://.godot/imported/detail_overhangWide.dae-67620e40ec2eba930cde18c293d8a7d2.scn"
+path="res://.godot/imported/detail_overhangWide.dae-54603842fc8002d70180bd1e51df80e3.scn"
 
 [deps]
 
-source_file="res://Art/KenneyCityKit/DAE format/detail_overhangWide.dae"
-dest_files=["res://.godot/imported/detail_overhangWide.dae-67620e40ec2eba930cde18c293d8a7d2.scn"]
+source_file="res://art/KenneyCityKit/DAE format/detail_overhangWide.dae"
+dest_files=["res://.godot/imported/detail_overhangWide.dae-54603842fc8002d70180bd1e51df80e3.scn"]
 
 [params]
 

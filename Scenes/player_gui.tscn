@@ -1,18 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://deub0tsd4g553"]
+[gd_scene load_steps=11 format=3 uid="uid://deub0tsd4g553"]
 
 [ext_resource type="Script" path="res://Scripts/player_gui.cs" id="1_sm5gn"]
+[ext_resource type="Texture2D" uid="uid://b8gbll0121k6g" path="res://art/GUI_art/icon-6031223_1280.png" id="2_frm8u"]
+[ext_resource type="Texture2D" uid="uid://btw0vugu7feer" path="res://art/GUI_art/heartbeat-304130_640.png" id="3_q2611"]
+[ext_resource type="Texture2D" uid="uid://esx8yrtsh0oa" path="res://art/GUI_art/recycling-99223_1280.png" id="4_ubp6n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4vhku"]
 font_size = 60
 shadow_color = Color(0.913725, 0, 0.447059, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16x5l"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_djev8"]
-material = SubResource("StandardMaterial3D_16x5l")
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ph5ke"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x5cub"]
 font_size = 40
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g7s1q"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_154yg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_m3o86"]
 
 [node name="Player_GUI" type="Control"]
 process_mode = 3
@@ -47,10 +53,10 @@ vertical_alignment = 1
 modulate = Color(1, 0, 0, 1)
 self_modulate = Color(1, 0, 0, 1)
 show_behind_parent = true
-position = Vector2(119, 107)
-rotation = 3.14159
-scale = Vector2(323.149, -315.377)
-mesh = SubResource("SphereMesh_djev8")
+position = Vector2(113.559, 88.5212)
+rotation = 4.71238
+scale = Vector2(165.241, -161.227)
+mesh = SubResource("CapsuleMesh_ph5ke")
 
 [node name="Position1" type="Label" parent="Player1/Player1"]
 top_level = true
@@ -64,20 +70,57 @@ label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle1" type="ReferenceRect" parent="Player1"]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 115.0
-offset_right = 512.0
-offset_bottom = 267.0
-border_color = Color(1, 1, 1, 1)
+offset_left = 3.0
+offset_top = 240.0
+offset_right = 171.0
+offset_bottom = 392.0
+border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
 [node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle1"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 12.0
-offset_right = 146.0
-offset_bottom = 140.0
-stretch_mode = 3
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("2_frm8u")
+expand_mode = 1
+
+[node name="ItemRectangle2" type="ReferenceRect" parent="Player1"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 240.0
+offset_right = 352.0
+offset_bottom = 392.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("3_q2611")
+expand_mode = 1
+
+[node name="ItemRectangle3" type="ReferenceRect" parent="Player1"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 240.0
+offset_right = 532.0
+offset_bottom = 392.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle3"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("4_ubp6n")
+expand_mode = 1
 
 [node name="Player2" type="Control" parent="."]
 anchors_preset = 0
@@ -88,10 +131,10 @@ offset_bottom = 83.0
 
 [node name="Player2" type="Label" parent="Player2"]
 layout_mode = 2
-offset_left = 18.0
-offset_top = 8.0
-offset_right = 118.0
-offset_bottom = 101.0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 246.0
+offset_bottom = 111.0
 text = "Player 2"
 label_settings = SubResource("LabelSettings_4vhku")
 horizontal_alignment = 1
@@ -100,10 +143,10 @@ vertical_alignment = 1
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Player2/Player2"]
 modulate = Color(0.145098, 0.823529, 0.219608, 1)
 show_behind_parent = true
-position = Vector2(116, 104)
-rotation = 3.14159
-scale = Vector2(323.149, -315.377)
-mesh = SubResource("SphereMesh_djev8")
+position = Vector2(108.44, 79.6415)
+rotation = 1.57079
+scale = Vector2(166.919, -170.065)
+mesh = SubResource("CapsuleMesh_g7s1q")
 
 [node name="Position2" type="Label" parent="Player2/Player2"]
 top_level = true
@@ -115,22 +158,56 @@ offset_bottom = 212.0
 text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle2" type="ReferenceRect" parent="Player2"]
+[node name="ItemRectangle1" type="ReferenceRect" parent="Player2"]
+offset_left = -247.0
+offset_top = 215.0
+offset_right = -79.0
+offset_bottom = 367.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle1"]
 layout_mode = 0
-offset_left = -219.0
-offset_top = 119.0
-offset_right = -51.0
-offset_bottom = 271.0
-border_color = Color(1, 1, 1, 1)
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("2_frm8u")
+expand_mode = 1
+
+[node name="ItemRectangle2" type="ReferenceRect" parent="Player2"]
+offset_left = -66.0
+offset_top = 215.0
+offset_right = 102.0
+offset_bottom = 367.0
+border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
 [node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle2"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 12.0
-offset_right = 146.0
-offset_bottom = 140.0
-stretch_mode = 3
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("3_q2611")
+expand_mode = 1
+
+[node name="ItemRectangle3" type="ReferenceRect" parent="Player2"]
+offset_left = 114.0
+offset_top = 215.0
+offset_right = 282.0
+offset_bottom = 367.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle3"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("4_ubp6n")
+expand_mode = 1
 
 [node name="Player3" type="Control" parent="."]
 anchors_preset = 0
@@ -154,10 +231,10 @@ vertical_alignment = 1
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Player3/Player3"]
 modulate = Color(0, 0.152941, 0.933333, 1)
 show_behind_parent = true
-position = Vector2(112, 93)
-rotation = 3.14159
-scale = Vector2(323.149, -315.377)
-mesh = SubResource("SphereMesh_djev8")
+position = Vector2(108, 82)
+rotation = 1.57079
+scale = Vector2(171.687, -170.066)
+mesh = SubResource("CapsuleMesh_154yg")
 
 [node name="Position3" type="Label" parent="Player3/Player3"]
 top_level = true
@@ -169,22 +246,56 @@ offset_bottom = 2045.0
 text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle3" type="ReferenceRect" parent="Player3"]
+[node name="ItemRectangle1" type="ReferenceRect" parent="Player3"]
+offset_left = -261.0
+offset_top = -170.0
+offset_right = -93.0
+offset_bottom = -18.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle1"]
 layout_mode = 0
-offset_left = -212.0
-offset_top = -17.0
-offset_right = -44.0
-offset_bottom = 135.0
-border_color = Color(1, 1, 1, 1)
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("2_frm8u")
+expand_mode = 1
+
+[node name="ItemRectangle2" type="ReferenceRect" parent="Player3"]
+offset_left = -80.0
+offset_top = -170.0
+offset_right = 88.0
+offset_bottom = -18.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("3_q2611")
+expand_mode = 1
+
+[node name="ItemRectangle3" type="ReferenceRect" parent="Player3"]
+offset_left = 100.0
+offset_top = -170.0
+offset_right = 268.0
+offset_bottom = -18.0
+border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
 [node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle3"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 12.0
-offset_right = 146.0
-offset_bottom = 140.0
-stretch_mode = 3
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("4_ubp6n")
+expand_mode = 1
 
 [node name="Player4" type="Control" parent="."]
 anchors_preset = 0
@@ -207,10 +318,10 @@ vertical_alignment = 1
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Player4/Player4"]
 modulate = Color(0.945098, 0.784314, 0, 1)
 show_behind_parent = true
-position = Vector2(117, 95)
-rotation = 3.14159
-scale = Vector2(323.149, -315.377)
-mesh = SubResource("SphereMesh_djev8")
+position = Vector2(122, 92)
+rotation = 1.57079
+scale = Vector2(175.725, -169.474)
+mesh = SubResource("CapsuleMesh_m3o86")
 
 [node name="Position4" type="Label" parent="Player4/Player4"]
 top_level = true
@@ -222,19 +333,53 @@ offset_bottom = 2052.0
 text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle4" type="ReferenceRect" parent="Player4"]
-layout_mode = 0
-offset_left = 329.0
-offset_top = -20.0
-offset_right = 497.0
-offset_bottom = 132.0
-border_color = Color(1, 1, 1, 1)
+[node name="ItemRectangle1" type="ReferenceRect" parent="Player4"]
+offset_left = -11.0
+offset_top = -173.0
+offset_right = 157.0
+offset_bottom = -21.0
+border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle4"]
+[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle1"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 12.0
-offset_right = 146.0
-offset_bottom = 140.0
-stretch_mode = 3
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("2_frm8u")
+expand_mode = 1
+
+[node name="ItemRectangle2" type="ReferenceRect" parent="Player4"]
+offset_left = 170.0
+offset_top = -173.0
+offset_right = 338.0
+offset_bottom = -21.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("3_q2611")
+expand_mode = 1
+
+[node name="ItemRectangle3" type="ReferenceRect" parent="Player4"]
+offset_left = 350.0
+offset_top = -173.0
+offset_right = 518.0
+offset_bottom = -21.0
+border_color = Color(1, 0, 0, 0)
+border_width = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle3"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 171.0
+offset_bottom = 155.0
+texture = ExtResource("4_ubp6n")
+expand_mode = 1

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://30ea5a63r2bi"
-path="res://.godot/imported/cover-hopper.glb-5c52c5abffc53539cd4115556b912ad3.scn"
+path="res://.godot/imported/cover-hopper.glb-34633de71a9e49d817f9d707810d43d0.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/cover-hopper.glb"
-dest_files=["res://.godot/imported/cover-hopper.glb-5c52c5abffc53539cd4115556b912ad3.scn"]
+source_file="res://art/GLB format (conveyor)/cover-hopper.glb"
+dest_files=["res://.godot/imported/cover-hopper.glb-34633de71a9e49d817f9d707810d43d0.scn"]
 
 [params]
 

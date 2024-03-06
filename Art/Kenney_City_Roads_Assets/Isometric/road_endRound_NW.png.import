@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo47nqf37fn3p"
-path="res://.godot/imported/road_endRound_NW.png-9cf1f9592c2c8efe99581b099f7ef83b.ctex"
+path="res://.godot/imported/road_endRound_NW.png-86c13d0fc21507957de85563d556ee82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Kenney_City_Roads_Assets/Isometric/road_endRound_NW.png"
-dest_files=["res://.godot/imported/road_endRound_NW.png-9cf1f9592c2c8efe99581b099f7ef83b.ctex"]
+source_file="res://art/Kenney_City_Roads_Assets/Isometric/road_endRound_NW.png"
+dest_files=["res://.godot/imported/road_endRound_NW.png-86c13d0fc21507957de85563d556ee82.ctex"]
 
 [params]
 

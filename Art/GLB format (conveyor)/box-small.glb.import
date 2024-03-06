@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://v1sj2k6xvw0f"
-path="res://.godot/imported/box-small.glb-d97fac42237a9852806cdbace51cbfa7.scn"
+path="res://.godot/imported/box-small.glb-ad0d110324f00f9bf130b78b0c918d9f.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/box-small.glb"
-dest_files=["res://.godot/imported/box-small.glb-d97fac42237a9852806cdbace51cbfa7.scn"]
+source_file="res://art/GLB format (conveyor)/box-small.glb"
+dest_files=["res://.godot/imported/box-small.glb-ad0d110324f00f9bf130b78b0c918d9f.scn"]
 
 [params]
 

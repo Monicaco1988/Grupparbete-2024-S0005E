@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dubx8o68sdvxj"
-path="res://.godot/imported/structure-yellow-medium.glb-1946005227f14ebe0406c11214c5320f.scn"
+path="res://.godot/imported/structure-yellow-medium.glb-2ca454346797f6f33199c2b5901b56bd.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/structure-yellow-medium.glb"
-dest_files=["res://.godot/imported/structure-yellow-medium.glb-1946005227f14ebe0406c11214c5320f.scn"]
+source_file="res://art/GLB format (conveyor)/structure-yellow-medium.glb"
+dest_files=["res://.godot/imported/structure-yellow-medium.glb-2ca454346797f6f33199c2b5901b56bd.scn"]
 
 [params]
 

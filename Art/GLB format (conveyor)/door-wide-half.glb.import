@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://chwk85uot7fi4"
-path="res://.godot/imported/door-wide-half.glb-a66f352d5999931516972409147a180f.scn"
+path="res://.godot/imported/door-wide-half.glb-0299fb570b882713420e0d8877227b90.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/door-wide-half.glb"
-dest_files=["res://.godot/imported/door-wide-half.glb-a66f352d5999931516972409147a180f.scn"]
+source_file="res://art/GLB format (conveyor)/door-wide-half.glb"
+dest_files=["res://.godot/imported/door-wide-half.glb-0299fb570b882713420e0d8877227b90.scn"]
 
 [params]
 
