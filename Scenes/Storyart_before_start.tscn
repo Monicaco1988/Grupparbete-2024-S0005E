@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ggkrw60mowyo"]
 
 [ext_resource type="Script" path="res://Scripts/Storyart_before_start.cs" id="1_5u7bf"]
-[ext_resource type="Texture2D" uid="uid://pj14sciwonpl" path="res://Art/Storyart/1.png" id="2_wjqgg"]
-[ext_resource type="Texture2D" uid="uid://dju1fwa5biarj" path="res://Art/Storyart/Enhanced.png" id="3_1kff0"]
-[ext_resource type="Texture2D" uid="uid://bxg23kemsds0l" path="res://Art/Storyart/3.png" id="4_4qbc7"]
+[ext_resource type="Texture2D" uid="uid://pj14sciwonpl" path="res://art/Storyart/1.png" id="2_wjqgg"]
+[ext_resource type="Texture2D" uid="uid://dju1fwa5biarj" path="res://art/Storyart/Enhanced.png" id="3_1kff0"]
+[ext_resource type="Texture2D" uid="uid://bxg23kemsds0l" path="res://art/Storyart/3.png" id="4_4qbc7"]
 
 [node name="Storyart" type="Control"]
 process_mode = 3

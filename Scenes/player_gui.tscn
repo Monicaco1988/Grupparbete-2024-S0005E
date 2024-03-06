@@ -159,6 +159,7 @@ text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle1" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = -247.0
 offset_top = 215.0
 offset_right = -79.0
@@ -176,6 +177,7 @@ texture = ExtResource("2_frm8u")
 expand_mode = 1
 
 [node name="ItemRectangle2" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = -66.0
 offset_top = 215.0
 offset_right = 102.0
@@ -193,6 +195,7 @@ texture = ExtResource("3_q2611")
 expand_mode = 1
 
 [node name="ItemRectangle3" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = 114.0
 offset_top = 215.0
 offset_right = 282.0
@@ -247,6 +250,7 @@ text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle1" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = -261.0
 offset_top = -170.0
 offset_right = -93.0
@@ -264,6 +268,7 @@ texture = ExtResource("2_frm8u")
 expand_mode = 1
 
 [node name="ItemRectangle2" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = -80.0
 offset_top = -170.0
 offset_right = 88.0
@@ -281,6 +286,7 @@ texture = ExtResource("3_q2611")
 expand_mode = 1
 
 [node name="ItemRectangle3" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = 100.0
 offset_top = -170.0
 offset_right = 268.0
@@ -334,6 +340,7 @@ text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="ItemRectangle1" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = -11.0
 offset_top = -173.0
 offset_right = 157.0
@@ -351,6 +358,7 @@ texture = ExtResource("2_frm8u")
 expand_mode = 1
 
 [node name="ItemRectangle2" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = 170.0
 offset_top = -173.0
 offset_right = 338.0
@@ -368,6 +376,7 @@ texture = ExtResource("3_q2611")
 expand_mode = 1
 
 [node name="ItemRectangle3" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = 350.0
 offset_top = -173.0
 offset_right = 518.0
