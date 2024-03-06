@@ -64,9 +64,12 @@ alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button2")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.972549, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("3_gnjxu")
@@ -79,9 +82,12 @@ layout_mode = 2
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../Button")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.972549, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("3_gnjxu")

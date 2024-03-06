@@ -16064,7 +16064,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="Countdown"]
-wait_time = 1.5
+wait_time = 0.001
 one_shot = true
 
 [node name="BuildingLights" type="Node3D" parent="."]

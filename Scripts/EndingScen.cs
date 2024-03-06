@@ -4,6 +4,8 @@ using System;
 public partial class EndingScen : Control
 {
 	private Button _pressButton;
+	private Button resetGameButton;
+	private Button quitGameButton;
 
 	//public static MenuManager Instance;
 
@@ -11,7 +13,10 @@ public partial class EndingScen : Control
 
 	public override void _Ready()
 	{
-		_GetSignalFromGameManager = GetNode<GameManager>("/root/GameManager");
+		resetGameButton = GetNode<Button>("HBoxContainer/VBoxContainer/Button");
+        quitGameButton = GetNode<Button>("HBoxContainer/VBoxContainer/Button2");
+		resetGameButton.GrabFocus();
+        _GetSignalFromGameManager = GetNode<GameManager>("/root/GameManager");
 		_GetSignalFromGameManager.UpdateGameState2 += Test2;
 	}
 
@@ -21,17 +26,41 @@ public partial class EndingScen : Control
 			_GetSignalFromGameManager.UpdateGameState2 -= Test2; //deque avoid memleak
 	}
 
-	public void OnButtonPressed() // when pressing Start the State should change to PlayerState but now it would be nice with whichever tho...
-	{
-        GetTree().Paused = false;
-        _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 0);
+    public override void _Process(double delta)
+    {
 
-		_GetSignalFromGameManager.UpdateGameState2 -= Test2;
+        var controllers = Input.GetConnectedJoypads();
 
-        //GetNode<Control>("/root/GameManager/AudioManager").QueueFree();
-		Destroy();
+        foreach (var controller in controllers)
+        {
+            // same as pushing start with the mouse on the button but on the x-box controller instead
+            if (Input.IsActionJustReleased("MenuSelect") && resetGameButton.HasFocus())//
+            {
+                GetTree().Paused = false;
+                _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 0);
 
+                _GetSignalFromGameManager.UpdateGameState2 -= Test2;
+                QueueFree();
+            }
+            // same as pushing quit with the mouse on the button but on the x-box controller instead
+            if (Input.IsActionJustReleased("MenuSelect") && quitGameButton.HasFocus())
+            {
+                GetTree().Quit();
+            }
+        }
     }
+
+ //   public void OnButtonPressed() // when pressing Start the State should change to PlayerState but now it would be nice with whichever tho...
+	//{
+ //       GetTree().Paused = false;
+ //       _GetSignalFromGameManager.EmitSignal(nameof(_GetSignalFromGameManager.UpdateGameState2), 0);
+
+	//	_GetSignalFromGameManager.UpdateGameState2 -= Test2;
+
+ //       //GetNode<Control>("/root/GameManager/AudioManager").QueueFree();
+	//	Destroy();
+
+ //   }
 
 
 	void OnButtonPressed2() 
