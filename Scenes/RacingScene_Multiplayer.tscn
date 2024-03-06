@@ -1843,9 +1843,9 @@ spot_range = 82.7753
 
 [node name="light_square2" type="Node3D" parent="Lights/Lights(Grouped)/Lights x23"]
 transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, -16.4947, 0, 0)
+visible = false
 
 [node name="light_square" type="MeshInstance3D" parent="Lights/Lights(Grouped)/Lights x23/light_square2"]
-visible = false
 mesh = SubResource("ArrayMesh_0u2fg")
 skeleton = NodePath("")
 
@@ -3666,6 +3666,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D25" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.999995, 0.00273398, 0.00154787, -0.00155303, 0.00188551, 0.999997, 0.00273106, -0.999994, 0.00188975, -10.894, 16.8893, 226.697)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3673,6 +3674,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D26" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.00273407, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273114, 0.999994, -0.00188975, -10.894, 16.8893, 206.021)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3680,6 +3682,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D27" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.999995, 0.00273398, 0.00154787, -0.00155303, 0.00188551, 0.999997, 0.00273106, -0.999994, 0.00188975, 14.106, 16.8893, 226.697)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3687,6 +3690,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D28" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.00273407, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273114, 0.999994, -0.00188975, 14.106, 16.8893, 206.021)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3694,6 +3698,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D29" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.999995, 0.00273398, 0.00154787, -0.00155303, 0.00188551, 0.999997, 0.00273106, -0.999994, 0.00188975, 39.106, 16.8893, 226.697)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3701,6 +3706,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D30" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.00273407, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273114, 0.999994, -0.00188975, 39.106, 16.8893, 206.021)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3708,6 +3714,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D31" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.00273101, -0.999995, 0.00188975, -0.00155303, 0.00188551, 0.999997, -0.999995, -0.00273394, -0.00154787, -50.2195, 16.8893, 185.882)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3715,6 +3722,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D32" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.0027311, 0.999995, -0.00188975, -0.00155303, 0.00188551, 0.999997, 0.999995, 0.00273403, 0.00154787, -70.8949, 16.8893, 185.882)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3722,6 +3730,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D33" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.00273101, -0.999995, 0.00188975, -0.00155303, 0.00188551, 0.999997, -0.999995, -0.00273394, -0.00154787, -50.2195, 16.8893, 160.882)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3729,6 +3738,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D34" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.0027339, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273097, 0.999994, -0.00188975, -35.985, 16.8893, 206.011)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3743,6 +3753,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D36" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.999995, 0.00273398, 0.00154787, -0.00155303, 0.00188551, 0.999997, 0.00273106, -0.999994, 0.00188975, -166.957, 16.8893, 46.5446)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3750,6 +3761,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D37" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.999995, 0.00273398, 0.00154787, -0.00155303, 0.00188551, 0.999997, 0.00273106, -0.999994, 0.00188975, -141.957, 16.8893, 46.5446)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3792,6 +3804,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D43" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.0027339, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273097, 0.999994, -0.00188975, -142.581, 16.8893, -4.17751)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3799,6 +3812,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D44" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.0027339, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273097, 0.999994, -0.00188975, -167.581, 16.8893, -4.17751)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3806,6 +3820,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D45" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.999995, -0.0027339, -0.00154787, -0.00155303, 0.00188551, 0.999997, -0.00273097, 0.999994, -0.00188975, -192.581, 16.8893, -4.17751)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3813,6 +3828,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D46" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.0027311, 0.999995, -0.00188975, -0.00155303, 0.00188551, 0.999997, 0.999995, 0.00273403, 0.00154787, 169.211, 16.8893, -28.773)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -3820,6 +3836,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D47" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.00273119, -0.999995, 0.00188975, -0.00155303, 0.00188551, 0.999997, -0.999995, -0.00273412, -0.00154787, 189.887, 16.8893, -28.773)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -4856,6 +4873,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D195" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.0027311, 0.999995, -0.00188975, -0.00155303, 0.00188551, 0.999997, 0.999995, 0.00273403, 0.00154787, -220.879, 16.8893, 474.206)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -4863,6 +4881,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D196" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(0.00273119, -0.999995, 0.00188975, -0.00155303, 0.00188551, 0.999997, -0.999995, -0.00273412, -0.00154787, -200.203, 16.8893, 474.206)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
@@ -6060,6 +6079,7 @@ spot_range = 82.7753
 
 [node name="SpotLight3D367" type="SpotLight3D" parent="Lights/Lights(Grouped)/Lights x62"]
 transform = Transform3D(-0.0027321, 0.999995, -0.00188975, -0.00155303, 0.00188551, 0.999997, 0.999995, 0.00273502, 0.00154787, -70.7949, 16.8893, 130.695)
+visible = false
 light_color = Color(1, 1, 0.701961, 1)
 light_energy = 16.0
 shadow_enabled = true
