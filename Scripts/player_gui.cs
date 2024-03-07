@@ -3,8 +3,6 @@ using Godot;
 public partial class player_gui : Control
 {
 
-    public player_manager score;
-
     Control Player1;
     Control Player2;
     Control Player3;
@@ -25,18 +23,18 @@ public partial class player_gui : Control
         Player4 = GetNode<Control>("Player4");
 
         // gets the score from playermanager to the GUI
-        score = GetNode<player_manager>("/root/GameManager/PlayerManager");
+
         scoreText = (Label)GetNode("Player1/Player1/Position1");
-        scoreText.Text = "WINS: " + score.player1Score.ToString();
+        scoreText.Text = "WINS: " + player_manager.instance.player1Score;
 
         scoreText2 = (Label)GetNode("Player2/Player2/Position2");
-        scoreText2.Text = "WINS: " + score.player2Score.ToString();
+        scoreText2.Text = "WINS: " + player_manager.instance.player2Score;
 
         scoreText3 = (Label)GetNode("Player3/Player3/Position3");
-        scoreText3.Text = "WINS: " + score.player3Score.ToString();
+        scoreText3.Text = "WINS: " + player_manager.instance.player3Score;
 
         scoreText4 = (Label)GetNode("Player4/Player4/Position4");
-        scoreText3.Text = "WINS: " + score.player4Score.ToString();
+        scoreText4.Text = "WINS: " + player_manager.instance.player4Score;
 
         hidePlayers();
     }
@@ -46,14 +44,13 @@ public partial class player_gui : Control
     public override void _Process(double delta)
     {
         //adds score on the players GUI
-        score = GetNode<player_manager>("/root/GameManager/PlayerManager");
-        scoreText.Text = "WINS: " + score.player1Score.ToString();
+        scoreText.Text = "WINS: " + player_manager.instance.player1Score;
 
-        scoreText2.Text = "WINS: " + score.player2Score.ToString();
+        scoreText2.Text = "WINS: " + player_manager.instance.player2Score;
 
-        scoreText3.Text = "WINS: " + score.player3Score.ToString();
+        scoreText3.Text = "WINS: " + player_manager.instance.player3Score;
 
-        scoreText3.Text = "WINS: " + score.player4Score.ToString();
+        scoreText4.Text = "WINS: " + player_manager.instance.player4Score;
 
         nrp = player_manager.instance.GetPNum();
         showPlayers();

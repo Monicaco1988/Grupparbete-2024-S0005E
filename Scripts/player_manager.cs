@@ -155,8 +155,8 @@ public partial class player_manager : Node3D
             {
                 if (numberOfPlayers == 2)// if there are 2 player
                 {
-                    var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
-                    var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
+                    var player_1 = (ambulances[0].GetParent() as Node3D);
+                    var player_2 = (ambulances[1].GetParent() as Node3D);
 
                     if (player_1.Visible == false || player_2.Visible == false)
                     {
@@ -228,6 +228,10 @@ public partial class player_manager : Node3D
                             ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             //ambulance.Visible = true;
                             offset += new Vector3(-5, 0, 0);
+
+                            ambulance.pwrUpDefib = 1;
+                            ambulance.pwrUpSpeed = 1;
+                            ambulance.pwrUpSwitch = 1;
                         }
                         Visibility();
 
@@ -242,10 +246,10 @@ public partial class player_manager : Node3D
                 }
                 else if (numberOfPlayers == 4) // if there are 4 player
                 {
-                    var player_1 = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
-                    var player_2 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(9);
-                    var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
-                    var player_4 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11);
+                    var player_1 = (ambulances[0].GetParent() as Node3D);
+                    var player_2 = (ambulances[1].GetParent() as Node3D);
+                    var player_3 = (ambulances[2].GetParent() as Node3D);
+                    var player_4 = (ambulances[3].GetParent() as Node3D);
 
                     if ((player_1.Visible == false && player_2.Visible == false && player_3.Visible == false ) ||
                         (player_1.Visible == false && player_2.Visible == false && player_4.Visible == false) || 
@@ -255,8 +259,9 @@ public partial class player_manager : Node3D
                         if (player_1.Visible == true) player1Score++;
                         else if (player_2.Visible == true) player2Score++;
                         else if (player_3.Visible == true) player3Score++;
-                        else if (player_3.Visible == true) player4Score++;
+                        else if (player_4.Visible == true) player4Score++;
                         else { }
+
                         if (player1Score == 3 || player2Score == 3 || player3Score == 3 || player4Score == 3)// || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
@@ -273,6 +278,10 @@ public partial class player_manager : Node3D
                             ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(2).GlobalPosition);
                             //ambulance.Visible = true;
                             offset += new Vector3(-5, 0, 0);
+
+                            ambulance.pwrUpDefib = 1;
+                            ambulance.pwrUpSpeed = 1;
+                            ambulance.pwrUpSwitch = 1;
                         }
                         Visibility();
 
