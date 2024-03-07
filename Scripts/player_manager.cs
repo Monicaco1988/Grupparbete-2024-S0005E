@@ -66,7 +66,7 @@ public partial class player_manager : Node3D
     {
         foreach (var ambulance in ambulances)
         {
-            ambulance.GlobalPosition = Spawnpoints[ambulance.id].GlobalPosition;
+            ambulance.GlobalPosition = Spawnpoints[ambulance.controllerId].GlobalPosition;
             ambulance.carMesh.Rotation = Vector3.Zero;
             ambulance.LinearVelocity = Vector3.Zero;
 
@@ -246,7 +246,10 @@ public partial class player_manager : Node3D
                     var player_3 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(10);
                     var player_4 = GetNode<Node3D>("/root/GameManager/PlayerManager").GetChild<Node3D>(11);
 
-                    if ((player_1.Visible == false && player_2.Visible == false && player_3.Visible == false ) || (player_1.Visible == false && player_2.Visible == false && player_4.Visible == false) || (player_4.Visible == false && player_2.Visible == false && player_3.Visible == false) || (player_1.Visible == false && player_4.Visible == false && player_3.Visible == false))
+                    if ((player_1.Visible == false && player_2.Visible == false && player_3.Visible == false ) ||
+                        (player_1.Visible == false && player_2.Visible == false && player_4.Visible == false) || 
+                        (player_4.Visible == false && player_2.Visible == false && player_3.Visible == false) || 
+                        (player_1.Visible == false && player_4.Visible == false && player_3.Visible == false))
                     {
                         if (player_1.Visible == true) player1Score++;
                         else if (player_2.Visible == true) player2Score++;

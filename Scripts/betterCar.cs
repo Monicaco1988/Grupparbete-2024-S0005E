@@ -190,7 +190,7 @@ public partial class betterCar : RigidBody3D
 		{
 			
 			var trackS = trackScene.Instantiate();
-			GetParent().GetParent().AddChild(trackS);
+			GetParent().GetParent().GetParent().GetParent().AddChild(trackS);
 
 			var trackL = trackS.GetNode<Decal>("DecalLeft");
 			var trackR = trackS.GetNode<Decal>("DecalRight");
