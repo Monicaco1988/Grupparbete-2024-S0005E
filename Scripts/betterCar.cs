@@ -267,7 +267,7 @@ public partial class betterCar : RigidBody3D
 					{
                         Array<betterCar> players = player_manager.instance.ambulances;
                         
-                        while (this == switchCar)
+                        while (this == switchCar || switchCar.state == PlayerState.IN_ACTIVE )
                         {
                             switchCar = players[GD.RandRange(0, player_manager.instance.numberOfPlayers - 1)];
                         }

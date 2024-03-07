@@ -335,6 +335,10 @@ public partial class player_manager : Node3D
         //if (GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@2").Visible == false)
         //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@3").Visible = true;
         //GetNode<Node3D>("/root/GameManager/PlayerManager/@Node3D@4").Visible = true;
+        foreach (var player in ambulances)
+        {
+            (player as betterCar).SetState(betterCar.PlayerState.ACTIVE);
+        }
     }
 
 

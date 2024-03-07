@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btw0vugu7feer"
-path="res://.godot/imported/heartbeat-304130_640.png-41d6f727afef3b9103110b12aa38eb9e.ctex"
+path="res://.godot/imported/heartbeat-304130_640.png-dad0173e4a032ea5a2971a6519124c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/GUI_art/heartbeat-304130_640.png"
-dest_files=["res://.godot/imported/heartbeat-304130_640.png-41d6f727afef3b9103110b12aa38eb9e.ctex"]
+source_file="res://Art/GUI_art/heartbeat-304130_640.png"
+dest_files=["res://.godot/imported/heartbeat-304130_640.png-dad0173e4a032ea5a2971a6519124c01.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b7axm43yqoul3"
-path="res://.godot/imported/top.glb-15c7a2fbdbf21dbc8cc21d5937e8510c.scn"
+path="res://.godot/imported/top.glb-ee0c52d151f87e545e64ce78977960c6.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/top.glb"
-dest_files=["res://.godot/imported/top.glb-15c7a2fbdbf21dbc8cc21d5937e8510c.scn"]
+source_file="res://Art/GLB format (conveyor)/top.glb"
+dest_files=["res://.godot/imported/top.glb-ee0c52d151f87e545e64ce78977960c6.scn"]
 
 [params]
 

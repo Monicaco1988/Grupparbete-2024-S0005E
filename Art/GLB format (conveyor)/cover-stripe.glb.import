@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmuto5ltdnhsx"
-path="res://.godot/imported/cover-stripe.glb-462da3dcdb3b11b62b970315f1630779.scn"
+path="res://.godot/imported/cover-stripe.glb-dd04ed5f35e4eec0d6037505974c3072.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/cover-stripe.glb"
-dest_files=["res://.godot/imported/cover-stripe.glb-462da3dcdb3b11b62b970315f1630779.scn"]
+source_file="res://Art/GLB format (conveyor)/cover-stripe.glb"
+dest_files=["res://.godot/imported/cover-stripe.glb-dd04ed5f35e4eec0d6037505974c3072.scn"]
 
 [params]
 

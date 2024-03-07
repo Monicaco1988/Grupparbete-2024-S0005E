@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://wxlau7onjfon"
-path="res://.godot/imported/raceFuture.obj-1522c471106ad08484c38c6524c59799.mesh"
+path="res://.godot/imported/raceFuture.obj-ed13b0bc58c26e005209cdedba370405.mesh"
 
 [deps]
 
-files=["res://.godot/imported/raceFuture.obj-1522c471106ad08484c38c6524c59799.mesh"]
+files=["res://.godot/imported/raceFuture.obj-ed13b0bc58c26e005209cdedba370405.mesh"]
 
-source_file="res://art/kenney_car-kit/Models/OBJ format/raceFuture.obj"
-dest_files=["res://.godot/imported/raceFuture.obj-1522c471106ad08484c38c6524c59799.mesh", "res://.godot/imported/raceFuture.obj-1522c471106ad08484c38c6524c59799.mesh"]
+source_file="res://Art/kenney_car-kit/Models/OBJ format/raceFuture.obj"
+dest_files=["res://.godot/imported/raceFuture.obj-ed13b0bc58c26e005209cdedba370405.mesh", "res://.godot/imported/raceFuture.obj-ed13b0bc58c26e005209cdedba370405.mesh"]
 
 [params]
 

@@ -12,8 +12,8 @@ public partial class Follow_Camera : Marker3D
 	//static private int collisionshapes = 0;
 
 	public Node3D _player;
-
-	public Node3D playerContainer1;
+    
+    public Node3D playerContainer1;
 
 	// used for collisioncheck with checkpoints
 	[Export]
@@ -23,7 +23,8 @@ public partial class Follow_Camera : Marker3D
 	public override void _Ready()
 	{
 		instance = this;
-		//instantiates the attributes and objects from playermanager
+        
+        //instantiates the attributes and objects from playermanager
         _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
 		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
 	}
@@ -39,8 +40,8 @@ public partial class Follow_Camera : Marker3D
 			areaNodeToDequeue.GetChild<CollisionShape3D>(0).QueueFree();
 
 		}
-		
-	}
+       
+    }
 
 
 	public override void _PhysicsProcess(double delta)

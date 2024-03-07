@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dmfjsge8akgjn"
-path="res://.godot/imported/structure-corner-outer.glb-576e640dfe6c15a561f73ffa508a33a2.scn"
+path="res://.godot/imported/structure-corner-outer.glb-aabb2ac9aa3abed6530066d382890374.scn"
 
 [deps]
 
-source_file="res://art/GLB format (conveyor)/structure-corner-outer.glb"
-dest_files=["res://.godot/imported/structure-corner-outer.glb-576e640dfe6c15a561f73ffa508a33a2.scn"]
+source_file="res://Art/GLB format (conveyor)/structure-corner-outer.glb"
+dest_files=["res://.godot/imported/structure-corner-outer.glb-aabb2ac9aa3abed6530066d382890374.scn"]
 
 [params]
 

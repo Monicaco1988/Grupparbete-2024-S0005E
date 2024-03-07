@@ -41,6 +41,7 @@ public partial class ExplosionMarker : Marker3D
 		explosion.Emitting = true;
 		GD.Print("Player exited screen");
 		_player.GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot").Hide();
-	}
+        (_player.GetNode<RigidBody3D>("Player") as betterCar).SetState(betterCar.PlayerState.IN_ACTIVE);
+    }
 
 }

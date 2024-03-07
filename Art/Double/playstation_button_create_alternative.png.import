@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwmhhq0j04v74"
-path="res://.godot/imported/playstation_button_create_alternative.png-5fdb859451d6cb7e3687c36010495990.ctex"
+path="res://.godot/imported/playstation_button_create_alternative.png-88e89ad3923d8af95ff88e66f65f830e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Double/playstation_button_create_alternative.png"
-dest_files=["res://.godot/imported/playstation_button_create_alternative.png-5fdb859451d6cb7e3687c36010495990.ctex"]
+source_file="res://Art/Double/playstation_button_create_alternative.png"
+dest_files=["res://.godot/imported/playstation_button_create_alternative.png-88e89ad3923d8af95ff88e66f65f830e.ctex"]
 
 [params]
 
