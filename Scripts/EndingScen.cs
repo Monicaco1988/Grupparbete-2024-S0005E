@@ -3,6 +3,9 @@ using System;
 
 public partial class EndingScen : Control
 {
+    [Export]
+    private Label winningPlayer;
+
 	private Button _pressButton;
 	private Button resetGameButton;
 	private Button quitGameButton;
@@ -18,9 +21,20 @@ public partial class EndingScen : Control
 		resetGameButton.GrabFocus();
         _GetSignalFromGameManager = GetNode<GameManager>("/root/GameManager");
 		_GetSignalFromGameManager.UpdateGameState2 += Test2;
+        WinningPlayer();
 	}
 
-	private void Test2(GameState tst)
+
+
+    public void WinningPlayer()
+    {
+        winningPlayer.Text = "Contgrats! \n" + player_manager.instance.leader + "\n Saved a granny!";
+    }
+
+
+
+
+    private void Test2(GameState tst)
 	{
 		if(GameState.Menu != _GetSignalFromGameManager.State)
 			_GetSignalFromGameManager.UpdateGameState2 -= Test2; //deque avoid memleak

@@ -10,10 +10,11 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vh0w"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="EndingScen" type="Control"]
+[node name="EndingScen" type="Control" node_paths=PackedStringArray("winningPlayer")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_r3jec")
+winningPlayer = NodePath("TextureRect/Label")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -49,9 +50,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 20
 theme_override_fonts/font = ExtResource("3_gnjxu")
 theme_override_font_sizes/font_size = 175
-text = "Contgrats! 
-Player
-Saved a granny!"
+text = "fdsa
+fsda
+fdsa"
 horizontal_alignment = 1
 uppercase = true
 

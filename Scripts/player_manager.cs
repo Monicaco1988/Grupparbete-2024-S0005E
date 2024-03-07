@@ -11,7 +11,7 @@ public partial class player_manager : Node3D
     public int player3Score = 0;
     public int player4Score = 0;
 
-
+    public string leader;
     public int Score = 0;
     public static player_manager instance {  get; private set; }
     private int lockAButton = 0;
@@ -167,7 +167,10 @@ public partial class player_manager : Node3D
 
                         if (player1Score == 3 || player2Score == 3)//Score == 3)// player2Score == 3 || player1Score == 3 || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null) // next fix is score system (added the logic if a player get to last node it triggers winning screen)
                         {
-
+                            if (player1Score == 3)
+                                leader = "Player 1";
+                            else if (player2Score == 3)
+                                leader = "Player 2";
 
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
@@ -214,6 +217,13 @@ public partial class player_manager : Node3D
                         
                         if (player1Score == 3 || player2Score == 3 || player3Score == 3)// || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
+                            if (player1Score == 3)
+                                leader = "Player 1";
+                            else if (player2Score == 3)
+                                leader = "Player 2";
+                            else if (player3Score == 3)
+                                leader = "Player 3";
+
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
                             this.QueueFree();
@@ -264,6 +274,16 @@ public partial class player_manager : Node3D
 
                         if (player1Score == 3 || player2Score == 3 || player3Score == 3 || player4Score == 3)// || GetNode<CollisionShape3D>("/root/GameManager/PlayerManager/World/CollisionaraDestroy/CollisionShape3D237") == null)
                         {
+                            if (player1Score == 3)
+                                leader = "Player 1";
+                            else if (player2Score == 3)
+                                leader = "Player 2";
+                            else if (player3Score == 3)
+                                leader = "Player 3";
+                            else if (player4Score == 3)
+                                leader = "Player 4";
+
+
                             GetNode<Node3D>("/root/GameManager/World").QueueFree();
 
                             this.QueueFree();
