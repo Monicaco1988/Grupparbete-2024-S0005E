@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ujq1ftasjrc3"
-path="res://.godot/imported/structure-doorway.glb-ea4e00e48ff01bfd350e628cb1c1ff20.scn"
+path="res://.godot/imported/structure-doorway.glb-e52b3d3b5bc6757ed0f2acb52b45a70b.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/structure-doorway.glb"
-dest_files=["res://.godot/imported/structure-doorway.glb-ea4e00e48ff01bfd350e628cb1c1ff20.scn"]
+source_file="res://art/GLB format (conveyor)/structure-doorway.glb"
+dest_files=["res://.godot/imported/structure-doorway.glb-e52b3d3b5bc6757ed0f2acb52b45a70b.scn"]
 
 [params]
 

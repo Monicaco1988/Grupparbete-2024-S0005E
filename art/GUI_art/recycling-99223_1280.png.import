@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://esx8yrtsh0oa"
-path="res://.godot/imported/recycling-99223_1280.png-38c675bb051018244362c8a89adea340.ctex"
+path="res://.godot/imported/recycling-99223_1280.png-f7f0d010118ac0376c77c8fe490a7108.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/GUI_art/recycling-99223_1280.png"
-dest_files=["res://.godot/imported/recycling-99223_1280.png-38c675bb051018244362c8a89adea340.ctex"]
+source_file="res://art/GUI_art/recycling-99223_1280.png"
+dest_files=["res://.godot/imported/recycling-99223_1280.png-f7f0d010118ac0376c77c8fe490a7108.ctex"]
 
 [params]
 

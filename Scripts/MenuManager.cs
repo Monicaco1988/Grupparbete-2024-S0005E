@@ -56,7 +56,7 @@ public partial class MenuManager : Control
 				QueueFree();
 			}
 			// same as pushing quit with the mouse on the button but on the x-box controller instead
-			if (BetterInput.IsActionJustPressed("MenuSelect", controllerIndex) && quitButton.HasFocus())
+			if (Input.IsActionJustReleased("MenuSelect") && quitButton.HasFocus())
 			{
 				GetTree().Quit();
 			}

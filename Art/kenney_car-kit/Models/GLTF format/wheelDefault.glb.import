@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://qd6twogv7ekw"
-path="res://.godot/imported/wheelDefault.glb-8ef0b928bbefd94926306e958d84aaa5.scn"
+path="res://.godot/imported/wheelDefault.glb-cf144932afd7fcc63c8567acb3984d48.scn"
 
 [deps]
 
-source_file="res://Art/kenney_car-kit/Models/GLTF format/wheelDefault.glb"
-dest_files=["res://.godot/imported/wheelDefault.glb-8ef0b928bbefd94926306e958d84aaa5.scn"]
+source_file="res://art/kenney_car-kit/Models/GLTF format/wheelDefault.glb"
+dest_files=["res://.godot/imported/wheelDefault.glb-cf144932afd7fcc63c8567acb3984d48.scn"]
 
 [params]
 

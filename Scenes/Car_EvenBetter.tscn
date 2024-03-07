@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 [ext_resource type="Script" path="res://Scenes/Smoke.cs" id="2_qcwma"]
-[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://Art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="3_bvmy7"]
+[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="3_bvmy7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xca33"]
 resource_local_to_scene = true
@@ -651,6 +651,46 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, -0.89778, 0), Vector3(0, -1.93334, 0), Vector3(0, -1.2991, 0), Vector3(0, -0.683593, 0), Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_sg20v"]
+resource_name = "Hole"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarMesh/MeshInstance3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 294.067, 294.067),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(5, 0.01, 5), Vector3(0, 0.01, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarMesh/ambulance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1), Vector3(0, -2.58067, 1), Vector3(0, -2.58067, 1), Vector3(0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarMesh/ambulance:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.733702, 0, 0), Vector3(0.733702, 0, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_xsvdq"]
 length = 0.001
 tracks/0/type = "value"
@@ -714,46 +754,6 @@ tracks/4/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_sg20v"]
-resource_name = "Hole"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CarMesh/MeshInstance3D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 3),
-"transitions": PackedFloat32Array(1, 294.067, 294.067),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(5, 0.01, 5), Vector3(0, 0.01, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CarMesh/ambulance:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 1), Vector3(0, -2.58067, 1), Vector3(0, -2.58067, 1), Vector3(0, 0, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CarMesh/ambulance:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1.1, 1.5, 2, 2.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.733702, 0, 0), Vector3(0.733702, 0, 0), Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pu1i6"]
 _data = {
 "DoorAnimation": SubResource("Animation_7v4xw"),
@@ -780,7 +780,6 @@ shape = SubResource("SphereShape3D_syqvy")
 mesh = SubResource("SphereMesh_ofj0k")
 
 [node name="CarMesh" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="ambulance" type="Node3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

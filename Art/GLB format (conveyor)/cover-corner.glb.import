@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://4rwuc38m3bx2"
-path="res://.godot/imported/cover-corner.glb-fb5e8e53945706352bac51a91df3ce84.scn"
+path="res://.godot/imported/cover-corner.glb-3f8ea16bf664db80b341343bc5596f3e.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/cover-corner.glb"
-dest_files=["res://.godot/imported/cover-corner.glb-fb5e8e53945706352bac51a91df3ce84.scn"]
+source_file="res://art/GLB format (conveyor)/cover-corner.glb"
+dest_files=["res://.godot/imported/cover-corner.glb-3f8ea16bf664db80b341343bc5596f3e.scn"]
 
 [params]
 

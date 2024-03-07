@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bx8b3n6w0yud2"]
 
 [ext_resource type="Script" path="res://Scripts/MenuManager.cs" id="1_brujs"]
-[ext_resource type="Texture2D" uid="uid://csv71w0kdv1e1" path="res://Art/Storyart/4.png" id="2_xmxy5"]
-[ext_resource type="FontFile" uid="uid://ccii14eo2t1mn" path="res://Art/yoster-island/yoster.ttf" id="3_1bdxr"]
+[ext_resource type="Texture2D" uid="uid://csv71w0kdv1e1" path="res://art/Storyart/4.png" id="2_xmxy5"]
+[ext_resource type="FontFile" uid="uid://ccii14eo2t1mn" path="res://art/yoster-island/yoster.ttf" id="3_1bdxr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yaxw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

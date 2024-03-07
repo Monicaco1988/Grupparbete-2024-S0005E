@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3bhe0d5s81mw"
-path="res://.godot/imported/structure-wall.glb-26a4e9ae747fb6ae9927c252325ab1c5.scn"
+path="res://.godot/imported/structure-wall.glb-3ec445f2a39b9d9c9d4fcdd3b1c81eb9.scn"
 
 [deps]
 
-source_file="res://Art/GLB format (conveyor)/structure-wall.glb"
-dest_files=["res://.godot/imported/structure-wall.glb-26a4e9ae747fb6ae9927c252325ab1c5.scn"]
+source_file="res://art/GLB format (conveyor)/structure-wall.glb"
+dest_files=["res://.godot/imported/structure-wall.glb-3ec445f2a39b9d9c9d4fcdd3b1c81eb9.scn"]
 
 [params]
 

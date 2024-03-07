@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du88stfehhrv1"
-path="res://.godot/imported/Crate.png-6cb895ce74b3b3c40fea100cac0365ae.ctex"
+path="res://.godot/imported/Crate.png-12876b831d052f3b9019745746b0f32e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Crate.png"
-dest_files=["res://.godot/imported/Crate.png-6cb895ce74b3b3c40fea100cac0365ae.ctex"]
+source_file="res://art/Crate.png"
+dest_files=["res://.godot/imported/Crate.png-12876b831d052f3b9019745746b0f32e.ctex"]
 
 [params]
 
