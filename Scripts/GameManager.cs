@@ -3,13 +3,15 @@ using System;
 
 public partial class GameManager : Node
 {
-	public GameState State;
+	public static GameManager instance { get; private set; }
+    public GameState State;
 
 	[Signal]
 	public delegate void UpdateGameState2EventHandler(GameState newState);
 
 	public override void _Ready()
 	{
+		instance = this;
 		UpdateGameState2 += UpdateGameState;
 		//UpdateGameState(GameState.AudioManager);
 		UpdateGameState(GameState.Menu);
@@ -70,20 +72,26 @@ public partial class GameManager : Node
 
 	private void HandleLevelSelect()
 	{
-		var sceneWorld = ResourceLoader.Load<PackedScene>("res://Scenes/RacingScene_Multiplayer.tscn").Instantiate<Node3D>();
-		AddChild(sceneWorld);
+        GetTree().Paused = true;
+        var sceneWorld = GD.Load<PackedScene>("res://Scenes/RacingScene_Multiplayer.tscn").Instantiate();
+		if (sceneWorld == null)
+			GD.Print("Sceneworld failed");
+		else
+            GD.Print("Sceneworld COOl");
+
+        AddChild(sceneWorld);
 	}
 	private void HandlePlayerSelect()
 	{
 		GD.Print("hi there, seems fine");
 		//not doing his right now
-		var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate<Node3D>();
+		var sceneplayer_manager = ResourceLoader.Load<PackedScene>("res://Scenes/player_manager.tscn").Instantiate();
 		AddChild(sceneplayer_manager);
 	}
 	private void HandleMenuSelect()
 	{
 		HandleAudioSelect();
-        var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate<Control>();
+        var sceneMenu = ResourceLoader.Load<PackedScene>("res://Scenes/Menumanager.tscn").Instantiate();
 		AddChild(sceneMenu);
 	}
 

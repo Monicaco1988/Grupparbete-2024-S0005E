@@ -45,7 +45,11 @@ public partial class Follow_Camera : Marker3D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		GD.Print(this);
+        if (playerContainer1 == null)
+        {
+			return;
+        }
+        GD.Print(this);
         if (timer > 3)
         {
             (playerContainer1 as betterCar).setFirst(true);

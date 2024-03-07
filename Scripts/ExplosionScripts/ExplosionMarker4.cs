@@ -24,6 +24,7 @@ public partial class ExplosionMarker4 : Marker3D
 
     public override void _Ready()
     {
+        GD.Print("bajs");
         //instantiates the attributes and objects from playermanager
         _VirtualPlayer = GetNode<Node3D>("/root/GameManager/PlayerManager");
         // check if node exists
@@ -36,8 +37,13 @@ public partial class ExplosionMarker4 : Marker3D
         else { this.QueueFree(); }
     }
 
-    public override void _PhysicsProcess(double delta)
+    public override void _Process(double delta)
     {
+        GD.Print("bajs");
+        if (GameManager.instance.State != GameState.LevelManager)
+        {
+            return;
+        }
         if (_VirtualPlayer.GetChildCount() > 11)//(_player.HasNode("/root/GameManager/PlayerManager/@Node3D@2")) old logic works but not if we respawn
         {
             //update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
