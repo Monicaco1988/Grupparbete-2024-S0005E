@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ixf7snc0lnvu"]
+[gd_scene load_steps=45 format=3 uid="uid://ixf7snc0lnvu"]
 
 [ext_resource type="Script" path="res://Scripts/betterCar.cs" id="1_wd3ea"]
 [ext_resource type="Script" path="res://Scenes/Smoke.cs" id="2_qcwma"]
@@ -559,6 +559,45 @@ color_ramp = SubResource("GradientTexture1D_jyet1")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
 
+[sub_resource type="Curve" id="Curve_ym5hs"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.22619, 0.89011), 0.0, 0.0, 0, 0, Vector2(1, 0.263736), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jxlae"]
+curve = SubResource("Curve_ym5hs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ncy0v"]
+angle_max = 360.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 4.0
+angular_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 1.0
+linear_accel_max = 5.0
+scale_min = 0.05
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_jxlae")
+color = Color(1, 0.505882, 0, 1)
+hue_variation_min = 0.96
+hue_variation_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr8sk"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.588235, 0.0313726, 0, 1)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_k5gvt"]
+material = SubResource("StandardMaterial3D_yr8sk")
+
 [sub_resource type="SphereMesh" id="SphereMesh_do464"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrwwk"]
@@ -764,7 +803,7 @@ _data = {
 [node name="PlayerRoot" type="Node3D"]
 process_mode = 3
 
-[node name="Player" type="RigidBody3D" parent="."]
+[node name="Player" type="RigidBody3D" parent="." node_paths=PackedStringArray("fireSpeedLeft", "fireSpeedRight")]
 visible = false
 collision_layer = 3
 collision_mask = 3
@@ -772,6 +811,8 @@ physics_material_override = SubResource("PhysicsMaterial_xca33")
 gravity_scale = 3.0
 angular_damp = 10.0
 script = ExtResource("1_wd3ea")
+fireSpeedLeft = NodePath("../CarMesh/ambulance/FireSpeed/GPUParticles3D")
+fireSpeedRight = NodePath("../CarMesh/ambulance/FireSpeed/GPUParticles3D2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("SphereShape3D_syqvy")
@@ -895,6 +936,35 @@ pixel_size = 0.03
 billboard = 1
 text = "P0
 "
+
+[node name="FireSpeed" type="Node3D" parent="CarMesh/ambulance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454744, 0.384481, 1.7336)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="CarMesh/ambulance/FireSpeed"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.412797, 0, 0.0204804)
+emitting = false
+amount = 600
+lifetime = 0.5
+one_shot = true
+randomness = 1.0
+visibility_aabb = AABB(-4, -4, -3.85449, 8, 8, 8)
+local_coords = true
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_ncy0v")
+draw_pass_1 = SubResource("QuadMesh_k5gvt")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="CarMesh/ambulance/FireSpeed"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.587203, 0, 0.0204804)
+emitting = false
+amount = 600
+lifetime = 0.5
+one_shot = true
+randomness = 1.0
+visibility_aabb = AABB(-4, -4, -3.85449, 8, 8, 8)
+local_coords = true
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_ncy0v")
+draw_pass_1 = SubResource("QuadMesh_k5gvt")
 
 [node name="RayCast3D" type="RayCast3D" parent="CarMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

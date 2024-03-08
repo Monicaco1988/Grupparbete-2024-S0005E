@@ -1058,6 +1058,86 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_oib23")
 draw_pass_1 = SubResource("QuadMesh_sshb2")
 
+[node name="smokeParticle18" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6773, 1.3825, 25.0944)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle19" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4704, 1.3825, 25.0944)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle20" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.298, 1.3825, 25.0944)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle21" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6084, 1.3825, 25.0944)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle22" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6084, 1.3825, 25.3013)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle23" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6084, 1.3825, 25.4737)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle24" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6084, 1.3825, 26.1633)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle25" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.229, 1.3825, 26.1633)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 25
+lifetime = 4.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
 [node name="smokeParticle16" type="GPUParticles3D" parent="Obstacles/Smoke building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2614, 1.15032, 26.3937)
 material_override = SubResource("StandardMaterial3D_ceo2o")

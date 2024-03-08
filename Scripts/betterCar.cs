@@ -58,7 +58,12 @@ public partial class betterCar : RigidBody3D
 	
 	PackedScene trackScene;
 	GpuParticles3D smoke;
-	Node3D rightSkid;
+    [Export]
+    GpuParticles3D fireSpeedLeft;
+    [Export]
+    GpuParticles3D fireSpeedRight;
+
+    Node3D rightSkid;
 	Node3D leftSkid;
 	Node3D dropPoint;
 	Label3D label;
@@ -223,6 +228,10 @@ public partial class betterCar : RigidBody3D
 						{
 						ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * 0.5f);// * (float)delta);
 						//playDoorAnimation();
+						bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
+                        fireSpeedRight.Emitting = true;
+                        fireSpeedLeft.Emitting = true;
+                        smoke.Emitting = true;
 
 						pwrUpSpeed--;
 						} 
@@ -416,9 +425,10 @@ public partial class betterCar : RigidBody3D
 
             if (velocity > 60f)
             {
-
+                fireSpeedRight.Emitting = true;
+                fireSpeedLeft.Emitting = true;
                 bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
-                smoke.Emitting = true;
+				smoke.Emitting = true;
             }
 
             if (groundRay.IsColliding())
