@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://uc6ovcrfcggm"]
+[gd_scene load_steps=64 format=3 uid="uid://uc6ovcrfcggm"]
 
 [ext_resource type="MeshLibrary" uid="uid://crmrar48pn4q6" path="res://Scenes/Tiles/NoRefl4.tres" id="1_0qgax"]
 [ext_resource type="Script" path="res://Scripts/CameraPrototyp.cs" id="3_gu15p"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://xvs8er04l7r2" path="res://Art/KenneyCityKit/GLTF format/skyscraperF.glb" id="9_lnjlb"]
 [ext_resource type="PackedScene" uid="uid://vp3y35pwm5xr" path="res://Art/KenneyCityKit/GLTF format/skyscraperA.glb" id="10_rmr7q"]
 [ext_resource type="PackedScene" uid="uid://cbrdrkv8x6tvg" path="res://Art/KenneyCityKit/GLTF format/large_buildingC.glb" id="11_4wocj"]
+[ext_resource type="Texture2D" uid="uid://bhy74ltpo43lq" path="res://Art/kenney_particle-pack/PNG (Transparent)/smoke_08.png" id="11_iqap3"]
 [ext_resource type="PackedScene" uid="uid://u1a8p1xl7mhr" path="res://Art/KenneyCityKit/GLTF format/large_buildingD.glb" id="12_jfejh"]
 [ext_resource type="PackedScene" uid="uid://b0b6tm6xyni0u" path="res://Art/KenneyCityKit/GLTF format/large_buildingE.glb" id="13_qmq4y"]
 [ext_resource type="PackedScene" uid="uid://dgkqir7e8w6o2" path="res://Art/KenneyCityKit/GLTF format/large_buildingA.glb" id="14_leb1m"]
@@ -53,6 +54,42 @@ backlight = Color(1, 1, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkf4w"]
 size = Vector3(1, 1, 1.06863)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ceo2o"]
+transparency = 1
+blend_mode = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(0.301961, 0.301961, 0.301961, 0.705882)
+albedo_texture = ExtResource("11_iqap3")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_7uggj"]
+max_value = 5.0
+_data = [Vector2(0, 3.9011), 0.0, 0.0, 0, 0, Vector2(0.258065, 4.45055), 0.887299, 0.887299, 0, 0, Vector2(0.483871, 4.50549), 4.51144, 4.51144, 0, 0, Vector2(0.746544, 4.67033), 0.0, 0.0, 0, 0, Vector2(0.990783, 4.28571), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_sp7ef"]
+curve = SubResource("Curve_7uggj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oib23"]
+lifetime_randomness = 0.05
+emission_shape = 1
+emission_sphere_radius = 0.1
+angle_max = 360.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+gravity = Vector3(10, 30, 0)
+scale_min = 0.2
+scale_curve = SubResource("CurveTexture_sp7ef")
+turbulence_enabled = true
+turbulence_noise_speed = Vector3(0, 50, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_sshb2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h4uv"]
 resource_name = "pavement"
@@ -854,6 +891,73 @@ transform = Transform3D(0.085, 0, 0, 0, 0.255, 0, 0, 0, 0.555, 1.33895, 0.018, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/Cone wall17/StaticBody3D"]
 transform = Transform3D(1, 0, -3.97904e-13, 0, 1, 0, -2.66454e-15, 0, 1, 0, 0, -0.002491)
 shape = SubResource("BoxShape3D_nkf4w")
+
+[node name="Smoke building" type="Node3D" parent="Obstacles"]
+
+[node name="smokeParticle" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4349, 0.629784, 33.7797)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle2" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4349, 0.629784, 34.6171)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle3" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4349, 0.629784, 32.2378)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle4" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3303, 0.629784, 32.2922)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle5" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4359, 0.629784, 30.7564)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+randomness = 1.0
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
+
+[node name="smokeParticle6" type="GPUParticles3D" parent="Obstacles/Smoke building"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4359, 0.629784, 29.1904)
+material_override = SubResource("StandardMaterial3D_ceo2o")
+amount = 100
+lifetime = 0.5
+visibility_aabb = AABB(-0.309063, -0.317723, -0.344538, 0.618126, 0.673531, 0.689076)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_oib23")
+draw_pass_1 = SubResource("QuadMesh_sshb2")
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -15832,6 +15936,31 @@ light_energy = 7.0
 
 [node name="OmniLight3D165" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
 transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -35.8141, 1, 40.708)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 7.0
+
+[node name="OmniLight3D240" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -35.0313, 1, 40.708)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 7.0
+
+[node name="OmniLight3D241" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -35.0313, 1, 41.0763)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 7.0
+
+[node name="OmniLight3D242" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -35.0313, 0.512978, 41.0763)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 7.0
+
+[node name="OmniLight3D243" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -35.173, 0.599904, 39.4589)
+light_color = Color(1, 1, 0.294118, 1)
+light_energy = 7.0
+
+[node name="OmniLight3D244" type="OmniLight3D" parent="Buildings/MoreLightsBuildings"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, -32.989, 0.599904, 39.4589)
 light_color = Color(1, 1, 0.294118, 1)
 light_energy = 7.0
 
