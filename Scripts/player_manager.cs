@@ -316,6 +316,22 @@ public partial class player_manager : Node3D
                 }
             }
         }
+
+        foreach (var ambulance in ambulances)
+        {
+            if(ambulance.pwrUpDefib != 1)
+            {
+                
+            }
+            if(ambulance.pwrUpSpeed != 1)
+            {
+
+            }
+            if(ambulance.pwrUpSwitch != 1)
+           {
+
+           }
+        }
     }
 
     public void Visibility()

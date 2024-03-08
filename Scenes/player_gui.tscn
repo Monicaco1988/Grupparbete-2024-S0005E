@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://deub0tsd4g553"]
+[gd_scene load_steps=12 format=3 uid="uid://deub0tsd4g553"]
 
 [ext_resource type="Script" path="res://Scripts/player_gui.cs" id="1_sm5gn"]
-[ext_resource type="Texture2D" uid="uid://bulxkmh7qpq60" path="res://art/Boost.png" id="2_s854q"]
-[ext_resource type="Texture2D" uid="uid://du88stfehhrv1" path="res://art/Crate.png" id="3_hp0ls"]
-[ext_resource type="Texture2D" uid="uid://124nmykh72al" path="res://art/Switch.png" id="4_nfr24"]
+[ext_resource type="Texture2D" uid="uid://bulxkmh7qpq60" path="res://Art/Boost.png" id="2_s854q"]
+[ext_resource type="Texture2D" uid="uid://du88stfehhrv1" path="res://Art/Crate.png" id="3_hp0ls"]
+[ext_resource type="Texture2D" uid="uid://124nmykh72al" path="res://Art/Switch.png" id="4_nfr24"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4vhku"]
 font_size = 60
@@ -13,6 +13,12 @@ shadow_color = Color(0.913725, 0, 0.447059, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x5cub"]
 font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2uog"]
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g7s1q"]
 
@@ -68,57 +74,85 @@ offset_bottom = 208.0
 text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle1" type="ReferenceRect" parent="Player1"]
+[node name="Speed" type="ReferenceRect" parent="Player1"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 240.0
-offset_right = 171.0
-offset_bottom = 392.0
+offset_left = 44.0
+offset_top = 209.0
+offset_right = 212.0
+offset_bottom = 361.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle1"]
+[node name="Panel" type="Panel" parent="Player1/Speed"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player1/Speed/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("2_s854q")
 expand_mode = 1
 
-[node name="ItemRectangle2" type="ReferenceRect" parent="Player1"]
-layout_mode = 0
-offset_left = 184.0
-offset_top = 240.0
-offset_right = 352.0
-offset_bottom = 392.0
+[node name="Box" type="ReferenceRect" parent="Player1"]
+offset_left = 44.0
+offset_top = 209.0
+offset_right = 212.0
+offset_bottom = 361.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle2"]
+[node name="Panel" type="Panel" parent="Player1/Box"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player1/Box/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
-[node name="ItemRectangle3" type="ReferenceRect" parent="Player1"]
-layout_mode = 0
-offset_left = 365.0
-offset_top = 240.0
-offset_right = 533.0
-offset_bottom = 392.0
+[node name="Switch" type="ReferenceRect" parent="Player1"]
+offset_left = 44.0
+offset_top = 209.0
+offset_right = 212.0
+offset_bottom = 361.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player1/ItemRectangle3"]
+[node name="Panel" type="Panel" parent="Player1/Switch"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player1/Switch/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("4_nfr24")
 expand_mode = 1
 
@@ -158,57 +192,84 @@ offset_bottom = 212.0
 text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle1" type="ReferenceRect" parent="Player2"]
-layout_mode = 0
-offset_left = -247.0
-offset_top = 215.0
-offset_right = -79.0
-offset_bottom = 367.0
+[node name="Speed" type="ReferenceRect" parent="Player2"]
+offset_left = 23.0
+offset_top = 191.0
+offset_right = 191.0
+offset_bottom = 343.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle1"]
+[node name="Panel" type="Panel" parent="Player2/Speed"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player2/Speed/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("2_s854q")
 expand_mode = 1
 
-[node name="ItemRectangle2" type="ReferenceRect" parent="Player2"]
-layout_mode = 0
-offset_left = -66.0
-offset_top = 215.0
-offset_right = 102.0
-offset_bottom = 367.0
+[node name="Box" type="ReferenceRect" parent="Player2"]
+offset_left = 23.0
+offset_top = 191.0
+offset_right = 191.0
+offset_bottom = 343.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle2"]
+[node name="Panel" type="Panel" parent="Player2/Box"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player2/Box/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
-[node name="ItemRectangle3" type="ReferenceRect" parent="Player2"]
-layout_mode = 0
-offset_left = 114.0
-offset_top = 215.0
-offset_right = 282.0
-offset_bottom = 367.0
+[node name="Switch" type="ReferenceRect" parent="Player2"]
+offset_left = 23.0
+offset_top = 191.0
+offset_right = 191.0
+offset_bottom = 343.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player2/ItemRectangle3"]
+[node name="Panel" type="Panel" parent="Player2/Switch"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player2/Switch/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("4_nfr24")
 expand_mode = 1
 
@@ -249,57 +310,84 @@ offset_bottom = 2045.0
 text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle1" type="ReferenceRect" parent="Player3"]
-layout_mode = 0
-offset_left = -261.0
-offset_top = -170.0
-offset_right = -93.0
-offset_bottom = -18.0
+[node name="Speed" type="ReferenceRect" parent="Player3"]
+offset_left = 28.0
+offset_top = -202.0
+offset_right = 196.0
+offset_bottom = -50.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle1"]
+[node name="Panel" type="Panel" parent="Player3/Speed"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player3/Speed/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("2_s854q")
 expand_mode = 1
 
-[node name="ItemRectangle2" type="ReferenceRect" parent="Player3"]
-layout_mode = 0
-offset_left = -80.0
-offset_top = -170.0
-offset_right = 88.0
-offset_bottom = -18.0
+[node name="Box" type="ReferenceRect" parent="Player3"]
+offset_left = 28.0
+offset_top = -202.0
+offset_right = 196.0
+offset_bottom = -50.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle2"]
+[node name="Panel" type="Panel" parent="Player3/Box"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player3/Box/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
-[node name="ItemRectangle3" type="ReferenceRect" parent="Player3"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = -170.0
-offset_right = 268.0
-offset_bottom = -18.0
+[node name="Switch" type="ReferenceRect" parent="Player3"]
+offset_left = 28.0
+offset_top = -202.0
+offset_right = 196.0
+offset_bottom = -50.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player3/ItemRectangle3"]
+[node name="Panel" type="Panel" parent="Player3/Switch"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player3/Switch/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("4_nfr24")
 expand_mode = 1
 
@@ -339,56 +427,83 @@ offset_bottom = 2052.0
 text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
-[node name="ItemRectangle1" type="ReferenceRect" parent="Player4"]
-layout_mode = 0
-offset_left = -11.0
-offset_top = -173.0
-offset_right = 157.0
-offset_bottom = -21.0
+[node name="Speed" type="ReferenceRect" parent="Player4"]
+offset_left = 35.0
+offset_top = -194.0
+offset_right = 203.0
+offset_bottom = -42.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle1"]
+[node name="Panel" type="Panel" parent="Player4/Speed"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player4/Speed/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("2_s854q")
 expand_mode = 1
 
-[node name="ItemRectangle2" type="ReferenceRect" parent="Player4"]
-layout_mode = 0
-offset_left = 170.0
-offset_top = -173.0
-offset_right = 338.0
-offset_bottom = -21.0
+[node name="Box" type="ReferenceRect" parent="Player4"]
+offset_left = 35.0
+offset_top = -194.0
+offset_right = 203.0
+offset_bottom = -42.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle2"]
+[node name="Panel" type="Panel" parent="Player4/Box"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player4/Box/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
-[node name="ItemRectangle3" type="ReferenceRect" parent="Player4"]
-layout_mode = 0
-offset_left = 351.0
-offset_top = -173.0
-offset_right = 519.0
-offset_bottom = -21.0
+[node name="Switch" type="ReferenceRect" parent="Player4"]
+offset_left = 35.0
+offset_top = -194.0
+offset_right = 203.0
+offset_bottom = -42.0
 border_color = Color(1, 0, 0, 0)
 border_width = 5.0
 
-[node name="TextureRect" type="TextureRect" parent="Player4/ItemRectangle3"]
+[node name="Panel" type="Panel" parent="Player4/Switch"]
+clip_children = 1
+clip_contents = true
 layout_mode = 0
-offset_left = -3.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j2uog")
+
+[node name="TextureRect" type="TextureRect" parent="Player4/Switch/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = -5.0
 offset_top = -3.0
-offset_right = 171.0
+offset_right = 169.0
 offset_bottom = 155.0
+scale = Vector2(1.2, 1.30435)
 texture = ExtResource("4_nfr24")
 expand_mode = 1
