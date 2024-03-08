@@ -103,6 +103,7 @@ texture = ExtResource("2_s854q")
 expand_mode = 1
 
 [node name="Box" type="ReferenceRect" parent="Player1"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 209.0
 offset_right = 212.0
@@ -130,6 +131,7 @@ texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
 [node name="Switch" type="ReferenceRect" parent="Player1"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 209.0
 offset_right = 212.0
@@ -193,6 +195,7 @@ text = "WINS: "
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="Speed" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 191.0
 offset_right = 191.0
@@ -220,6 +223,7 @@ texture = ExtResource("2_s854q")
 expand_mode = 1
 
 [node name="Box" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 191.0
 offset_right = 191.0
@@ -247,6 +251,7 @@ texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
 [node name="Switch" type="ReferenceRect" parent="Player2"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 191.0
 offset_right = 191.0
@@ -311,6 +316,7 @@ text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="Speed" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = -202.0
 offset_right = 196.0
@@ -338,6 +344,7 @@ texture = ExtResource("2_s854q")
 expand_mode = 1
 
 [node name="Box" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = -202.0
 offset_right = 196.0
@@ -365,6 +372,7 @@ texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
 [node name="Switch" type="ReferenceRect" parent="Player3"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = -202.0
 offset_right = 196.0
@@ -428,6 +436,7 @@ text = "WINS:"
 label_settings = SubResource("LabelSettings_x5cub")
 
 [node name="Speed" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = 35.0
 offset_top = -194.0
 offset_right = 203.0
@@ -455,6 +464,7 @@ texture = ExtResource("2_s854q")
 expand_mode = 1
 
 [node name="Box" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = 35.0
 offset_top = -194.0
 offset_right = 203.0
@@ -482,6 +492,7 @@ texture = ExtResource("3_hp0ls")
 expand_mode = 1
 
 [node name="Switch" type="ReferenceRect" parent="Player4"]
+layout_mode = 0
 offset_left = 35.0
 offset_top = -194.0
 offset_right = 203.0
