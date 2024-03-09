@@ -154,8 +154,23 @@ public partial class betterCar : RigidBody3D
 			switch (powerUp)
 			{
 				case PowerUp.SPEED_BOOST:
+<<<<<<< Updated upstream
 					ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * (float)delta);
 					playDoorAnimation();
+=======
+					if (pwrUpSpeed == 1)
+						{
+						ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * 0.5f);// * (float)delta);
+						//playDoorAnimation();
+						//bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
+                        fireSpeedRight.Emitting = true;
+                        fireSpeedLeft.Emitting = true;
+                        //smoke.Emitting = true;
+
+						pwrUpSpeed--;
+						}
+					//powerUp = PowerUp.DEFIBRILLATOR;
+>>>>>>> Stashed changes
 					break;
 
 				case PowerUp.DEFIBRILLATOR:

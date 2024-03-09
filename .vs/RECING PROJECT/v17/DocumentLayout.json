@@ -82,6 +82,22 @@
             {
               "$type": "Document",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+              "DocumentIndex": 2,
+              "Title": "BetterInput.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\BetterInput.cs",
+              "RelativeDocumentMoniker": "Scripts\\BetterInput.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\BetterInput.cs",
+              "RelativeToolTip": "Scripts\\BetterInput.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T09:10:23.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+>>>>>>> Stashed changes
               "DocumentIndex": 4,
 =======
               "DocumentIndex": 2,
@@ -92,7 +108,83 @@
               "RelativeToolTip": "Scripts\\audio_manager.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAwwA8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-02-26T19:06:38.008Z"
+=======
+              "WhenOpened": "2024-03-09T08:51:28.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "player_gui.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_gui.cs",
+              "RelativeDocumentMoniker": "Scripts\\player_gui.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_gui.cs",
+              "RelativeToolTip": "Scripts\\player_gui.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T08:48:32.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Checkpoints.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Checkpoints.cs",
+              "RelativeDocumentMoniker": "Scripts\\Checkpoints.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\Checkpoints.cs",
+              "RelativeToolTip": "Scripts\\Checkpoints.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:05:06.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CameraPole2.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraPole2.cs",
+              "RelativeDocumentMoniker": "Scripts\\CameraPole2.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraPole2.cs",
+              "RelativeToolTip": "Scripts\\CameraPole2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:53:08.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Scripts\\CameraFollow.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Scripts\\CameraFollow.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T22:22:29.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EndingScen.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\EndingScen.cs",
+              "RelativeDocumentMoniker": "Scripts\\EndingScen.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\EndingScen.cs",
+              "RelativeToolTip": "Scripts\\EndingScen.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCEAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T16:46:05.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Scripts\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T08:52:00.47Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -137,9 +229,13 @@
               "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\betterCar.cs",
               "RelativeToolTip": "Scripts\\betterCar.cs",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               "ViewState": "AQIAAPQAAAAAAAAAAAAtwAIBAAAqAAAA",
 =======
               "ViewState": "AQIAAN8AAAAAAAAAAIAwwP4AAAAAAAAA",
+>>>>>>> Stashed changes
+=======
+              "ViewState": "AQIAANUAAAAAAAAAAAAxwOUAAAAZAAAA",
 >>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-24T18:41:18.938Z",
@@ -157,7 +253,11 @@
               "RelativeDocumentMoniker": "Scripts\\player_manager.cs",
               "ToolTip": "C:\\Users\\Mono\\Documents\\GitHub\\Grupparbete-2024-S0005E\\Scripts\\player_manager.cs",
               "RelativeToolTip": "Scripts\\player_manager.cs",
+<<<<<<< Updated upstream
               "ViewState": "AQIAAHQAAAAAAAAAAAAQwIwAAAAAAAAA",
+=======
+              "ViewState": "AQIAADEBAAAAAAAAAAAuwBIAAAADAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-24T18:31:10.592Z"
             },

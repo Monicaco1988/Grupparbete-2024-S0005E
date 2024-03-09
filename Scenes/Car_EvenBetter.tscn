@@ -560,6 +560,48 @@ color_ramp = SubResource("GradientTexture1D_5nnsv")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wbcc1"]
 
+<<<<<<< Updated upstream
+=======
+[sub_resource type="Curve" id="Curve_ym5hs"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.22619, 0.89011), 0.0, 0.0, 0, 0, Vector2(1, 0.263736), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tle7j"]
+curve = SubResource("Curve_ym5hs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ncy0v"]
+angle_max = 360.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 4.0
+angular_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 1.0
+linear_accel_max = 5.0
+scale_min = 0.05
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_tle7j")
+color = Color(1, 0.505882, 0, 1)
+hue_variation_min = 0.96
+hue_variation_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4im43"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.588235, 0.0313726, 0, 1)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_k5gvt"]
+material = SubResource("StandardMaterial3D_4im43")
+
+>>>>>>> Stashed changes
 [sub_resource type="SphereMesh" id="SphereMesh_do464"]
 
 [sub_resource type="Animation" id="Animation_pu1ql"]
