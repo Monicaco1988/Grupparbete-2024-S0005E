@@ -101,23 +101,20 @@ public partial class betterCar : RigidBody3D
 	float jumpInput;
 	float jumpInput2;
 
-    public PlayerState GetState(PlayerState state)
+    public PlayerState GetState()
 	{
-		PlayerState returnState = PlayerState.IN_ACTIVE;
-		switch (state)
-		{
-			case PlayerState.ACTIVE:
-				returnState = PlayerState.ACTIVE;
-				break;
-
-			case PlayerState.IN_ACTIVE:
-				returnState = PlayerState.IN_ACTIVE;
-				break;
-		}
-		return returnState;
+			return state;
 	}
+	public PowerUp GetPowerUpState()
+	{
+		return powerUp;
+	}
+    public void SetPowerUpState(PowerUp PU)
+    {
+        this.powerUp = PU;
+    }
 
-	public void SetState(PlayerState newState)
+    public void SetState(PlayerState newState)
 	{
 		this.state = newState;    
 	}
@@ -228,13 +225,14 @@ public partial class betterCar : RigidBody3D
 						{
 						ApplyCentralImpulse(-carMesh.GlobalBasis.Z * speedBoost * 0.5f);// * (float)delta);
 						//playDoorAnimation();
-						bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
-                        fireSpeedRight.Emitting = true;
-                        fireSpeedLeft.Emitting = true;
-                        smoke.Emitting = true;
+						//bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
+                        //fireSpeedRight.Emitting = true;
+                        //fireSpeedLeft.Emitting = true;
+                        //smoke.Emitting = true;
 
 						pwrUpSpeed--;
-						} 
+						}
+					//powerUp = PowerUp.DEFIBRILLATOR;
 					break;
 
 				case PowerUp.DEFIBRILLATOR:
@@ -249,6 +247,7 @@ public partial class betterCar : RigidBody3D
 						//obj.ApplyCentralImpulse(carMesh.GlobalBasis.Z * 2 * (float)delta);
 						pwrUpDefib--;
 					}
+                    //powerUp = PowerUp.SWITCHAROO;
                     break;
 
                 case PowerUp.P3:
@@ -285,6 +284,7 @@ public partial class betterCar : RigidBody3D
 						doorAnimation.Play("Hole");
 						
 					}
+                    //powerUp = PowerUp.NO_POWER;
                     break;
 
                 default: break;
@@ -420,7 +420,7 @@ public partial class betterCar : RigidBody3D
 			var tilted = -turnInput2 * LinearVelocity.Length() / bodyTilt;
 			bodyMesh.Rotation = new Vector3(0, 0, tilted);
 
-           GD.Print(velocity);
+           //GD.Print(velocity);
             //GD.Print(tilted);
 
             if (velocity > 60f)

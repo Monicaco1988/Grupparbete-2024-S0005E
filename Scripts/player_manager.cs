@@ -315,38 +315,105 @@ public partial class player_manager : Node3D
                     }
                 }
             }
+            foreach (var player in ambulances)
+            {
+                if (player.controllerId == controller)
+                {
+                    handlePlayerGUIPowerUp(player);
+                }
+            }   
         }
 
-        foreach (var ambulance in ambulances)
+        //foreach (var ambulance in ambulances)
+        //{
+        //    var numAmb = 0;
+        //    if(ambulance.pwrUpSpeed != 1)
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Hide();
+        //    }
+        //    else
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Show();
+        //    }
+        //    if(ambulance.pwrUpDefib != 1)
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Hide();
+        //    }
+        //    else
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Show();
+        //    }
+        //    if(ambulance.pwrUpSwitch != 1)
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Hide();  
+        //    }
+        //    else
+        //    {
+        //        playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Show();
+        //    }
+        //    numAmb++;
+        //}
+    }
+
+    public void handlePlayerGUIPowerUp(betterCar player)
+    {
+        switch(player.GetPowerUpState())
         {
-            var numAmb = 0;
-            if(ambulance.pwrUpSpeed != 1)
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Hide();
-            }
-            else
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Show();
-            }
-            if(ambulance.pwrUpDefib != 1)
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Hide();
-            }
-            else
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Show();
-            }
-            if(ambulance.pwrUpSwitch != 1)
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Hide();  
-            }
-            else
-            {
-                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Show();
-            }
-            numAmb++;
+            case betterCar.PowerUp.SPEED_BOOST:
+                foreach (var ambulance in ambulances)
+                {
+                    if (ambulance.controllerId == player.controllerId)
+                    {
+                        GD.Print(player.id);
+                        playerGUI.GetNode<ReferenceRect>("Player"+ (ambulance.id-1) + "/Speed").Show();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Box").Hide();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Switch").Hide();
+                        return;
+                    }
+                }                
+                break;
+
+            case betterCar.PowerUp.DEFIBRILLATOR:
+                foreach (var ambulance in ambulances)
+                {
+                    if (ambulance.controllerId == player.controllerId)
+                    {
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Box").Show();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Speed").Hide();                        
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Switch").Hide();
+                        return;
+                    }
+                }
+                break;
+
+            case betterCar.PowerUp.SWITCHAROO:
+                foreach (var ambulance in ambulances)
+                {
+                    if (ambulance.controllerId == player.controllerId)
+                    {
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Switch").Show();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Speed").Hide();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Box").Hide();
+                        return;
+                    }
+                }
+                break;
+
+            case betterCar.PowerUp.NO_POWER:
+                foreach (var ambulance in ambulances)
+                {
+                    if (ambulance.controllerId == player.controllerId)
+                    {
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Speed").Hide();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Box").Hide();
+                        playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Switch").Hide();
+                        return;
+                    }
+                }
+                break;
         }
     }
+            
 
     public void Visibility()
     {
@@ -368,6 +435,7 @@ public partial class player_manager : Node3D
         foreach (var player in ambulances)
         {
             (player as betterCar).SetState(betterCar.PlayerState.ACTIVE);
+            //player.SetPowerUpState(betterCar.PowerUp.SPEED_BOOST);
         }
     }
 
