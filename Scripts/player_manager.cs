@@ -10,7 +10,7 @@ public partial class player_manager : Node3D
     public int player2Score = 0;
     public int player3Score = 0;
     public int player4Score = 0;
-
+    Node playerGUI;
     public string leader;
     public int Score = 0;
     public static player_manager instance {  get; private set; }
@@ -58,7 +58,7 @@ public partial class player_manager : Node3D
     private void HandelPlayerGui() 
     {
         player_gui = GD.Load<PackedScene>("res://Scenes/player_gui.tscn");
-        var playerGUI = player_gui.Instantiate();
+        playerGUI = player_gui.Instantiate();
         AddChild(playerGUI);
         
     }
@@ -319,18 +319,32 @@ public partial class player_manager : Node3D
 
         foreach (var ambulance in ambulances)
         {
-            if(ambulance.pwrUpDefib != 1)
-            {
-                
-            }
+            var numAmb = 0;
             if(ambulance.pwrUpSpeed != 1)
             {
-
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Hide();
+            }
+            else
+            {
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(2).Show();
+            }
+            if(ambulance.pwrUpDefib != 1)
+            {
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Hide();
+            }
+            else
+            {
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(1).Show();
             }
             if(ambulance.pwrUpSwitch != 1)
-           {
-
-           }
+            {
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Hide();  
+            }
+            else
+            {
+                playerGUI.GetChild<Control>(numAmb).GetChild<ReferenceRect>(0).Show();
+            }
+            numAmb++;
         }
     }
 
