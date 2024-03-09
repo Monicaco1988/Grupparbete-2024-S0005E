@@ -803,7 +803,7 @@ _data = {
 [node name="PlayerRoot" type="Node3D"]
 process_mode = 3
 
-[node name="Player" type="RigidBody3D" parent="."]
+[node name="Player" type="RigidBody3D" parent="." node_paths=PackedStringArray("fireSpeedLeft", "fireSpeedRight")]
 visible = false
 collision_layer = 3
 collision_mask = 3
@@ -811,6 +811,8 @@ physics_material_override = SubResource("PhysicsMaterial_xca33")
 gravity_scale = 3.0
 angular_damp = 10.0
 script = ExtResource("1_wd3ea")
+fireSpeedLeft = NodePath("../CarMesh/ambulance/FireSpeed/GPUParticles3D")
+fireSpeedRight = NodePath("../CarMesh/ambulance/FireSpeed/GPUParticles3D2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("SphereShape3D_syqvy")
