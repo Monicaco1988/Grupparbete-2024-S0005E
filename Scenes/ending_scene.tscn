@@ -50,9 +50,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 20
 theme_override_fonts/font = ExtResource("3_gnjxu")
 theme_override_font_sizes/font_size = 175
-text = "fdsa
-fsda
-fdsa"
+text = "Good Job!
+You Have all saved grandma! 
+Thanks for playing"
 horizontal_alignment = 1
 uppercase = true
 

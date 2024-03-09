@@ -19,15 +19,19 @@ public partial class Follow_Camera : Marker3D
 	[Export]
 	public Area3D areaNodeToDequeue;
 
+    //Adding Class to be able to listen to GameManager and change GameManager State. See GameManager Script.
+    private GameManager _GetStateGameManager;
 
-	public override void _Ready()
+    public override void _Ready()
 	{
 		instance = this;
         
         //instantiates the attributes and objects from playermanager
         _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
 		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
-	}
+		GD.Print(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChildCount() + "amount of nodes left in the world");
+        _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
+    }
 
 
 	public void OnPlayerEnter(Node3D playerContainer)
@@ -64,6 +68,16 @@ public partial class Follow_Camera : Marker3D
         //GD.Print(timer);
   //      if (timer > 3)
 		//{
+
+		// if a player gets to the hospital this code will run ending the gamesession
+		if(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChildCount() == 0)
+			{
+                GetNode<Node3D>("/root/GameManager/World").QueueFree();
+
+                this.QueueFree();
+                _GetStateGameManager.EmitSignal(nameof(_GetStateGameManager.UpdateGameState2), 5);
+            }
+
 			//update position of camera and camerapivotarm to the position of the player. linear interpolation for soft follow. Delta * 5 for acceleration to player position
 			this.GlobalPosition = this.GlobalPosition.Lerp(playerContainer1.GlobalPosition, (float)delta * 5f);
 		}
