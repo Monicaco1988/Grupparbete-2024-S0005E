@@ -29,6 +29,9 @@ public partial class EndingScen : Control
     public void WinningPlayer()
     {
         winningPlayer.Text = "Contgrats! \n" + player_manager.instance.leader + "\n Saved a granny!";
+
+        if(player_manager.instance.leader == null)
+            winningPlayer.Text = "Contgrats! \n" + "You Have all " + "\n Saved a granny!";
     }
 
 
