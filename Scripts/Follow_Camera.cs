@@ -29,7 +29,7 @@ public partial class Follow_Camera : Marker3D
         //instantiates the attributes and objects from playermanager
         _player = GetNode<Node3D>("/root/GameManager/PlayerManager/PlayerRoot");
 		this.GlobalPosition = _player.GetChild<RigidBody3D>(playerId).GlobalPosition;
-		GD.Print(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChildCount() + "amount of nodes left in the world");
+		//GD.Print(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChildCount() + "amount of nodes left in the world");
         _GetStateGameManager = GetNode<GameManager>("/root/GameManager");
     }
 
@@ -54,7 +54,7 @@ public partial class Follow_Camera : Marker3D
         {
 			return;
         }
-        GD.Print(this);
+        //GD.Print(this);
         if (timer > 3)
         {
             (playerContainer1 as betterCar).setFirst(true);

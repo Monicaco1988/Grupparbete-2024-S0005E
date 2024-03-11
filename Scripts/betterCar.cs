@@ -96,7 +96,7 @@ public partial class betterCar : RigidBody3D
 	float turnInput2;
 	float speedBoost = 25;
 	bool isDrifting = false;
-	bool isFirst = false;
+	public bool isFirst = false;
 	int onoff = 1;
 	float jumpInput;
 	float jumpInput2;

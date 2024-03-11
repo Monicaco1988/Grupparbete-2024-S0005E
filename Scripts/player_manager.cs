@@ -183,8 +183,18 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-             //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
-                            ambulance.carMesh.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition);
+                            //ambulance.carMesh.LookAtFromPosition(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition, GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition); // this works fine
+                            foreach (var player in ambulances)
+                            {
+                                if (player.isFirst)
+                                {
+                                    foreach (var item in ambulances)
+                                    {
+                                        item.carMesh.Rotation = player.carMesh.Rotation;
+                                    }
+                                    break;
+                                }
+                            }
                             offset += new Vector3(-5, 0, 0);
 
                             ambulance.pwrUpDefib = 1;
@@ -235,8 +245,20 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition);
+                            //ambulance.GetParent().GetNode<Node3D>("CarMesh").LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition);
                             //ambulance.Visible = true;
+                            foreach (var player in ambulances)
+                            {
+                                if(player.isFirst)
+                                {
+                                    foreach (var item in ambulances)
+                                    {
+                                        item.carMesh.Rotation = player.carMesh.Rotation;
+                                    }
+                                    break;
+                                }
+                            }
+                            GD.Print("Spelare: " + ambulance.id + " har Rotation: " + ambulance.Rotation);
                             offset += new Vector3(-5, 0, 0);
 
                             ambulance.pwrUpDefib = 1;
@@ -295,7 +317,17 @@ public partial class player_manager : Node3D
                         {
                             ambulance.GlobalPosition = GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(0).GlobalPosition + offset;
                             ambulance.LinearVelocity = Vector3.Zero;
-                            ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition);
+                            foreach (var player in ambulances)//ambulance.LookAt(GetNode<Area3D>("/root/GameManager/World/CollisionaraDestroy").GetChild<CollisionShape3D>(1).GlobalPosition);
+                            {
+                                if (player.isFirst)
+                                {
+                                    foreach (var item in ambulances)
+                                    {
+                                        item.carMesh.Rotation = player.carMesh.Rotation;
+                                    }
+                                    break;
+                                }
+                            }
                             //ambulance.Visible = true;
                             offset += new Vector3(-5, 0, 0);
 
@@ -364,7 +396,7 @@ public partial class player_manager : Node3D
                 {
                     if (ambulance.controllerId == player.controllerId)
                     {
-                        GD.Print(player.id);
+                        //GD.Print(player.id);
                         playerGUI.GetNode<ReferenceRect>("Player"+ (ambulance.id-1) + "/Speed").Show();
                         playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Box").Hide();
                         playerGUI.GetNode<ReferenceRect>("Player" + (ambulance.id - 1) + "/Switch").Hide();
