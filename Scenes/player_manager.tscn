@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c52ahpitgg1b0"]
+[gd_scene load_steps=38 format=3 uid="uid://c52ahpitgg1b0"]
 
 [ext_resource type="Script" path="res://Scripts/player_manager.cs" id="1_fqr60"]
 [ext_resource type="PackedScene" uid="uid://ksysankeyie8" path="res://Art/Kenney_City_Roads_Assets/Models/DAE format/construction_light.dae" id="2_iw2ho"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dft7ijkrj6e66" path="res://Art/Double/playstation_trigger_l1_alternative.png" id="5_fpf58"]
 [ext_resource type="Texture2D" uid="uid://cc27p3kaqepc1" path="res://Art/DoubleX/xbox_button_color_x.png" id="6_pygoy"]
 [ext_resource type="Texture2D" uid="uid://bp2kppt4vg6fc" path="res://Art/DoubleX/xbox_button_color_a.png" id="7_febm6"]
+[ext_resource type="MeshLibrary" uid="uid://crmrar48pn4q6" path="res://Scenes/Tiles/NoRefl4.tres" id="9_v0iq2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jx4ly"]
 albedo_color = Color(0, 0, 0, 1)
@@ -647,16 +648,16 @@ shape = SubResource("BoxShape3D_p07bu")
 transform = Transform3D(0.866025, -0.416466, 0.276689, 0, 0.553377, 0.832931, -0.5, -0.721339, 0.479238, 17.7308, 55.2228, 5.7014)
 
 [node name="SpawnPoint1" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0, -2.71861)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89908, 0.968584, -2.71861)
 
 [node name="SpawnPoint2" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55301, 0, -2.26245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55301, 3.43393, -2.26245)
 
 [node name="SpawnPoint3" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 0, 2.68194)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68335, 2.72548, 2.68194)
 
 [node name="SpawnPoint4" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 0, 2.66987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38677, 4.15711, 2.66987)
 
 [node name="Node" type="Node" parent="."]
 
@@ -1208,3 +1209,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "PRESS Y TO START GAME"
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(119.955, 0, 0, 0, 119.955, 0, 0, 0, 119.955, 0, 0, 0)
+mesh_library = ExtResource("9_v0iq2")
+cell_size = Vector3(0.01, 0.001, 0.3)
+data = {
+"cells": PackedInt32Array(-917503, 65530, 1441841, -917503, 65533, 1441841, -917503, 0, 1441841)
+}
+metadata/_editor_floor_ = Vector3(0, -14, 0)
