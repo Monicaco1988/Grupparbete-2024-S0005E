@@ -228,9 +228,11 @@ public partial class betterCar : RigidBody3D
 						//bodyMesh.Rotation = new Vector3(0.2f, 0, 0);
                         //fireSpeedRight.Emitting = true;
                         //fireSpeedLeft.Emitting = true;
+						GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/FireSpeed/GPUParticles3D").Emitting = true;
+                        GetParent().GetNode<GpuParticles3D>("CarMesh/ambulance/FireSpeed/GPUParticles3D2").Emitting = true;
                         //smoke.Emitting = true;
 
-						pwrUpSpeed--;
+                        pwrUpSpeed--;
 						}
 					//powerUp = PowerUp.DEFIBRILLATOR;
 					break;
